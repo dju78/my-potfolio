@@ -1087,6 +1087,24 @@ body {
     margin-bottom: 0.25rem;
 }
 
+.media-item p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.media-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.media-item a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 .interests-section {
     background: white;
     padding: 2.5rem;
