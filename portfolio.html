@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daramola Joseph Omoyele | Economist & Data Analyst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a2332;
+            --secondary: #2d4159;
+            --accent: #c8965a;
+            --light: #f8f7f4;
+            --mid: #e8e5df;
+            --text: #2a2a2a;
+            --text-light: #6a6a6a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text);
+            background: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--light);
+            padding: 8rem 2rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(200, 150, 90, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(200, 150, 90, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .hero h1 strong {
+            font-weight: 700;
+            display: block;
+            color: var(--accent);
+        }
+
+        .subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--mid);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .orcid-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+            color: var(--light);
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .orcid-badge:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--light);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            animation: slideDown 0.5s ease-out 0.3s backwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        section {
+            padding: 5rem 0;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        section:nth-child(even) {
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            letter-spacing: -0.01em;
+        }
+
+        .section-header .accent-line {
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+            margin: 1.5rem auto;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Value Proposition */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s ease;
+            border-left: 4px solid var(--accent);
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .value-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Expertise Grid */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .expertise-item {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .expertise-item:hover {
+            background: white;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .expertise-item h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .expertise-item ul {
+            list-style: none;
+            color: var(--text-light);
+        }
+
+        .expertise-item li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .expertise-item li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--mid);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--light);
+        }
+
+        .timeline-item h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .timeline-meta {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .timeline-item ul {
+            margin-top: 1rem;
+            color: var(--text-light);
+        }
+
+        .timeline-item ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item ul li::marker {
+            color: var(--accent);
+        }
+
+        /* Publications */
+        .publications-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .publication {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--accent);
+        }
+
+        .publication:hover {
+            box-shadow: 0 8px 35px rgba(0, 0, 0, 0.12);
+            transform: translateX(5px);
+        }
+
+        .pub-type {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .publication h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .pub-meta {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .publication p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-top: 1rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--light);
+        }
+
+        #contact .section-header h2,
+        #contact .section-header p {
+            color: var(--light);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .contact-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .contact-card a {
+            color: var(--light);
+            text-decoration: none;
+            word-break: break-all;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--mid);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 5rem 1.5rem 4rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item::before {
+                left: -2.5rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--accent);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="serif">
+                Daramola Joseph Omoyele
+                <strong>Economist | Data Analyst | Policy Specialist</strong>
+            </h1>
+            <p class="subtitle">
+                Applied Econometrics • Regulatory Analytics • Evidence-Based Policymaking
+            </p>
+            <a href="https://orcid.org/0009-0006-0347-0499" class="orcid-badge" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor">
+                    <path
+                        d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z" />
+                    <path fill="#fff" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z" />
+                    <path fill="#fff"
+                        d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5 c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z" />
+                    <path fill="#fff"
+                        d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1 C84.2,46.7,88.7,51.3,88.7,56.8z" />
+                </svg>
+                ORCID: 0009-0006-0347-0499
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="serif">Executive Profile</h2>
+                <div class="accent-line"></div>
+                <p>Operating at the intersection of economics, data, and regulation to solve real policy and compliance
+                    problems</p>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3 class="serif">Evidence-Driven Decision Support</h3>
+                    <p>I combine academic rigour with delivery-focused analytics to provide actionable insights for
+                        policymakers and stakeholders.</p>
+                </div>
+                <div class="value-card">
+                    <h3 class="serif">Regulatory Intelligence at Scale</h3>
+                    <p>Specializing in turning messy administrative data into clear policy insight that strengthens
+                        compliance systems and enhances transparency.</p>
+                </div>
+                <div class="value-card">
+                    <h3 class="serif">Measurable Public-Sector Impact</h3>
+                    <p>15+ years delivering data-driven economic analysis that supports evidence-based policymaking
+                        under scrutiny.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="serif">Core Capabilities</h2>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <h4>Economic & Policy Analysis</h4>
+                    <ul>
+                        <li>Regulatory economics</li>
+                        <li>Impact assessment</li>
+                        <li>Cost-benefit analysis</li>
+                        <li>Forecasting & evaluation</li>
+                        <li>HMT Green Book aligned</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-item">
+                    <h4>Econometrics & Modelling</h4>
+                    <ul>
+                        <li>Panel ARDL & panel data</li>
+                        <li>Time series analysis</li>
+                        <li>Regression modelling</li>
+                        <li>Composite index construction</li>
+                        <li>Survey design</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-item">
+                    <h4>Analytics & Visualization</h4>
+                    <ul>
+                        <li>R (ggplot2, Shiny)</li>
+                        <li>Python, SQL, Stata</li>
+                        <li>Power BI, Tableau</li>
+                        <li>Automated dashboards</li>
+                        <li>Decision-support systems</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-item">
+                    <h4>Governance & Compliance</h4>
+                    <ul>
+                        <li>RegTech analytics</li>
+                        <li>GDPR & data governance</li>
+                        <li>Data quality assurance</li>
+                        <li>ETL pipelines</li>
+                        <li>Compliance frameworks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="serif">Professional Experience</h2>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Finance & Economic Analyst</h3>
+                    <div class="timeline-meta">Univelcity Consulting | United Kingdom | July 2023 – Present</div>
+                    <p>Delivering economic analysis for donor-funded development programmes across multiple currency
+                        environments (GBP, USD, EUR, NGN).</p>
+                    <ul>
+                        <li>Apply econometric modelling to inform strategic decisions</li>
+                        <li>Build automated dashboards reducing reporting time by 30%</li>
+                        <li>Conduct cost-benefit analysis, forecasting, and risk assessment</li>
+                        <li>Lead data governance aligned with GDPR and international standards</li>
+                        <li>Train analysts on compliance, analytics, and quality assurance</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Financial & Economic Data Analyst</h3>
+                    <div class="timeline-meta">Office of the Accountant General | Nigeria | January 2014 – September
+                        2022</div>
+                    <p>Evaluated fiscal policy and public expenditure performance to improve budget accountability.</p>
+                    <ul>
+                        <li>Delivered impact assessments and ex-post evaluations</li>
+                        <li>Reduced reporting cycles by 35% through process optimization</li>
+                        <li>Built econometric models linking spending to outcomes</li>
+                        <li>Produced senior-level policy briefings</li>
+                        <li>Strengthened evidence base for policy design</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Data Analyst</h3>
+                    <div class="timeline-meta">Nigerian Postal Service | Nigeria | January 2008 – November 2013</div>
+                    <p>Analyzed nationwide operational and socioeconomic datasets to drive service delivery
+                        improvements.</p>
+                    <ul>
+                        <li>Built forecasting and efficiency models</li>
+                        <li>Achieved 20% improvement in operational efficiency</li>
+                        <li>Designed composite performance indices</li>
+                        <li>Guided regional offices on survey and data standards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="serif">Featured Projects</h2>
+                <div class="accent-line"></div>
+                <p>Data-driven applications and tools for regulatory compliance and policy analysis</p>
+            </div>
+
+            <div class="publications-list">
+                <div class="publication"
+                    style="background: linear-gradient(135deg, #f8f7f4 0%, #ffffff 100%); border-left: 5px solid var(--accent);">
+                    <div class="pub-type">Web Application</div>
+                    <h3>NairaGuard</h3>
+                    <div class="pub-meta">AI-Powered Financial Security Utility | 2026</div>
+                    <p>NairaGuard is an AI-powered web application designed for counterfeit Nigerian currency detection.
+                        It serves as both a verification tool and an educational resource, helping users identify
+                        authentic Naira banknotes through a simulated AI scanner and detailed security feature guides.
+                    </p>
+                    <p style="margin-top: 1.5rem;"><strong>Key Features:</strong></p>
+                    <ul style="margin-top: 0.5rem; line-height: 2; color: var(--text-light);">
+                        <li>AI-Powered Currency Scanner (Simulated)</li>
+                        <li>Comprehensive Security Feature Guides</li>
+                        <li>Interactive Note Preview Gallery</li>
+                        <li>Credit-based Verification System</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem;">
+                        <a href="https://daramol.netlify.app/" target="_blank" rel="noopener"
+                            style="display: inline-block; background: var(--accent); color: white; padding: 0.8rem 2rem; 
+                                  border-radius: 5px; text-decoration: none; font-weight: 600; 
+                                  transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.9rem;"
+                            onmouseover="this.style.background='var(--secondary)'; this.style.transform='translateY(-2px)'"
+                            onmouseout="this.style.background='var(--accent)'; this.style.transform='translateY(0)'">
+                            View Live Application →
+                        </a>
+                    </p>
+                </div>
+
+                <div class="publication"
+                    style="background: linear-gradient(135deg, #f8f7f4 0%, #ffffff 100%); border-left: 5px solid var(--accent);">
+                    <div class="pub-type">Educational Game</div>
+                    <h3>KogiQuest</h3>
+                    <div class="pub-meta">EduVerse Adventure Game | 2026</div>
+                    <p>KogiQuest is an educational adventure where players embark on a journey through the "EduVerse" to
+                        master challenges and learn about the history, culture, and traditions of Kogi State.</p>
+                    <p style="margin-top: 1.5rem;"><strong>Key Features:</strong></p>
+                    <ul style="margin-top: 0.5rem; line-height: 2; color: var(--text-light);">
+                        <li>Interactive Cultural Journey</li>
+                        <li>Knowledge Challenges & Quizzes</li>
+                        <li>Competitive Leaderboards</li>
+                        <li>Historical Archive Access</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem;">
+                        <a href="https://dju78.github.io/kogiqest/" target="_blank" rel="noopener"
+                            style="display: inline-block; background: var(--accent); color: white; padding: 0.8rem 2rem; 
+                                  border-radius: 5px; text-decoration: none; font-weight: 600; 
+                                  transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.9rem;"
+                            onmouseover="this.style.background='var(--secondary)'; this.style.transform='translateY(-2px)'"
+                            onmouseout="this.style.background='var(--accent)'; this.style.transform='translateY(0)'">
+                            View Live Application →
+                        </a>
+                    </p>
+                </div>
+
+                <div class="publication"
+                    style="background: linear-gradient(135deg, #f8f7f4 0%, #ffffff 100%); border-left: 5px solid var(--accent);">
+                    <div class="pub-type">Web Application</div>
+                    <h3>DEAP Tax Compliance System</h3>
+                    <div class="pub-meta">RegTech Solution | 2025</div>
+                    <p>A comprehensive tax compliance and regulatory analytics platform demonstrating practical
+                        application of data science and econometric principles to real-world governance challenges. This
+                        system showcases expertise in building scalable compliance frameworks that enhance regulatory
+                        effectiveness and transparency.</p>
+                    <p style="margin-top: 1.5rem;"><strong>Key Features:</strong></p>
+                    <ul style="margin-top: 0.5rem; line-height: 2; color: var(--text-light);">
+                        <li>Regulatory compliance analytics and monitoring</li>
+                        <li>Data-driven decision support for tax administration</li>
+                        <li>Interactive dashboards and visualization tools</li>
+                        <li>Evidence-based policy insights</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem;">
+                        <a href="https://deaptaxcompliance.netlify.app/" target="_blank" rel="noopener"
+                            style="display: inline-block; background: var(--accent); color: white; padding: 0.8rem 2rem; 
+                                  border-radius: 5px; text-decoration: none; font-weight: 600; 
+                                  transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.9rem;"
+                            onmouseover="this.style.background='var(--secondary)'; this.style.transform='translateY(-2px)'"
+                            onmouseout="this.style.background='var(--accent)'; this.style.transform='translateY(0)'">
+                            View Live Application →
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="serif">Research Focus</h2>
+                <div class="accent-line"></div>
+                <p>Addressing systemic policy failures using rigorous quantitative methods and real-world data</p>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3 class="serif">Housing Affordability</h3>
+                    <p>Analyzing housing market dynamics and policy interventions to improve accessibility and
+                        affordability.</p>
+                </div>
+                <div class="value-card">
+                    <h3 class="serif">Taxation & Public Finance</h3>
+                    <p>Research on fiscal policy, revenue optimization, and the role of religious institutions in tax
+                        systems.</p>
+                </div>
+                <div class="value-card">
+                    <h3 class="serif">Digital Identity & Governance</h3>
+                    <p>Examining data harmonization, electoral integrity, and the use of digital identity systems like
+                        NIN.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--primary);" class="serif">Key Research
+                    Projects</h3>
+
+                <div class="publication">
+                    <div class="pub-type">MSc Dissertation</div>
+                    <h3>Impact of Foreign Direct Investment on Economic Growth in Sub-Saharan Africa</h3>
+                    <div class="pub-meta">University of Essex | 2023</div>
+                    <p>Applied Panel ARDL methodology across 39 countries (1970–2019), integrating World Bank, IMF, and
+                        UNCTAD datasets. Conducted comprehensive robustness checks and produced policy-relevant findings
+                        on FDI effectiveness in developing economies.</p>
+                </div>
+
+                <div class="publication">
+                    <div class="pub-type">Undergraduate Research</div>
+                    <h3>Stock Market Effects of Bank Recapitalisation in Nigeria</h3>
+                    <div class="pub-meta">University of Ilorin | 2006</div>
+                    <p>Employed time-series econometrics and event study methodology to analyze the impact of financial
+                        regulation on market performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="serif">Publications & Media</h2>
+                <div class="accent-line"></div>
+                <p>Translating economic evidence into public policy debate</p>
+            </div>
+
+            <div class="publications-list">
+                <div class="publication">
+                    <div class="pub-type">Journal Article</div>
+                    <h3>Religion as an Economic Institution in Sub-Saharan Africa</h3>
+                    <div class="pub-meta">World Journal of Advanced Research and Reviews | 2026 | DOI:
+                        10.30574/wjarr.2026.29.1.0134</div>
+                    <p>This paper reconceptualises religious institutions as economic institutions that mobilise
+                        resources, accumulate capital, shape labour relations, and influence household and national
+                        development outcomes. Drawing on political economy and institutional economics, the study
+                        introduces the Religious Economic Complex (REC) framework, explaining how faith, trust, and
+                        cultural legitimacy are transformed into sustained economic power.</p>
+                    <p style="margin-top: 1.5rem;">
+                        <a href="https://doi.org/10.30574/wjarr.2026.29.1.0134" target="_blank" rel="noopener"
+                            style="display: inline-block; padding: 0.6rem 1.5rem; border: 1px solid var(--accent); color: var(--accent); 
+                                  border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='var(--accent)'; this.style.color='white'"
+                            onmouseout="this.style.background='transparent'; this.style.color='var(--accent)'">
+                            Read Article →
+                        </a>
+                    </p>
+                </div>
+
+                <div class="publication">
+                    <div class="pub-type">Book</div>
+                    <h3>Faith, Power, and the Nigerian Reality</h3>
+                    <div class="pub-meta">Amazon Kindle Direct Publishing | 2025 | ISBN: 979-8279463763</div>
+                    <p>An examination of the intersection between religion, governance, and state power using
+                        socio-political analysis. Contributes to discourse on the role of faith-based institutions in
+                        economic and social development.</p>
+                    <p><strong>Contributions:</strong> Conceptualization, Original drafting, Methodology, Review &
+                        editing</p>
+                </div>
+
+                <div class="publication">
+                    <div class="pub-type">Policy Commentary</div>
+                    <h3>FG advised to include religious institutions in tax net</h3>
+                    <div class="pub-meta">Vanguard News | 2025</div>
+                    <p>Policy analysis and commentary on taxation reform and the inclusion of religious institutions in
+                        Nigeria's tax system to enhance revenue generation and equity.</p>
+                </div>
+
+                <div class="publication">
+                    <div class="pub-type">Media Interview</div>
+                    <h3>Analyst seeks legal reform, data harmonisation for use of NIN during elections</h3>
+                    <div class="pub-meta">GazetteNGR / News Agency of Nigeria | 2025</div>
+                    <p>Expert commentary on the harmonization of digital identity systems and electoral reform in
+                        Nigeria, addressing data governance and integrity challenges.</p>
+                </div>
+
+                <div class="publication">
+                    <div class="pub-type">Expert Commentary</div>
+                    <h3>Harmonisation of Identification Numbers</h3>
+                    <div class="pub-meta">News Agency of Nigeria | 2025</div>
+                    <p>Analysis of Nigeria's National Identification Number (NIN) system and recommendations for
+                        improved data harmonization across government agencies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section style="background: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="serif">Education & Credentials</h2>
+                <div class="accent-line"></div>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="publication">
+                    <div class="pub-type">Master's Degree</div>
+                    <h3>MSc Economics with Data Analytics</h3>
+                    <div class="pub-meta">University of Essex | United Kingdom | 2022 – 2023</div>
+                    <p>Specialized in applied econometrics, policy evaluation, and evidence-based research with
+                        real-world data analysis.</p>
+                </div>
+
+                <div class="publication">
+                    <div class="pub-type">Bachelor's Degree</div>
+                    <h3>BSc Economics</h3>
+                    <div class="pub-meta">University of Ilorin | Nigeria | 2003 – 2006</div>
+                    <p>Foundation in economic theory, quantitative methods, and policy analysis.</p>
+                </div>
+
+                <div class="publication">
+                    <div class="pub-type">Professional Certifications</div>
+                    <h3>Continuous Professional Development</h3>
+                    <ul style="margin-top: 1rem; line-height: 2;">
+                        <li>Certified National Accountant (CNA)</li>
+                        <li>Google Data Analytics Professional Certificate</li>
+                        <li>Advanced SQL for Data Analysis</li>
+                        <li>Microsoft Power BI Advanced Reporting</li>
+                        <li>GDPR & Data Protection Training</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="serif">Get in Touch</h2>
+                <div class="accent-line"></div>
+                <p>Available immediately for hybrid, full-time, or part-time roles with travel flexibility</p>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h4>Location</h4>
+                    <p>Colchester, Essex<br>United Kingdom</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Email</h4>
+                    <p><a href="/cdn-cgi/l/email-protection#5e3a342b69661e273f363131703d3133"><span class="__cf_email__"
+                                data-cfemail="f3979986c4cbb38a929b9c9cdd909c9e">[email&#160;protected]</span></a></p>
+                    <p><a href="/cdn-cgi/l/email-protection#32030b050a56584772555f535b5e1c515d5f"><span
+                                class="__cf_email__"
+                                data-cfemail="1120282629757b6451767c70787d3f727e7c">[email&#160;protected]</span></a>
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <h4>Research Profile</h4>
+                    <p><a href="https://orcid.org/0009-0006-0347-0499" target="_blank" rel="noopener">ORCID Profile</a>
+                    </p>
+                </div>
+            </div>
+
+            <div
+                style="text-align: center; margin-top: 4rem; padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 8px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--accent);">Strategic
+                    Question</h3>
+                <p style="font-size: 1.2rem; font-style: italic; line-height: 1.8;">
+                    "If regulators must justify decisions under scrutiny, who better than an economist who builds
+                    auditable, data-driven systems?"
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Daramola Joseph Omoyele. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">Economist | Data Analyst | Policy Specialist</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements 
