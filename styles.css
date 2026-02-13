@@ -1065,9 +1065,30 @@ body {
     margin-bottom: 1rem;
 }
 
+.pub-doi {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+}
+
 .pub-description {
     color: var(--text-secondary);
     line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.pub-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.pub-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
 .media-list {
