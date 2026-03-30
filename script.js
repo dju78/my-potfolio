@@ -75,19 +75,16 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Optional: stop observing once revealed
         }
     });
 }, observerOptions);
 
 // Observe elements for animation
-const animateElements = document.querySelectorAll('.about-card, .timeline-item, .research-card, .skill-category, .publication-card, .contact-card');
+const animateElements = document.querySelectorAll('.reveal');
 
 animateElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
