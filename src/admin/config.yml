@@ -45,7 +45,11 @@ collections:
       - { label: "Date", name: "date_issued", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Description", name: "body", widget: "markdown" }
-      - { label: "Media Coverage Links", name: "coverage", widget: "list", field: { label: "URI", name: "url", widget: "string" } }
+      - label: "Media Coverage Links"
+        name: "coverage"
+        widget: "list"
+        fields:
+          - { label: "URI", name: "url", widget: "string" }
 
   - name: "projects"
     label: "Projects"
@@ -58,8 +62,17 @@ collections:
       - { label: "Badge", name: "badge", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Live Demo Link", name: "link", widget: "string" }
-      - { label: "Highlights", name: "highlights", widget: "list", field: { label: "Text", name: "text", widget: "string" } }
-      - { label: "Tech Stack", name: "tags", widget: "list", field: { label: "Tool", name: "tag", widget: "string" } }
+      - label: "Highlights"
+        name: "highlights"
+        widget: "list"
+        fields:
+          - { label: "Text", name: "text", widget: "string" }
+      - label: "Tech Stack"
+        name: "tags"
+        widget: "list"
+        fields:
+          - { label: "Tool", name: "tag", widget: "string" }
+
   - name: "working_papers"
     label: "Working Papers & Preprints"
     folder: "src/content/working-papers"
@@ -82,10 +95,12 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Publication Date", name: "date_issued", widget: "string" }
-      - { label: "Coverage", name: "coverage", widget: "list", fields: [
-          { label: "Source Name", name: "source", widget: "string" },
-          { label: "Link", name: "url", widget: "string" }
-        ]}
+      - label: "Coverage"
+        name: "coverage"
+        widget: "list"
+        fields:
+          - { label: "Source Name", name: "source", widget: "string" }
+          - { label: "Link", name: "url", widget: "string" }
       - { label: "Other Platforms", name: "other_platforms", widget: "string", required: false }
 
   - name: "research"
@@ -97,5 +112,9 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Institution", name: "institution", widget: "string" }
       - { label: "Badge", name: "badge", widget: "string" }
-      - { label: "Methodology/Focus Items", name: "items", widget: "list", field: { label: "Point", name: "text", widget: "string" } }
+      - label: "Methodology/Focus Items"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Point", name: "text", widget: "string" }
       - { label: "Outcome", name: "outcome", widget: "string", required: false }
