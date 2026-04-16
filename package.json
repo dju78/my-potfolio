@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is a modern, responsive professional portfolio website showcasing the comprehensive CV and professional experience of Daramola Joseph Omoyele - Economist, Senior Data Analyst, and Regulatory & Policy Analytics Specialist.",
+  "main": "script.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dju78/my-potfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dju78/my-potfolio/issues"
+  },
+  "homepage": "https://github.com/dju78/my-potfolio#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}
