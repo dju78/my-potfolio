@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to main)
 
+site_url: https://daramolajo.co.uk
+display_url: https://daramolajo.co.uk
+
 media_folder: "src/images" # Folder where user uploaded files should go
 public_folder: "images"
 
