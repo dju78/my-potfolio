@@ -7,9 +7,24 @@
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
+    <script>
+      // Diagnostic script to catch initialization errors
+      window.onerror = function(msg, url, line, col, error) {
+        var errorBox = document.getElementById('error-reporting');
+        if (errorBox) {
+          errorBox.style.display = 'block';
+          errorBox.innerHTML += '<p style="color: red; margin: 10px 0;">' + msg + ' (Line: ' + line + ')</p>';
+        }
+        return false;
+      };
+    </script>
   </head>
   <body>
-    <!-- Initial loading state -->
+    <!-- Initial loading state and error reporting -->
+    <div id="error-reporting" style="display: none; padding: 20px; background: #fff5f5; border: 1px solid #ffc1c1; position: fixed; top: 0; left: 0; right: 0; z-index: 9999;">
+      <h3 style="margin: 0; color: #cc0000;">CMS Error Detected:</h3>
+    </div>
+
     <div id="nc-root">
       <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; color: #666;">
         <p>Loading CMS Configuration...</p>
