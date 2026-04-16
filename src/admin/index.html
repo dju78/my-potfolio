@@ -6,8 +6,14 @@
     <title>Content Manager | Portfolio Admin</title>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@3.1.2/dist/decap-cms.js"></script>
   </head>
   <body>
+    <!-- Initial loading state -->
+    <div id="nc-root">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; color: #666;">
+        <p>Loading CMS Configuration...</p>
+      </div>
+    </div>
   </body>
 </html>
