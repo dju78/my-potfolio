@@ -17,24 +17,37 @@
     </script>
     <!-- Include the CMS library AFTER the config is defined -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.js"></script>
   </head>
   <body>
     <div id="error-reporting" style="display: none; padding: 20px; background: #fff; border: 2px solid #cc0000; position: fixed; top: 0; left: 0; right: 0; z-index: 9999; margin: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-      <h3 style="margin: 0 0 10px 0; color: #cc0000;">CMS Initialization Error:</h3>
+      <h3 style="margin: 0 0 10px 0; color: #cc0000;">CMS Error:</h3>
     </div>
 
-    <div id="nc-root">
-      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; color: #666; background: #f4f4f4;">
-        <div style="text-align: center;">
-          <p style="margin-bottom: 20px; font-size: 1.2rem;">Loading Content Manager...</p>
-          <div style="width: 40px; height: 40px; border: 4px solid #ddd; border-top: 4px solid #333; border-radius: 50%; display: inline-block; animation: spin 1s linear infinite;"></div>
-        </div>
-      </div>
-    </div>
+    <!-- The CMS will mount here -->
+    <div id="nc-root"></div>
 
-    <style>
-      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
+    <script src="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.js"></script>
+
+    <script>
+      // Netlify Identity Handshake
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+
+      // Check if CMS loaded
+      setTimeout(function() {
+        if (!window.CMS) {
+          var errorBox = document.getElementById('error-reporting');
+          errorBox.style.display = 'block';
+          errorBox.innerHTML += '<p>Decap CMS failed to initialize. This could be due to a script loading error or an issue with config.yml.</p>';
+        }
+      }, 5000);
+    </script>
   </body>
 </html>
