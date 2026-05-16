@@ -4,6 +4,7 @@ subtitle: "A Practical Guide to Avoiding Reporting Errors, Software Mistakes and
 year: 2026
 isbn: "979-8196895852"
 asin: "B0H21N2W7T"
+image: "images/mtd_handbook_cover.png"
 link: "https://www.amazon.co.uk/dp/B0H21N2W7T"
 ---
 Making Tax Digital for Self-Employed Workers and Landlords is a practical guide for UK sole traders, freelancers, landlords, bookkeepers and small business owners preparing for Making Tax Digital for Income Tax.
