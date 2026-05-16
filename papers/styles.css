@@ -128,6 +128,43 @@ a:hover {
     margin-right: 0.5rem;
 }
 
+.btn-video {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e53e3e;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-video:hover {
+    background-color: #c53030;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.btn-video svg {
+    margin-right: 0.5rem;
+}
+
+.video-container {
+    margin: 1.5rem 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
 /* Responsive */
 @media (max-width: 640px) {
     body {
