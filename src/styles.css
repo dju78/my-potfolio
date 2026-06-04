@@ -320,9 +320,10 @@ body {
 }
 
 .btn-primary {
-    background: var(--primary-gradient);
-    color: var(--text-primary);
+    background: var(--secondary-gradient);
+    color: white;
     box-shadow: var(--shadow-lg);
+    border: none;
 }
 
 .btn-primary:hover {
