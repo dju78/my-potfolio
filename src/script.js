@@ -1,134 +1,148 @@
-// Navigation functionality
-const navbar = document.getElementById('navbar');
+// ===========================
+// Navigation
+// ===========================
+const navbar    = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-const navLinks = document.querySelectorAll('.nav-link');
+const navMenu   = document.getElementById('navMenu');
+const navLinks  = document.querySelectorAll('.nav-link');
 
-// Navbar scroll effect
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
 
-// Mobile menu toggle
 navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    const open = navMenu.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded', open);
 });
 
-// Close mobile menu when clicking a link
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-    });
-});
+navLinks.forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
 
-// Active navigation link on scroll
-const sections = document.querySelectorAll('.section, .hero');
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
 
 function setActiveNav() {
-    let currentSection = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (window.scrollY >= sectionTop - 200) {
-            currentSection = section.getAttribute('id');
-        }
+    let current = '';
+    sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 220) current = s.id;
     });
-
     navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-            link.classList.add('active');
-        }
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
     });
 }
-
-window.addEventListener('scroll', setActiveNav);
+window.addEventListener('scroll', setActiveNav, { passive: true });
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-
-        if (target) {
-            const offsetTop = target.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
+        const target = document.querySelector(href);
+        if (target) window.scrollTo({ top: target.offsetTop - 72, behavior: 'smooth' });
     });
 });
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
+// ===========================
+// Reveal on Scroll
+// ===========================
+const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            observer.unobserve(entry.target); // Optional: stop observing once revealed
+            revealObserver.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-// Observe elements for animation
-const animateElements = document.querySelectorAll('.reveal');
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-animateElements.forEach(el => {
-    observer.observe(el);
-});
+// ===========================
+// Counter Animation
+// ===========================
+function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const suffix = el.dataset.suffix || '';
+    if (isNaN(target)) return;
 
-// Dynamic year in footer
-const currentYear = new Date().getFullYear();
-const footerYear = document.querySelector('.footer-bottom p');
-if (footerYear) {
-    footerYear.textContent = `© ${currentYear} Daramola Joseph Omoyele. All rights reserved.`;
+    const duration = 1800;
+    const start = performance.now();
+
+    function update(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased    = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
 }
 
-// Add hover effect to timeline items
-const timelineItems = document.querySelectorAll('.timeline-item');
-timelineItems.forEach(item => {
-    item.addEventListener('mouseenter', function () {
-        this.querySelector('.timeline-marker').style.transform = 'scale(1.2)';
-    });
+// Observe the metrics strip (new dashboard counters)
+const metricsStrip = document.querySelector('.metrics-strip');
+if (metricsStrip) {
+    new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.metric-number[data-target]').forEach(animateCounter);
+            }
+        });
+    }, { threshold: 0.4 }).observe(metricsStrip);
+}
 
-    item.addEventListener('mouseleave', function () {
-        this.querySelector('.timeline-marker').style.transform = 'scale(1)';
+// ===========================
+// Project Filter Tabs
+// ===========================
+const filterBtns   = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        projectCards.forEach(card => {
+            const cat = card.dataset.category || '';
+            card.classList.toggle('hidden', filter !== 'all' && cat !== filter);
+        });
     });
 });
 
-// Parallax effect for hero orbs
-window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    const orbs = document.querySelectorAll('.gradient-orb');
-
-    orbs.forEach((orb, index) => {
-        const speed = (index + 1) * 0.1;
-        orb.style.transform = `translate(${scrolled * speed}px, ${scrolled * speed}px)`;
+// ===========================
+// Read More / Less (Publications)
+// ===========================
+document.querySelectorAll('.read-more-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const desc = btn.previousElementSibling;
+        if (!desc) return;
+        const isCollapsed = desc.classList.contains('collapsed');
+        desc.classList.toggle('collapsed', !isCollapsed);
+        desc.classList.toggle('expanded', isCollapsed);
+        btn.textContent = isCollapsed ? 'Read less ▴' : 'Read more ▾';
+        btn.setAttribute('aria-expanded', isCollapsed ? 'true' : 'false');
     });
 });
 
-// Add loading animation
+// ===========================
+// Timeline hover
+// ===========================
+document.querySelectorAll('.timeline-item').forEach(item => {
+    const marker = item.querySelector('.timeline-marker');
+    if (!marker) return;
+    item.addEventListener('mouseenter', () => marker.style.transform = 'scale(1.3)');
+    item.addEventListener('mouseleave', () => marker.style.transform = '');
+});
+
+// ===========================
+// Footer Year
+// ===========================
+const footerYear = document.getElementById('footer-year');
+if (footerYear) footerYear.textContent = new Date().getFullYear();
+
+// ===========================
+// Page Load Fade-In
+// ===========================
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
+    document.body.style.transition = 'opacity 0.4s ease';
+    requestAnimationFrame(() => requestAnimationFrame(() => { document.body.style.opacity = '1'; }));
 });
-
-// Console message for developers
-console.log('%c👋 Hello Developer!', 'color: #667eea; font-size: 20px; font-weight: bold;');
-console.log('%cThis portfolio was built with modern web technologies.', 'color: #4a5568; font-size: 14px;');
-console.log('%cInterested in working together? Get in touch!', 'color: #667eea; font-size: 14px;');

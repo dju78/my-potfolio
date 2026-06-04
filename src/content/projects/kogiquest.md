@@ -8,7 +8,7 @@ highlights:
   - text: "Community engagement hub"
   - text: "Local initiative tracking"
   - text: "User-friendly accessible design"
-tags:
+tech:
   - tag: "Community"
   - tag: "Social Impact"
   - tag: "Platform"

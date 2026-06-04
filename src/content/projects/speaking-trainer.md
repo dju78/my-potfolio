@@ -8,7 +8,7 @@ highlights:
   - text: "Interactive speaking exercises"
   - text: "Progress tracking and analytics"
   - text: "User-centred educational design"
-tags:
+tech:
   - tag: "EdTech"
   - tag: "Interactive"
   - tag: "Analytics"

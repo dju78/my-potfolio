@@ -9,7 +9,7 @@ highlights:
   - text: "Real-time care updates and reporting"
   - text: "Streamlined family engagement"
   - text: "Compliance with healthcare data standards"
-tags:
+tech:
   - tag: "Healthcare"
   - tag: "Product Design"
   - tag: "Communication"

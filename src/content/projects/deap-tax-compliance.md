@@ -8,7 +8,7 @@ highlights:
   - text: "Interactive data visualizations"
   - text: "Automated compliance metrics"
   - text: "Streamlined reporting for stakeholders"
-tags:
+tech:
   - tag: "Data Analytics"
   - tag: "Dashboard"
   - tag: "Compliance"

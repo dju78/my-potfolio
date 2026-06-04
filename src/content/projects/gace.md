@@ -8,7 +8,7 @@ highlights:
   - text: "Policy compliance tracking"
   - text: "Data aggregation from public sources"
   - text: "Actionable governance reports"
-tags:
+tech:
   - tag: "Governance"
   - tag: "Research"
   - tag: "Public Policy"

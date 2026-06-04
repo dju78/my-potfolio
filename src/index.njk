@@ -5,138 +5,332 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daramola Joseph Omoyele | Daramola Digital Labs</title>
-    <meta name="description"
-        content="Portfolio of Daramola Joseph Omoyele, Data Analyst, Research Analyst and Digital Product Builder. Showcasing data projects, research publications, dashboards, compliance tools and digital products under Daramola Digital Labs.">
+    <meta name="description" content="Portfolio of Daramola Joseph Omoyele, Data Analyst, Research Analyst and Digital Product Builder. Showcasing data projects, research publications, dashboards, compliance tools and digital products under Daramola Digital Labs.">
     <link rel="icon" type="image/svg+xml" href="/brand/daramola-digital-labs-icon.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
-    <!-- Navigation -->
+
+    <!-- ===================== NAVBAR ===================== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-brand">
-                <img src="/brand/daramola-digital-labs-icon.svg" alt="Daramola Digital Labs Logo" style="height: 32px; width: auto; margin-right: 10px;">
-                <span class="brand-name">Daramola Digital Labs</span>
-            </div>
+            <a href="#home" class="nav-brand">
+                <img src="/brand/daramola-digital-labs-icon.svg" alt="Daramola Digital Labs" class="nav-logo-img">
+                <div class="nav-brand-text">
+                    <span class="brand-name-top">DARAMOLA</span>
+                    <span class="brand-name-bottom">DIGITAL LABS</span>
+                </div>
+            </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#awards" class="nav-link">Awards</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home"         class="nav-link active">Home</a></li>
+                <li><a href="#about"        class="nav-link">About</a></li>
+                <li><a href="#projects"     class="nav-link">Projects</a></li>
+                <li><a href="#research"     class="nav-link">Research</a></li>
+                <li><a href="#skills"       class="nav-link">CV</a></li>
+                <li><a href="#contact"      class="nav-link">Contact</a></li>
             </ul>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-right">
+                <a href="#contact" class="nav-cta">Let's Connect</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===================== HERO ===================== -->
     <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
+        <!-- Background layers -->
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-grid"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <!-- Chart decoration SVG -->
+            <svg class="hero-chart-deco" viewBox="0 0 700 420" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <path d="M20 380 L110 300 L200 330 L300 210 L390 260 L480 140 L580 175 L680 70" stroke="#C49A2C" stroke-width="1.5" stroke-dasharray="6 3" opacity="0.35"/>
+                <circle cx="110" cy="300" r="4" fill="#C49A2C" opacity="0.45"/>
+                <circle cx="300" cy="210" r="5" fill="#C49A2C" opacity="0.5"/>
+                <circle cx="480" cy="140" r="6" fill="#C49A2C" opacity="0.55"/>
+                <circle cx="680" cy="70"  r="4" fill="#C49A2C" opacity="0.45"/>
+                <rect x="90"  y="320" width="14" height="80"  fill="#16864C" opacity="0.12" rx="2"/>
+                <rect x="180" y="270" width="14" height="130" fill="#16864C" opacity="0.1"  rx="2"/>
+                <rect x="270" y="215" width="14" height="185" fill="#16864C" opacity="0.09" rx="2"/>
+                <rect x="360" y="165" width="14" height="235" fill="#16864C" opacity="0.08" rx="2"/>
+                <rect x="450" y="110" width="14" height="290" fill="#16864C" opacity="0.07" rx="2"/>
+                <rect x="540" y="70"  width="14" height="330" fill="#16864C" opacity="0.06" rx="2"/>
+                <circle cx="200" cy="380" r="2" fill="rgba(196,154,44,0.3)"/>
+                <circle cx="350" cy="350" r="2" fill="rgba(196,154,44,0.3)"/>
+                <circle cx="500" cy="360" r="2" fill="rgba(196,154,44,0.2)"/>
+                <circle cx="620" cy="340" r="2" fill="rgba(196,154,44,0.2)"/>
+            </svg>
         </div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Let's Connect
-            </div>
-            <h1 class="hero-title">
-                <span class="title-line">Hi, I’m Daramola</span>
-                <span class="title-line gradient-text">Joseph Omoyele.</span>
-            </h1>
-            <p class="hero-subtitle">Data Analyst | Research Analyst | Digital Product Builder</p>
-            <p class="hero-description" style="font-weight: 500; font-size: 1.2rem; color: #C49A2C; margin-bottom: 0.5rem;">
-                A portfolio by Daramola Digital Labs
-            </p>
-            <p class="hero-description">
-                Data Analyst, Research Analyst and Digital Product Builder creating data-driven tools, dashboards, research outputs and digital products for smarter decisions and measurable impact.
-            </p>
-            <p class="hero-description" style="font-size: 1rem; max-width: 800px; margin-top: 1rem;">
-                I combine data analysis, applied research, automation and digital product development to solve practical problems across compliance, finance, healthcare, education and community development.
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary" style="color: white; border-color: white;">Download CV</a>
-                <a href="#contact" class="btn btn-primary">Contact Me</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">R | Python | SQL</div>
-                    <div class="stat-label">Analytics Stack</div>
+
+        <div class="container">
+            <div class="hero-inner">
+                <!-- Left: Text content -->
+                <div class="hero-left">
+                    <div class="hero-badge-pill">DATA &nbsp;|&nbsp; RESEARCH &nbsp;|&nbsp; IMPACT</div>
+                    <h1 class="hero-headline">
+                        Hi, I'm<br>
+                        <span class="hero-name">Daramola Joseph<br>Omoyele.</span><span class="hero-dot">.</span>
+                    </h1>
+                    <p class="hero-tagline">Data Analyst. Research Analyst. Digital Product Builder.</p>
+                    <p class="hero-description">
+                        I build data-driven solutions, produce research outputs, create insightful dashboards, and design digital products that support smarter decisions and measurable impact across people, organisations and communities.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-hero-primary">
+                            View Projects
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-hero-outline">
+                            Download CV
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">39</div>
-                    <div class="stat-label">Countries Analysed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Evidence-Led</div>
+
+                <!-- Right: Photo -->
+                <div class="hero-right">
+                    <div class="hero-photo-frame">
+                        <div class="hero-photo-ring" id="heroPhotoRing">
+                            <img src="/images/profile-photo.jpg"
+                                 alt="Daramola Joseph Omoyele"
+                                 class="hero-photo"
+                                 onerror="document.getElementById('heroPhotoRing').classList.add('no-photo')">
+                            <div class="hero-photo-fallback">DJO</div>
+                        </div>
+                        <div class="photo-deco-dot photo-deco-1"></div>
+                        <div class="photo-deco-dot photo-deco-2"></div>
+                        <div class="photo-deco-dot photo-deco-3"></div>
+                        <div class="photo-pulse-ring"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="featured-header">
+                <h2 class="featured-title">Featured Projects</h2>
+                <a href="#projects" class="featured-view-all">View all projects →</a>
+            </div>
+            <div class="featured-scroll-wrapper">
+                <div class="featured-grid">
+
+                    <div class="feat-card">
+                        <div class="feat-icon-box" style="background:#082554;">
+                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
+                        <h3 class="feat-name">CareTalk UK</h3>
+                        <p class="feat-category">Care &amp; Communication Platform</p>
+                        <p class="feat-desc">Connecting caregivers and families for better care coordination.</p>
+                        <a href="https://caretalk.omoyelejd.co.uk" target="_blank" rel="noopener" class="feat-link">View Project →</a>
+                    </div>
+
+                    <div class="feat-card">
+                        <div class="feat-icon-box" style="background:#16864C;">
+                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3h2v2h-2V6zm0 4h2v2h-2v-2zm-4-4h2v2H8V6zm0 4h2v2H8v-2zm-2 8v-2h8v2H6zm10 0h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg>
+                        </div>
+                        <h3 class="feat-name">TaxMate UK</h3>
+                        <p class="feat-category">Tax &amp; Compliance Platform</p>
+                        <p class="feat-desc">Simplifying tax calculations, filing, and compliance for individuals and SMEs.</p>
+                        <a href="https://taxmate.omoyelejd.co.uk/" target="_blank" rel="noopener" class="feat-link">View Project →</a>
+                    </div>
+
+                    <div class="feat-card">
+                        <div class="feat-icon-box" style="background:#C49A2C;">
+                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 15c1.66 0 2.99-1.34 2.99-3L15 6c0-1.66-1.34-3-3-3S9 4.34 9 6v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 15 6.7 12H5c0 3.42 2.72 6.23 6 6.72V22h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+                        </div>
+                        <h3 class="feat-name">Speaking Trainer</h3>
+                        <p class="feat-category">AI Speaking Coach</p>
+                        <p class="feat-desc">AI-powered feedback to improve pronunciation, fluency and confidence.</p>
+                        <a href="#projects" class="feat-link">View Project →</a>
+                    </div>
+
+                    <div class="feat-card">
+                        <div class="feat-icon-box" style="background:#16864C;">
+                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                        </div>
+                        <h3 class="feat-name">DEAP</h3>
+                        <p class="feat-category">Data Analytics Platform</p>
+                        <p class="feat-desc">Turning education data into insights that improve learning outcomes.</p>
+                        <a href="#projects" class="feat-link">View Project →</a>
+                    </div>
+
+                    <div class="feat-card">
+                        <div class="feat-icon-box" style="background:#082554;">
+                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                        </div>
+                        <h3 class="feat-name">GACE</h3>
+                        <p class="feat-category">Governance &amp; Accountability Tool</p>
+                        <p class="feat-desc">Credential assessment and verification for global compliance frameworks.</p>
+                        <a href="#projects" class="feat-link">View Project →</a>
+                    </div>
+
+                    <div class="feat-card">
+                        <div class="feat-icon-box" style="background:#16864C;">
+                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        </div>
+                        <h3 class="feat-name">Kogi Quest</h3>
+                        <p class="feat-category">Tourism &amp; Discovery Platform</p>
+                        <p class="feat-desc">Exploring Kogi State's culture, places and experiences.</p>
+                        <a href="#projects" class="feat-link">View Project →</a>
+                    </div>
+
+                    <div class="feat-card">
+                        <div class="feat-icon-box" style="background:#082554;">
+                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4zm0 14v-2h12v2H6z"/></svg>
+                        </div>
+                        <h3 class="feat-name">Research / Publications</h3>
+                        <p class="feat-category">Evidence. Insight. Impact.</p>
+                        <p class="feat-desc">Peer-reviewed research across data, health, education and policy.</p>
+                        <a href="#publications" class="feat-link">View Publications →</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== METRICS STRIP ===================== -->
+    <div class="metrics-strip">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" opacity="0.9"/></svg>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-number" data-target="15" data-suffix="+">0+</span>
+                        <span class="metric-label">Projects Delivered</span>
+                    </div>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 1.5V8h4.5L13 3.5zM6 20V4h5v5h5v11H6z" opacity="0.9"/></svg>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-number" data-target="16" data-suffix="+">0+</span>
+                        <span class="metric-label">Research Publications</span>
+                    </div>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" opacity="0.9"/></svg>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-number" data-target="5" data-suffix="+">0+</span>
+                        <span class="metric-label">Industries Impacted</span>
+                    </div>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8-1.41-1.42z" opacity="0.9"/></svg>
+                    </div>
+                    <div class="metric-content">
+                        <span class="metric-number" data-target="100" data-suffix="%">0%</span>
+                        <span class="metric-label">Commitment to Impact</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== QUICK NAV ===================== -->
+    <section class="quick-nav-section">
+        <div class="container">
+            <div class="quick-nav-grid">
+                <a href="#about" class="qn-card">
+                    <div class="qn-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <div class="qn-text">
+                        <h3>About</h3>
+                        <p>Background, skills, values and professional journey.</p>
+                        <span class="qn-link">Learn more →</span>
+                    </div>
+                </a>
+                <a href="#projects" class="qn-card">
+                    <div class="qn-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <div class="qn-text">
+                        <h3>Projects</h3>
+                        <p>Data projects, dashboards and digital products.</p>
+                        <span class="qn-link">Explore →</span>
+                    </div>
+                </a>
+                <a href="#publications" class="qn-card">
+                    <div class="qn-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                    <div class="qn-text">
+                        <h3>Research</h3>
+                        <p>Publications, studies and insights that drive change.</p>
+                        <span class="qn-link">Read more →</span>
+                    </div>
+                </a>
+                <a href="#contact" class="qn-card">
+                    <div class="qn-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div class="qn-text">
+                        <h3>Contact</h3>
+                        <p>Let's collaborate on meaningful work.</p>
+                        <span class="qn-link">Get in touch →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
     <section id="about" class="section about-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Brand Statement</span>
                 <h2 class="section-title">Daramola Digital Labs</h2>
             </div>
-            
-            <div class="value-proposition" style="margin-bottom: 4rem;">
+            <div class="value-proposition">
                 <div class="vp-content">
-                    <h3 class="vp-title">Solving Real-World Problems</h3>
+                    <h3 class="vp-title">Solving Real-World Problems with Data</h3>
                     <blockquote class="vp-quote">
                         "Daramola Digital Labs builds practical, data-driven digital tools that support compliance, financial reporting, research, education, healthcare and community development. Our products combine data analysis, automation and user-centred design to solve real-world problems."
                     </blockquote>
                 </div>
             </div>
-
             <div class="about-grid">
                 <div class="about-card reveal">
                     <div class="card-icon">📊</div>
                     <h3>Data-Driven Insights</h3>
-                    <p>I deliver data-driven economic insight and build digital products for regulation, public finance, and policy design.</p>
+                    <p>Delivering economic insight and building digital products for regulation, public finance, and policy design across government, consultancy and development sectors.</p>
                 </div>
                 <div class="about-card reveal">
                     <div class="card-icon">🎯</div>
                     <h3>Advanced Expertise</h3>
-                    <p>15+ years of public-sector and consulting experience combined with advanced applied econometrics
-                        and regulatory compliance analytics.</p>
+                    <p>15+ years of public-sector and consulting experience combined with advanced applied econometrics and regulatory compliance analytics.</p>
                 </div>
                 <div class="about-card reveal">
                     <div class="card-icon">💡</div>
                     <h3>Clear Communication</h3>
-                    <p>Strong ability to communicate complex economic concepts to policymakers and non-technical
-                        audiences, ensuring actionable insights.</p>
+                    <p>Strong ability to communicate complex economic concepts to policymakers and non-technical audiences, ensuring actionable, evidence-based insights.</p>
                 </div>
-            </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ===================== EXPERIENCE ===================== -->
     <section id="experience" class="section experience-section">
         <div class="container">
             <div class="section-header">
@@ -149,7 +343,7 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
-                                <h3>Finance & Economic Analyst</h3>
+                                <h3>Finance &amp; Economic Analyst</h3>
                                 <p class="company">Univelcity Consulting | UK</p>
                             </div>
                             <span class="timeline-date">July 2023 – Present</span>
@@ -164,20 +358,16 @@
                                 <li>Lead data governance aligned with GDPR and international standards</li>
                                 <li>Train analysts on compliance, analytics, and quality assurance</li>
                             </ul>
-                            <div class="impact-badge">
-                                <strong>Impact:</strong> Faster decisions • Higher analytical confidence • Stronger
-                                regulatory compliance
-                            </div>
+                            <div class="impact-badge"><strong>Impact:</strong> Faster decisions · Higher analytical confidence · Stronger regulatory compliance</div>
                         </div>
                     </div>
                 </div>
-
                 <div class="timeline-item reveal">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
-                                <h3>Financial & Economic Data Analyst</h3>
+                                <h3>Financial &amp; Economic Data Analyst</h3>
                                 <p class="company">Office of the Accountant General | Nigeria</p>
                             </div>
                             <span class="timeline-date">January 2014 – September 2022</span>
@@ -191,14 +381,10 @@
                                 <li>Built econometric models linking spending to outcomes</li>
                                 <li>Produced senior-level policy briefings</li>
                             </ul>
-                            <div class="impact-badge">
-                                <strong>Impact:</strong> Improved budget accountability • Stronger evidence for policy
-                                design
-                            </div>
+                            <div class="impact-badge"><strong>Impact:</strong> Improved budget accountability · Stronger evidence for policy design</div>
                         </div>
                     </div>
                 </div>
-
                 <div class="timeline-item reveal">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
@@ -218,10 +404,7 @@
                                 <li>Designed composite performance indices</li>
                                 <li>Guided regional offices on survey and data standards</li>
                             </ul>
-                            <div class="impact-badge">
-                                <strong>Impact:</strong> Measurable service delivery gains • Data-driven operational
-                                planning
-                            </div>
+                            <div class="impact-badge"><strong>Impact:</strong> Measurable service delivery gains · Data-driven operational planning</div>
                         </div>
                     </div>
                 </div>
@@ -229,12 +412,12 @@
         </div>
     </section>
 
-    <!-- Research Section -->
+    <!-- ===================== RESEARCH ===================== -->
     <section id="research" class="section research-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Academic Work</span>
-                <h2 class="section-title">Research & Major Projects</h2>
+                <h2 class="section-title">Research &amp; Major Projects</h2>
             </div>
             <div class="research-grid">
                 {% for item in collections.research | reverse %}
@@ -243,16 +426,10 @@
                     <h3>{{ item.data.title }}</h3>
                     <p class="research-institution">{{ item.data.institution }}</p>
                     <div class="research-details">
-                        <h4>Methodology/Focus areas:</h4>
-                        <ul>
-                            {% for pt in item.data.items %}
-                            <li>{{ pt.text }}</li>
-                            {% endfor %}
-                        </ul>
+                        <h4>Methodology / Focus areas:</h4>
+                        <ul>{% for pt in item.data.items %}<li>{{ pt.text }}</li>{% endfor %}</ul>
                         {% if item.data.outcome %}
-                        <div class="research-outcome">
-                            <strong>Outcome:</strong> {{ item.data.outcome }}
-                        </div>
+                        <div class="research-outcome"><strong>Outcome:</strong> {{ item.data.outcome }}</div>
                         {% endif %}
                     </div>
                 </div>
@@ -261,55 +438,51 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ===================== PROJECTS ===================== -->
     <section id="projects" class="section projects-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Portfolio</span>
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">All Projects</h2>
             </div>
-            <div class="project-showcase">
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="digital-product">Digital Products</button>
+                <button class="filter-btn" data-filter="data-dashboard">Dashboards</button>
+                <button class="filter-btn" data-filter="research-tool">Research Tools</button>
+                <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+            </div>
+            <div class="project-grid">
                 {% for project in collections.projects | reverse %}
-                <div class="project-card {% if loop.first %}featured-project{% endif %} reveal">
-                    <div class="project-header">
-                        <div class="project-badge">{{ project.data.badge }}</div>
-                        <h3>{{ project.data.title }}</h3>
-                        <p class="project-client">{{ project.data.client }}</p>
+                <div class="project-card reveal" data-category="{{ project.data.badge | lower | replace(' ', '-') }}">
+                    <div class="project-card-top">
+                        <div class="project-card-meta">
+                            <span class="project-badge">{{ project.data.badge }}</span>
+                            <span class="project-client-tag">{{ project.data.client }}</span>
+                        </div>
+                        <h3 class="project-title">{{ project.data.title }}</h3>
+                        <p class="project-desc">{{ project.data.description }}</p>
                     </div>
-                    <div class="project-content">
-                        <div class="project-description">
-                            <h4>Project Overview</h4>
-                            <p>{{ project.data.description }}</p>
+                    <div class="project-card-mid">
+                        <div class="project-highlights">
+                            {% for highlight in project.data.highlights %}
+                            <div class="highlight-item"><span class="highlight-dot">▸</span><span>{{ highlight.text }}</span></div>
+                            {% endfor %}
                         </div>
-                        <div class="project-features">
-                            <h4>Key Features</h4>
-                            <div class="features-grid">
-                                {% for highlight in project.data.highlights %}
-                                <div class="feature-item">
-                                    <div class="feature-icon">⚡</div>
-                                    <p>{{ highlight.text }}</p>
-                                </div>
-                                {% endfor %}
-                            </div>
+                        {% if project.data.tech %}
+                        <div class="tech-tags">
+                            {% for tag in project.data.tech %}<span class="tech-tag">{{ tag.tag }}</span>{% endfor %}
                         </div>
-                        <div class="project-tech">
-                            <h4>Technical Implementation</h4>
-                            <div class="tech-tags">
-                                {% for tag in project.data.tags %}
-                                <span class="tech-tag">{{ tag.tag }}</span>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        <div class="project-actions">
-                            <a href="{{ project.data.link }}" target="_blank" class="btn btn-primary">
-                                <span>View Live Demo</span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="project-card-foot">
+                        {% if project.data.link and project.data.link != '#' %}
+                        <a href="{{ project.data.link }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                            View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        {% else %}
+                        <span class="btn btn-disabled btn-sm">Coming Soon</span>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}
@@ -317,43 +490,37 @@
         </div>
     </section>
 
-    <!-- Awards Section -->
-    <section id="awards" class="section awards-section reveal">
+    <!-- ===================== AWARDS ===================== -->
+    <section id="awards" class="section awards-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Recognition</span>
-                <h2 class="section-title">Awards & Honours</h2>
+                <h2 class="section-title">Awards &amp; Honours</h2>
             </div>
             <div class="awards-grid">
                 {% for award in collections.awards | reverse %}
                 <div class="award-card reveal">
                     {% if award.data.image %}
                     <div class="award-image-container">
-                        <img src="{{ award.data.image }}" alt="{{ award.data.title }}" class="award-image">
+                        <img src="{{ award.data.image }}" alt="{{ award.data.title }}" class="award-image" loading="lazy">
                     </div>
                     {% endif %}
                     <div class="award-content">
-                        {% if award.data.badge %}
-                        <span class="award-badge">{{ award.data.badge }}</span>
-                        {% endif %}
+                        {% if award.data.badge %}<span class="award-badge">{{ award.data.badge }}</span>{% endif %}
                         <h3>{{ award.data.title }}</h3>
                         <p class="award-issuer">{{ award.data.issuer }}</p>
-                        <div class="award-description">
-                            {{ award.templateContent | safe }}
-                        </div>
+                        <div class="award-description">{{ award.templateContent | safe }}</div>
                         {% if award.data.coverage %}
-                        <div class="coverage-details" style="margin-top: 1rem; margin-bottom: 1rem;">
-                            <span class="coverage-label" style="font-size: 0.8rem;">Media Coverage:</span>
+                        <div class="coverage-details">
+                            <span class="coverage-label">Media Coverage:</span>
                             <div class="coverage-links">
                                 {% for item in award.data.coverage %}
-                                <a href="{{ item.url }}" target="_blank" class="news-pill">Source {{ loop.index }}</a>
+                                <a href="{{ item.url }}" target="_blank" rel="noopener" class="news-pill">Source {{ loop.index }}</a>
                                 {% endfor %}
                             </div>
                         </div>
                         {% endif %}
-                        <div class="award-date">
-                            <span>📅 {{ award.data.date_issued }}</span>
-                        </div>
+                        <div class="award-date"><span>📅 {{ award.data.date_issued }}</span></div>
                     </div>
                 </div>
                 {% endfor %}
@@ -361,7 +528,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ===================== SKILLS ===================== -->
     <section id="skills" class="section skills-section">
         <div class="container">
             <div class="section-header">
@@ -370,23 +537,16 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-category reveal">
-                    <div class="category-header">
-                        <div class="category-icon">📈</div>
-                        <h3>Economic & Policy Analysis</h3>
-                    </div>
+                    <div class="category-header"><div class="category-icon">📈</div><h3>Economic &amp; Policy Analysis</h3></div>
                     <ul class="skill-list">
                         <li>Regulatory economics and impact assessment</li>
                         <li>Cost-benefit analysis and options appraisal</li>
                         <li>Forecasting and policy evaluation</li>
-                        <li>HMT Green Book & Magenta Book aligned analysis</li>
+                        <li>HMT Green Book &amp; Magenta Book aligned analysis</li>
                     </ul>
                 </div>
-
                 <div class="skill-category reveal">
-                    <div class="category-header">
-                        <div class="category-icon">🔬</div>
-                        <h3>Econometrics & Data Science</h3>
-                    </div>
+                    <div class="category-header"><div class="category-icon">🔬</div><h3>Econometrics &amp; Data Science</h3></div>
                     <ul class="skill-list">
                         <li>Panel ARDL, panel data, time series, regression</li>
                         <li>Composite index construction</li>
@@ -394,24 +554,16 @@
                         <li>Survey design and validation</li>
                     </ul>
                 </div>
-
                 <div class="skill-category reveal">
-                    <div class="category-header">
-                        <div class="category-icon">💻</div>
-                        <h3>Analytics & Visualisation</h3>
-                    </div>
+                    <div class="category-header"><div class="category-icon">💻</div><h3>Analytics &amp; Visualisation</h3></div>
                     <ul class="skill-list">
                         <li>R (advanced), Python, SQL</li>
                         <li>Power BI, Tableau, Shiny, ggplot2</li>
                         <li>Automated dashboards and decision-support systems</li>
                     </ul>
                 </div>
-
                 <div class="skill-category reveal">
-                    <div class="category-header">
-                        <div class="category-icon">🛡️</div>
-                        <h3>Governance & Compliance</h3>
-                    </div>
+                    <div class="category-header"><div class="category-icon">🛡️</div><h3>Governance &amp; Compliance</h3></div>
                     <ul class="skill-list">
                         <li>RegTech and compliance analytics</li>
                         <li>GDPR and data governance frameworks</li>
@@ -419,27 +571,27 @@
                     </ul>
                 </div>
             </div>
-
             <div class="certifications">
-                <h3 class="cert-title">Certifications & Professional Development</h3>
+                <h3 class="cert-title">Certifications &amp; Professional Development</h3>
                 <div class="cert-grid">
                     <div class="cert-badge">Certified National Accountant (CNA)</div>
                     <div class="cert-badge">Google Data Analytics Professional Certificate</div>
                     <div class="cert-badge">Advanced SQL for Data Analysis</div>
                     <div class="cert-badge">Microsoft Power BI Advanced Reporting</div>
-                    <div class="cert-badge">GDPR & Data Protection Training</div>
+                    <div class="cert-badge">GDPR &amp; Data Protection Training</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Publications Section -->
+    <!-- ===================== PUBLICATIONS ===================== -->
     <section id="publications" class="section publications-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Thought Leadership</span>
-                <h2 class="section-title">Publications & Public Engagement</h2>
+                <h2 class="section-title">Publications &amp; Public Engagement</h2>
             </div>
+
             <div class="pub-section journal-articles">
                 <h3 class="pub-category-title"><span>Published</span> Journal Articles</h3>
                 <div class="publications-grid">
@@ -448,73 +600,52 @@
                         <div class="pub-icon">📄</div>
                         <h3>{{ article.data.title }}</h3>
                         <p class="pub-meta">{{ article.data.journal }} ({{ article.data.year }})</p>
-                        {% if article.data.doi %}
-                        <p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank">DOI Link</a></p>
-                        {% endif %}
-                        <div class="pub-description">
-                            {{ article.templateContent | safe }}
-                        </div>
-                        {% if article.data.contributors %}
-                        <div class="pub-contributors" style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">
-                            <strong>Contributors:</strong> {{ article.data.contributors }}
-                        </div>
-                        {% endif %}
-                        <a href="{{ article.data.doi }}" target="_blank" class="pub-link" style="margin-top: 1rem;">View Journal Article</a>
+                        {% if article.data.doi %}<p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
+                        <div class="pub-description pub-collapsible collapsed">{{ article.templateContent | safe }}</div>
+                        <button class="read-more-btn" aria-expanded="false">Read more ▾</button>
+                        {% if article.data.contributors %}<div class="pub-contributors"><strong>Contributors:</strong> {{ article.data.contributors }}</div>{% endif %}
+                        <a href="{{ article.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Journal Article →</a>
                     </div>
                     {% endfor %}
                 </div>
             </div>
 
             <div class="pub-section preprints">
-                <h3 class="pub-category-title"><span>Working</span> Papers & Preprints</h3>
+                <h3 class="pub-category-title"><span>Working</span> Papers &amp; Preprints</h3>
                 <div class="publications-grid">
                     {% for paper in collections.working_papers | reverse %}
                     <div class="publication-card journal-card reveal">
                         <div class="pub-icon">📄</div>
                         <h3>{{ paper.data.title }}</h3>
                         <p class="pub-meta">{{ paper.data.journal }} ({{ paper.data.year }})</p>
-                        {% if paper.data.doi %}
-                        <p class="pub-doi"><a href="{{ paper.data.doi }}" target="_blank">DOI Link</a></p>
-                        {% endif %}
-                        <div class="pub-description">
-                            {{ paper.templateContent | safe }}
-                        </div>
-                        {% if paper.data.contributors %}
-                        <div class="pub-contributors" style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">
-                            <strong>Contributors:</strong> {{ paper.data.contributors }}
-                        </div>
-                        {% endif %}
-                        <a href="{{ paper.data.doi }}" target="_blank" class="pub-link" style="margin-top: 1rem;">View Preprint Article</a>
+                        {% if paper.data.doi %}<p class="pub-doi"><a href="{{ paper.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
+                        <div class="pub-description pub-collapsible collapsed">{{ paper.templateContent | safe }}</div>
+                        <button class="read-more-btn" aria-expanded="false">Read more ▾</button>
+                        {% if paper.data.contributors %}<div class="pub-contributors"><strong>Contributors:</strong> {{ paper.data.contributors }}</div>{% endif %}
+                        <a href="{{ paper.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Preprint →</a>
                     </div>
                     {% endfor %}
                 </div>
             </div>
 
             <div class="pub-section books">
-                <h3 class="pub-category-title"><span>Books</span> & Handbooks</h3>
+                <h3 class="pub-category-title"><span>Books</span> &amp; Handbooks</h3>
                 <div class="publications-grid">
                     {% for book in collections.books | reverse %}
                     <div class="publication-card book-card flip-card reveal">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="{{ book.data.image }}" alt="{{ book.data.title }} Cover" class="book-cover-img" />
+                                <img src="{{ book.data.image }}" alt="{{ book.data.title }} Cover" class="book-cover-img" loading="lazy"/>
+                                <div class="flip-hint">Hover to read more</div>
                             </div>
                             <div class="flip-card-back">
                                 <h3>{{ book.data.title }}</h3>
-                                {% if book.data.subtitle %}
-                                <p class="pub-subtitle"><strong>Subtitle:</strong> {{ book.data.subtitle }}</p>
-                                {% endif %}
+                                {% if book.data.subtitle %}<p class="pub-subtitle"><em>{{ book.data.subtitle }}</em></p>{% endif %}
                                 <p class="pub-meta">Independently published ({{ book.data.year }})</p>
-                                {% if book.data.isbn %}
-                                <p class="pub-isbn">ISBN: {{ book.data.isbn }}</p>
-                                {% endif %}
-                                {% if book.data.asin %}
-                                <p class="pub-isbn">ASIN: {{ book.data.asin }}</p>
-                                {% endif %}
-                                <div class="pub-description">
-                                    {{ book.templateContent | safe }}
-                                </div>
-                                <a href="{{ book.data.link }}" target="_blank" class="pub-link">View on Amazon</a>
+                                {% if book.data.isbn %}<p class="pub-isbn">ISBN: {{ book.data.isbn }}</p>{% endif %}
+                                {% if book.data.asin %}<p class="pub-isbn">ASIN: {{ book.data.asin }}</p>{% endif %}
+                                <div class="pub-description">{{ book.templateContent | safe }}</div>
+                                <a href="{{ book.data.link }}" target="_blank" rel="noopener" class="pub-link">View on Amazon →</a>
                             </div>
                         </div>
                     </div>
@@ -523,33 +654,29 @@
             </div>
 
             <div class="pub-section policy-media">
-                <h3 class="pub-category-title"><span>Public</span> Engagement & Policy Commentary</h3>
+                <h3 class="pub-category-title"><span>Public</span> Engagement &amp; Policy Commentary</h3>
                 <div class="publications-grid">
                     <div class="publication-card media-card reveal">
                         <div class="pub-icon">📰</div>
-                        <h3>Media & Policy Commentary</h3>
+                        <h3>Media &amp; Policy Commentary</h3>
+                        <p class="pub-media-intro">Consistently translating economic evidence into public policy debate for wider audiences across major Nigerian media outlets.</p>
                         <div class="media-list">
                             {% for item in collections.media | reverse %}
                             <div class="media-item">
                                 <h4>{{ item.data.title }}</h4>
-                                <p class="media-description">{{ item.data.description }} ({{ item.data.date_issued }})</p>
+                                <p class="media-description">{{ item.data.description }} <span class="media-date">({{ item.data.date_issued }})</span></p>
                                 <div class="coverage-details">
                                     <span class="coverage-label">Published in:</span>
                                     <div class="coverage-links">
                                         {% for source in item.data.coverage %}
-                                        <a href="{{ source.url }}" target="_blank" class="news-pill">{{ source.source }}</a>
+                                        <a href="{{ source.url }}" target="_blank" rel="noopener" class="news-pill">{{ source.source }}</a>
                                         {% endfor %}
                                     </div>
-                                    {% if item.data.other_platforms %}
-                                    <p class="other-coverage">{{ item.data.other_platforms }}</p>
-                                    {% endif %}
+                                    {% if item.data.other_platforms %}<p class="other-coverage">{{ item.data.other_platforms }}</p>{% endif %}
                                 </div>
                             </div>
                             {% endfor %}
                         </div>
-                        <p class="pub-description">
-                            Consistently translating economic evidence into public policy debate for wider audiences across major Nigerian media outlets.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -567,7 +694,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ===================== CONTACT ===================== -->
     <section id="contact" class="section contact-section">
         <div class="container">
             <div class="section-header">
@@ -580,7 +707,7 @@
                         <div class="contact-icon">📧</div>
                         <h3>Email</h3>
                         <p><a href="mailto:dju78@yahoo.com">dju78@yahoo.com</a></p>
-                        <p><a href="mailto:1978dju@gmail.com">1978dju@gmail.com</a></p>
+                        <p><a href="mailto:dju78@omoyelejd.co.uk">dju78@omoyelejd.co.uk</a></p>
                     </div>
                     <div class="contact-card reveal">
                         <div class="contact-icon">📍</div>
@@ -591,46 +718,72 @@
                     <div class="contact-card reveal">
                         <div class="contact-icon">🔬</div>
                         <h3>ORCID iD</h3>
-                        <p><a href="https://orcid.org/0009-0006-0347-0499" target="_blank">0009-0006-0347-0499</a></p>
+                        <p><a href="https://orcid.org/0009-0006-0347-0499" target="_blank" rel="noopener">0009-0006-0347-0499</a></p>
+                    </div>
+                    <div class="contact-card reveal">
+                        <div class="contact-icon">💼</div>
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/dju78" target="_blank" rel="noopener">github.com/dju78</a></p>
                     </div>
                 </div>
                 <div class="availability-card">
                     <div class="availability-badge">
                         <span class="badge-dot pulse"></span>
-                        Let's Connect
+                        Open to Opportunities
                     </div>
                     <h3>Availability</h3>
                     <p>Open to hybrid, full-time, or part-time roles and travel as required.</p>
-                    <p class="availability-note">Ready to bring data-driven economic insights to your organization.</p>
+                    <p class="availability-note">Ready to bring data-driven economic insights to your organisation.</p>
+                    <div class="contact-actions">
+                        <a href="mailto:dju78@omoyelejd.co.uk" class="btn btn-primary">Send Email</a>
+                        <a href="https://orcid.org/0009-0006-0347-0499" target="_blank" rel="noopener" class="btn btn-outline-light">ORCID Profile</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3>Daramola Digital Labs</h3>
-                    <p>Data Analyst | Research Analyst | Digital Product Builder</p>
+                    <div class="footer-logo">
+                        <img src="/brand/daramola-digital-labs-icon.svg" alt="Daramola Digital Labs" height="32" loading="lazy">
+                        <div>
+                            <div class="footer-brand-name">Daramola Digital Labs</div>
+                            <div class="footer-brand-tagline">Data-driven tools for smarter decisions</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
                     <a href="#projects">Projects</a>
                     <a href="#research">Research</a>
                     <a href="#skills">Skills</a>
+                    <a href="#publications">Publications</a>
                     <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/dju78" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    </a>
+                    <a href="mailto:dju78@omoyelejd.co.uk" aria-label="Email" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13 20 6.01V6H4zm0 12h16V8.99l-8 6.5-8-6.5V18z"/></svg>
+                    </a>
+                    <a href="https://orcid.org/0009-0006-0347-0499" target="_blank" rel="noopener" aria-label="ORCID" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9h2v9h-2zm0-10.5V4.5h2V6h-2z"/></svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Daramola Digital Labs. All rights reserved.<br>Portfolio of Daramola Joseph Omoyele.</p>
+                <p>&copy; <span id="footer-year">2026</span> Daramola Digital Labs. All rights reserved. · Portfolio of Daramola Joseph Omoyele.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>

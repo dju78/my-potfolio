@@ -1,70 +1,119 @@
-# Daramola Digital Labs Portfolio
+# Daramola Digital Labs — Portfolio
+
+Professional portfolio website for **Daramola Joseph Omoyele** — Data Analyst, Research Analyst, and Digital Product Builder — built and presented under the **Daramola Digital Labs** brand.
+
+---
 
 ## Purpose
-This repository houses the professional portfolio of **Daramola Joseph Omoyele**, presenting a cohesive brand identity under **Daramola Digital Labs**. It serves as a comprehensive showcase of data-driven projects, research publications, dashboards, and digital products tailored for employers, clients, collaborators, investors, and innovation endorsing bodies.
 
-## Brand Statement
-**Daramola Digital Labs** builds practical, data-driven digital tools that support compliance, financial reporting, research, education, healthcare and community development. Our products combine data analysis, automation and user-centred design to solve real-world problems.
+This portfolio showcases:
+- **Digital products** — CareTalk UK, TaxMate UK, Speaking Trainer, DEAP, GACE, Kogi Quest
+- **Research & publications** — peer-reviewed journal articles, working papers, books and policy commentary
+- **Professional experience** — 15+ years across public sector and consulting
+- **Skills & certifications** — econometrics, data science, compliance analytics, visualisation
 
-## Key Sections
-- **Hero**: Professional introduction and high-level value proposition.
-- **About**: Brand statement and strategic positioning.
-- **Skills**: Core capabilities in data analytics, research, and product building.
-- **Projects**: Interactive showcase of featured digital products and tools.
-- **Research/Publications**: Academic work, working papers, and media commentary.
-- **Contact**: Professional availability and contact channels.
+---
+
+## Brand Identity
+
+| Element       | Value                                      |
+|---------------|--------------------------------------------|
+| Brand name    | Daramola Digital Labs                      |
+| Tagline       | Data-driven tools for smarter decisions    |
+| Navy          | `#082554`                                  |
+| Green         | `#16864C`                                  |
+| Gold          | `#C49A2C`                                  |
+| Background    | `#F8FAFC`                                  |
+| Heading font  | Poppins (700 / 800 / 900)                  |
+| Body font     | Inter (400 / 500 / 600)                    |
+
+---
 
 ## Featured Projects
-- **CareTalk UK**: Healthcare communication platform.
-- **TaxMate UK**: Financial management & tax tracking tool.
-- **Speaking Trainer**: Interactive language education application.
-- **DEAP**: Tax compliance and evaluative analytics platform.
-- **GACE**: Government accountability and compliance evaluator.
-- **Kogi Quest**: Community development and social impact platform.
-- **Research & Publications Portfolio**: Comprehensive econometric and policy analysis outputs.
+
+| Project | Category | URL |
+|---------|----------|-----|
+| CareTalk UK | Healthcare Communication | caretalk.omoyelejd.co.uk |
+| TaxMate UK | Tax & Compliance Platform | taxmate.omoyelejd.co.uk |
+| Speaking Trainer | AI Language Coach | — |
+| DEAP | Data Analytics Platform | — |
+| GACE | Governance & Accountability | — |
+| Kogi Quest | Tourism & Discovery | — |
+| Research / Publications | Academic & Policy Output | See Publications section |
+
+---
 
 ## Tech Stack
-- **Static Site Generator**: 11ty (Eleventy)
-- **Styling**: Vanilla CSS (CSS Variables, Flexbox, CSS Grid)
-- **Templating**: Nunjucks (`.njk`)
-- **Assets**: SVG graphics
 
-## Development Instructions
+| Layer | Technology |
+|-------|-----------|
+| Static Site Generator | [Eleventy (11ty)](https://www.11ty.dev/) v3.x |
+| Templating | Nunjucks (`.njk`) |
+| Content | Markdown with YAML front matter |
+| Styles | Plain CSS (custom properties, Grid, Flexbox) |
+| Fonts | Google Fonts — Poppins + Inter |
+| CMS | Netlify CMS (admin at `/admin`) |
+| Deployment | Netlify |
 
-### Prerequisites
-- Node.js (v14 or higher recommended)
-- npm
+---
 
-### Local Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/dju78/my-potfolio.git
-   cd portfolio
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run start
-   ```
-   The site will be available locally at `http://localhost:8080`.
+## Development
 
-## Deployment Instructions
-The portfolio is designed for seamless deployment on platforms like Netlify, Vercel, or GitHub Pages.
+**Install dependencies:**
+```bash
+npm install
+```
 
-To build the production-ready site:
+**Start dev server** (live reload, port 8080):
+```bash
+npm run start
+```
+
+**Build for production** (outputs to `_site/`):
 ```bash
 npm run build
 ```
-The compiled files will be output to the `_site` directory.
 
-## Contact / Portfolio Notes
-- **Name**: Daramola Joseph Omoyele
-- **Professional Title**: Data Analyst | Research Analyst | Digital Product Builder
-- **Email**: dju78@yahoo.com / 1978dju@gmail.com
-- **ORCID**: [0009-0006-0347-0499](https://orcid.org/0009-0006-0347-0499)
+---
+
+## Project Structure
+
+```
+src/
+├── index.njk                    # Main page template
+├── styles.css                   # All styles
+├── script.js                    # JS — nav, counters, filters, read-more
+├── images/                      # Images (profile photo, books, awards)
+├── admin/                       # Netlify CMS config
+└── content/
+    ├── projects/                # Project markdown files
+    ├── journal-articles/        # Published journal articles
+    ├── working-papers/          # Preprints & working papers
+    ├── books/                   # Books & handbooks
+    ├── media/                   # Policy commentary & media
+    ├── research/                # Academic dissertations
+    └── awards/                  # Awards & honours
+```
+
+### Adding your profile photo
+
+Place your professional headshot at:
+```
+src/images/profile-photo.jpg
+```
+The hero section will automatically display it inside the gold circular frame.
+
+---
+
+## Deployment
+
+Deployed via **Netlify** from the `main` branch. Every push triggers an automatic rebuild.
+
+Configuration: `netlify.toml`
+
+---
 
 ## Copyright
-© 2026 Daramola Digital Labs. All rights reserved. Portfolio of Daramola Joseph Omoyele.
+
+© 2026 Daramola Digital Labs. All rights reserved.
+Portfolio of Daramola Joseph Omoyele.

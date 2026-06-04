@@ -8,7 +8,7 @@ highlights:
   - text: "Econometric models and impact assessments"
   - text: "Published journal articles and working papers"
   - text: "Media commentary and public engagement"
-tags:
+tech:
   - tag: "Econometrics"
   - tag: "Policy Design"
   - tag: "Research"

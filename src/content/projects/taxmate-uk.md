@@ -9,7 +9,7 @@ highlights:
   - text: "Automated tax reservation suggestions"
   - text: "HMRC Self Assessment deadline countdown"
   - text: "Visual financial trend analysis"
-tags:
+tech:
   - tag: "FinTech"
   - tag: "HMRC Compliance"
   - tag: "Web App"
