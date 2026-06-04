@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+    <!-- Icon part -->
+    <g transform="translate(10, 0)">
+        <path d="M30 20 h30 c22 0, 40 18, 40 40 s-18 40 -40 40 H30 V20 z" fill="none" stroke="#082554" stroke-width="16" />
+        <path d="M45 70 v15 M60 50 v35 M75 60 v25" stroke="#16864C" stroke-width="10" stroke-linecap="round" />
+        <path d="M30 75 L50 55 L65 60 L90 35" fill="none" stroke="#C49A2C" stroke-width="4" />
+        <circle cx="50" cy="55" r="4" fill="#C49A2C" />
+        <circle cx="65" cy="60" r="4" fill="#C49A2C" />
+        <circle cx="90" cy="35" r="4" fill="#C49A2C" />
+    </g>
+    <!-- Text part -->
+    <g transform="translate(130, 0)">
+        <text x="0" y="55" font-family="'Inter', sans-serif" font-weight="800" font-size="32" fill="#082554" letter-spacing="2">DARAMOLA</text>
+        <text x="0" y="85" font-family="'Inter', sans-serif" font-weight="600" font-size="18" fill="#16864C" letter-spacing="4">DIGITAL LABS</text>
+        <line x1="0" y1="100" x2="250" y2="100" stroke="#C49A2C" stroke-width="2" />
+        <text x="0" y="115" font-family="'Inter', sans-serif" font-weight="400" font-style="italic" font-size="12" fill="#334155">Data-driven tools for smarter decisions</text>
+    </g>
+</svg>
