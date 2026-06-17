@@ -687,7 +687,7 @@
                                     <span class="coverage-label">Published in:</span>
                                     <div class="coverage-links">
                                         {% for source in item.data.coverage %}
-                                        <a href="{{ source.url }}" target="_blank" rel="noopener" class="news-pill">{{ source.source }}</a>
+                                        {% if source.url %}<a href="{{ source.url }}" target="_blank" rel="noopener" class="news-pill">{{ source.source }}</a>{% else %}<span class="news-pill news-pill-plain">{{ source.source }}</span>{% endif %}
                                         {% endfor %}
                                     </div>
                                     {% if item.data.other_platforms %}<p class="other-coverage">{{ item.data.other_platforms }}</p>{% endif %}

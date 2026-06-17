@@ -606,6 +606,8 @@ ul, ol { list-style:none; }
     font-size:.76rem; font-weight:600; text-decoration:none; transition:var(--ease);
 }
 .news-pill:hover { background:var(--green); color:#fff; transform:translateY(-1px); }
+.news-pill-plain { background:rgba(100,116,139,.08); color:var(--text-2); border-color:rgba(100,116,139,.2); cursor:default; }
+.news-pill-plain:hover { background:rgba(100,116,139,.08); color:var(--text-2); transform:none; }
 .other-coverage { font-size:.78rem; color:var(--text-3); font-style:italic; margin-top:.4rem; }
 
 /* ============================================================
