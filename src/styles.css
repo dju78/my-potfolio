@@ -98,10 +98,7 @@ ul, ol { list-style:none; }
 
 /* Brand */
 .nav-brand   { display:flex; align-items:center; gap:.65rem; }
-.nav-logo-img { height:36px; width:auto; }
-.nav-brand-text { display:flex; flex-direction:column; line-height:1.1; }
-.brand-name-top    { font-family:var(--font-display); font-size:.95rem; font-weight:800; color:var(--navy); letter-spacing:.04em; }
-.brand-name-bottom { font-size:.65rem; font-weight:600; color:var(--gold); letter-spacing:.18em; }
+.nav-logo-img { height:56px; width:auto; }
 
 /* Nav links */
 .nav-menu  { display:flex; gap:.15rem; }
