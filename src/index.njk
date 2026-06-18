@@ -741,6 +741,41 @@
         </div>
     </section>
 
+    <!-- ===================== EXTERNAL MENTIONS ===================== -->
+    <section id="external-mentions" class="section mentions-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Research Visibility</span>
+                <h2 class="section-title">External Mentions &amp; Research Visibility</h2>
+            </div>
+            <div class="mentions-grid">
+                {% for item in collections.external_mentions | reverse %}
+                <div class="mention-card reveal">
+                    <div class="mention-meta">
+                        <span class="mention-type">{{ item.data.mention_type }}</span>
+                        {% if item.data.date_display %}<span class="mention-date">{{ item.data.date_display }}</span>{% endif %}
+                    </div>
+                    <h3>{{ item.data.title }}</h3>
+                    {% if item.data.source %}<p class="mention-source"><strong>Source:</strong> {{ item.data.source }}</p>{% endif %}
+                    <p class="mention-desc">{{ item.data.description }}</p>
+                    {% if item.data.papers %}
+                    <div class="mention-papers">
+                        <span class="mention-papers-label">Papers mentioned:</span>
+                        <ul>{% for p in item.data.papers %}<li>{{ p }}</li>{% endfor %}</ul>
+                    </div>
+                    {% endif %}
+                    <div class="policy-tags">
+                        {% for tag in item.data.tags %}<span class="policy-tag">{{ tag }}</span>{% endfor %}
+                    </div>
+                    {% if item.data.link %}
+                    <a href="{{ item.data.link }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm mention-btn">{{ item.data.button_text or "View Mention" }}</a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
     <!-- ===================== CONTACT ===================== -->
     <section id="contact" class="section contact-section">
         <div class="container">
