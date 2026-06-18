@@ -596,8 +596,57 @@
                     <div class="cert-badge">Google Data Analytics Professional Certificate</div>
                     <div class="cert-badge">Advanced SQL for Data Analysis</div>
                     <div class="cert-badge">Microsoft Power BI Advanced Reporting</div>
-                    <div class="cert-badge">GDPR &amp; Data Protection Training</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Academic Background</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card reveal">
+                    <h3>MSc Economics with Data Analytics</h3>
+                    <p class="edu-institution">University of Essex</p>
+                    <p class="edu-award"><strong>Award:</strong> Master of Science with Merit</p>
+                    <p class="edu-date">Awarded 29 November 2023</p>
+                </div>
+                <div class="edu-card reveal">
+                    <h3>BSc Economics</h3>
+                    <p class="edu-institution">University of Ilorin</p>
+                    <p class="edu-date">Awarded 2006</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section id="certifications" class="section certlearn-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Professional Learning</span>
+                <h2 class="section-title">Certifications &amp; Professional Learning</h2>
+            </div>
+            <div class="certlearn-grid">
+                {% for item in collections.certifications | reverse %}
+                <div class="certlearn-card reveal">
+                    <h3>{{ item.data.title }}</h3>
+                    <p class="certlearn-provider">{{ item.data.provider }}</p>
+                    {% if item.data.date_display %}<p class="certlearn-date">Completed {{ item.data.date_display }}</p>{% endif %}
+                    {% if item.data.cert_no %}<p class="certlearn-no">Certificate No: {{ item.data.cert_no }}</p>{% endif %}
+                    <p class="certlearn-relevance">{{ item.data.relevance }}</p>
+                    <div class="policy-tags">
+                        {% for tag in item.data.tags %}<span class="policy-tag">{{ tag }}</span>{% endfor %}
+                    </div>
+                    {% if item.data.verify %}
+                    <a href="{{ item.data.verify }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm certlearn-btn">Verify Certificate</a>
+                    {% endif %}
+                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
