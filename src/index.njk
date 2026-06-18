@@ -712,6 +712,35 @@
         </div>
     </section>
 
+    <!-- ===================== POLICY CONTRIBUTIONS ===================== -->
+    <section id="policy" class="section policy-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Policy Engagement</span>
+                <h2 class="section-title">Policy Contributions &amp; Consultation Responses</h2>
+            </div>
+            <div class="policy-intro">
+                <p>I contribute independent policy analysis and consultation responses across UK tax administration, data governance, automated decision-making, energy data regulation, climate-related compliance, and public-sector digital reform.</p>
+                <p>My work combines data analysis, economic reasoning, compliance insight, behavioural understanding, and practical implementation recommendations. The focus is on improving data quality, strengthening audit trails, reducing avoidable compliance failure, supporting proportionate regulation, and making public systems easier for people and organisations to use correctly.</p>
+            </div>
+            <div class="policy-grid">
+                {% for item in collections.policy_contributions %}
+                <div class="policy-card reveal">
+                    <span class="policy-area">{{ item.data.area }}</span>
+                    <h3>{{ item.data.title }}</h3>
+                    <p class="policy-desc">{{ item.data.description }}</p>
+                    <div class="policy-tags">
+                        {% for tag in item.data.tags %}<span class="policy-tag">{{ tag }}</span>{% endfor %}
+                    </div>
+                    {% if item.data.pdf %}
+                    <a href="{{ item.data.pdf }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm policy-btn">{{ item.data.pdf_label or "Read Submission" }}</a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
     <!-- ===================== CONTACT ===================== -->
     <section id="contact" class="section contact-section">
         <div class="container">
