@@ -1,13 +1,14 @@
 # Daramola Digital Labs — Portfolio
 
-Professional portfolio website for **Daramola Joseph Omoyele** — Data Analyst, Research Analyst, and Digital Product Builder — built and presented under the **Daramola Digital Labs** brand.
+🌐 **Live Website:** https://daramolajo.co.uk
 
+Professional portfolio website for **Daramola Joseph Omoyele** — Research Analyst, Data Analyst, and AI Product Builder — presented under the **Daramola Digital Labs** brand.
 ---
 
 ## Purpose
 
 This portfolio showcases:
-- **Digital products** — CareTalk UK, TaxMate UK, Speaking Trainer, DEAP, GACE, Kogi Quest
+- **Digital products** — CarePhrase UK, TaxMate UK, Speaking Trainer, DEAP, GACE, Kogi Quest
 - **Research & publications** — peer-reviewed journal articles, working papers, books and policy commentary
 - **Professional experience** — 15+ years across public sector and consulting
 - **Skills & certifications** — econometrics, data science, compliance analytics, visualisation
@@ -32,14 +33,15 @@ This portfolio showcases:
 ## Featured Projects
 
 | Project | Category | URL |
-|---------|----------|-----|
-| CareTalk UK | Healthcare Communication | caretalk.omoyelejd.co.uk |
-| TaxMate UK | Tax & Compliance Platform | taxmate.omoyelejd.co.uk |
-| Speaking Trainer | AI Language Coach | — |
-| DEAP | Data Analytics Platform | — |
+|---|---|---|
+| CarePhrase | Healthcare Communication | https://carephrase.com |
+| CarePhrase Communication Academy | AI Communication Training | https://comms.carephrase.com |
+| TaxMate UK | Tax & Compliance Platform | https://taxmate.omoyelejd.co.uk |
+| Speaking Trainer | AI Language Coach | https://speech.omoyelejd.co.uk |
+| DEAP | Data Analytics Platform | https://deaptaxcompliance.netlify.app |
 | GACE | Governance & Accountability | — |
-| Kogi Quest | Tourism & Discovery | — |
-| Research / Publications | Academic & Policy Output | See Publications section |
+| Kogi Quest | Tourism & Discovery | https://dju78.github.io/kogiquest |
+| Research & Publications | Academic & Policy Output | See Publications section |
 
 ---
 
