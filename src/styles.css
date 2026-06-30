@@ -921,3 +921,87 @@ ul, ol { list-style:none; }
     .publication-card.flip-card { height:420px; }
     .featured-header { flex-direction:column; align-items:flex-start; gap:.5rem; }
 }
+
+/* ===================== Featured Policy Contribution ===================== */
+.fpc-section { background: var(--bg-light); }
+.fpc-panel { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--shadow-lg); overflow: hidden; }
+.fpc-panel > div { padding: 2rem 2.5rem; }
+.fpc-panel > div + div { border-top: 1px solid var(--border); }
+
+.fpc-kicker { font-size: .8rem; font-weight: 600; letter-spacing: .04em; color: var(--navy-light); text-transform: uppercase; margin: 0 0 .75rem; }
+.fpc-lead p { margin: 0; font-size: 1.05rem; line-height: 1.8; color: var(--text); }
+.fpc-lead strong { color: var(--navy); }
+
+.fpc-eyebrow, .fpc-group-title { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--navy-light); font-weight: 700; margin: 0 0 1rem; }
+.fpc-group-title { margin-top: 1.5rem; }
+.fpc-block-title { font-family: var(--font-display); font-size: 1.3rem; color: var(--navy); margin: 0 0 .25rem; }
+.fpc-block-sub { font-size: .92rem; color: #64748b; margin: 0 0 1.5rem; }
+
+/* Evidence at a glance */
+.fpc-ev-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: .85rem; }
+.fpc-ev { background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--r-md); padding: .9rem; display: flex; flex-direction: column; gap: .3rem; }
+.fpc-ev-label { font-weight: 700; font-size: .9rem; color: var(--navy); }
+.fpc-ev-desc { font-size: .8rem; color: #64748b; line-height: 1.45; }
+.fpc-ev-accent { border-color: rgba(196,154,44,.5); background: rgba(196,154,44,.07); }
+.fpc-ev-accent .fpc-ev-label { color: var(--gold); }
+
+/* Two threads */
+.fpc-threads { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.fpc-thread { background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--r-md); padding: 1.5rem; }
+.fpc-tag { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: .25rem .6rem; border-radius: var(--r-full); margin-bottom: .8rem; }
+.fpc-tag-1 { background: rgba(22,134,76,.12); color: var(--green); }
+.fpc-tag-2 { background: rgba(196,154,44,.14); color: var(--gold); }
+.fpc-thread h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--navy); margin: 0 0 .6rem; }
+.fpc-thread h4 { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: #64748b; margin: 1rem 0 .35rem; }
+.fpc-thread p { font-size: .95rem; line-height: 1.65; margin: 0 0 .6rem; color: var(--text); }
+.fpc-thread strong { color: var(--navy); }
+.fpc-small { font-size: .85rem; color: #64748b; font-style: italic; }
+
+/* Chronology */
+.fpc-timeline { position: relative; margin-left: .5rem; padding-left: 1.75rem; border-left: 2px solid var(--border); }
+.fpc-tl { position: relative; padding-bottom: 1.4rem; display: flex; flex-direction: column; }
+.fpc-tl:last-child { padding-bottom: 0; }
+.fpc-tl::before { content: ""; position: absolute; left: -2.25rem; top: .2rem; width: 12px; height: 12px; border-radius: 50%; background: var(--navy-light); border: 2px solid var(--bg-white); box-shadow: 0 0 0 2px var(--navy-light); }
+.fpc-tl-fin::before { background: var(--gold); box-shadow: 0 0 0 2px var(--gold); }
+.fpc-tl-policy::before { background: var(--bg-white); border: 2px solid var(--gold); box-shadow: 0 0 0 2px var(--gold); width: 14px; height: 14px; left: -2.3rem; }
+.fpc-tl-date { font-size: .76rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #64748b; }
+.fpc-tl-title { font-weight: 600; color: var(--navy); margin: .15rem 0; }
+.fpc-tl-policy .fpc-tl-title { color: var(--gold); }
+.fpc-tl-desc { font-size: .9rem; color: #64748b; }
+.fpc-ext { display: inline-block; font-size: .62rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold); border-radius: 4px; padding: .05rem .4rem; margin-left: .5rem; vertical-align: middle; }
+
+/* Media + research cards */
+.fpc-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .8rem; }
+.fpc-card, .fpc-paper { display: flex; flex-direction: column; gap: .25rem; text-decoration: none; border: 1px solid var(--border); border-radius: var(--r-md); padding: .9rem 1rem; background: var(--bg-light); transition: var(--ease); }
+.fpc-card:hover, .fpc-paper:hover { border-color: var(--navy-light); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.fpc-outlet { font-weight: 700; font-size: .92rem; color: var(--navy); }
+.fpc-headline { font-size: .85rem; color: var(--text); }
+.fpc-meta { font-size: .78rem; color: #64748b; }
+.fpc-go { font-size: .82rem; font-weight: 600; color: var(--gold); margin-top: .25rem; }
+.fpc-paper { padding: 1.4rem 1.6rem; }
+.fpc-paper-title { font-family: var(--font-display); font-size: 1.05rem; color: var(--navy); line-height: 1.4; }
+
+/* Attribution + impact */
+.fpc-attrib { font-size: .86rem; color: #64748b; background: var(--bg-light); }
+.fpc-attrib strong { color: var(--navy-light); }
+.fpc-impact { background: var(--navy); color: var(--text-inv); }
+.fpc-impact h3 { font-family: var(--font-display); color: #fff; font-size: 1.3rem; margin: 0 0 .6rem; }
+.fpc-impact p { margin: 0; color: #cbd5e1; line-height: 1.7; }
+
+/* Policy themes */
+.fpc-theme-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
+.fpc-theme { text-align: center; }
+.fpc-theme .fpc-ic { width: 46px; height: 46px; margin: 0 auto .6rem; border-radius: var(--r-md); background: var(--bg-light); display: flex; align-items: center; justify-content: center; }
+.fpc-theme .fpc-ic svg { stroke: var(--navy-light); fill: none; }
+.fpc-theme-label { font-size: .82rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+
+@media (max-width: 900px) {
+  .fpc-ev-grid { grid-template-columns: repeat(2, 1fr); }
+  .fpc-theme-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 680px) {
+  .fpc-panel > div { padding: 1.5rem 1.25rem; }
+  .fpc-threads { grid-template-columns: 1fr; }
+  .fpc-ev-grid { grid-template-columns: 1fr; }
+  .fpc-theme-grid { grid-template-columns: repeat(2, 1fr); }
+}
