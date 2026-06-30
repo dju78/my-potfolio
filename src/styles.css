@@ -1005,3 +1005,61 @@ ul, ol { list-style:none; }
   .fpc-ev-grid { grid-template-columns: 1fr; }
   .fpc-theme-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ===================== Featured Policy Contribution — preview + page ===================== */
+/* Homepage preview card */
+.fpc-preview-section { background: var(--bg-light); }
+.fpc-preview { display: grid; grid-template-columns: 1.6fr 1fr; gap: 1.5rem; align-items: center; text-decoration: none; background: var(--bg-white); border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--r-lg); box-shadow: var(--shadow-md); padding: 1.75rem 2rem; transition: var(--ease); }
+.fpc-preview:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.fpc-preview-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: .5rem; }
+.fpc-preview-title { font-family: var(--font-display); font-size: 1.5rem; color: var(--navy); margin: 0 0 .6rem; }
+.fpc-preview-text { font-size: .98rem; line-height: 1.7; color: var(--text); margin: 0 0 1rem; }
+.fpc-preview-cta { display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; color: var(--gold); }
+.fpc-preview-cta svg { stroke: var(--gold); transition: transform .2s; }
+.fpc-preview:hover .fpc-preview-cta svg { transform: translateX(3px); }
+.fpc-preview-aside { display: flex; flex-direction: column; gap: .6rem; }
+.fpc-preview-pill { font-size: .8rem; font-weight: 600; color: var(--navy); background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--r-full); padding: .5rem .9rem; text-align: center; }
+
+/* Cross-links from Research / Publications / Media */
+.fpc-xlink { margin: 1.25rem 0 0; }
+.fpc-xlink a { color: var(--navy-light); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(8,37,84,.2); padding-bottom: 1px; }
+.fpc-xlink a:hover { color: var(--gold); border-color: var(--gold); }
+.fpc-xlink-center { text-align: center; margin: 0 0 2rem; }
+.fpc-xlink-inline { display: inline-block; margin-top: 1rem; color: var(--gold); font-weight: 700; text-decoration: none; border: 0; }
+.fpc-xlink-inline:hover { text-decoration: underline; }
+
+/* Dedicated Policy Contributions page */
+.pc-page { padding-top: 7rem; padding-bottom: 4rem; background: var(--bg); }
+.pc-breadcrumb { font-size: .85rem; color: #64748b; margin-bottom: 1.5rem; }
+.pc-breadcrumb a { color: var(--navy-light); text-decoration: none; }
+.pc-breadcrumb a:hover { color: var(--gold); }
+.pc-breadcrumb-sep { margin: 0 .5rem; color: #94a3b8; }
+.pc-hero { margin-bottom: 2rem; }
+.pc-hero .section-tag { color: var(--gold); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .75rem; }
+.pc-hero h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--navy); margin: .5rem 0 .75rem; line-height: 1.15; }
+.pc-hero-sub { font-size: 1.05rem; line-height: 1.7; color: var(--text); max-width: 760px; }
+.pc-related { margin-top: 2rem; }
+
+/* Mobile refinements: equal-height cards, stacked threads, compact evidence, tighter spacing */
+.fpc-card { height: 100%; }
+.fpc-card .fpc-go { margin-top: auto; }
+@media (max-width: 900px) {
+  .fpc-ev-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
+  .fpc-preview { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.5rem 1.25rem; }
+  .fpc-panel > div { padding: 1.5rem 1.1rem; }
+  .fpc-threads { grid-template-columns: 1fr; gap: 1rem; }
+  .fpc-ev-grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+  .fpc-ev { padding: .7rem; }
+  .fpc-ev-label { font-size: .82rem; }
+  .fpc-ev-desc { font-size: .74rem; }
+  .fpc-theme-grid { grid-template-columns: repeat(3, 1fr); }
+  .fpc-timeline { margin-left: .25rem; padding-left: 1.4rem; }
+  .fpc-cards { grid-template-columns: 1fr; }
+  .pc-page { padding-top: 6rem; }
+  .pc-hero h1 { font-size: 1.7rem; }
+}
+@media (max-width: 420px) {
+  .fpc-ev-grid { grid-template-columns: 1fr; }
+}

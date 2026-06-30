@@ -41,6 +41,7 @@
                 <li><a href="#about"        class="nav-link">About</a></li>
                 <li><a href="#projects"     class="nav-link">Projects</a></li>
                 <li><a href="#research"     class="nav-link">Research</a></li>
+                <li><a href="/policy-contributions/" class="nav-link">Policy</a></li>
                 <li><a href="#skills"       class="nav-link">CV</a></li>
                 <li><a href="#contact"      class="nav-link">Contact</a></li>
             </ul>
@@ -453,6 +454,7 @@
                 </div>
                 {% endfor %}
             </div>
+            <p class="fpc-xlink"><a href="/policy-contributions/">See the featured policy case study: Digital Identity Harmonisation in Nigeria →</a></p>
         </div>
     </section>
 
@@ -659,6 +661,8 @@
                 <h2 class="section-title">Publications &amp; Public Engagement</h2>
             </div>
 
+            <p class="fpc-xlink fpc-xlink-center"><a href="/policy-contributions/">Featured: Digital Identity Harmonisation in Nigeria — research, media &amp; policy relevance →</a></p>
+
             <div class="pub-section journal-articles">
                 <h3 class="pub-category-title"><span>Published</span> Journal Articles</h3>
                 <div class="publications-grid">
@@ -666,12 +670,13 @@
                     <div class="publication-card journal-card reveal">
                         <div class="pub-icon">📄</div>
                         <h3>{{ article.data.title }}</h3>
-                        <p class="pub-meta">{{ article.data.journal }}{% if article.data.year %} ({{ article.data.year }}){% endif %}</p>
+                        <p class="pub-meta">{{ article.data.journal }}{% if article.data.volume %}, {{ article.data.volume }}{% endif %}{% if article.data.pages %}, pp. {{ article.data.pages }}{% endif %}{% if article.data.year %} ({{ article.data.year }}){% endif %}</p>
+                        {% if article.data.published %}<p class="pub-meta pub-published">Published {{ article.data.published }}</p>{% endif %}
                         {% if article.data.doi %}<p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
                         <div class="pub-description pub-collapsible collapsed">{{ article.templateContent | safe }}</div>
                         <button class="read-more-btn" aria-expanded="false">Read more ▾</button>
                         {% if article.data.contributors %}<div class="pub-contributors"><strong>Contributors:</strong> {{ article.data.contributors }}</div>{% endif %}
-                        <a href="{{ article.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Journal Article →</a>
+                        <a href="{{ article.data.url or article.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Journal Article →</a>
                     </div>
                     {% endfor %}
                 </div>
@@ -744,6 +749,7 @@
                             </div>
                             {% endfor %}
                         </div>
+                        <a class="fpc-xlink fpc-xlink-inline" href="/policy-contributions/">See the featured policy case study →</a>
                     </div>
                 </div>
             </div>
@@ -761,116 +767,22 @@
         </div>
     </section>
 
-    <!-- ===================== FEATURED POLICY CONTRIBUTION ===================== -->
-    <section id="featured-policy" class="section fpc-section">
+    <!-- ============ FEATURED POLICY CONTRIBUTION (homepage preview) ============ -->
+    <section id="featured-policy" class="section fpc-preview-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Featured Policy Contribution</span>
-                <h2 class="section-title">Digital Identity Harmonisation in Nigeria</h2>
-            </div>
-
-            <div class="fpc-panel">
-                <div class="fpc-lead">
-                    <p class="fpc-kicker">Research · Public Commentary · National Media · Policy Relevance</p>
-                    <p>Between September and October 2025, I contributed to national public debate on the future of Nigeria's identity infrastructure — arguing that the country's fragmented identification systems should be harmonised around the <strong>National Identification Number (NIN)</strong>. The commentary was reported by the News Agency of Nigeria, Peoples Gazette, Nigeria Communications Week and Biometric Update, and developed further in a peer-reviewed journal article published in March 2026. In June 2026 the <strong>NIMC Act 2026</strong> was signed into law, reinforcing the NIN as the cornerstone of identity verification and accelerating database harmonisation — the direction this analysis had <strong>anticipated</strong>.</p>
+            <a class="fpc-preview" href="/policy-contributions/">
+                <div class="fpc-preview-body">
+                    <span class="fpc-preview-tag">Featured Policy Contribution</span>
+                    <h2 class="fpc-preview-title">Digital Identity Harmonisation in Nigeria</h2>
+                    <p class="fpc-preview-text">Research, public commentary and a peer-reviewed publication examining Nigeria's digital identity infrastructure and the harmonisation of identification systems around the National Identification Number (NIN).</p>
+                    <span class="fpc-preview-cta">Read More <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </div>
-
-                <div class="fpc-evidence">
-                    <h3 class="fpc-eyebrow">Evidence at a glance</h3>
-                    <div class="fpc-ev-grid">
-                        <div class="fpc-ev"><span class="fpc-ev-label">Peer-reviewed article</span><span class="fpc-ev-desc"><em>Administrative Reach and State Capacity</em> · IJDES 14(1), 2026</span></div>
-                        <div class="fpc-ev"><span class="fpc-ev-label">DOI registered</span><span class="fpc-ev-desc">10.37745/ijdes.13/vol14n13344</span></div>
-                        <div class="fpc-ev"><span class="fpc-ev-label">National media coverage</span><span class="fpc-ev-desc">NAN, Peoples Gazette, Comms Week, The Nigerian Observer, RealNews</span></div>
-                        <div class="fpc-ev"><span class="fpc-ev-label">International media coverage</span><span class="fpc-ev-desc">Biometric Update; syndicated via Sierra Leone Press</span></div>
-                        <div class="fpc-ev fpc-ev-accent"><span class="fpc-ev-label">Policy relevance</span><span class="fpc-ev-desc">NIN reinforced as the identity cornerstone following the NIMC Act 2026</span></div>
-                    </div>
+                <div class="fpc-preview-aside" aria-hidden="true">
+                    <span class="fpc-preview-pill">Peer-reviewed article · IJDES 2026</span>
+                    <span class="fpc-preview-pill">National &amp; international media</span>
+                    <span class="fpc-preview-pill">Policy relevance · NIMC Act 2026</span>
                 </div>
-
-                <div class="fpc-threads">
-                    <div class="fpc-thread">
-                        <span class="fpc-tag fpc-tag-1">Thread 1 — Identity harmonisation</span>
-                        <h3>Harmonising identification around the NIN</h3>
-                        <h4>What I argued (Sept–Oct 2025)</h4>
-                        <p>Nigeria operates multiple parallel identifiers — the NIN, BVN, voter registration, SIM registration and a new Tax ID — with limited interoperability. I advocated treating the <strong>NIN as the primary key</strong> for identity verification, including as the basis for voter qualification, supported by legal reform and structured data-sharing between agencies.</p>
-                        <h4>How it aligned with later policy</h4>
-                        <p>The NIMC Act 2026 (signed 26 June 2026) reinforces the NIN as the cornerstone of identity verification nationwide and is intended to accelerate the harmonisation of identity databases. My commentary <strong>anticipated and aligned with</strong> this direction.</p>
-                        <p class="fpc-small">It does not claim authorship of, or influence over, the legislation.</p>
-                    </div>
-                    <div class="fpc-thread">
-                        <span class="fpc-tag fpc-tag-2">Thread 2 — Financial inclusion risk</span>
-                        <h3>Financial inclusion risks in the new Tax ID (TIN)</h3>
-                        <h4>The caution I raised (Sept 2025)</h4>
-                        <p>In parallel, I warned that making a new <strong>Tax Identification Number (TIN)</strong> a precondition for opening bank accounts could risk excluding millions of unbanked Nigerians from the financial system if introduced without first harmonising existing identifiers.</p>
-                        <h4>Why it is distinct</h4>
-                        <p>This is a <strong>financial-inclusion risk</strong> about sequencing and implementation — separate from the harmonisation argument. It frames a risk to monitor as reforms roll out, rather than a prediction about the NIMC Act.</p>
-                        <p class="fpc-small">Reported by Biometric Update, Nigeria Communications Week and The Nigerian Observer.</p>
-                    </div>
-                </div>
-
-                <div class="fpc-chrono">
-                    <h3 class="fpc-block-title">Chronology</h3>
-                    <p class="fpc-block-sub">Independent commentary and research, shown alongside the subsequent national policy development for context.</p>
-                    <div class="fpc-timeline">
-                        <div class="fpc-tl"><span class="fpc-tl-date">Sept 2025</span><span class="fpc-tl-title">Public commentary: harmonise identification around the NIN</span><span class="fpc-tl-desc">Reported by the News Agency of Nigeria and Peoples Gazette.</span></div>
-                        <div class="fpc-tl fpc-tl-fin"><span class="fpc-tl-date">Sept 2025</span><span class="fpc-tl-title">Warning: new Tax ID could frustrate financial inclusion</span><span class="fpc-tl-desc">Reported by Biometric Update, Nigeria Communications Week and The Nigerian Observer.</span></div>
-                        <div class="fpc-tl"><span class="fpc-tl-date">Oct 2025</span><span class="fpc-tl-title">Further commentary: NIN as a basis for voter qualification</span><span class="fpc-tl-desc">Reported by the News Agency of Nigeria.</span></div>
-                        <div class="fpc-tl"><span class="fpc-tl-date">24 March 2026</span><span class="fpc-tl-title">Peer-reviewed journal article — <em>Administrative Reach and State Capacity: Interoperability Failures in Nigeria's Digital Identification Infrastructure</em></span><span class="fpc-tl-desc">Published in the International Journal of Development and Economic Sustainability, 14(1), 33–44.</span></div>
-                        <div class="fpc-tl fpc-tl-policy"><span class="fpc-tl-date">26 June 2026</span><span class="fpc-tl-title">NIMC Act 2026 signed into law <span class="fpc-ext">External policy development</span></span><span class="fpc-tl-desc">Reinforces the NIN as the cornerstone of identity verification and accelerates database harmonisation.</span></div>
-                    </div>
-                </div>
-
-                <div class="fpc-media">
-                    <h3 class="fpc-block-title">Media coverage</h3>
-                    <p class="fpc-block-sub">National and specialist outlets that reported the commentary, grouped by theme.</p>
-
-                    <h4 class="fpc-group-title">Identity harmonisation (NIN)</h4>
-                    <div class="fpc-cards">
-                        <a class="fpc-card" href="https://nannews.ng/data-analyst-urges-fg-to-harmonise-identification-numbers/" target="_blank" rel="noopener"><span class="fpc-outlet">News Agency of Nigeria</span><span class="fpc-headline">Data Analyst Urges FG to Harmonise Identification Numbers</span><span class="fpc-meta">15 Sept 2025</span><span class="fpc-go">Read article →</span></a>
-                        <a class="fpc-card" href="https://gazettengr.com/economist-seeks-harmonisation-of-identification-numbers-amid-tin-requirement/" target="_blank" rel="noopener"><span class="fpc-outlet">Peoples Gazette</span><span class="fpc-headline">Economist seeks harmonisation of identification numbers amid TIN requirement</span><span class="fpc-meta">14 Sept 2025</span><span class="fpc-go">Read article →</span></a>
-                        <a class="fpc-card" href="https://nannews.ng/analyst-seeks-legal-reform-data-harmonisation-for-use-of-nin-during-elections/" target="_blank" rel="noopener"><span class="fpc-outlet">News Agency of Nigeria</span><span class="fpc-headline">Analyst Seeks Legal Reform, Data Harmonisation For Use of NIN During Elections</span><span class="fpc-meta">13 Oct 2025</span><span class="fpc-go">Read article →</span></a>
-                        <a class="fpc-card" href="https://realnewsmagazine.net/data-analyst-urges-fg-to-harmonise-identification-numbers-2/" target="_blank" rel="noopener"><span class="fpc-outlet">RealNews Magazine</span><span class="fpc-headline">Data Analyst Urges FG to Harmonise Identification Numbers</span><span class="fpc-meta">Sept 2025</span><span class="fpc-go">Read article →</span></a>
-                    </div>
-
-                    <h4 class="fpc-group-title">Financial inclusion &amp; the new Tax ID</h4>
-                    <div class="fpc-cards">
-                        <a class="fpc-card" href="https://www.biometricupdate.com/202509/nigerias-new-tax-id-could-frustrate-financial-inclusion-efforts-says-analyst" target="_blank" rel="noopener"><span class="fpc-outlet">Biometric Update</span><span class="fpc-headline">Nigeria's new tax ID could frustrate financial inclusion efforts</span><span class="fpc-meta">16 Sept 2025</span><span class="fpc-go">Read article →</span></a>
-                        <a class="fpc-card" href="https://nigeriacommunicationsweek.com.ng/fgs-new-tax-id-could-frustrate-financial-inclusion-efforts-omoyele/" target="_blank" rel="noopener"><span class="fpc-outlet">Nigeria Communications Week</span><span class="fpc-headline">FG's New Tax ID Could Frustrate Financial Inclusion Efforts</span><span class="fpc-meta">17 Sept 2025</span><span class="fpc-go">Read article →</span></a>
-                        <a class="fpc-card" href="https://nigerianobservernews.com/2025/09/38m-nigerians-risk-financial-exclusion-over-new-tax-id-analyst/" target="_blank" rel="noopener"><span class="fpc-outlet">The Nigerian Observer</span><span class="fpc-headline">38m Nigerians risk financial exclusion over new tax ID</span><span class="fpc-meta">15 Sept 2025</span><span class="fpc-go">Read article →</span></a>
-                    </div>
-                </div>
-
-                <div class="fpc-research">
-                    <h3 class="fpc-block-title">Research output</h3>
-                    <a class="fpc-paper" href="https://eajournals.org/ijdes/vol14-issue-1-2026/administrative-reach-and-state-capacity-interoperability-failures-in-nigerias-digital-identification-infrastructure/" target="_blank" rel="noopener">
-                        <span class="fpc-outlet">Published Journal Article</span>
-                        <span class="fpc-paper-title">Administrative Reach and State Capacity: Interoperability Failures in Nigeria's Digital Identification Infrastructure</span>
-                        <span class="fpc-meta">International Journal of Development and Economic Sustainability, 14(1), 33–44</span>
-                        <span class="fpc-meta">Published 24 March 2026 · DOI: 10.37745/ijdes.13/vol14n13344</span>
-                        <span class="fpc-go">Read article →</span>
-                    </a>
-                </div>
-
-                <div class="fpc-attrib">
-                    <strong>Attribution note.</strong> This feature places independent public commentary and research alongside a subsequent legislative development for context. It does not assert that the commentary caused, shaped, or directly influenced the NIMC Act 2026.
-                </div>
-
-                <div class="fpc-impact">
-                    <h3>Why this matters</h3>
-                    <p>This body of work demonstrates an ability to identify emerging governance challenges early, communicate evidence to public and policy audiences, and contribute constructively to national debate on digital identity, data governance, and financial inclusion.</p>
-                </div>
-
-                <div class="fpc-themes">
-                    <h3 class="fpc-block-title">Policy themes</h3>
-                    <div class="fpc-theme-grid">
-                        <div class="fpc-theme"><div class="fpc-ic"><svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M5 16c.7-1.6 2-2.4 3.5-2.4S11.3 14.4 12 16M14 9h5M14 12h5M14 15h3"/></svg></div><div class="fpc-theme-label">Digital Identity</div></div>
-                        <div class="fpc-theme"><div class="fpc-ic"><svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div><div class="fpc-theme-label">Data Governance</div></div>
-                        <div class="fpc-theme"><div class="fpc-ic"><svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8"><path d="M3 21h18M4 10h16M12 3l8 4H4zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div><div class="fpc-theme-label">Public Policy</div></div>
-                        <div class="fpc-theme"><div class="fpc-ic"><svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div class="fpc-theme-label">Regulatory Compliance</div></div>
-                        <div class="fpc-theme"><div class="fpc-ic"><svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.2c0-1.2 1.1-1.9 2.5-1.9s2.5.7 2.5 1.7-1 1.6-2.5 1.9-2.5.9-2.5 1.9 1.1 1.7 2.5 1.7 2.5-.7 2.5-1.9"/></svg></div><div class="fpc-theme-label">Financial Inclusion</div></div>
-                        <div class="fpc-theme"><div class="fpc-ic"><svg width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8"><path d="M4 4v16h16"/><path d="M7 15l3-4 3 2 4-6"/></svg></div><div class="fpc-theme-label">Evidence-Based Analysis</div></div>
-                    </div>
-                </div>
-            </div>
+            </a>
         </div>
     </section>
 
