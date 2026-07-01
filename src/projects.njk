@@ -1,0 +1,56 @@
+---
+layout: base.njk
+permalink: /projects/index.html
+pageTitle: "All Projects | Daramola Joseph Omoyele"
+pageDescription: "Digital products, dashboards and research tools built by Daramola Joseph Omoyele under Daramola Digital Labs."
+---
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Portfolio</span>
+            <h2 class="section-title">All Projects</h2>
+        </div>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="digital-product">Digital Products</button>
+            <button class="filter-btn" data-filter="data-dashboard">Dashboards</button>
+            <button class="filter-btn" data-filter="research-tool">Research Tools</button>
+            <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+        </div>
+        <div class="project-grid">
+            {% for project in collections.projects | reverse %}
+            <div class="project-card reveal" data-category="{{ project.data.badge | lower | replace(' ', '-') }}">
+                <div class="project-card-top">
+                    <div class="project-card-meta">
+                        <span class="project-badge">{{ project.data.badge }}</span>
+                        <span class="project-client-tag">{{ project.data.client }}</span>
+                    </div>
+                    <h3 class="project-title">{{ project.data.title }}</h3>
+                    <p class="project-desc">{{ project.data.description }}</p>
+                </div>
+                <div class="project-card-mid">
+                    <div class="project-highlights">
+                        {% for highlight in project.data.highlights %}
+                        <div class="highlight-item"><span class="highlight-dot">▸</span><span>{{ highlight.text }}</span></div>
+                        {% endfor %}
+                    </div>
+                    {% if project.data.tech %}
+                    <div class="tech-tags">
+                        {% for tag in project.data.tech %}<span class="tech-tag">{{ tag.tag }}</span>{% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="project-card-foot">
+                    {% if project.data.link and project.data.link != '#' %}
+                    <a href="{{ project.data.link }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                        View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    {% else %}
+                    <span class="btn btn-disabled btn-sm">Coming Soon</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

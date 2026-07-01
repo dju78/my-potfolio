@@ -1,0 +1,35 @@
+---
+layout: base.njk
+permalink: /books/index.html
+pageTitle: "Books & Handbooks | Daramola Joseph Omoyele"
+pageDescription: "Books and handbooks written by Daramola Joseph Omoyele."
+---
+<section id="books" class="section publications-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Thought Leadership</span>
+            <h2 class="section-title">Books &amp; Handbooks</h2>
+        </div>
+        <div class="publications-grid">
+            {% for book in collections.books | reverse %}
+            <div class="publication-card book-card flip-card reveal">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="{{ book.data.image }}" alt="{{ book.data.title }} Cover" class="book-cover-img" loading="lazy"/>
+                        <div class="flip-hint">Hover to read more</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>{{ book.data.title }}</h3>
+                        {% if book.data.subtitle %}<p class="pub-subtitle"><em>{{ book.data.subtitle }}</em></p>{% endif %}
+                        <p class="pub-meta">Independently published ({{ book.data.year }})</p>
+                        {% if book.data.isbn %}<p class="pub-isbn">ISBN: {{ book.data.isbn }}</p>{% endif %}
+                        {% if book.data.asin %}<p class="pub-isbn">ASIN: {{ book.data.asin }}</p>{% endif %}
+                        <div class="pub-description">{{ book.templateContent | safe }}</div>
+                        <a href="{{ book.data.link }}" target="_blank" rel="noopener" class="pub-link">View on Amazon →</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

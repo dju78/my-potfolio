@@ -1,0 +1,42 @@
+---
+layout: base.njk
+permalink: /awards/index.html
+pageTitle: "Awards & Honours | Daramola Joseph Omoyele"
+pageDescription: "Awards and recognition earned by Daramola Joseph Omoyele."
+---
+<section id="awards" class="section awards-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Recognition</span>
+            <h2 class="section-title">Awards &amp; Honours</h2>
+        </div>
+        <div class="awards-grid">
+            {% for award in collections.awards | reverse %}
+            <div class="award-card reveal">
+                {% if award.data.image %}
+                <div class="award-image-container">
+                    <img src="{{ award.data.image }}" alt="{{ award.data.title }}" class="award-image" loading="lazy">
+                </div>
+                {% endif %}
+                <div class="award-content">
+                    {% if award.data.badge %}<span class="award-badge">{{ award.data.badge }}</span>{% endif %}
+                    <h3>{{ award.data.title }}</h3>
+                    <p class="award-issuer">{{ award.data.issuer }}</p>
+                    <div class="award-description">{{ award.templateContent | safe }}</div>
+                    {% if award.data.coverage %}
+                    <div class="coverage-details">
+                        <span class="coverage-label">Media Coverage:</span>
+                        <div class="coverage-links">
+                            {% for item in award.data.coverage %}
+                            <a href="{{ item.url }}" target="_blank" rel="noopener" class="news-pill">Source {{ loop.index }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="award-date"><span>📅 {{ award.data.date_issued }}</span></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

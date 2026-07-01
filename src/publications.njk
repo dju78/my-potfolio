@@ -1,0 +1,42 @@
+---
+layout: base.njk
+permalink: /publications/index.html
+pageTitle: "Publications | Daramola Joseph Omoyele"
+pageDescription: "Peer-reviewed journal articles published by Daramola Joseph Omoyele."
+---
+<section id="publications" class="section publications-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Thought Leadership</span>
+            <h2 class="section-title">Published Journal Articles</h2>
+        </div>
+        <p class="fpc-xlink fpc-xlink-center"><a href="/policy-contributions/">Featured: Digital Identity Harmonisation in Nigeria — research, media &amp; policy relevance →</a></p>
+        <div class="publications-grid">
+            {% for article in collections.journal_articles | reverse %}
+            <div class="publication-card journal-card reveal">
+                <div class="pub-icon">📄</div>
+                <h3>{{ article.data.title }}</h3>
+                <p class="pub-meta">{{ article.data.journal }}{% if article.data.volume %}, {{ article.data.volume }}{% endif %}{% if article.data.pages %}, pp. {{ article.data.pages }}{% endif %}{% if article.data.year %} ({{ article.data.year }}){% endif %}</p>
+                {% if article.data.published %}<p class="pub-meta pub-published">Published {{ article.data.published }}</p>{% endif %}
+                {% if article.data.doi %}<p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
+                <p class="pub-summary">{{ article.templateContent | excerpt(2) }}</p>
+                <div class="pub-full-details collapsed">{{ article.templateContent | safe }}</div>
+                <button class="read-more-btn" aria-expanded="false">Read more ▾</button>
+                {% if article.data.contributors %}<div class="pub-contributors"><strong>Contributors:</strong> {{ article.data.contributors }}</div>{% endif %}
+                <a href="{{ article.data.url or article.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Journal Article →</a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="interests-section">
+            <h3>Professional Interests</h3>
+            <div class="interests-tags">
+                <span class="interest-tag">Economic regulation and innovation</span>
+                <span class="interest-tag">Data protection and privacy economics</span>
+                <span class="interest-tag">RegTech and compliance analytics</span>
+                <span class="interest-tag">Digital identity and governance</span>
+                <span class="interest-tag">Housing affordability and public finance</span>
+            </div>
+        </div>
+    </div>
+</section>

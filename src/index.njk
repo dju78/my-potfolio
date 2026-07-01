@@ -1,59 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daramola Joseph Omoyele | Daramola Digital Labs</title>
-    <meta name="description" content="Portfolio of Daramola Joseph Omoyele, Data Analyst, Research Analyst and Digital Product Builder. Showcasing data projects, research publications, dashboards, compliance tools and digital products under Daramola Digital Labs.">
-    <meta property="og:image" content="/djo-portfolio-logo.png">
-    <meta property="og:title" content="Daramola Joseph Omoyele | Portfolio">
-    <meta property="og:type" content="website">
-    <link rel="icon" type="image/png" href="/djo-portfolio-logo.png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Daramola Joseph Omoyele",
-      "url": "https://daramolajo.co.uk/",
-      "logo": "https://daramolajo.co.uk/djo-portfolio-logo.png",
-      "image": "https://daramolajo.co.uk/djo-portfolio-logo.png",
-      "jobTitle": "Data Analyst and Digital Product Builder"
-    }
-    </script>
-</head>
-
-<body>
-
-    <!-- ===================== NAVBAR ===================== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-brand">
-                <img src="/djo-portfolio-logo.png" alt="DJO professional portfolio logo" title="Daramola Joseph Omoyele Logo" class="nav-logo-img">
-            </a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home"         class="nav-link active">Home</a></li>
-                <li><a href="#about"        class="nav-link">About</a></li>
-                <li><a href="#projects"     class="nav-link">Projects</a></li>
-                <li><a href="#research"     class="nav-link">Research</a></li>
-                <li><a href="/policy-contributions/" class="nav-link">Policy</a></li>
-                <li><a href="#skills"       class="nav-link">CV</a></li>
-                <li><a href="#contact"      class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <a href="#contact" class="nav-cta">Let's Connect</a>
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
+---
+layout: base.njk
+pageTitle: "Daramola Joseph Omoyele | Daramola Digital Labs"
+pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research Analyst and Digital Product Builder. Showcasing data projects, research publications, dashboards, compliance tools and digital products under Daramola Digital Labs."
+---
     <!-- ===================== HERO ===================== -->
     <section id="home" class="hero">
         <!-- Background layers -->
@@ -131,7 +80,7 @@
         <div class="container">
             <div class="featured-header">
                 <h2 class="featured-title">Featured Projects</h2>
-                <a href="#projects" class="featured-view-all">View all projects →</a>
+                <a href="/projects/" class="featured-view-all">View all projects →</a>
             </div>
             <div class="featured-scroll-wrapper">
                 <div class="featured-grid">
@@ -183,7 +132,7 @@
                         <h3 class="feat-name">GACE</h3>
                         <p class="feat-category">Governance &amp; Accountability Tool</p>
                         <p class="feat-desc">Credential assessment and verification for global compliance frameworks.</p>
-                        <a href="#projects" class="feat-link">View Project →</a>
+                        <a href="/projects/" class="feat-link">View Project →</a>
                     </div>
 
                     <div class="feat-card">
@@ -203,7 +152,7 @@
                         <h3 class="feat-name">Research / Publications</h3>
                         <p class="feat-category">Evidence. Insight. Impact.</p>
                         <p class="feat-desc">Peer-reviewed research across data, health, education and policy.</p>
-                        <a href="#publications" class="feat-link">View Publications →</a>
+                        <a href="/publications/" class="feat-link">View Publications →</a>
                     </div>
 
                 </div>
@@ -341,210 +290,70 @@
         </div>
     </section>
 
-    <!-- ===================== EXPERIENCE ===================== -->
-    <section id="experience" class="section experience-section">
+    <!-- ============ FEATURED POLICY CONTRIBUTION (homepage preview) ============ -->
+    <section id="featured-policy" class="section fpc-preview-section">
+        <div class="container">
+            <a class="fpc-preview" href="/policy-contributions/">
+                <div class="fpc-preview-body">
+                    <span class="fpc-preview-tag">Featured Policy Contribution</span>
+                    <h2 class="fpc-preview-title">Digital Identity Harmonisation in Nigeria</h2>
+                    <p class="fpc-preview-text">Research, public commentary and a peer-reviewed publication examining Nigeria's digital identity infrastructure and the harmonisation of identification systems around the National Identification Number (NIN).</p>
+                    <span class="fpc-preview-cta">Read More <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </div>
+                <div class="fpc-preview-aside" aria-hidden="true">
+                    <span class="fpc-preview-pill">Peer-reviewed article · IJDES 2026</span>
+                    <span class="fpc-preview-pill">National &amp; international media</span>
+                    <span class="fpc-preview-pill">Policy relevance · NIMC Act 2026</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===================== PROFESSIONAL EXPERIENCE (PREVIEW) ===================== -->
+    <section id="experience" class="section experience-section section-preview">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Career Journey</span>
                 <h2 class="section-title">Professional Experience</h2>
             </div>
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Data &amp; Finance Analyst</h3>
-                                <p class="company">Univelcity Computing | UK / Remote</p>
-                            </div>
-                            <span class="timeline-date">July 2023 – Present</span>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="role-focus"><strong>Role focus:</strong> Data analysis, economic modelling, financial analysis, business intelligence, policy evidence, programme monitoring, compliance assurance, and stakeholder insight.</p>
-                            <h4>Key Responsibilities:</h4>
-                            <ul>
-                                <li>Delivered economic, financial, and research-led data analysis for donor-funded development programmes and business research, informing policy-focused decision-making for senior stakeholders.</li>
-                                <li>Applied econometric modelling, forecasting, cost-benefit analysis, risk assessment, and scenario analysis across multi-currency environments including GBP, USD, EUR, and NGN.</li>
-                                <li>Designed and built automated dashboards and reporting tools in Power BI, Tableau, and Shiny, reducing manual reporting time by 30% and improving stakeholder access to timely insights.</li>
-                                <li>Analysed complex datasets using R, Python, SQL, and Excel to identify trends, risks, performance gaps, and decision-relevant insights.</li>
-                                <li>Produced evidence-based reports, policy briefings, and analytical summaries that translated technical findings into clear recommendations for non-technical audiences.</li>
-                                <li>Supported programme monitoring by developing indicators, tracking performance trends, and reporting progress against agreed outcomes and operational priorities.</li>
-                                <li>Strengthened data governance, GDPR-aligned data handling, validation checks, and quality assurance processes to improve data accuracy, confidentiality, and compliance.</li>
-                                <li>Trained junior analysts on analytics workflows, dashboard reporting, compliance standards, data quality checks, and insight communication.</li>
-                            </ul>
-                            <div class="impact-badge"><strong>Impact:</strong> Reduced reporting time by 30%, improved analytical confidence, strengthened compliance, and supported faster evidence-based decision-making.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Data Analyst</h3>
-                                <p class="company">Nigerian Postal Service | Nigeria</p>
-                            </div>
-                            <span class="timeline-date">January 2014 – October 2022</span>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="role-focus"><strong>Role focus:</strong> Public sector data analysis, operational insight, performance monitoring, forecasting, service improvement, and evidence-based decision-making.</p>
-                            <h4>Key Responsibilities:</h4>
-                            <ul>
-                                <li>Analysed national operational, financial, and socioeconomic datasets to support service delivery improvement, public sector planning, and performance monitoring.</li>
-                                <li>Built forecasting models and performance monitoring tools to identify regional efficiency gaps, operational risks, and opportunities for targeted intervention.</li>
-                                <li>Designed composite performance indices to benchmark regional office performance and support objective resource allocation decisions.</li>
-                                <li>Produced analytical reports, insight summaries, and management briefings that translated data findings into practical recommendations for service delivery improvement.</li>
-                                <li>Supported monitoring and evaluation activities by tracking key performance indicators, reviewing operational outcomes, and identifying evidence of service improvement.</li>
-                                <li>Strengthened survey design, data collection, reporting standards, and data quality assurance processes across regional offices.</li>
-                                <li>Partnered with operational teams to embed data-driven decision-making into planning, reporting, and day-to-day service improvement.</li>
-                            </ul>
-                            <div class="impact-badge"><strong>Impact:</strong> Supported measurable service delivery improvement, including a 20% improvement in operational efficiency.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Lecturer / Education Data &amp; Academic Administration Support</h3>
-                                <p class="company">City College of Education | Nigeria</p>
-                            </div>
-                            <span class="timeline-date">April 2008 – March 2013</span>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="role-focus"><strong>Role focus:</strong> Analysed student attendance, assessment outcomes, and academic progress data to support departmental reporting, quality assurance, curriculum planning, and evidence-based learner support.</p>
-                            <h4>Key Responsibilities:</h4>
-                            <ul>
-                                <li>Supported teaching delivery, academic administration, student performance monitoring, and departmental reporting.</li>
-                                <li>Monitored student attendance, assessment outcomes, engagement, and academic progress to support evidence-based academic decision-making.</li>
-                                <li>Maintained assessment records and academic reporting systems, strengthening quality assurance and institutional documentation standards.</li>
-                                <li>Compiled departmental reports and learning performance data to support curriculum planning, learner support, and academic improvement.</li>
-                                <li>Liaised with academic staff and management to improve reporting standards, student progress documentation, and learning outcome monitoring.</li>
-                                <li>Contributed to evidence-informed improvements in academic delivery, reporting processes, and student support practices.</li>
-                            </ul>
-                            <div class="impact-badge"><strong>Impact:</strong> Strengthened academic reporting, supported student progress tracking, and improved education administration.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p class="section-preview-intro">15+ years across public-sector data analysis, economic modelling, and academic administration — most recently delivering economic and compliance analytics at Univelcity Computing.</p>
+            <a href="/experience/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 
-    <!-- ===================== RESEARCH ===================== -->
-    <section id="research" class="section research-section">
+    <!-- ===================== ACADEMIC WORK (PREVIEW) ===================== -->
+    <section id="research" class="section research-section section-preview">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Academic Work</span>
                 <h2 class="section-title">Research &amp; Major Projects</h2>
             </div>
-            <div class="research-grid">
-                {% for item in collections.research | reverse %}
-                <div class="research-card {% if loop.first %}featured{% else %}reveal{% endif %}">
-                    <div class="research-badge">{{ item.data.badge }}</div>
-                    <h3>{{ item.data.title }}</h3>
-                    <p class="research-institution">{{ item.data.institution }}</p>
-                    <div class="research-details">
-                        <h4>Methodology / Focus areas:</h4>
-                        <ul>{% for pt in item.data.items %}<li>{{ pt.text }}</li>{% endfor %}</ul>
-                        {% if item.data.outcome %}
-                        <div class="research-outcome"><strong>Outcome:</strong> {{ item.data.outcome }}</div>
-                        {% endif %}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            <p class="fpc-xlink"><a href="/policy-contributions/">See the featured policy case study: Digital Identity Harmonisation in Nigeria →</a></p>
+            <p class="section-preview-intro">Major research initiatives spanning econometric modelling, institutional economics, and applied policy analysis, from postgraduate dissertation work to independent published studies.</p>
+            <a href="/academic-work/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 
-    <!-- ===================== PROJECTS ===================== -->
-    <section id="projects" class="section projects-section">
+    <!-- ===================== PROJECTS (PREVIEW) ===================== -->
+    <section id="projects" class="section projects-section section-preview">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Portfolio</span>
                 <h2 class="section-title">All Projects</h2>
             </div>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="digital-product">Digital Products</button>
-                <button class="filter-btn" data-filter="data-dashboard">Dashboards</button>
-                <button class="filter-btn" data-filter="research-tool">Research Tools</button>
-                <button class="filter-btn" data-filter="portfolio">Portfolio</button>
-            </div>
-            <div class="project-grid">
-                {% for project in collections.projects | reverse %}
-                <div class="project-card reveal" data-category="{{ project.data.badge | lower | replace(' ', '-') }}">
-                    <div class="project-card-top">
-                        <div class="project-card-meta">
-                            <span class="project-badge">{{ project.data.badge }}</span>
-                            <span class="project-client-tag">{{ project.data.client }}</span>
-                        </div>
-                        <h3 class="project-title">{{ project.data.title }}</h3>
-                        <p class="project-desc">{{ project.data.description }}</p>
-                    </div>
-                    <div class="project-card-mid">
-                        <div class="project-highlights">
-                            {% for highlight in project.data.highlights %}
-                            <div class="highlight-item"><span class="highlight-dot">▸</span><span>{{ highlight.text }}</span></div>
-                            {% endfor %}
-                        </div>
-                        {% if project.data.tech %}
-                        <div class="tech-tags">
-                            {% for tag in project.data.tech %}<span class="tech-tag">{{ tag.tag }}</span>{% endfor %}
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="project-card-foot">
-                        {% if project.data.link and project.data.link != '#' %}
-                        <a href="{{ project.data.link }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                            View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </a>
-                        {% else %}
-                        <span class="btn btn-disabled btn-sm">Coming Soon</span>
-                        {% endif %}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
+            <p class="section-preview-intro">Digital products, dashboards, and research tools spanning healthcare communication, tax compliance, governance, and tourism — see the full project catalogue with tech stacks and live demos.</p>
+            <a href="/projects/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 
-    <!-- ===================== AWARDS ===================== -->
-    <section id="awards" class="section awards-section">
+    <!-- ===================== AWARDS (PREVIEW) ===================== -->
+    <section id="awards" class="section awards-section section-preview">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Recognition</span>
                 <h2 class="section-title">Awards &amp; Honours</h2>
             </div>
-            <div class="awards-grid">
-                {% for award in collections.awards | reverse %}
-                <div class="award-card reveal">
-                    {% if award.data.image %}
-                    <div class="award-image-container">
-                        <img src="{{ award.data.image }}" alt="{{ award.data.title }}" class="award-image" loading="lazy">
-                    </div>
-                    {% endif %}
-                    <div class="award-content">
-                        {% if award.data.badge %}<span class="award-badge">{{ award.data.badge }}</span>{% endif %}
-                        <h3>{{ award.data.title }}</h3>
-                        <p class="award-issuer">{{ award.data.issuer }}</p>
-                        <div class="award-description">{{ award.templateContent | safe }}</div>
-                        {% if award.data.coverage %}
-                        <div class="coverage-details">
-                            <span class="coverage-label">Media Coverage:</span>
-                            <div class="coverage-links">
-                                {% for item in award.data.coverage %}
-                                <a href="{{ item.url }}" target="_blank" rel="noopener" class="news-pill">Source {{ loop.index }}</a>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        <div class="award-date"><span>📅 {{ award.data.date_issued }}</span></div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
+            <p class="section-preview-intro">Recognition for contributions to data analysis, research, and public-sector service.</p>
+            <a href="/awards/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 
@@ -626,227 +435,87 @@
         </div>
     </section>
 
-    <!-- ===================== CERTIFICATIONS ===================== -->
-    <section id="certifications" class="section certlearn-section">
+    <!-- ===================== CERTIFICATIONS (PREVIEW) ===================== -->
+    <section id="certifications" class="section certlearn-section section-preview">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Professional Learning</span>
                 <h2 class="section-title">Certifications &amp; Professional Learning</h2>
             </div>
-            <div class="certlearn-grid">
-                {% for item in collections.certifications | reverse %}
-                <div class="certlearn-card reveal">
-                    <h3>{{ item.data.title }}</h3>
-                    <p class="certlearn-provider">{{ item.data.provider }}</p>
-                    {% if item.data.date_display %}<p class="certlearn-date">Completed {{ item.data.date_display }}</p>{% endif %}
-                    {% if item.data.cert_no %}<p class="certlearn-no">Certificate No: {{ item.data.cert_no }}</p>{% endif %}
-                    <p class="certlearn-relevance">{{ item.data.relevance }}</p>
-                    <div class="policy-tags">
-                        {% for tag in item.data.tags %}<span class="policy-tag">{{ tag }}</span>{% endfor %}
-                    </div>
-                    {% if item.data.verify %}
-                    <a href="{{ item.data.verify }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm certlearn-btn">Verify Certificate</a>
-                    {% endif %}
-                </div>
-                {% endfor %}
-            </div>
+            <p class="section-preview-intro">Continuing professional development across data analytics, SQL, and business intelligence tools, each independently verified.</p>
+            <a href="/certifications/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 
-    <!-- ===================== PUBLICATIONS ===================== -->
-    <section id="publications" class="section publications-section">
+    <!-- ===================== PUBLICATIONS (PREVIEW) ===================== -->
+    <section id="publications" class="section publications-section section-preview">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Thought Leadership</span>
-                <h2 class="section-title">Publications &amp; Public Engagement</h2>
+                <h2 class="section-title">Publications</h2>
             </div>
-
-            <p class="fpc-xlink fpc-xlink-center"><a href="/policy-contributions/">Featured: Digital Identity Harmonisation in Nigeria — research, media &amp; policy relevance →</a></p>
-
-            <div class="pub-section journal-articles">
-                <h3 class="pub-category-title"><span>Published</span> Journal Articles</h3>
-                <div class="publications-grid">
-                    {% for article in collections.journal_articles | reverse %}
-                    <div class="publication-card journal-card reveal">
-                        <div class="pub-icon">📄</div>
-                        <h3>{{ article.data.title }}</h3>
-                        <p class="pub-meta">{{ article.data.journal }}{% if article.data.volume %}, {{ article.data.volume }}{% endif %}{% if article.data.pages %}, pp. {{ article.data.pages }}{% endif %}{% if article.data.year %} ({{ article.data.year }}){% endif %}</p>
-                        {% if article.data.published %}<p class="pub-meta pub-published">Published {{ article.data.published }}</p>{% endif %}
-                        {% if article.data.doi %}<p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
-                        <div class="pub-description pub-collapsible collapsed">{{ article.templateContent | safe }}</div>
-                        <button class="read-more-btn" aria-expanded="false">Read more ▾</button>
-                        {% if article.data.contributors %}<div class="pub-contributors"><strong>Contributors:</strong> {{ article.data.contributors }}</div>{% endif %}
-                        <a href="{{ article.data.url or article.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Journal Article →</a>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="pub-section preprints">
-                <h3 class="pub-category-title"><span>Working</span> Papers &amp; Preprints</h3>
-                <div class="publications-grid">
-                    {% for paper in collections.working_papers | reverse %}
-                    <div class="publication-card journal-card reveal">
-                        <div class="pub-icon">📄</div>
-                        <h3>{{ paper.data.title }}</h3>
-                        <p class="pub-meta">{{ paper.data.journal }}{% if paper.data.year %} ({{ paper.data.year }}){% endif %}</p>
-                        {% if paper.data.doi %}<p class="pub-doi"><a href="{{ paper.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
-                        <div class="pub-description pub-collapsible collapsed">{{ paper.templateContent | safe }}</div>
-                        <button class="read-more-btn" aria-expanded="false">Read more ▾</button>
-                        {% if paper.data.contributors %}<div class="pub-contributors"><strong>Contributors:</strong> {{ paper.data.contributors }}</div>{% endif %}
-                        <a href="{{ paper.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Preprint →</a>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="pub-section books">
-                <h3 class="pub-category-title"><span>Books</span> &amp; Handbooks</h3>
-                <div class="publications-grid">
-                    {% for book in collections.books | reverse %}
-                    <div class="publication-card book-card flip-card reveal">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="{{ book.data.image }}" alt="{{ book.data.title }} Cover" class="book-cover-img" loading="lazy"/>
-                                <div class="flip-hint">Hover to read more</div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h3>{{ book.data.title }}</h3>
-                                {% if book.data.subtitle %}<p class="pub-subtitle"><em>{{ book.data.subtitle }}</em></p>{% endif %}
-                                <p class="pub-meta">Independently published ({{ book.data.year }})</p>
-                                {% if book.data.isbn %}<p class="pub-isbn">ISBN: {{ book.data.isbn }}</p>{% endif %}
-                                {% if book.data.asin %}<p class="pub-isbn">ASIN: {{ book.data.asin }}</p>{% endif %}
-                                <div class="pub-description">{{ book.templateContent | safe }}</div>
-                                <a href="{{ book.data.link }}" target="_blank" rel="noopener" class="pub-link">View on Amazon →</a>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="pub-section policy-media">
-                <h3 class="pub-category-title"><span>Public</span> Engagement &amp; Policy Commentary</h3>
-                <div class="publications-grid">
-                    <div class="publication-card media-card reveal">
-                        <div class="pub-icon">📰</div>
-                        <h3>Media &amp; Policy Commentary</h3>
-                        <p class="pub-media-intro">Consistently translating economic evidence into public policy debate for wider audiences across major Nigerian media outlets.</p>
-                        <div class="media-list">
-                            {% for item in collections.media | reverse %}
-                            <div class="media-item">
-                                <h4>{{ item.data.title }}</h4>
-                                <p class="media-description">{{ item.data.description }} <span class="media-date">({{ item.data.date_issued }})</span></p>
-                                <div class="coverage-details">
-                                    <span class="coverage-label">Published in:</span>
-                                    <div class="coverage-links">
-                                        {% for source in item.data.coverage %}
-                                        {% if source.url %}<a href="{{ source.url }}" target="_blank" rel="noopener" class="news-pill">{{ source.source }}</a>{% else %}<span class="news-pill news-pill-plain">{{ source.source }}</span>{% endif %}
-                                        {% endfor %}
-                                    </div>
-                                    {% if item.data.other_platforms %}<p class="other-coverage">{{ item.data.other_platforms }}</p>{% endif %}
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                        <a class="fpc-xlink fpc-xlink-inline" href="/policy-contributions/">See the featured policy case study →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="interests-section">
-                <h3>Professional Interests</h3>
-                <div class="interests-tags">
-                    <span class="interest-tag">Economic regulation and innovation</span>
-                    <span class="interest-tag">Data protection and privacy economics</span>
-                    <span class="interest-tag">RegTech and compliance analytics</span>
-                    <span class="interest-tag">Digital identity and governance</span>
-                    <span class="interest-tag">Housing affordability and public finance</span>
-                </div>
-            </div>
+            <p class="section-preview-intro">Peer-reviewed journal articles across development economics, tax policy, and institutional analysis.</p>
+            <a href="/publications/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 
-    <!-- ============ FEATURED POLICY CONTRIBUTION (homepage preview) ============ -->
-    <section id="featured-policy" class="section fpc-preview-section">
+    <!-- ===================== WORKING PAPERS (PREVIEW) ===================== -->
+    <section id="working-papers" class="section publications-section section-preview">
         <div class="container">
-            <a class="fpc-preview" href="/policy-contributions/">
-                <div class="fpc-preview-body">
-                    <span class="fpc-preview-tag">Featured Policy Contribution</span>
-                    <h2 class="fpc-preview-title">Digital Identity Harmonisation in Nigeria</h2>
-                    <p class="fpc-preview-text">Research, public commentary and a peer-reviewed publication examining Nigeria's digital identity infrastructure and the harmonisation of identification systems around the National Identification Number (NIN).</p>
-                    <span class="fpc-preview-cta">Read More <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </div>
-                <div class="fpc-preview-aside" aria-hidden="true">
-                    <span class="fpc-preview-pill">Peer-reviewed article · IJDES 2026</span>
-                    <span class="fpc-preview-pill">National &amp; international media</span>
-                    <span class="fpc-preview-pill">Policy relevance · NIMC Act 2026</span>
-                </div>
-            </a>
+            <div class="section-header">
+                <span class="section-tag">Thought Leadership</span>
+                <h2 class="section-title">Working Papers &amp; Preprints</h2>
+            </div>
+            <p class="section-preview-intro">Ongoing research and preprints covering tax compliance, migration, health, and macroeconomic policy.</p>
+            <a href="/working-papers/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 
-    <!-- ===================== POLICY CONTRIBUTIONS ===================== -->
-    <section id="policy" class="section policy-section">
+    <!-- ===================== BOOKS (PREVIEW) ===================== -->
+    <section id="books" class="section publications-section section-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Thought Leadership</span>
+                <h2 class="section-title">Books &amp; Handbooks</h2>
+            </div>
+            <p class="section-preview-intro">Independently published books and handbooks distilling applied economics and data analysis for practitioners.</p>
+            <a href="/books/" class="btn btn-primary view-more-btn">View More →</a>
+        </div>
+    </section>
+
+    <!-- ===================== PUBLIC ENGAGEMENT (PREVIEW) ===================== -->
+    <section id="public-engagement" class="section publications-section section-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Thought Leadership</span>
+                <h2 class="section-title">Public Engagement &amp; Policy Commentary</h2>
+            </div>
+            <p class="section-preview-intro">Consistently translating economic evidence into public policy debate for wider audiences across major Nigerian media outlets.</p>
+            <a href="/public-engagement/" class="btn btn-primary view-more-btn">View More →</a>
+        </div>
+    </section>
+
+    <!-- ===================== POLICY CONTRIBUTIONS (PREVIEW) ===================== -->
+    <section id="policy" class="section policy-section section-preview">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Policy Engagement</span>
                 <h2 class="section-title">Policy Contributions &amp; Consultation Responses</h2>
             </div>
-            <div class="policy-intro">
-                <p>I contribute independent policy analysis and consultation responses across UK tax administration, data governance, automated decision-making, energy data regulation, climate-related compliance, and public-sector digital reform.</p>
-                <p>My work combines data analysis, economic reasoning, compliance insight, behavioural understanding, and practical implementation recommendations. The focus is on improving data quality, strengthening audit trails, reducing avoidable compliance failure, supporting proportionate regulation, and making public systems easier for people and organisations to use correctly.</p>
-            </div>
-            <div class="policy-grid">
-                {% for item in collections.policy_contributions %}
-                <div class="policy-card reveal">
-                    <span class="policy-area">{{ item.data.area }}</span>
-                    <h3>{{ item.data.title }}</h3>
-                    <p class="policy-desc">{{ item.data.description }}</p>
-                    <div class="policy-tags">
-                        {% for tag in item.data.tags %}<span class="policy-tag">{{ tag }}</span>{% endfor %}
-                    </div>
-                    {% if item.data.pdf %}
-                    <a href="{{ item.data.pdf }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm policy-btn">{{ item.data.pdf_label or "Read Submission" }}</a>
-                    {% endif %}
-                </div>
-                {% endfor %}
-            </div>
+            <p class="section-preview-intro">Independent policy analysis and consultation responses across UK tax administration, data governance, automated decision-making, energy data regulation, and public-sector digital reform.</p>
+            <a href="/policy-contributions/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 
-    <!-- ===================== EXTERNAL MENTIONS ===================== -->
-    <section id="external-mentions" class="section mentions-section">
+    <!-- ===================== RESEARCH VISIBILITY (PREVIEW) ===================== -->
+    <section id="external-mentions" class="section mentions-section section-preview">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Research Visibility</span>
                 <h2 class="section-title">External Mentions &amp; Research Visibility</h2>
             </div>
-            <div class="mentions-grid">
-                {% for item in collections.external_mentions | reverse %}
-                <div class="mention-card reveal">
-                    <div class="mention-meta">
-                        <span class="mention-type">{{ item.data.mention_type }}</span>
-                        {% if item.data.date_display %}<span class="mention-date">{{ item.data.date_display }}</span>{% endif %}
-                    </div>
-                    <h3>{{ item.data.title }}</h3>
-                    {% if item.data.source %}<p class="mention-source"><strong>Source:</strong> {{ item.data.source }}</p>{% endif %}
-                    <p class="mention-desc">{{ item.data.description }}</p>
-                    {% if item.data.papers %}
-                    <div class="mention-papers">
-                        <span class="mention-papers-label">Papers mentioned:</span>
-                        <ul>{% for p in item.data.papers %}<li>{{ p }}</li>{% endfor %}</ul>
-                    </div>
-                    {% endif %}
-                    <div class="policy-tags">
-                        {% for tag in item.data.tags %}<span class="policy-tag">{{ tag }}</span>{% endfor %}
-                    </div>
-                    {% if item.data.link %}
-                    <a href="{{ item.data.link }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm mention-btn">{{ item.data.button_text or "View Mention" }}</a>
-                    {% endif %}
-                </div>
-                {% endfor %}
-            </div>
+            <p class="section-preview-intro">Independent research picked up in third-party roundups and reviews, including the TaxProf Blog SSRN Tax Roundup.</p>
+            <a href="/research-visibility/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 
@@ -898,47 +567,3 @@
             </div>
         </div>
     </section>
-
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="/djo-portfolio-logo.png" alt="DJO professional portfolio logo" title="Daramola Joseph Omoyele Logo" height="48" loading="lazy">
-                        <div>
-                            <div class="footer-brand-tagline">Data-driven tools for smarter decisions</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#research">Research</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#publications">Publications</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/dju78" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                    </a>
-                    <a href="mailto:dju78@omoyelejd.co.uk" aria-label="Email" class="social-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13 20 6.01V6H4zm0 12h16V8.99l-8 6.5-8-6.5V18z"/></svg>
-                    </a>
-                    <a href="https://orcid.org/0009-0006-0347-0499" target="_blank" rel="noopener" aria-label="ORCID" class="social-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9h2v9h-2zm0-10.5V4.5h2V6h-2z"/></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="footer-year">2026</span> Daramola Digital Labs. All rights reserved. · Portfolio of Daramola Joseph Omoyele.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>

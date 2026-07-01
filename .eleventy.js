@@ -7,6 +7,14 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("papers");
     eleventyConfig.addPassthroughCopy({ "public": "/" });
 
+    // Returns the first `count` sentences of rendered HTML content as plain text,
+    // for a short always-visible summary above a collapsible full-text block.
+    eleventyConfig.addFilter("excerpt", (html, count = 2) => {
+        const text = String(html || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+        const sentences = text.split(/(?<=[.!?])\s+(?=[A-Z(])/);
+        return sentences.slice(0, count).join(" ").trim();
+    });
+
     return {
         dir: {
             input: "src",

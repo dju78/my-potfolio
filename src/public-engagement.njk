@@ -1,0 +1,39 @@
+---
+layout: base.njk
+permalink: /public-engagement/index.html
+pageTitle: "Public Engagement & Policy Commentary | Daramola Joseph Omoyele"
+pageDescription: "Media appearances and policy commentary by Daramola Joseph Omoyele across major Nigerian media outlets."
+---
+<section id="public-engagement" class="section publications-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Thought Leadership</span>
+            <h2 class="section-title">Public Engagement &amp; Policy Commentary</h2>
+        </div>
+        <div class="publications-grid">
+            <div class="publication-card media-card reveal">
+                <div class="pub-icon">📰</div>
+                <h3>Media &amp; Policy Commentary</h3>
+                <p class="pub-media-intro">Consistently translating economic evidence into public policy debate for wider audiences across major Nigerian media outlets.</p>
+                <div class="media-list">
+                    {% for item in collections.media | reverse %}
+                    <div class="media-item">
+                        <h4>{{ item.data.title }}</h4>
+                        <p class="media-description">{{ item.data.description }} <span class="media-date">({{ item.data.date_issued }})</span></p>
+                        <div class="coverage-details">
+                            <span class="coverage-label">Published in:</span>
+                            <div class="coverage-links">
+                                {% for source in item.data.coverage %}
+                                {% if source.url %}<a href="{{ source.url }}" target="_blank" rel="noopener" class="news-pill">{{ source.source }}</a>{% else %}<span class="news-pill news-pill-plain">{{ source.source }}</span>{% endif %}
+                                {% endfor %}
+                            </div>
+                            {% if item.data.other_platforms %}<p class="other-coverage">{{ item.data.other_platforms }}</p>{% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <a class="fpc-xlink fpc-xlink-inline" href="/policy-contributions/">See the featured policy case study →</a>
+            </div>
+        </div>
+    </div>
+</section>

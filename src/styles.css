@@ -79,6 +79,25 @@ ul, ol { list-style:none; }
     background:transparent; color:#fff; border-color:rgba(255,255,255,.35);
 }
 .btn-outline-light:hover { background:rgba(255,255,255,.1); transform:translateY(-2px); }
+.btn-soft {
+    background:rgba(8,37,84,.06); color:var(--navy); border-color:transparent;
+}
+.btn-soft:hover { background:rgba(8,37,84,.12); transform:translateY(-2px); }
+
+/* ---- Section preview cards (homepage summaries) ------------- */
+.section-preview-intro {
+    max-width:62ch; margin:0 auto 1.75rem; text-align:center;
+    color:var(--text-2); font-size:1rem; line-height:1.7;
+}
+.view-more-btn { display:flex; margin:0 auto; width:max-content; }
+
+/* ---- Back-to-portfolio link (dedicated sub-pages) ------------ */
+.subpage-back-wrap { padding:6.5rem 2rem 0; }
+.back-link {
+    display:inline-flex; align-items:center; gap:.4rem;
+    color:var(--navy); font-weight:600; font-size:.9rem; transition:var(--ease);
+}
+.back-link:hover { color:var(--green); }
 
 /* ============================================================
    NAVBAR
@@ -322,7 +341,10 @@ ul, ol { list-style:none; }
 .featured-view-all:hover { color:var(--navy); gap:.6rem; }
 
 /* Scroll wrapper (horizontal scroll on small screens) */
-.featured-scroll-wrapper { overflow-x:auto; padding-bottom:.5rem; scrollbar-width:thin; }
+.featured-scroll-wrapper {
+    overflow-x:auto; padding-bottom:.5rem; scrollbar-width:thin;
+    scroll-snap-type:x proximity;
+}
 .featured-scroll-wrapper::-webkit-scrollbar { height:4px; }
 .featured-scroll-wrapper::-webkit-scrollbar-thumb { background:var(--border); border-radius:2px; }
 
@@ -331,6 +353,7 @@ ul, ol { list-style:none; }
     grid-template-columns:repeat(7,minmax(185px,1fr));
     gap:1.1rem; min-width:1300px;
 }
+.feat-card { scroll-snap-align:start; }
 
 /* Feature card */
 .feat-card {
@@ -750,9 +773,11 @@ ul, ol { list-style:none; }
 .pub-doi a { color:var(--green); font-weight:600; transition:var(--ease); }
 .pub-doi a:hover { text-decoration:underline; }
 
-.pub-collapsible { color:var(--text-2); line-height:1.7; font-size:.86rem; transition:max-height .4s ease, opacity .3s ease; overflow:hidden; margin-bottom:.2rem; }
-.pub-collapsible.collapsed { max-height:4.5em; -webkit-mask-image:linear-gradient(to bottom,black 55%,transparent 100%); mask-image:linear-gradient(to bottom,black 55%,transparent 100%); }
-.pub-collapsible.expanded  { max-height:9999px; -webkit-mask-image:none; mask-image:none; }
+.pub-summary { color:var(--text-2); line-height:1.7; font-size:.86rem; margin-bottom:.5rem; }
+
+.pub-full-details { color:var(--text-2); line-height:1.7; font-size:.86rem; margin-bottom:.5rem; }
+.pub-full-details.collapsed { display:none; }
+.pub-full-details.expanded  { display:block; }
 
 .read-more-btn {
     background:none; border:none; color:var(--navy); font-size:.8rem; font-weight:600;
@@ -898,6 +923,7 @@ ul, ol { list-style:none; }
     .research-card.featured { grid-column:1; }
     .value-proposition { padding:2rem; }
     .vp-quote { font-size:1.05rem; }
+    .subpage-back-wrap { padding-top:6rem; }
 }
 
 @media(max-width:640px){
@@ -920,6 +946,7 @@ ul, ol { list-style:none; }
     .footer-social { justify-content:center; }
     .publication-card.flip-card { height:420px; }
     .featured-header { flex-direction:column; align-items:flex-start; gap:.5rem; }
+    .subpage-back-wrap { padding:5.5rem 1.25rem 0; }
 }
 
 /* ===================== Featured Policy Contribution ===================== */

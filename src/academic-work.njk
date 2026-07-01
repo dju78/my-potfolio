@@ -1,0 +1,31 @@
+---
+layout: base.njk
+permalink: /academic-work/index.html
+pageTitle: "Academic Work | Daramola Joseph Omoyele"
+pageDescription: "Research and major academic projects by Daramola Joseph Omoyele, Data Analyst and Research Analyst."
+---
+<section id="research" class="section research-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Academic Work</span>
+            <h2 class="section-title">Research &amp; Major Projects</h2>
+        </div>
+        <div class="research-grid">
+            {% for item in collections.research | reverse %}
+            <div class="research-card {% if loop.first %}featured{% else %}reveal{% endif %}">
+                <div class="research-badge">{{ item.data.badge }}</div>
+                <h3>{{ item.data.title }}</h3>
+                <p class="research-institution">{{ item.data.institution }}</p>
+                <div class="research-details">
+                    <h4>Methodology / Focus areas:</h4>
+                    <ul>{% for pt in item.data.items %}<li>{{ pt.text }}</li>{% endfor %}</ul>
+                    {% if item.data.outcome %}
+                    <div class="research-outcome"><strong>Outcome:</strong> {{ item.data.outcome }}</div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <p class="fpc-xlink"><a href="/policy-contributions/">See the featured policy case study: Digital Identity Harmonisation in Nigeria →</a></p>
+    </div>
+</section>
