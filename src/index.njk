@@ -62,6 +62,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
                             <img src="/images/profile-photo.jpg"
                                  alt="Daramola Joseph Omoyele"
                                  class="hero-photo"
+                                 loading="eager"
                                  onerror="document.getElementById('heroPhotoRing').classList.add('no-photo')">
                             <div class="hero-photo-fallback">DJO</div>
                         </div>
@@ -75,220 +76,65 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
         </div>
     </section>
 
-    <!-- ===================== FEATURED PROJECTS ===================== -->
-    <section class="featured-section">
+    <!-- ===================== ICON NAVIGATION ===================== -->
+    <nav class="icon-nav-section" aria-label="Section quick links">
         <div class="container">
-            <div class="featured-header">
-                <h2 class="featured-title">Featured Projects</h2>
-                <a href="/projects/" class="featured-view-all">View all projects →</a>
-            </div>
-            <div class="featured-scroll-wrapper">
-                <div class="featured-grid">
-
-                    <div class="feat-card">
-                        <div class="feat-icon-box" style="background:#082554;">
-                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        </div>
-                        <h3 class="feat-name">CarePhrase</h3>
-                        <p class="feat-category">Care Communication &amp; Training Platform</p>
-                        <p class="feat-desc">Helping care workers observe, record, escalate, and communicate care information, with the CarePhrase Communication Academy.</p>
-                        <a href="https://carephrase.com" target="_blank" rel="noopener" class="feat-link">View Project →</a>
-                    </div>
-
-                    <div class="feat-card">
-                        <div class="feat-icon-box" style="background:#16864C;">
-                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3h2v2h-2V6zm0 4h2v2h-2v-2zm-4-4h2v2H8V6zm0 4h2v2H8v-2zm-2 8v-2h8v2H6zm10 0h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg>
-                        </div>
-                        <h3 class="feat-name">TaxMate UK</h3>
-                        <p class="feat-category">Tax &amp; Compliance Platform</p>
-                        <p class="feat-desc">Simplifying tax calculations, filing, and compliance for individuals and SMEs.</p>
-                        <a href="https://taxmate.omoyelejd.co.uk/" target="_blank" rel="noopener" class="feat-link">View Project →</a>
-                    </div>
-
-                    <div class="feat-card">
-                        <div class="feat-icon-box" style="background:#C49A2C;">
-                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 15c1.66 0 2.99-1.34 2.99-3L15 6c0-1.66-1.34-3-3-3S9 4.34 9 6v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 15 6.7 12H5c0 3.42 2.72 6.23 6 6.72V22h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
-                        </div>
-                        <h3 class="feat-name">Speaking Trainer</h3>
-                        <p class="feat-category">AI Speaking Coach</p>
-                        <p class="feat-desc">AI-powered feedback to improve pronunciation, fluency and confidence.</p>
-                        <a href="https://speech.omoyelejd.co.uk" target="_blank" rel="noopener" class="feat-link">View Live Demo →</a>
-                    </div>
-
-                    <div class="feat-card">
-                        <div class="feat-icon-box" style="background:#16864C;">
-                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
-                        </div>
-                        <h3 class="feat-name">DEAP</h3>
-                        <p class="feat-category">Data Analytics Platform</p>
-                        <p class="feat-desc">Aggregating tax data into an interactive dashboard for faster compliance reporting and decisions.</p>
-                        <a href="https://deaptaxcompliance.netlify.app/" target="_blank" rel="noopener" class="feat-link">View Live Demo →</a>
-                    </div>
-
-                    <div class="feat-card">
-                        <div class="feat-icon-box" style="background:#082554;">
-                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-                        </div>
-                        <h3 class="feat-name">GACE</h3>
-                        <p class="feat-category">Governance &amp; Accountability Tool</p>
-                        <p class="feat-desc">Credential assessment and verification for global compliance frameworks.</p>
-                        <a href="/projects/" class="feat-link">View Project →</a>
-                    </div>
-
-                    <div class="feat-card">
-                        <div class="feat-icon-box" style="background:#16864C;">
-                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        </div>
-                        <h3 class="feat-name">Kogi Quest</h3>
-                        <p class="feat-category">Tourism &amp; Discovery Platform</p>
-                        <p class="feat-desc">Exploring Kogi State's culture, places and experiences.</p>
-                        <a href="https://dju78.github.io/kogiqest/" target="_blank" rel="noopener" class="feat-link">View Live Demo →</a>
-                    </div>
-
-                    <div class="feat-card">
-                        <div class="feat-icon-box" style="background:#082554;">
-                            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4zm0 14v-2h12v2H6z"/></svg>
-                        </div>
-                        <h3 class="feat-name">Research / Publications</h3>
-                        <p class="feat-category">Evidence. Insight. Impact.</p>
-                        <p class="feat-desc">Peer-reviewed research across data, health, education and policy.</p>
-                        <a href="/publications/" class="feat-link">View Publications →</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================== METRICS STRIP ===================== -->
-    <div class="metrics-strip">
-        <div class="container">
-            <div class="metrics-grid">
-                <div class="metric-item">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" opacity="0.9"/></svg>
-                    </div>
-                    <div class="metric-content">
-                        <span class="metric-text">Digital Products &amp; Research Projects</span>
-                        <span class="metric-label">Projects</span>
-                    </div>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 1.5V8h4.5L13 3.5zM6 20V4h5v5h5v11H6z" opacity="0.9"/></svg>
-                    </div>
-                    <div class="metric-content">
-                        <span class="metric-text">Published Research &amp; Working Papers</span>
-                        <span class="metric-label">Publications</span>
-                    </div>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" opacity="0.9"/></svg>
-                    </div>
-                    <div class="metric-content">
-                        <span class="metric-text">Finance, Policy, Education, Health &amp; Compliance</span>
-                        <span class="metric-label">Industries</span>
-                    </div>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8-1.41-1.42z" opacity="0.9"/></svg>
-                    </div>
-                    <div class="metric-content">
-                        <span class="metric-text">Data-Driven Problem Solving</span>
-                        <span class="metric-label">Approach</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===================== QUICK NAV ===================== -->
-    <section class="quick-nav-section">
-        <div class="container">
-            <div class="quick-nav-grid">
-                <a href="#about" class="qn-card">
-                    <div class="qn-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    </div>
-                    <div class="qn-text">
-                        <h3>About</h3>
-                        <p>Background, skills, values and professional journey.</p>
-                        <span class="qn-link">Learn more →</span>
-                    </div>
+            <div class="icon-nav-grid">
+                <a href="#featured-policy" class="icon-nav-tile active-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.9 6.5 7.1.6-5.4 4.7 1.7 6.9-6.3-3.8-6.3 3.8 1.7-6.9L2 9.1l7.1-.6z"/></svg>
+                    <span class="icon-nav-label">Featured Policy</span>
                 </a>
-                <a href="#projects" class="qn-card">
-                    <div class="qn-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    </div>
-                    <div class="qn-text">
-                        <h3>Projects</h3>
-                        <p>Data projects, dashboards and digital products.</p>
-                        <span class="qn-link">Explore →</span>
-                    </div>
+                <a href="#projects" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 4v-1M16 4v-1"/></svg>
+                    <span class="icon-nav-label">Projects</span>
                 </a>
-                <a href="#publications" class="qn-card">
-                    <div class="qn-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                    </div>
-                    <div class="qn-text">
-                        <h3>Research</h3>
-                        <p>Publications, studies and insights that drive change.</p>
-                        <span class="qn-link">Read more →</span>
-                    </div>
+                <a href="#experience" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
+                    <span class="icon-nav-label">Experience</span>
                 </a>
-                <a href="#contact" class="qn-card">
-                    <div class="qn-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </div>
-                    <div class="qn-text">
-                        <h3>Contact</h3>
-                        <p>Let's collaborate on meaningful work.</p>
-                        <span class="qn-link">Get in touch →</span>
-                    </div>
+                <a href="#research" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3L2 8l10 5 8-4.2V17"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg>
+                    <span class="icon-nav-label">Research</span>
+                </a>
+                <a href="#awards" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-2.5 5 2.5-1.5-8.5"/></svg>
+                    <span class="icon-nav-label">Awards</span>
+                </a>
+                <a href="#skills" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
+                    <span class="icon-nav-label">Expertise</span>
+                </a>
+                <a href="#publications" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4.5h6a3 3 0 0 1 3 3V20a2.5 2.5 0 0 0-2.5-2.5H2zM22 4.5h-6a3 3 0 0 0-3 3V20a2.5 2.5 0 0 1 2.5-2.5H22z"/></svg>
+                    <span class="icon-nav-label">Publications</span>
+                </a>
+                <a href="#books" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h11a2 2 0 0 1 2 2v16H7a2 2 0 0 1-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2"/></svg>
+                    <span class="icon-nav-label">Books</span>
+                </a>
+                <a href="#public-engagement" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11v2a2 2 0 0 0 2 2h1l4 4v-6M10 9h8a3 3 0 0 0 0-6h-8z"/><path d="M3 11h4V9H5a2 2 0 0 0-2 2z"/></svg>
+                    <span class="icon-nav-label">Media</span>
+                </a>
+                <a href="#policy" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 7l-3 6a3.2 3.2 0 0 0 6 0zM19 7l-3 6a3.2 3.2 0 0 0 6 0zM5 7h14M3 21h18"/></svg>
+                    <span class="icon-nav-label">Policy Work</span>
+                </a>
+                <a href="#impact" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M11 20V4M18 20v-7"/><path d="M3 20h18"/></svg>
+                    <span class="icon-nav-label">Impact</span>
+                </a>
+                <a href="#education" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3L2 8l10 5 10-5z"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg>
+                    <span class="icon-nav-label">Education</span>
+                </a>
+                <a href="#contact" class="icon-nav-tile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span class="icon-nav-label">Contact</span>
                 </a>
             </div>
         </div>
-    </section>
-
-    <!-- ===================== ABOUT ===================== -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Brand Statement</span>
-                <h2 class="section-title">Daramola Digital Labs</h2>
-            </div>
-            <div class="value-proposition">
-                <div class="vp-content">
-                    <h3 class="vp-title">Solving Real-World Problems with Data</h3>
-                    <blockquote class="vp-quote">
-                        "Daramola Digital Labs builds practical, data-driven digital tools that support compliance, financial reporting, research, education, healthcare and community development. Our products combine data analysis, automation and user-centred design to solve real-world problems."
-                    </blockquote>
-                </div>
-            </div>
-            <div class="about-grid">
-                <div class="about-card reveal">
-                    <div class="card-icon">📊</div>
-                    <h3>Data-Driven Insights</h3>
-                    <p>Delivering economic insight and building digital products for regulation, public finance, and policy design across government, consultancy and development sectors.</p>
-                </div>
-                <div class="about-card reveal">
-                    <div class="card-icon">🎯</div>
-                    <h3>Advanced Expertise</h3>
-                    <p>15+ years of public-sector and consulting experience combined with advanced applied econometrics and regulatory compliance analytics.</p>
-                </div>
-                <div class="about-card reveal">
-                    <div class="card-icon">💡</div>
-                    <h3>Clear Communication</h3>
-                    <p>Strong ability to communicate complex economic concepts to policymakers and non-technical audiences, ensuring actionable, evidence-based insights.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </nav>
 
     <!-- ============ FEATURED POLICY CONTRIBUTION (homepage preview) ============ -->
     <section id="featured-policy" class="section fpc-preview-section">
@@ -309,213 +155,334 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
         </div>
     </section>
 
+    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <p class="section-preview-intro">A selection of digital products, dashboards and research tools spanning healthcare communication, tax compliance, governance and tourism.</p>
+            <div class="project-grid">
+                {% for project in collections.projects | reverse %}
+                {% if loop.index <= 4 %}
+                <div class="project-card reveal" data-category="{{ project.data.badge | lower | replace(' ', '-') }}">
+                    <div class="project-card-top">
+                        <div class="project-card-meta">
+                            <span class="project-badge">{{ project.data.badge }}</span>
+                            <span class="project-client-tag">{{ project.data.client }}</span>
+                        </div>
+                        <h3 class="project-title">{{ project.data.title }}</h3>
+                        <p class="project-desc">{{ project.data.description }}</p>
+                    </div>
+                    <div class="project-card-mid">
+                        <div class="project-highlights">
+                            {% for highlight in project.data.highlights %}
+                            {% if loop.index <= 2 %}
+                            <div class="highlight-item"><span class="highlight-dot">▸</span><span>{{ highlight.text }}</span></div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="project-card-foot">
+                        {% if project.data.link and project.data.link != '#' %}
+                        <a href="{{ project.data.link }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                            View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        {% else %}
+                        <span class="btn btn-disabled btn-sm">Coming Soon</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <a href="/projects/" class="btn btn-primary view-more-btn">View All Projects →</a>
+        </div>
+    </section>
+
     <!-- ===================== PROFESSIONAL EXPERIENCE (PREVIEW) ===================== -->
-    <section id="experience" class="section experience-section section-preview">
+    <section id="experience" class="section experience-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Career Journey</span>
                 <h2 class="section-title">Professional Experience</h2>
             </div>
-            <p class="section-preview-intro">15+ years across public-sector data analysis, economic modelling, and academic administration — most recently delivering economic and compliance analytics at Univelcity Computing.</p>
-            <a href="/experience/" class="btn btn-primary view-more-btn">View More →</a>
+            <p class="section-preview-intro">15+ years across public-sector data analysis, economic modelling, and academic administration.</p>
+            <div class="exp-preview-grid">
+                <div class="exp-preview-card reveal">
+                    <div class="exp-preview-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
+                    </div>
+                    <h3>Data &amp; Finance Analyst</h3>
+                    <p class="exp-preview-company">Univelcity Computing</p>
+                    <p class="exp-preview-date">July 2023 – Present</p>
+                    <p class="role-focus">Data analysis, economic modelling, financial analysis, business intelligence and compliance assurance.</p>
+                </div>
+                <div class="exp-preview-card reveal">
+                    <div class="exp-preview-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
+                    </div>
+                    <h3>Data Analyst</h3>
+                    <p class="exp-preview-company">Nigerian Postal Service</p>
+                    <p class="exp-preview-date">January 2014 – October 2022</p>
+                    <p class="role-focus">Public sector data analysis, operational insight, performance monitoring and forecasting.</p>
+                </div>
+                <div class="exp-preview-card reveal">
+                    <div class="exp-preview-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
+                    </div>
+                    <h3>Lecturer / Education Data Support</h3>
+                    <p class="exp-preview-company">City College of Education</p>
+                    <p class="exp-preview-date">April 2008 – March 2013</p>
+                    <p class="role-focus">Student attendance, assessment outcomes and academic progress data for departmental reporting.</p>
+                </div>
+            </div>
+            <a href="/experience/" class="btn btn-primary view-more-btn">View Full Experience →</a>
         </div>
     </section>
 
-    <!-- ===================== ACADEMIC WORK (PREVIEW) ===================== -->
-    <section id="research" class="section research-section section-preview">
+    <!-- ===================== ACADEMIC RESEARCH (PREVIEW) ===================== -->
+    <section id="research" class="section research-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Academic Work</span>
-                <h2 class="section-title">Research &amp; Major Projects</h2>
+                <h2 class="section-title">Academic Research</h2>
             </div>
-            <p class="section-preview-intro">Major research initiatives spanning econometric modelling, institutional economics, and applied policy analysis, from postgraduate dissertation work to independent published studies.</p>
-            <a href="/academic-work/" class="btn btn-primary view-more-btn">View More →</a>
+            <p class="section-preview-intro">Major research initiatives spanning econometric modelling, institutional economics, and applied policy analysis.</p>
+            <div class="research-grid">
+                {% for item in collections.research | reverse %}
+                <div class="research-card reveal">
+                    <div class="research-badge">{{ item.data.badge }}</div>
+                    <h3>{{ item.data.title }}</h3>
+                    <p class="research-institution">{{ item.data.institution }}</p>
+                    <div class="research-details">
+                        <h4>Methodology / Focus areas:</h4>
+                        <ul>{% for pt in item.data.items %}{% if loop.index <= 3 %}<li>{{ pt.text }}</li>{% endif %}{% endfor %}</ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="/academic-work/" class="btn btn-primary view-more-btn">View All Research →</a>
         </div>
     </section>
 
-    <!-- ===================== PROJECTS (PREVIEW) ===================== -->
-    <section id="projects" class="section projects-section section-preview">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Portfolio</span>
-                <h2 class="section-title">All Projects</h2>
-            </div>
-            <p class="section-preview-intro">Digital products, dashboards, and research tools spanning healthcare communication, tax compliance, governance, and tourism — see the full project catalogue with tech stacks and live demos.</p>
-            <a href="/projects/" class="btn btn-primary view-more-btn">View More →</a>
-        </div>
-    </section>
-
-    <!-- ===================== AWARDS (PREVIEW) ===================== -->
-    <section id="awards" class="section awards-section section-preview">
+    <!-- ===================== AWARDS & HONOURS (PREVIEW) ===================== -->
+    <section id="awards" class="section awards-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Recognition</span>
                 <h2 class="section-title">Awards &amp; Honours</h2>
             </div>
             <p class="section-preview-intro">Recognition for contributions to data analysis, research, and public-sector service.</p>
-            <a href="/awards/" class="btn btn-primary view-more-btn">View More →</a>
+            <div class="awards-grid">
+                {% for award in collections.awards | reverse %}
+                <div class="award-card reveal">
+                    {% if award.data.image %}
+                    <div class="award-image-container">
+                        <img src="{{ award.data.image }}" alt="{{ award.data.title }}" class="award-image" loading="lazy">
+                    </div>
+                    {% endif %}
+                    <div class="award-content">
+                        {% if award.data.badge %}<span class="award-badge">{{ award.data.badge }}</span>{% endif %}
+                        <h3>{{ award.data.title }}</h3>
+                        <p class="award-issuer">{{ award.data.issuer }}</p>
+                        <div class="award-date"><span>📅 {{ award.data.date_issued }}</span></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="/awards/" class="btn btn-primary view-more-btn">View All Awards →</a>
         </div>
     </section>
 
-    <!-- ===================== SKILLS ===================== -->
+    <!-- ===================== CORE EXPERTISE ===================== -->
     <section id="skills" class="section skills-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Technical Expertise</span>
-                <h2 class="section-title">Core Capability Stack</h2>
+                <h2 class="section-title">Core Expertise</h2>
             </div>
-            <div class="skills-grid">
-                <div class="skill-category reveal">
-                    <div class="category-header"><div class="category-icon">📈</div><h3>Economic &amp; Policy Analysis</h3></div>
-                    <ul class="skill-list">
-                        <li>Regulatory economics and impact assessment</li>
-                        <li>Cost-benefit analysis and options appraisal</li>
-                        <li>Forecasting and policy evaluation</li>
-                        <li>HMT Green Book &amp; Magenta Book aligned analysis</li>
-                    </ul>
-                </div>
-                <div class="skill-category reveal">
-                    <div class="category-header"><div class="category-icon">🔬</div><h3>Econometrics &amp; Data Science</h3></div>
-                    <ul class="skill-list">
-                        <li>Panel ARDL, panel data, time series, regression</li>
-                        <li>Composite index construction</li>
-                        <li>Large-scale administrative data analysis</li>
-                        <li>Survey design and validation</li>
-                    </ul>
-                </div>
-                <div class="skill-category reveal">
-                    <div class="category-header"><div class="category-icon">💻</div><h3>Analytics &amp; Visualisation</h3></div>
-                    <ul class="skill-list">
-                        <li>R (advanced), Python, SQL</li>
-                        <li>Power BI, Tableau, Shiny, ggplot2</li>
-                        <li>Automated dashboards and decision-support systems</li>
-                    </ul>
-                </div>
-                <div class="skill-category reveal">
-                    <div class="category-header"><div class="category-icon">🛡️</div><h3>Governance &amp; Compliance</h3></div>
-                    <ul class="skill-list">
-                        <li>RegTech and compliance analytics</li>
-                        <li>GDPR and data governance frameworks</li>
-                        <li>Data quality assurance and ETL pipelines</li>
-                    </ul>
+            <p class="section-preview-intro">A cross-disciplinary toolkit spanning economic analysis, econometrics, analytics engineering and regulatory compliance.</p>
+            <div class="expertise-card reveal">
+                <div class="expertise-tags">
+                    <span class="expertise-tag">Data Analysis</span>
+                    <span class="expertise-tag">Econometrics</span>
+                    <span class="expertise-tag">Policy Analysis</span>
+                    <span class="expertise-tag">R</span>
+                    <span class="expertise-tag">Python</span>
+                    <span class="expertise-tag">SQL</span>
+                    <span class="expertise-tag">Power BI</span>
+                    <span class="expertise-tag">Tableau</span>
+                    <span class="expertise-tag">Machine Learning</span>
+                    <span class="expertise-tag">Research Methods</span>
+                    <span class="expertise-tag">RegTech</span>
+                    <span class="expertise-tag">Digital Governance</span>
                 </div>
             </div>
-            <div class="certifications">
-                <h3 class="cert-title">Certifications &amp; Professional Development</h3>
-                <div class="cert-grid">
-                    <div class="cert-badge">Certified National Accountant (CNA)</div>
-                    <div class="cert-badge">Google Data Analytics Professional Certificate</div>
-                    <div class="cert-badge">Advanced SQL for Data Analysis</div>
-                    <div class="cert-badge">Microsoft Power BI Advanced Reporting</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================== EDUCATION ===================== -->
-    <section id="education" class="section education-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Academic Background</span>
-                <h2 class="section-title">Education</h2>
-            </div>
-            <div class="edu-grid">
-                <div class="edu-card reveal">
-                    <h3>MSc Economics with Data Analytics</h3>
-                    <p class="edu-institution">University of Essex</p>
-                    <p class="edu-award"><strong>Award:</strong> Master of Science with Merit</p>
-                    <p class="edu-date">Awarded 29 November 2023</p>
-                </div>
-                <div class="edu-card reveal">
-                    <h3>BSc Economics</h3>
-                    <p class="edu-institution">University of Ilorin</p>
-                    <p class="edu-date">Awarded 2006</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================== CERTIFICATIONS (PREVIEW) ===================== -->
-    <section id="certifications" class="section certlearn-section section-preview">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Professional Learning</span>
-                <h2 class="section-title">Certifications &amp; Professional Learning</h2>
-            </div>
-            <p class="section-preview-intro">Continuing professional development across data analytics, SQL, and business intelligence tools, each independently verified.</p>
-            <a href="/certifications/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 
     <!-- ===================== PUBLICATIONS (PREVIEW) ===================== -->
-    <section id="publications" class="section publications-section section-preview">
+    <section id="publications" class="section publications-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Thought Leadership</span>
-                <h2 class="section-title">Publications</h2>
+                <h2 class="section-title">Latest Publications</h2>
             </div>
             <p class="section-preview-intro">Peer-reviewed journal articles across development economics, tax policy, and institutional analysis.</p>
-            <a href="/publications/" class="btn btn-primary view-more-btn">View More →</a>
-        </div>
-    </section>
-
-    <!-- ===================== WORKING PAPERS (PREVIEW) ===================== -->
-    <section id="working-papers" class="section publications-section section-preview">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Thought Leadership</span>
-                <h2 class="section-title">Working Papers &amp; Preprints</h2>
+            <div class="publications-grid">
+                {% for article in collections.journal_articles | reverse %}
+                {% if loop.index <= 3 %}
+                <div class="publication-card journal-card reveal">
+                    <div class="pub-icon">📄</div>
+                    <h3>{{ article.data.title }}</h3>
+                    <p class="pub-meta">{{ article.data.journal }}{% if article.data.year %} ({{ article.data.year }}){% endif %}</p>
+                    {% if article.data.doi %}<p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
+                    <p class="pub-summary">{{ article.templateContent | excerpt(2) }}</p>
+                    <div class="pub-full-details collapsed">{{ article.templateContent | safe }}</div>
+                    <button class="read-more-btn" aria-expanded="false">Read more ▾</button>
+                    <a href="{{ article.data.url or article.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Journal Article →</a>
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
-            <p class="section-preview-intro">Ongoing research and preprints covering tax compliance, migration, health, and macroeconomic policy.</p>
-            <a href="/working-papers/" class="btn btn-primary view-more-btn">View More →</a>
+            <a href="/publications/" class="btn btn-primary view-more-btn">View All Publications →</a>
         </div>
     </section>
 
     <!-- ===================== BOOKS (PREVIEW) ===================== -->
-    <section id="books" class="section publications-section section-preview">
+    <section id="books" class="section publications-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Thought Leadership</span>
                 <h2 class="section-title">Books &amp; Handbooks</h2>
             </div>
             <p class="section-preview-intro">Independently published books and handbooks distilling applied economics and data analysis for practitioners.</p>
-            <a href="/books/" class="btn btn-primary view-more-btn">View More →</a>
+            <div class="publications-grid">
+                {% for book in collections.books | reverse %}
+                {% if loop.index <= 3 %}
+                <div class="publication-card book-card flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{{ book.data.image }}" alt="{{ book.data.title }} Cover" class="book-cover-img" loading="lazy"/>
+                            <div class="flip-hint">Hover to read more</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>{{ book.data.title }}</h3>
+                            <p class="pub-meta">Independently published ({{ book.data.year }})</p>
+                            <div class="pub-description">{{ book.templateContent | safe }}</div>
+                            <a href="{{ book.data.link }}" target="_blank" rel="noopener" class="pub-link">View on Amazon →</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <a href="/books/" class="btn btn-primary view-more-btn">View All Books →</a>
         </div>
     </section>
 
-    <!-- ===================== PUBLIC ENGAGEMENT (PREVIEW) ===================== -->
-    <section id="public-engagement" class="section publications-section section-preview">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Thought Leadership</span>
-                <h2 class="section-title">Public Engagement &amp; Policy Commentary</h2>
+    <!-- ============ PUBLIC ENGAGEMENT + POLICY CONTRIBUTIONS (paired) ============ -->
+    <section class="section section-pair-wrap">
+        <div class="container section-pair">
+            <div id="public-engagement" class="section-pair-col">
+                <div class="section-header section-header-left">
+                    <span class="section-tag">Thought Leadership</span>
+                    <h2 class="section-title">Public Engagement</h2>
+                </div>
+                <p class="section-preview-intro section-preview-intro-left">Translating economic evidence into public policy debate across major Nigerian media outlets.</p>
+                <div class="publications-grid">
+                    <div class="publication-card media-card reveal">
+                        <div class="pub-icon">📰</div>
+                        <div class="media-list">
+                            {% for item in collections.media | reverse %}
+                            {% if loop.index <= 3 %}
+                            <div class="media-item">
+                                <h4>{{ item.data.title }}</h4>
+                                <p class="media-description">{{ item.data.description }} <span class="media-date">({{ item.data.date_issued }})</span></p>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <a href="/public-engagement/" class="btn btn-primary view-more-btn">View All Media →</a>
             </div>
-            <p class="section-preview-intro">Consistently translating economic evidence into public policy debate for wider audiences across major Nigerian media outlets.</p>
-            <a href="/public-engagement/" class="btn btn-primary view-more-btn">View More →</a>
+            <div id="policy" class="section-pair-col">
+                <div class="section-header section-header-left">
+                    <span class="section-tag">Policy Engagement</span>
+                    <h2 class="section-title">Policy Contributions</h2>
+                </div>
+                <p class="section-preview-intro section-preview-intro-left">Independent consultation responses across UK tax administration, data governance and public-sector digital reform.</p>
+                <div class="policy-grid">
+                    {% for item in collections.policy_contributions %}
+                    {% if loop.index <= 3 %}
+                    <div class="policy-card reveal">
+                        <span class="policy-area">{{ item.data.area }}</span>
+                        <h3>{{ item.data.title }}</h3>
+                        <p class="policy-desc">{{ item.data.description }}</p>
+                        {% if item.data.pdf %}
+                        <a href="{{ item.data.pdf }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm policy-btn">{{ item.data.pdf_label or "Read Submission" }}</a>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <a href="/policy-contributions/" class="btn btn-primary view-more-btn">View All Policy Work →</a>
+            </div>
         </div>
     </section>
 
-    <!-- ===================== POLICY CONTRIBUTIONS (PREVIEW) ===================== -->
-    <section id="policy" class="section policy-section section-preview">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Policy Engagement</span>
-                <h2 class="section-title">Policy Contributions &amp; Consultation Responses</h2>
+    <!-- ============ RESEARCH IMPACT + EDUCATION (paired) ============ -->
+    <section class="section section-pair-wrap">
+        <div class="container section-pair">
+            <div id="impact" class="section-pair-col">
+                <div class="section-header section-header-left">
+                    <span class="section-tag">By the Numbers</span>
+                    <h2 class="section-title">Research Impact</h2>
+                </div>
+                <div class="impact-card reveal">
+                    <div class="impact-stat">
+                        <div class="impact-stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4.5h6a3 3 0 0 1 3 3V20a2.5 2.5 0 0 0-2.5-2.5H2zM22 4.5h-6a3 3 0 0 0-3 3V20a2.5 2.5 0 0 1 2.5-2.5H22z"/></svg></div>
+                        <span class="impact-stat-number">9+</span>
+                        <span class="impact-stat-label">Journal Publications</span>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11v2a2 2 0 0 0 2 2h1l4 4v-6M10 9h8a3 3 0 0 0 0-6h-8z"/><path d="M3 11h4V9H5a2 2 0 0 0-2 2z"/></svg></div>
+                        <span class="impact-stat-number">6+</span>
+                        <span class="impact-stat-label">National Media Features</span>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 7l-3 6a3.2 3.2 0 0 0 6 0zM19 7l-3 6a3.2 3.2 0 0 0 6 0zM5 7h14M3 21h18"/></svg></div>
+                        <span class="impact-stat-number">5+</span>
+                        <span class="impact-stat-label">Policy Submissions</span>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M11 20V4M18 20v-7"/><path d="M3 20h18"/></svg></div>
+                        <span class="impact-stat-label impact-stat-label-solo">Policy Influence &amp; Engagement</span>
+                    </div>
+                </div>
             </div>
-            <p class="section-preview-intro">Independent policy analysis and consultation responses across UK tax administration, data governance, automated decision-making, energy data regulation, and public-sector digital reform.</p>
-            <a href="/policy-contributions/" class="btn btn-primary view-more-btn">View More →</a>
-        </div>
-    </section>
-
-    <!-- ===================== RESEARCH VISIBILITY (PREVIEW) ===================== -->
-    <section id="external-mentions" class="section mentions-section section-preview">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Research Visibility</span>
-                <h2 class="section-title">External Mentions &amp; Research Visibility</h2>
+            <div id="education" class="section-pair-col">
+                <div class="section-header section-header-left">
+                    <span class="section-tag">Academic Background</span>
+                    <h2 class="section-title">Education</h2>
+                </div>
+                <div class="edu-grid">
+                    <div class="edu-card reveal">
+                        <h3>MSc Economics with Data Analytics</h3>
+                        <p class="edu-institution">University of Essex</p>
+                        <p class="edu-award"><strong>Award:</strong> Master of Science with Merit</p>
+                        <p class="edu-date">Awarded 29 November 2023</p>
+                    </div>
+                    <div class="edu-card reveal">
+                        <h3>BSc Economics</h3>
+                        <p class="edu-institution">University of Ilorin</p>
+                        <p class="edu-date">Awarded 2006</p>
+                    </div>
+                </div>
             </div>
-            <p class="section-preview-intro">Independent research picked up in third-party roundups and reviews, including the TaxProf Blog SSRN Tax Roundup.</p>
-            <a href="/research-visibility/" class="btn btn-primary view-more-btn">View More →</a>
         </div>
     </section>
 

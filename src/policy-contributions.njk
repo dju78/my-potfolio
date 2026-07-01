@@ -108,7 +108,7 @@
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="/"                      class="nav-link">Home</a></li>
-                <li><a href="/#about"                class="nav-link">About</a></li>
+                <li><a href="/#featured-policy"       class="nav-link">Featured</a></li>
                 <li><a href="/#projects"             class="nav-link">Projects</a></li>
                 <li><a href="/#research"             class="nav-link">Research</a></li>
                 <li><a href="/policy-contributions/" class="nav-link active">Policy</a></li>
@@ -252,6 +252,31 @@
                 </div>
             </section>
 
+            <section class="pc-other-submissions">
+                <div class="section-header">
+                    <span class="section-tag">All Consultation Responses</span>
+                    <h2 class="section-title">Other Policy Contributions</h2>
+                </div>
+                <div class="policy-intro">
+                    <p>I contribute independent policy analysis and consultation responses across UK tax administration, data governance, automated decision-making, energy data regulation, climate-related compliance, and public-sector digital reform.</p>
+                </div>
+                <div class="policy-grid">
+                    {% for item in collections.policy_contributions %}
+                    <div class="policy-card reveal">
+                        <span class="policy-area">{{ item.data.area }}</span>
+                        <h3>{{ item.data.title }}</h3>
+                        <p class="policy-desc">{{ item.data.description }}</p>
+                        <div class="policy-tags">
+                            {% for tag in item.data.tags %}<span class="policy-tag">{{ tag }}</span>{% endfor %}
+                        </div>
+                        {% if item.data.pdf %}
+                        <a href="{{ item.data.pdf }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm policy-btn">{{ item.data.pdf_label or "Read Submission" }}</a>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
         </div>
     </main>
 
@@ -269,7 +294,7 @@
                 </div>
                 <div class="footer-links">
                     <a href="/">Home</a>
-                    <a href="/#about">About</a>
+                    <a href="/#featured-policy">Featured</a>
                     <a href="/#experience">Experience</a>
                     <a href="/#projects">Projects</a>
                     <a href="/#research">Research</a>
