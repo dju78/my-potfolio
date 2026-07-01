@@ -1,0 +1,29 @@
+---
+layout: base.njk
+permalink: /working-papers/index.html
+pageTitle: "Working Papers & Preprints | Daramola Joseph Omoyele"
+pageDescription: "Working papers and preprints authored by Daramola Joseph Omoyele."
+---
+<section id="working-papers" class="section publications-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Thought Leadership</span>
+            <h2 class="section-title">Working Papers &amp; Preprints</h2>
+        </div>
+        <div class="publications-grid">
+            {% for paper in collections.working_papers | reverse %}
+            <div class="publication-card journal-card reveal">
+                <div class="pub-icon">📄</div>
+                <h3>{{ paper.data.title }}</h3>
+                <p class="pub-meta">{{ paper.data.journal }}{% if paper.data.year %} ({{ paper.data.year }}){% endif %}</p>
+                {% if paper.data.doi %}<p class="pub-doi"><a href="{{ paper.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
+                <p class="pub-summary">{{ paper.templateContent | excerpt(2) }}</p>
+                <div class="pub-full-details collapsed">{{ paper.templateContent | safe }}</div>
+                <button class="read-more-btn" aria-expanded="false">Read more ▾</button>
+                {% if paper.data.contributors %}<div class="pub-contributors"><strong>Contributors:</strong> {{ paper.data.contributors }}</div>{% endif %}
+                <a href="{{ paper.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Preprint →</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
