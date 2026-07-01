@@ -41,7 +41,7 @@
             <ul class="nav-menu" id="navMenu">
                 {% set h = "" if page.url == "/" else "/" %}
                 <li><a href="{{ h }}#home"       class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
-                <li><a href="{{ h }}#about"      class="nav-link">About</a></li>
+                <li><a href="{{ h }}#featured-policy" class="nav-link">Featured</a></li>
                 <li><a href="{{ h }}#projects"   class="nav-link">Projects</a></li>
                 <li><a href="{{ h }}#research"   class="nav-link">Research</a></li>
                 <li><a href="/policy-contributions/" class="nav-link{% if page.url == '/policy-contributions/' %} active{% endif %}">Policy</a></li>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="footer-links">
                     <a href="{{ h }}#home">Home</a>
-                    <a href="{{ h }}#about">About</a>
+                    <a href="{{ h }}#featured-policy">Featured</a>
                     <a href="/experience/">Experience</a>
                     <a href="/projects/">Projects</a>
                     <a href="/academic-work/">Research</a>
