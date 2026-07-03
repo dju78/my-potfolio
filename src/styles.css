@@ -57,8 +57,17 @@ ul, ol { list-style:none; }
     font-family:var(--font-display); font-size:clamp(1.9rem,4.5vw,3rem);
     font-weight:800; color:var(--text); letter-spacing:-.03em; line-height:1.15;
 }
-.reveal { opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
-.reveal.active { opacity:1; transform:translateY(0); }
+/* Reveal-on-scroll is opt-in progressive enhancement: content is fully visible
+   by default, and only fades in on scroll once JS confirms it can animate it
+   back in. This avoids permanently-invisible cards when JS hasn't run yet
+   (slow connections, print/PDF export, disabled JS). */
+.js .reveal { opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+.js .reveal.active { opacity:1; transform:translateY(0); }
+
+@media print {
+    .reveal, .js .reveal { opacity:1 !important; transform:none !important; }
+    .navbar, .icon-nav-section, .nav-toggle { display:none !important; }
+}
 
 /* ---- Buttons ----------------------------------------------- */
 .btn {
