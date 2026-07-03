@@ -147,7 +147,7 @@ ul, ol { list-style:none; }
 .hero {
     min-height:100vh; position:relative; overflow:hidden;
     display:flex; align-items:center;
-    padding:8rem 2rem 5rem;
+    padding:3rem 2rem 5rem;
     color:var(--text-inv);
 }
 
@@ -324,6 +324,7 @@ ul, ol { list-style:none; }
    ICON NAVIGATION STRIP
    ============================================================ */
 .icon-nav-section { background:var(--bg-white); padding:2.25rem 2rem; border-bottom:1px solid var(--border); }
+.icon-nav-section.icon-nav-top { padding-top:6.5rem; }
 .icon-nav-grid { display:grid; grid-template-columns:repeat(13,1fr); gap:.4rem; }
 .icon-nav-tile {
     display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
@@ -855,10 +856,11 @@ ul, ol { list-style:none; }
 }
 
 @media(max-width:640px){
-    .hero { padding:7rem 1.25rem 3.5rem; }
+    .hero { padding:2.5rem 1.25rem 3.5rem; }
     .hero-photo-frame { width:220px; height:220px; }
     .section { padding:4rem 1.25rem; }
     .icon-nav-section { padding:1.5rem 1rem; }
+    .icon-nav-section.icon-nav-top { padding-top:5.5rem; }
     .icon-nav-grid { grid-template-columns:repeat(4,1fr); gap:.35rem; }
     .icon-nav-tile { padding:.6rem .2rem; }
     .icon-nav-label { font-size:.6rem; }
