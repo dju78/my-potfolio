@@ -10,12 +10,24 @@
 
 [[redirects]]
   from = "/academic-work"
-  to = "/research/"
+  to = "/academic-research/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/academic-work/*"
-  to = "/research/"
+  to = "/academic-research/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/research"
+  to = "/academic-research/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/research/*"
+  to = "/academic-research/"
   status = 301
   force = true
