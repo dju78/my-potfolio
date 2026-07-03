@@ -19,9 +19,9 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
                     <span class="icon-nav-label">Experience</span>
                 </a>
-                <a href="/research/" class="icon-nav-tile">
+                <a href="/academic-research/" class="icon-nav-tile">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3L2 8l10 5 8-4.2V17"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg>
-                    <span class="icon-nav-label">Research</span>
+                    <span class="icon-nav-label">Academic Research</span>
                 </a>
                 <a href="/awards/" class="icon-nav-tile">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-2.5 5 2.5-1.5-8.5"/></svg>
@@ -162,14 +162,15 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
                 <span class="section-tag">Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
             </div>
-            <p class="section-preview-intro">A selection of digital products, dashboards and research tools spanning healthcare communication, tax compliance, governance and tourism.</p>
+            <p class="section-preview-intro">A selection of digital products spanning healthcare communication, tax compliance, and community platforms.</p>
             <div class="project-grid">
-                {% for project in collections.projects | reverse %}
+                {% for project in collections.projects | sort(false, false, 'data.order') %}
                 {% if loop.index <= 4 %}
                 <div class="project-card reveal" data-category="{{ project.data.badge | lower | replace(' ', '-') }}">
                     <div class="project-card-top">
                         <div class="project-card-meta">
                             <span class="project-badge">{{ project.data.badge }}</span>
+                            {% if project.data.status %}<span class="project-status-badge">{{ project.data.status }}</span>{% endif %}
                             <span class="project-client-tag">{{ project.data.client }}</span>
                         </div>
                         <h3 class="project-title">{{ project.data.title }}</h3>
@@ -247,7 +248,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Academic Work</span>
-                <h2 class="section-title">Research &amp; Major Projects</h2>
+                <h2 class="section-title">Academic Research</h2>
             </div>
             <p class="section-preview-intro">Major research initiatives spanning econometric modelling, institutional economics, and applied policy analysis.</p>
             <div class="research-grid">
@@ -263,7 +264,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
                 </div>
                 {% endfor %}
             </div>
-            <a href="/research/" class="btn btn-primary view-more-btn">View All Research →</a>
+            <a href="/academic-research/" class="btn btn-primary view-more-btn">View Academic Research →</a>
         </div>
     </section>
 

@@ -2,6 +2,7 @@
 title: "TaxMate UK"
 client: "Financial Management"
 badge: "Digital Product"
+order: 4
 description: "A financial management and tax-planning tool designed for UK freelancers and small business owners. Solves the problem of manual tax tracking by providing automated insights and HMRC deadline tracking."
 link: "https://taxmate.omoyelejd.co.uk/"
 highlights:

@@ -1,7 +1,8 @@
 ---
 title: "DEAP Tax Compliance"
 client: "Tax Analytics"
-badge: "Data Dashboard"
+badge: "Digital Product"
+order: 7
 description: "Data-driven Evaluative Analytics Platform (DEAP). Solves complex compliance reporting issues by aggregating tax data into an interactive dashboard for quick decision-making and transparency."
 link: "https://deaptaxcompliance.netlify.app/"
 highlights:

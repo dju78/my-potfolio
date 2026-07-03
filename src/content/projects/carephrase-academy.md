@@ -2,6 +2,7 @@
 title: "CarePhrase Communication Academy"
 client: "Care Workforce Training"
 badge: "Digital Product"
+order: 2
 description: "The CarePhrase Communication Academy is a structured workplace training platform that strengthens how care workers communicate, hand over, escalate, and safeguard. It supports communication, handover, escalation, safeguarding, and care-English training as part of the wider CarePhrase ecosystem."
 link: "https://comms.carephrase.com"
 highlights:
