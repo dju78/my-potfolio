@@ -9,7 +9,13 @@
   force = false
 
 [[redirects]]
-  from = "/academic-work/"
+  from = "/academic-work"
+  to = "/research/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/academic-work/*"
   to = "/research/"
   status = 301
   force = true
