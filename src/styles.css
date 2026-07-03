@@ -100,14 +100,6 @@ ul, ol { list-style:none; }
 }
 .view-more-btn { display:flex; margin:0 auto; width:max-content; }
 
-/* ---- Back-to-portfolio link (dedicated sub-pages) ------------ */
-.subpage-back-wrap { padding:6.5rem 2rem 0; }
-.back-link {
-    display:inline-flex; align-items:center; gap:.4rem;
-    color:var(--navy); font-weight:600; font-size:.9rem; transition:var(--ease);
-}
-.back-link:hover { color:var(--green); }
-
 /* ============================================================
    NAVBAR
    ============================================================ */
@@ -859,7 +851,6 @@ ul, ol { list-style:none; }
     .footer-links   { justify-content:flex-start; gap:1rem; }
     .research-grid, .publications-grid { grid-template-columns:1fr; }
     .research-card.featured { grid-column:1; }
-    .subpage-back-wrap { padding-top:6rem; }
     .section-pair { grid-template-columns:1fr; gap:3rem; }
     .impact-card { grid-template-columns:1fr 1fr; }
 }
@@ -881,7 +872,6 @@ ul, ol { list-style:none; }
     .timeline-marker { left:-1.75rem; }
     .footer-social { justify-content:center; }
     .publication-card.flip-card { height:420px; }
-    .subpage-back-wrap { padding:5.5rem 1.25rem 0; }
     .impact-card { grid-template-columns:1fr; }
     .view-more-btn, .section-pair-col .view-more-btn { width:100%; justify-content:center; }
 }

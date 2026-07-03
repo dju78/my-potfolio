@@ -3,13 +3,21 @@ layout: base.njk
 permalink: /books/index.html
 pageTitle: "Books & Handbooks | Daramola Joseph Omoyele"
 pageDescription: "Books and handbooks written by Daramola Joseph Omoyele."
+breadcrumbLabel: "Books"
 ---
-<section id="books" class="section publications-section">
+<main class="pc-page">
     <div class="container">
-        <div class="section-header">
+        <nav class="pc-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="pc-breadcrumb-sep">/</span>
+            <span aria-current="page">Books</span>
+        </nav>
+        <header class="pc-hero">
             <span class="section-tag">Thought Leadership</span>
-            <h2 class="section-title">Books &amp; Handbooks</h2>
-        </div>
+            <h1>Books &amp; Handbooks</h1>
+            <p class="pc-hero-sub">Independently published books and handbooks distilling applied economics, tax compliance, and data analysis for practitioners.</p>
+        </header>
+
         <div class="publications-grid">
             {% for book in collections.books | reverse %}
             <div class="publication-card book-card flip-card reveal">
@@ -31,5 +39,14 @@ pageDescription: "Books and handbooks written by Daramola Joseph Omoyele."
             </div>
             {% endfor %}
         </div>
+
+        <section class="pc-related">
+            <h2 class="fpc-block-title">Keep exploring</h2>
+            <div class="fpc-cards">
+                <a class="fpc-card" href="/publications/"><span class="fpc-outlet">Portfolio</span><span class="fpc-headline">Published Journal Articles</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/working-papers/"><span class="fpc-outlet">Portfolio</span><span class="fpc-headline">Working Papers &amp; Preprints</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/contact/"><span class="fpc-outlet">Get in touch</span><span class="fpc-headline">Contact Me</span><span class="fpc-go">View section →</span></a>
+            </div>
+        </section>
     </div>
-</section>
+</main>

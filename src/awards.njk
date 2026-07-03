@@ -3,13 +3,21 @@ layout: base.njk
 permalink: /awards/index.html
 pageTitle: "Awards & Honours | Daramola Joseph Omoyele"
 pageDescription: "Awards and recognition earned by Daramola Joseph Omoyele."
+breadcrumbLabel: "Awards"
 ---
-<section id="awards" class="section awards-section">
+<main class="pc-page">
     <div class="container">
-        <div class="section-header">
+        <nav class="pc-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="pc-breadcrumb-sep">/</span>
+            <span aria-current="page">Awards</span>
+        </nav>
+        <header class="pc-hero">
             <span class="section-tag">Recognition</span>
-            <h2 class="section-title">Awards &amp; Honours</h2>
-        </div>
+            <h1>Awards &amp; Honours</h1>
+            <p class="pc-hero-sub">Recognition for contributions to data analysis, digital innovation, and public-sector service.</p>
+        </header>
+
         <div class="awards-grid">
             {% for award in collections.awards | reverse %}
             <div class="award-card reveal">
@@ -38,5 +46,14 @@ pageDescription: "Awards and recognition earned by Daramola Joseph Omoyele."
             </div>
             {% endfor %}
         </div>
+
+        <section class="pc-related">
+            <h2 class="fpc-block-title">Keep exploring</h2>
+            <div class="fpc-cards">
+                <a class="fpc-card" href="/impact/"><span class="fpc-outlet">By the Numbers</span><span class="fpc-headline">Research Impact</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/public-engagement/"><span class="fpc-outlet">Portfolio</span><span class="fpc-headline">Public Engagement &amp; Policy Commentary</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/contact/"><span class="fpc-outlet">Get in touch</span><span class="fpc-headline">Contact Me</span><span class="fpc-go">View section →</span></a>
+            </div>
+        </section>
     </div>
-</section>
+</main>
