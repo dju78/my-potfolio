@@ -1,0 +1,48 @@
+---
+layout: base.njk
+permalink: /research/index.html
+pageTitle: "Research & Major Projects | Daramola Joseph Omoyele"
+pageDescription: "Research and major academic projects by Daramola Joseph Omoyele, Data Analyst and Research Analyst."
+breadcrumbLabel: "Research"
+---
+<main class="pc-page">
+    <div class="container">
+        <nav class="pc-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="pc-breadcrumb-sep">/</span>
+            <span aria-current="page">Research</span>
+        </nav>
+        <header class="pc-hero">
+            <span class="section-tag">Academic Work</span>
+            <h1>Research &amp; Major Projects</h1>
+            <p class="pc-hero-sub">Major research initiatives spanning econometric modelling, institutional economics, and applied policy analysis, from postgraduate dissertation work to independent published studies.</p>
+        </header>
+
+        <div class="research-grid">
+            {% for item in collections.research | reverse %}
+            <div class="research-card {% if loop.first %}featured{% else %}reveal{% endif %}">
+                <div class="research-badge">{{ item.data.badge }}</div>
+                <h3>{{ item.data.title }}</h3>
+                <p class="research-institution">{{ item.data.institution }}</p>
+                <div class="research-details">
+                    <h4>Methodology / Focus areas:</h4>
+                    <ul>{% for pt in item.data.items %}<li>{{ pt.text }}</li>{% endfor %}</ul>
+                    {% if item.data.outcome %}
+                    <div class="research-outcome"><strong>Outcome:</strong> {{ item.data.outcome }}</div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <p class="fpc-xlink"><a href="/policy-contributions/">See the featured policy case study: Digital Identity Harmonisation in Nigeria →</a></p>
+
+        <section class="pc-related">
+            <h2 class="fpc-block-title">Keep exploring</h2>
+            <div class="fpc-cards">
+                <a class="fpc-card" href="/education/"><span class="fpc-outlet">Education</span><span class="fpc-headline">MSc Economics with Data Analytics, University of Essex</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/publications/"><span class="fpc-outlet">Portfolio</span><span class="fpc-headline">Published journal articles</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/contact/"><span class="fpc-outlet">Get in touch</span><span class="fpc-headline">Contact Me</span><span class="fpc-go">View section →</span></a>
+            </div>
+        </section>
+    </div>
+</main>

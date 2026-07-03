@@ -7,3 +7,9 @@
   to = "/admin/index.html"
   status = 200
   force = false
+
+[[redirects]]
+  from = "/academic-work/"
+  to = "/research/"
+  status = 301
+  force = true

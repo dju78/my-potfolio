@@ -3,13 +3,21 @@ layout: base.njk
 permalink: /working-papers/index.html
 pageTitle: "Working Papers & Preprints | Daramola Joseph Omoyele"
 pageDescription: "Working papers and preprints authored by Daramola Joseph Omoyele."
+breadcrumbLabel: "Working Papers"
 ---
-<section id="working-papers" class="section publications-section">
+<main class="pc-page">
     <div class="container">
-        <div class="section-header">
+        <nav class="pc-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="pc-breadcrumb-sep">/</span>
+            <span aria-current="page">Working Papers</span>
+        </nav>
+        <header class="pc-hero">
             <span class="section-tag">Thought Leadership</span>
-            <h2 class="section-title">Working Papers &amp; Preprints</h2>
-        </div>
+            <h1>Working Papers &amp; Preprints</h1>
+            <p class="pc-hero-sub">Ongoing research and preprints covering tax compliance, migration, health, and macroeconomic policy.</p>
+        </header>
+
         <div class="publications-grid">
             {% for paper in collections.working_papers | reverse %}
             <div class="publication-card journal-card reveal">
@@ -25,5 +33,14 @@ pageDescription: "Working papers and preprints authored by Daramola Joseph Omoye
             </div>
             {% endfor %}
         </div>
+
+        <section class="pc-related">
+            <h2 class="fpc-block-title">Keep exploring</h2>
+            <div class="fpc-cards">
+                <a class="fpc-card" href="/publications/"><span class="fpc-outlet">Portfolio</span><span class="fpc-headline">Published Journal Articles</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/research-visibility/"><span class="fpc-outlet">Portfolio</span><span class="fpc-headline">External Mentions &amp; Research Visibility</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/contact/"><span class="fpc-outlet">Get in touch</span><span class="fpc-headline">Contact Me</span><span class="fpc-go">View section →</span></a>
+            </div>
+        </section>
     </div>
-</section>
+</main>

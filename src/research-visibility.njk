@@ -3,13 +3,21 @@ layout: base.njk
 permalink: /research-visibility/index.html
 pageTitle: "External Mentions & Research Visibility | Daramola Joseph Omoyele"
 pageDescription: "External mentions and research visibility for Daramola Joseph Omoyele's published work."
+breadcrumbLabel: "Research Visibility"
 ---
-<section id="external-mentions" class="section mentions-section">
+<main class="pc-page">
     <div class="container">
-        <div class="section-header">
+        <nav class="pc-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="pc-breadcrumb-sep">/</span>
+            <span aria-current="page">Research Visibility</span>
+        </nav>
+        <header class="pc-hero">
             <span class="section-tag">Research Visibility</span>
-            <h2 class="section-title">External Mentions &amp; Research Visibility</h2>
-        </div>
+            <h1>External Mentions &amp; Research Visibility</h1>
+            <p class="pc-hero-sub">Independent research picked up in third-party roundups and reviews, including the TaxProf Blog SSRN Tax Roundup.</p>
+        </header>
+
         <div class="mentions-grid">
             {% for item in collections.external_mentions | reverse %}
             <div class="mention-card reveal">
@@ -35,5 +43,14 @@ pageDescription: "External mentions and research visibility for Daramola Joseph 
             </div>
             {% endfor %}
         </div>
+
+        <section class="pc-related">
+            <h2 class="fpc-block-title">Keep exploring</h2>
+            <div class="fpc-cards">
+                <a class="fpc-card" href="/publications/"><span class="fpc-outlet">Portfolio</span><span class="fpc-headline">Published Journal Articles</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/working-papers/"><span class="fpc-outlet">Portfolio</span><span class="fpc-headline">Working Papers &amp; Preprints</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/contact/"><span class="fpc-outlet">Get in touch</span><span class="fpc-headline">Contact Me</span><span class="fpc-go">View section →</span></a>
+            </div>
+        </section>
     </div>
-</section>
+</main>
