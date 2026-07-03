@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 permalink: /projects/index.html
-pageTitle: "All Projects | Daramola Joseph Omoyele"
-pageDescription: "Digital products, dashboards and research tools built by Daramola Joseph Omoyele under Daramola Digital Labs."
+pageTitle: "Featured Digital Projects | Daramola Joseph Omoyele"
+pageDescription: "Digital products built by Daramola Joseph Omoyele under Daramola Digital Labs, spanning healthcare communication, tax compliance, and community platforms."
 breadcrumbLabel: "Projects"
 ---
 <main class="pc-page">
@@ -14,23 +14,21 @@ breadcrumbLabel: "Projects"
         </nav>
         <header class="pc-hero">
             <span class="section-tag">Portfolio</span>
-            <h1>Featured Projects</h1>
-            <p class="pc-hero-sub">Digital products, dashboards, and research tools spanning healthcare communication, tax compliance, governance, and tourism — built end-to-end under Daramola Digital Labs.</p>
+            <h1>Featured Digital Projects</h1>
+            <p class="pc-hero-sub">Digital products built end-to-end under Daramola Digital Labs, spanning healthcare communication, tax compliance, and community platforms.</p>
         </header>
 
         <div class="project-filters">
             <button class="filter-btn active" data-filter="all">All Projects</button>
             <button class="filter-btn" data-filter="digital-product">Digital Products</button>
-            <button class="filter-btn" data-filter="data-dashboard">Dashboards</button>
-            <button class="filter-btn" data-filter="research-tool">Research Tools</button>
-            <button class="filter-btn" data-filter="portfolio">Portfolio</button>
         </div>
         <div class="project-grid">
-            {% for project in collections.projects | reverse %}
+            {% for project in collections.projects | sort(false, false, 'data.order') %}
             <div class="project-card reveal" data-category="{{ project.data.badge | lower | replace(' ', '-') }}">
                 <div class="project-card-top">
                     <div class="project-card-meta">
                         <span class="project-badge">{{ project.data.badge }}</span>
+                        {% if project.data.status %}<span class="project-status-badge">{{ project.data.status }}</span>{% endif %}
                         <span class="project-client-tag">{{ project.data.client }}</span>
                     </div>
                     <h3 class="project-title">{{ project.data.title }}</h3>

@@ -162,14 +162,15 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
                 <span class="section-tag">Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
             </div>
-            <p class="section-preview-intro">A selection of digital products, dashboards and research tools spanning healthcare communication, tax compliance, governance and tourism.</p>
+            <p class="section-preview-intro">A selection of digital products spanning healthcare communication, tax compliance, and community platforms.</p>
             <div class="project-grid">
-                {% for project in collections.projects | reverse %}
+                {% for project in collections.projects | sort(false, false, 'data.order') %}
                 {% if loop.index <= 4 %}
                 <div class="project-card reveal" data-category="{{ project.data.badge | lower | replace(' ', '-') }}">
                     <div class="project-card-top">
                         <div class="project-card-meta">
                             <span class="project-badge">{{ project.data.badge }}</span>
+                            {% if project.data.status %}<span class="project-status-badge">{{ project.data.status }}</span>{% endif %}
                             <span class="project-client-tag">{{ project.data.client }}</span>
                         </div>
                         <h3 class="project-title">{{ project.data.title }}</h3>

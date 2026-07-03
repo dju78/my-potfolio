@@ -504,6 +504,11 @@ ul, ol { list-style:none; }
     display:inline-block; padding:.25rem .75rem; background:linear-gradient(135deg,var(--navy),var(--navy-light));
     color:#fff; border-radius:var(--r-full); font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
 }
+.project-status-badge {
+    display:inline-block; padding:.25rem .75rem; background:rgba(196,154,44,.14);
+    color:#8a6512; border:1px solid rgba(196,154,44,.35); border-radius:var(--r-full);
+    font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+}
 .project-client-tag { font-size:.78rem; color:var(--text-3); font-weight:500; }
 .project-title { font-size:1.15rem; font-weight:700; color:var(--text); margin-bottom:.55rem; letter-spacing:-.02em; line-height:1.25; }
 .project-desc  { font-size:.86rem; color:var(--text-2); line-height:1.65; }
