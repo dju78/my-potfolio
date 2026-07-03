@@ -485,7 +485,7 @@ ul, ol { list-style:none; }
 .filter-btn.active   { background:linear-gradient(135deg,var(--navy),var(--navy-light)); color:#fff; border-color:transparent; box-shadow:var(--shadow-md); }
 
 /* Project grid */
-.project-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:1.5rem; }
+.project-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr)); gap:1.5rem; }
 .project-card {
     background:var(--bg-white); border-radius:var(--r-lg); border:1px solid var(--border);
     box-shadow:var(--shadow-md); display:flex; flex-direction:column; transition:var(--ease);
