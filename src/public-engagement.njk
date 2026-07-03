@@ -3,18 +3,25 @@ layout: base.njk
 permalink: /public-engagement/index.html
 pageTitle: "Public Engagement & Policy Commentary | Daramola Joseph Omoyele"
 pageDescription: "Media appearances and policy commentary by Daramola Joseph Omoyele across major Nigerian media outlets."
+breadcrumbLabel: "Public Engagement"
 ---
-<section id="public-engagement" class="section publications-section">
+<main class="pc-page">
     <div class="container">
-        <div class="section-header">
+        <nav class="pc-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="pc-breadcrumb-sep">/</span>
+            <span aria-current="page">Public Engagement</span>
+        </nav>
+        <header class="pc-hero">
             <span class="section-tag">Thought Leadership</span>
-            <h2 class="section-title">Public Engagement &amp; Policy Commentary</h2>
-        </div>
+            <h1>Public Engagement &amp; Policy Commentary</h1>
+            <p class="pc-hero-sub">Consistently translating economic evidence into public policy debate for wider audiences across major Nigerian media outlets.</p>
+        </header>
+
         <div class="publications-grid">
             <div class="publication-card media-card reveal">
                 <div class="pub-icon">📰</div>
                 <h3>Media &amp; Policy Commentary</h3>
-                <p class="pub-media-intro">Consistently translating economic evidence into public policy debate for wider audiences across major Nigerian media outlets.</p>
                 <div class="media-list">
                     {% for item in collections.media | reverse %}
                     <div class="media-item">
@@ -35,5 +42,14 @@ pageDescription: "Media appearances and policy commentary by Daramola Joseph Omo
                 <a class="fpc-xlink fpc-xlink-inline" href="/policy-contributions/">See the featured policy case study →</a>
             </div>
         </div>
+
+        <section class="pc-related">
+            <h2 class="fpc-block-title">Keep exploring</h2>
+            <div class="fpc-cards">
+                <a class="fpc-card" href="/policy-contributions/"><span class="fpc-outlet">Policy Engagement</span><span class="fpc-headline">Policy Contributions &amp; Consultation Responses</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/research-visibility/"><span class="fpc-outlet">Portfolio</span><span class="fpc-headline">External Mentions &amp; Research Visibility</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/contact/"><span class="fpc-outlet">Get in touch</span><span class="fpc-headline">Contact Me</span><span class="fpc-go">View section →</span></a>
+            </div>
+        </section>
     </div>
-</section>
+</main>

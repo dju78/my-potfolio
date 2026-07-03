@@ -56,6 +56,13 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+// Safety net: if the observer never fires for some elements (e.g. automated
+// capture tools that resize the viewport without simulating real scrolling),
+// force everything visible after a short delay rather than leaving it stuck.
+setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.active)').forEach(el => el.classList.add('active'));
+}, 1200);
+
 // ===========================
 // Counter Animation
 // ===========================

@@ -3,13 +3,21 @@ layout: base.njk
 permalink: /projects/index.html
 pageTitle: "All Projects | Daramola Joseph Omoyele"
 pageDescription: "Digital products, dashboards and research tools built by Daramola Joseph Omoyele under Daramola Digital Labs."
+breadcrumbLabel: "Projects"
 ---
-<section id="projects" class="section projects-section">
+<main class="pc-page">
     <div class="container">
-        <div class="section-header">
+        <nav class="pc-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="pc-breadcrumb-sep">/</span>
+            <span aria-current="page">Projects</span>
+        </nav>
+        <header class="pc-hero">
             <span class="section-tag">Portfolio</span>
-            <h2 class="section-title">All Projects</h2>
-        </div>
+            <h1>Featured Projects</h1>
+            <p class="pc-hero-sub">Digital products, dashboards, and research tools spanning healthcare communication, tax compliance, governance, and tourism — built end-to-end under Daramola Digital Labs.</p>
+        </header>
+
         <div class="project-filters">
             <button class="filter-btn active" data-filter="all">All Projects</button>
             <button class="filter-btn" data-filter="digital-product">Digital Products</button>
@@ -52,5 +60,14 @@ pageDescription: "Digital products, dashboards and research tools built by Daram
             </div>
             {% endfor %}
         </div>
+
+        <section class="pc-related">
+            <h2 class="fpc-block-title">Keep exploring</h2>
+            <div class="fpc-cards">
+                <a class="fpc-card" href="/expertise/"><span class="fpc-outlet">Skills</span><span class="fpc-headline">Core Expertise behind these products</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/experience/"><span class="fpc-outlet">Portfolio</span><span class="fpc-headline">Professional Experience</span><span class="fpc-go">View section →</span></a>
+                <a class="fpc-card" href="/contact/"><span class="fpc-outlet">Get in touch</span><span class="fpc-headline">Contact Me</span><span class="fpc-go">View section →</span></a>
+            </div>
+        </section>
     </div>
-</section>
+</main>
