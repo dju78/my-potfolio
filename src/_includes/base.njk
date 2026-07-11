@@ -46,13 +46,37 @@
             </a>
             <ul class="nav-menu" id="navMenu">
                 {% set h = "" if page.url == "/" else "/" %}
-                <li><a href="{{ h }}#home"       class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
-                <li><a href="/policy-contributions/" class="nav-link{% if page.url == '/policy-contributions/' %} active{% endif %}">Featured</a></li>
-                <li><a href="/projects/"   class="nav-link{% if page.url == '/projects/' %} active{% endif %}">Projects</a></li>
-                <li><a href="/academic-research/"   class="nav-link{% if page.url == '/academic-research/' %} active{% endif %}">Academic Research</a></li>
-                <li><a href="/policy-contributions/" class="nav-link{% if page.url == '/policy-contributions/' %} active{% endif %}">Policy</a></li>
-                <li><a href="/cv/"     class="nav-link{% if page.url == '/cv/' %} active{% endif %}">CV</a></li>
-                <li><a href="/contact/"    class="nav-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a></li>
+                <li><a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
+                <li><a href="/projects/" class="nav-link{% if page.url == '/projects/' %} active{% endif %}">Projects</a></li>
+                <li class="nav-item-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-dropdown="research">Research</button>
+                    <ul class="nav-dropdown" id="research-menu" aria-label="Research submenu">
+                        <li><a href="/academic-research/" class="nav-dropdown-link{% if page.url == '/academic-research/' %} active{% endif %}">Academic Research</a></li>
+                        <li><a href="/publications/" class="nav-dropdown-link{% if page.url == '/publications/' %} active{% endif %}">Publications</a></li>
+                        <li><a href="/books/" class="nav-dropdown-link{% if page.url == '/books/' %} active{% endif %}">Books</a></li>
+                        <li><a href="/public-engagement/" class="nav-dropdown-link{% if page.url == '/public-engagement/' %} active{% endif %}">Media</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-dropdown="policy">Policy & Impact</button>
+                    <ul class="nav-dropdown" id="policy-menu" aria-label="Policy & Impact submenu">
+                        <li><a href="/policy-contributions/" class="nav-dropdown-link{% if page.url == '/policy-contributions/' %} active{% endif %}">Policy Work</a></li>
+                        <li><a href="/impact/" class="nav-dropdown-link{% if page.url == '/impact/' %} active{% endif %}">Impact</a></li>
+                        <li><a href="/policy-contributions/" class="nav-dropdown-link">Featured Policy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-dropdown="expertise">Expertise</button>
+                    <ul class="nav-dropdown" id="expertise-menu" aria-label="Expertise submenu">
+                        <li><a href="/expertise/" class="nav-dropdown-link{% if page.url == '/expertise/' %} active{% endif %}">Expertise</a></li>
+                        <li><a href="/experience/" class="nav-dropdown-link{% if page.url == '/experience/' %} active{% endif %}">Experience</a></li>
+                        <li><a href="/cv/" class="nav-dropdown-link{% if page.url == '/cv/' %} active{% endif %}">CV</a></li>
+                        <li><a href="/education/" class="nav-dropdown-link{% if page.url == '/education/' %} active{% endif %}">Education</a></li>
+                        <li><a href="/certifications/" class="nav-dropdown-link{% if page.url == '/certifications/' %} active{% endif %}">Certifications</a></li>
+                        <li><a href="/awards/" class="nav-dropdown-link{% if page.url == '/awards/' %} active{% endif %}">Awards</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact/" class="nav-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a></li>
             </ul>
             <div class="nav-right">
                 <a href="/contact/" class="nav-cta">Let's Connect</a>
@@ -78,23 +102,23 @@
                     </div>
                 </div>
                 <div class="footer-links">
-                    <a href="{{ h }}#home">Home</a>
-                    <a href="/policy-contributions/">Featured</a>
-                    <a href="/experience/">Experience</a>
+                    <a href="/">Home</a>
                     <a href="/projects/">Projects</a>
+                    <span class="footer-section-label">Research</span>
                     <a href="/academic-research/">Academic Research</a>
                     <a href="/publications/">Publications</a>
                     <a href="/books/">Books</a>
-                    <a href="/awards/">Awards</a>
-                    <a href="/expertise/">Expertise</a>
-                    <a href="/cv/">CV</a>
+                    <a href="/public-engagement/">Media</a>
+                    <span class="footer-section-label">Policy & Impact</span>
+                    <a href="/policy-contributions/">Policy Work</a>
                     <a href="/impact/">Impact</a>
+                    <span class="footer-section-label">Expertise</span>
+                    <a href="/expertise/">Expertise</a>
+                    <a href="/experience/">Experience</a>
+                    <a href="/cv/">CV</a>
                     <a href="/education/">Education</a>
                     <a href="/certifications/">Certifications</a>
-                    <a href="/working-papers/">Working Papers</a>
-                    <a href="/public-engagement/">Public Engagement</a>
-                    <a href="/policy-contributions/">Policy</a>
-                    <a href="/research-visibility/">Research Visibility</a>
+                    <a href="/awards/">Awards</a>
                     <a href="/contact/">Contact</a>
                 </div>
                 <div class="footer-social">
