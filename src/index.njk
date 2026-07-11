@@ -341,7 +341,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
                             {% for item in collections.media | reverse %}
                             {% if loop.index <= 3 %}
                             <div class="media-item">
-                                <h4>{{ item.data.title }}</h4>
+                                <h3>{{ item.data.title }}</h3>
                                 <p class="media-description">{{ item.data.description }} <span class="media-date">({{ item.data.date_issued }})</span></p>
                             </div>
                             {% endif %}
