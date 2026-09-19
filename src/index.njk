@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-pageTitle: "Daramola Joseph Omoyele | Daramola Digital Labs"
-pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research Analyst and Digital Product Builder. Showcasing data projects, research publications, dashboards, compliance tools and digital products under Daramola Digital Labs."
+pageTitle: "Daramola Joseph Omoyele | Data Analyst · Research Analyst · Performance Analyst · Digital Product Builder"
+pageDescription: "Portfolio of Daramola Joseph Omoyele — Data Analyst, Research Analyst, Performance Analyst and Digital Product Builder. Combining statistical analysis, research, performance analytics, business intelligence, automation and digital product development to turn complex information and operational problems into practical decision-support tools."
 ---
     <!-- ===================== HERO ===================== -->
     <section id="home" class="hero">
@@ -34,14 +34,14 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
             <div class="hero-inner">
                 <!-- Left: Text content -->
                 <div class="hero-left">
-                    <div class="hero-badge-pill">DATA &nbsp;|&nbsp; RESEARCH &nbsp;|&nbsp; IMPACT</div>
+                    <div class="hero-badge-pill">DATA &nbsp;|&nbsp; RESEARCH &nbsp;|&nbsp; PERFORMANCE &nbsp;|&nbsp; PRODUCT</div>
                     <h1 class="hero-headline">
                         Hi, I'm<br>
                         <span class="hero-name">Daramola Joseph<br>Omoyele</span><span class="hero-dot">.</span>
                     </h1>
-                    <p class="hero-tagline">Data Analyst. Research Analyst. Digital Product Builder.</p>
+                    <p class="hero-tagline">Data Analyst. Research Analyst. Performance Analyst. Digital Product Builder.</p>
                     <p class="hero-description">
-                        I build data-driven solutions, produce research outputs, create insightful dashboards, and design digital products that support smarter decisions and measurable impact across people, organisations and communities.
+                        I combine statistical analysis, research, performance analytics, business intelligence, automation and digital product development to turn complex information and operational problems into practical decision-support tools.
                     </p>
                     <div class="hero-cta">
                         <a href="#projects" class="btn btn-hero-primary">
@@ -100,13 +100,13 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Portfolio</span>
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">Featured Projects &amp; Analytical Products</h2>
             </div>
-            <p class="section-preview-intro">A selection of digital products spanning healthcare communication, tax compliance, and community platforms.</p>
+            <p class="section-preview-intro">Interactive analytical applications, statistical tools, and digital platforms turning complex data into actionable intelligence.</p>
             <div class="project-grid">
                 {% for project in collections.projects | sort(false, false, 'data.order') %}
                 {% if loop.index <= 4 %}
-                <div class="project-card reveal" data-category="{{ project.data.badge | lower | replace(' ', '-') }}">
+                <div class="project-card reveal" data-category="{% if project.data.categories %}{{ project.data.categories | join(' ') }}{% else %}{{ project.data.badge | lower | replace(' ', '-') }}{% endif %}">
                     <div class="project-card-top">
                         <div class="project-card-meta">
                             <span class="project-badge">{{ project.data.badge }}</span>
@@ -124,21 +124,30 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
                             {% endif %}
                             {% endfor %}
                         </div>
+                        {% if project.data.tech or project.data.tags %}
+                        <div class="tech-tags">
+                            {% for tag in (project.data.tech or project.data.tags) %}
+                            {% if loop.index <= 4 %}
+                            <span class="tech-tag">{{ tag.tag }}</span>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
                     </div>
                     <div class="project-card-foot">
                         {% if project.data.link and project.data.link != '#' %}
-                        <a href="{{ project.data.link }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                        <a href="{{ project.data.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                             View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </a>
                         {% else %}
-                        <span class="btn btn-disabled btn-sm">Coming Soon</span>
+                        <span class="btn btn-disabled btn-sm">In Development</span>
                         {% endif %}
                     </div>
                 </div>
                 {% endif %}
                 {% endfor %}
             </div>
-            <a href="/projects/" class="btn btn-primary view-more-btn">View All Projects →</a>
+            <a href="/projects/" class="btn btn-primary view-more-btn">View All 15 Projects →</a>
         </div>
     </section>
 
@@ -248,17 +257,19 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data Analyst, Research A
             <div class="expertise-card reveal">
                 <div class="expertise-tags">
                     <span class="expertise-tag">Data Analysis</span>
+                    <span class="expertise-tag">Statistical Methodology</span>
+                    <span class="expertise-tag">Performance Analytics</span>
                     <span class="expertise-tag">Econometrics</span>
-                    <span class="expertise-tag">Policy Analysis</span>
-                    <span class="expertise-tag">R</span>
                     <span class="expertise-tag">Python</span>
+                    <span class="expertise-tag">R</span>
                     <span class="expertise-tag">SQL</span>
+                    <span class="expertise-tag">Streamlit</span>
                     <span class="expertise-tag">Power BI</span>
                     <span class="expertise-tag">Tableau</span>
-                    <span class="expertise-tag">Machine Learning</span>
-                    <span class="expertise-tag">Research Methods</span>
-                    <span class="expertise-tag">RegTech</span>
-                    <span class="expertise-tag">Digital Governance</span>
+                    <span class="expertise-tag">KPI &amp; Decision Support</span>
+                    <span class="expertise-tag">Data Quality Assurance</span>
+                    <span class="expertise-tag">Digital Product Development</span>
+                    <span class="expertise-tag">Policy &amp; Research Methods</span>
                 </div>
             </div>
             <a href="/expertise/" class="btn btn-primary view-more-btn">View Expertise →</a>

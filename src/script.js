@@ -179,8 +179,9 @@ filterBtns.forEach(btn => {
 
         const filter = btn.dataset.filter;
         projectCards.forEach(card => {
-            const cat = card.dataset.category || '';
-            card.classList.toggle('hidden', filter !== 'all' && cat !== filter);
+            const categories = (card.dataset.category || '').toLowerCase().split(/\s+/);
+            const matches = filter === 'all' || categories.includes(filter.toLowerCase());
+            card.classList.toggle('hidden', !matches);
         });
     });
 });

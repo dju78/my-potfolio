@@ -2,16 +2,17 @@
 
 🌐 **Live Website:** https://daramolajo.co.uk
 
-Professional portfolio website for **Daramola Joseph Omoyele** — Research Analyst, Data Analyst, and AI Product Builder — presented under the **Daramola Digital Labs** brand.
+Professional portfolio website for **Daramola Joseph Omoyele** — Data Analyst, Research Analyst, Performance Analyst, and Digital Product Builder — presented under the **Daramola Digital Labs** brand.
+
 ---
 
 ## Purpose
 
-This portfolio showcases:
-- **Digital products** — CarePhrase UK, TaxMate UK, Speaking Trainer, DEAP, GACE, Kogi Quest
-- **Research & publications** — peer-reviewed journal articles, working papers, books and policy commentary
-- **Professional experience** — 15+ years across public sector and consulting
-- **Skills & certifications** — econometrics, data science, compliance analytics, visualisation
+This portfolio showcases the intersection of:
+- **Statistical Analysis & Research** — peer-reviewed journal articles, working papers, books, econometric models, and policy submissions
+- **Performance Analytics & Business Intelligence** — KPI monitoring, management decision support, operational insights, and dashboard systems
+- **Automation & Digital Products** — interactive analytical web applications, calculation engines, and user-centred digital platforms
+- **Professional Experience** — 15+ years across public sector analytics, economic modelling, and consulting
 
 ---
 
@@ -30,29 +31,36 @@ This portfolio showcases:
 
 ---
 
-## Featured Projects
+## Featured Analytical Products & Applications
 
-| Project | Category | URL |
-|---|---|---|
-| CarePhrase | Healthcare Communication | https://carephrase.com |
-| CarePhrase Communication Academy | AI Communication Training | https://comms.carephrase.com |
-| TaxMate UK | Tax & Compliance Platform | https://taxmate.omoyelejd.co.uk |
-| Speaking Trainer | AI Language Coach | https://speech.omoyelejd.co.uk |
-| DEAP | Data Analytics Platform | https://deaptaxcompliance.netlify.app |
-| GACE | Governance & Accountability | — |
-| Kogi Quest | Tourism & Discovery | https://dju78.github.io/kogiquest |
-| Research & Publications | Academic & Policy Output | See Publications section |
+| Project | Category | Positioning / Description | Live URL |
+|---|---|---|---|
+| **Price Quality Explorer** | Data & Analytics | Statistical methodology, price-index construction (Jevons/Carli/Dutot), anomaly detection & data quality | [pricequality.streamlit.app](https://pricequality.streamlit.app/) |
+| **Performance Insight Explorer** | Data & Analytics | Operational KPI intelligence, comparative benchmarks & decision support | [performance-insight-explorer.streamlit.app](https://performance-insight-explorer.streamlit.app/performance_overview) |
+| **Care Quality Intelligence (CQI)** | Data & Analytics / Health | Quality monitoring, risk board, workforce supervision & regulatory evidence | [cqi.carephrase.com](https://cqi.carephrase.com) |
+| **UKCalc Platform** | FinTech & Tools | UK tax, mortgage, savings & financial calculation tools | [ukcalc.jomovate.com](https://ukcalc.jomovate.com/) |
+| **CarePhrase** | Health & Care | Healthcare communication & clinical note documentation quality | [carephrase.com](https://carephrase.com) |
+| **TaxMate UK** | FinTech & Tools | Sole-trader bookkeeping, financial KPIs & HMRC deadline tracking | [taxmate.omoyelejd.co.uk](https://taxmate.omoyelejd.co.uk/) |
+| **GarageProof UK** | Automotive Tech | Garage repair workflow, digital audit trail & customer approval | In Development |
+| **AutoDamage Quote** | Automotive Tech | Vehicle damage assessment & algorithmic repair quotation engine | In Development |
+| **CarePhrase Academy** | Digital Learning | Care communication, clinical handover & safeguarding training | [comms.carephrase.com](https://comms.carephrase.com) |
+| **Professional Speaking Trainer** | Digital Learning | Interactive speaking practice, speech analytics & real-time feedback | [speech.omoyelejd.co.uk](https://speech.omoyelejd.co.uk) |
+| **Takete-Ide Platform** | Community | Community archives, Supabase database, development tracking & heritage | [takete-ide.org](https://www.takete-ide.org/) |
+| **DEAP Tax Compliance** | FinTech / Data | Multi-source tax data aggregation & compliance dashboards | [deaptaxcompliance.netlify.app](https://deaptaxcompliance.netlify.app/) |
+| **UBA Pulse** | Data & Analytics | Executive business intelligence & operational KPI prototype | [ubapulse.netlify.app](https://ubapulse.netlify.app/) |
+| **NairaGuard** | FinTech & Security | AI-assisted currency verification prototype & security education | [daramol.netlify.app](https://daramol.netlify.app/) |
+| **Kogi Quest** | Community | Regional civic engagement & local development initiative platform | [dju78.github.io/kogiqest](https://dju78.github.io/kogiqest/) |
 
 ---
 
 ## Tech Stack
 
 | Layer | Technology |
-|-------|-----------|
+|---|---|
 | Static Site Generator | [Eleventy (11ty)](https://www.11ty.dev/) v3.x |
 | Templating | Nunjucks (`.njk`) |
 | Content | Markdown with YAML front matter |
-| Styles | Plain CSS (custom properties, Grid, Flexbox) |
+| Styles | Plain CSS (custom properties, CSS Grid, Flexbox) |
 | Fonts | Google Fonts — Poppins + Inter |
 | CMS | Netlify CMS (admin at `/admin`) |
 | Deployment | Netlify |
@@ -82,36 +90,21 @@ npm run build
 
 ```
 src/
-├── index.njk                    # Main page template
-├── styles.css                   # All styles
-├── script.js                    # JS — nav, counters, filters, read-more
-├── images/                      # Images (profile photo, books, awards)
-├── admin/                       # Netlify CMS config
+├── index.njk                    # Homepage template
+├── projects.njk                 # Dedicated projects & products catalog
+├── styles.css                   # All styling
+├── script.js                    # Interactive navigation, multi-category filters & counters
+├── images/                      # Media assets & profile photography
+├── admin/                       # Netlify CMS configuration
 └── content/
-    ├── projects/                # Project markdown files
-    ├── journal-articles/        # Published journal articles
+    ├── projects/                # 15 structured analytical and digital product entries
+    ├── journal-articles/        # Peer-reviewed journal articles
     ├── working-papers/          # Preprints & working papers
-    ├── books/                   # Books & handbooks
-    ├── media/                   # Policy commentary & media
+    ├── books/                   # Published books & handbooks
+    ├── media/                   # Policy commentary & media features
     ├── research/                # Academic dissertations
-    └── awards/                  # Awards & honours
+    └── awards/                  # Honours & recognitions
 ```
-
-### Adding your profile photo
-
-Place your professional headshot at:
-```
-src/images/profile-photo.jpg
-```
-The hero section will automatically display it inside the gold circular frame.
-
----
-
-## Deployment
-
-Deployed via **Netlify** from the `main` branch. Every push triggers an automatic rebuild.
-
-Configuration: `netlify.toml`
 
 ---
 
