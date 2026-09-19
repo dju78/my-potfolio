@@ -2,7 +2,7 @@
 title: "Kogi Quest"
 client: "Community Development & Civic Engagement"
 badge: "Live Platform"
-order: 15
+order: 14
 categories:
   - "community"
 description: "A community-centred digital engagement platform designed to promote regional civic participation, showcase grassroots development projects, and highlight cultural landmarks."

@@ -45,7 +45,6 @@ This portfolio showcases the intersection of:
 | **AutoDamage Quote** | Automotive Tech | Vehicle damage assessment & algorithmic repair quotation engine | In Development |
 | **CarePhrase Academy** | Digital Learning | Care communication, clinical handover & safeguarding training | [comms.carephrase.com](https://comms.carephrase.com) |
 | **Professional Speaking Trainer** | Digital Learning | Interactive speaking practice, speech analytics & real-time feedback | [speech.omoyelejd.co.uk](https://speech.omoyelejd.co.uk) |
-| **Takete-Ide Platform** | Community | Community archives, Supabase database, development tracking & heritage | [takete-ide.org](https://www.takete-ide.org/) |
 | **DEAP Tax Compliance** | FinTech / Data | Multi-source tax data aggregation & compliance dashboards | [deaptaxcompliance.netlify.app](https://deaptaxcompliance.netlify.app/) |
 | **UBA Pulse** | Data & Analytics | Executive business intelligence & operational KPI prototype | [ubapulse.netlify.app](https://ubapulse.netlify.app/) |
 | **NairaGuard** | FinTech & Security | AI-assisted currency verification prototype & security education | [daramol.netlify.app](https://daramol.netlify.app/) |

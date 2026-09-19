@@ -2,7 +2,7 @@
 title: "DEAP Tax Compliance"
 client: "Tax Analytics & Compliance Assurance"
 badge: "Live Analytics Platform"
-order: 12
+order: 11
 categories:
   - "fintech"
   - "data-analytics"

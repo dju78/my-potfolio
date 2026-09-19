@@ -3,7 +3,7 @@ title: "NairaGuard"
 client: "FinTech & Currency Security AI Prototype"
 badge: "Live Prototype"
 status: "AI Prototype"
-order: 14
+order: 13
 categories:
   - "fintech"
 description: "A proof-of-concept AI-assisted banknote verification prototype providing simulated currency feature scanning, security education, confidence scoring, and anti-counterfeit guidance."

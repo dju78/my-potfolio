@@ -3,7 +3,7 @@ title: "UBA Pulse"
 client: "Business Intelligence & Executive Analytics"
 badge: "Live Prototype"
 status: "Prototype"
-order: 13
+order: 12
 categories:
   - "data-analytics"
 description: "An executive business intelligence dashboard prototype engineered to track core performance indicators, user activity, operational trends, and decision-support signals."
