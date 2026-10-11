@@ -2,9 +2,9 @@
 title: "Professional Speaking Trainer"
 client: "Digital Learning / Professional Communication / Interactive Coaching"
 badge: "Live EdTech App"
-order: 10
+order: 11
 categories:
-  - "digital-learning"
+  - "business-applications"
 description: "An interactive coaching application designed to help professionals practice and elevate speaking clarity, structured articulation, and presentation confidence through real-time feedback."
 link: "https://speech.omoyelejd.co.uk"
 highlights:

@@ -3,9 +3,10 @@ title: "NairaGuard"
 client: "FinTech & Currency Security AI Prototype"
 badge: "Live Prototype"
 status: "AI Prototype"
-order: 13
+order: 14
 categories:
   - "fintech"
+  - "business-applications"
 description: "A proof-of-concept AI-assisted banknote verification prototype providing simulated currency feature scanning, security education, confidence scoring, and anti-counterfeit guidance."
 link: "https://daramol.netlify.app/"
 highlights:

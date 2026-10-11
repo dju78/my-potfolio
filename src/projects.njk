@@ -20,12 +20,12 @@ breadcrumbLabel: "Projects"
 
         <div class="project-filters" role="tablist" aria-label="Filter projects by category">
             <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="data-analytics">Data &amp; Analytics</button>
-            <button class="filter-btn" data-filter="health-care">Health &amp; Care</button>
-            <button class="filter-btn" data-filter="fintech">FinTech &amp; Financial Tools</button>
-            <button class="filter-btn" data-filter="automotive">Automotive Technology</button>
-            <button class="filter-btn" data-filter="digital-learning">Digital Learning</button>
-            <button class="filter-btn" data-filter="community">Community &amp; Public Interest</button>
+            <button class="filter-btn" data-filter="data-analytics">Data Analytics &amp; BI</button>
+            <button class="filter-btn" data-filter="economic-research">Economic Research &amp; Policy</button>
+            <button class="filter-btn" data-filter="health-care">Healthcare &amp; Communication</button>
+            <button class="filter-btn" data-filter="fintech">FinTech &amp; Calculation Tools</button>
+            <button class="filter-btn" data-filter="business-applications">Business Applications &amp; Automation</button>
+            <button class="filter-btn" data-filter="websites-platforms">Websites &amp; Community Platforms</button>
         </div>
         <div class="project-grid">
             {% for project in collections.projects | sort(false, false, 'data.order') %}

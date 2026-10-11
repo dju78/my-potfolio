@@ -3,9 +3,10 @@ title: "UBA Pulse"
 client: "Business Intelligence & Executive Analytics"
 badge: "Live Prototype"
 status: "Prototype"
-order: 12
+order: 13
 categories:
   - "data-analytics"
+  - "business-applications"
 description: "An executive business intelligence dashboard prototype engineered to track core performance indicators, user activity, operational trends, and decision-support signals."
 link: "https://ubapulse.netlify.app/"
 highlights:

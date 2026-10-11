@@ -1,11 +1,12 @@
 ---
 title: "AutoDamage Quote"
 client: "Automotive Technology / Damage Assessment / Quotation Workflow"
-badge: "Digital Product"
-status: "Quotation Engine"
-order: 8
+badge: "In Development"
+status: "Quotation Engine (In Development)"
+order: 9
 categories:
   - "automotive"
+  - "business-applications"
 description: "A specialized automotive damage assessment and quotation engine engineered to streamline repair estimates, cost modeling, structured reporting, and parts breakdown."
 link: "#"
 highlights:

@@ -2,10 +2,11 @@
 title: "DEAP Tax Compliance"
 client: "Tax Analytics & Compliance Assurance"
 badge: "Live Analytics Platform"
-order: 11
+order: 12
 categories:
   - "fintech"
   - "data-analytics"
+  - "business-applications"
 description: "Data-driven Evaluative Analytics Platform (DEAP) that addresses complex tax compliance monitoring by aggregating multi-source fiscal data into transparent, actionable dashboards."
 link: "https://deaptaxcompliance.netlify.app/"
 highlights:

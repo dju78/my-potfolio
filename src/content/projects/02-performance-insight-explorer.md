@@ -2,7 +2,7 @@
 title: "Performance Insight Explorer"
 client: "Performance Analytics / KPI Intelligence / Decision Support"
 badge: "Live Analytical App"
-order: 2
+order: 3
 categories:
   - "data-analytics"
 description: "An interactive analytical application transforming operational and organizational data into executive KPIs, trend analyses, comparative benchmarks, and evidence to guide strategic decisions."

@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-pageTitle: "Daramola Joseph Omoyele | Data Analyst · Research Analyst · Performance Analyst · Digital Product Builder"
-pageDescription: "Portfolio of Daramola Joseph Omoyele — Data Analyst, Research Analyst, Performance Analyst and Digital Product Builder. Combining statistical analysis, research, performance analytics, business intelligence, automation and digital product development to turn complex information and operational problems into practical decision-support tools."
+pageTitle: "Daramola Joseph Omoyele | Data & Research Analyst | Economic Analysis & Business Intelligence"
+pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analyst. Turning complex data into clear insights and practical tools that support better decisions across statistical analysis, economic research, business intelligence and digital product development."
 ---
     <!-- ===================== HERO ===================== -->
     <section id="home" class="hero">
@@ -34,23 +34,27 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data Analyst, Researc
             <div class="hero-inner">
                 <!-- Left: Text content -->
                 <div class="hero-left">
-                    <div class="hero-badge-pill">DATA &nbsp;|&nbsp; RESEARCH &nbsp;|&nbsp; PERFORMANCE &nbsp;|&nbsp; PRODUCT</div>
+                    <div class="hero-badge-pill">DATA &amp; RESEARCH ANALYST</div>
                     <h1 class="hero-headline">
                         Hi, I'm<br>
                         <span class="hero-name">Daramola Joseph<br>Omoyele</span><span class="hero-dot">.</span>
                     </h1>
-                    <p class="hero-tagline">Data Analyst. Research Analyst. Performance Analyst. Digital Product Builder.</p>
+                    <p class="hero-tagline">Data &amp; Research Analyst | Economic Analysis &amp; Business Intelligence</p>
                     <p class="hero-description">
-                        I combine statistical analysis, research, performance analytics, business intelligence, automation and digital product development to turn complex information and operational problems into practical decision-support tools.
+                        I turn complex data into clear insights and practical tools that support better decisions. My work combines statistical analysis, economic research, business intelligence and the development of useful web-based applications.
                     </p>
                     <div class="hero-cta">
                         <a href="#projects" class="btn btn-hero-primary">
-                            View Projects
+                            Explore My Work
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </a>
                         <a href="/Daramola_Joseph_Omoyele_CV.pdf" download class="btn btn-hero-outline">
-                            Download CV
+                            Download My CV
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-hero-outline">
+                            Contact Me
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13 20 6.01V6H4zm0 12h16V8.99l-8 6.5-8-6.5V18z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </a>
                     </div>
                 </div>
@@ -95,17 +99,17 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data Analyst, Researc
         </div>
     </section>
 
-    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <!-- ===================== 2. SELECTED DATA, RESEARCH & BI PROJECTS ===================== -->
     <section id="projects" class="section projects-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Portfolio</span>
-                <h2 class="section-title">Featured Projects &amp; Analytical Products</h2>
+                <span class="section-tag">Analytical Solutions</span>
+                <h2 class="section-title">Selected Data, Research &amp; Business Intelligence Projects</h2>
             </div>
-            <p class="section-preview-intro">Interactive analytical applications, statistical tools, and digital platforms turning complex data into actionable intelligence.</p>
+            <p class="section-preview-intro">Interactive analytical platforms, econometric models, statistical methodologies and operational intelligence systems.</p>
             <div class="project-grid">
                 {% for project in collections.projects | sort(false, false, 'data.order') %}
-                {% if loop.index <= 4 %}
+                {% if project.data.order <= 4 %}
                 <div class="project-card reveal" data-category="{% if project.data.categories %}{{ project.data.categories | join(' ') }}{% else %}{{ project.data.badge | lower | replace(' ', '-') }}{% endif %}">
                     <div class="project-card-top">
                         <div class="project-card-meta">
@@ -140,34 +144,101 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data Analyst, Researc
                             View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </a>
                         {% else %}
-                        <span class="btn btn-disabled btn-sm">In Development</span>
+                        <span class="btn btn-disabled btn-sm">{% if project.data.status %}{{ project.data.status }}{% else %}In Development{% endif %}</span>
                         {% endif %}
                     </div>
                 </div>
                 {% endif %}
                 {% endfor %}
             </div>
-            <a href="/projects/" class="btn btn-primary view-more-btn">View All Projects →</a>
+            <a href="/projects/" class="btn btn-primary view-more-btn">View All Projects &amp; Products →</a>
         </div>
     </section>
 
-    <!-- ===================== PROFESSIONAL EXPERIENCE (PREVIEW) ===================== -->
+    <!-- ===================== 3. WIDER APPLICATIONS & WEBSITE PORTFOLIO ===================== -->
+    <section id="applications" class="section applications-section" style="background:var(--bg-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Digital Products</span>
+                <h2 class="section-title">Wider Applications &amp; Digital Solutions</h2>
+            </div>
+            <p class="section-preview-intro">Practical web-based calculation engines, workflow automation tools, health communication platforms, and community technology.</p>
+            <div class="project-grid">
+                {% for project in collections.projects | sort(false, false, 'data.order') %}
+                {% if project.data.order >= 5 and project.data.order <= 8 %}
+                <div class="project-card reveal" data-category="{% if project.data.categories %}{{ project.data.categories | join(' ') }}{% else %}{{ project.data.badge | lower | replace(' ', '-') }}{% endif %}">
+                    <div class="project-card-top">
+                        <div class="project-card-meta">
+                            <span class="project-badge">{{ project.data.badge }}</span>
+                            {% if project.data.status %}<span class="project-status-badge">{{ project.data.status }}</span>{% endif %}
+                            <span class="project-client-tag">{{ project.data.client }}</span>
+                        </div>
+                        <h3 class="project-title">{{ project.data.title }}</h3>
+                        <p class="project-desc">{{ project.data.description }}</p>
+                    </div>
+                    <div class="project-card-mid">
+                        <div class="project-highlights">
+                            {% for highlight in project.data.highlights %}
+                            {% if loop.index <= 2 %}
+                            <div class="highlight-item"><span class="highlight-dot">▸</span><span>{{ highlight.text }}</span></div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% if project.data.tech or project.data.tags %}
+                        <div class="tech-tags">
+                            {% for tag in (project.data.tech or project.data.tags) %}
+                            {% if loop.index <= 4 %}
+                            <span class="tech-tag">{{ tag.tag }}</span>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="project-card-foot">
+                        {% if project.data.link and project.data.link != '#' %}
+                        <a href="{{ project.data.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                            View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        {% else %}
+                        <span class="btn btn-disabled btn-sm">{% if project.data.status %}{{ project.data.status }}{% else %}In Development{% endif %}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div style="text-align:center; margin-top:1.75rem;">
+                <a href="/projects/" class="btn btn-outline view-more-btn">Explore Full Product Catalogue →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 4. PROFESSIONAL EXPERIENCE ===================== -->
     <section id="experience" class="section experience-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Career Journey</span>
                 <h2 class="section-title">Professional Experience</h2>
             </div>
-            <p class="section-preview-intro">15+ years across public-sector data analysis, economic modelling, and academic administration.</p>
+            <p class="section-preview-intro">15+ years combining data analysis, economic research, business intelligence, public sector analytics, and digital product development.</p>
             <div class="exp-preview-grid">
                 <div class="exp-preview-card reveal">
                     <div class="exp-preview-icon">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
                     </div>
-                    <h3>Data &amp; Finance Analyst</h3>
+                    <h3>Founder &amp; Product Business Analyst</h3>
+                    <p class="exp-preview-company">Jomovate Digital Labs</p>
+                    <p class="exp-preview-date">July 2024 – Present</p>
+                    <p class="role-focus">Founded Jomovate Digital Labs to develop data-driven solutions, conduct applied research, and build practical analytical applications and dashboards.</p>
+                </div>
+                <div class="exp-preview-card reveal">
+                    <div class="exp-preview-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
+                    </div>
+                    <h3>Data Analyst</h3>
                     <p class="exp-preview-company">Univelcity Computing</p>
                     <p class="exp-preview-date">July 2023 – Present</p>
-                    <p class="role-focus">Data analysis, economic modelling, financial analysis, business intelligence and compliance assurance.</p>
+                    <p class="role-focus">Data analysis, economic modelling, financial analysis, business intelligence, dashboards in Power BI/Shiny, and compliance assurance.</p>
                 </div>
                 <div class="exp-preview-card reveal">
                     <div class="exp-preview-icon">
@@ -176,7 +247,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data Analyst, Researc
                     <h3>Data Analyst</h3>
                     <p class="exp-preview-company">Nigerian Postal Service</p>
                     <p class="exp-preview-date">January 2014 – October 2022</p>
-                    <p class="role-focus">Public sector data analysis, operational insight, performance monitoring and forecasting.</p>
+                    <p class="role-focus">Public sector operational datasets, regional performance benchmarking, forecasting models, and service quality monitoring.</p>
                 </div>
                 <div class="exp-preview-card reveal">
                     <div class="exp-preview-icon">
@@ -185,239 +256,85 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data Analyst, Researc
                     <h3>Lecturer / Education Data Support</h3>
                     <p class="exp-preview-company">City College of Education</p>
                     <p class="exp-preview-date">April 2008 – March 2013</p>
-                    <p class="role-focus">Student attendance, assessment outcomes and academic progress data for departmental reporting.</p>
+                    <p class="role-focus">Departmental reporting, student attendance and assessment tracking, quality assurance, and academic administration.</p>
                 </div>
             </div>
             <a href="/experience/" class="btn btn-primary view-more-btn">View Full Experience →</a>
         </div>
     </section>
 
-    <!-- ===================== RESEARCH & MAJOR PROJECTS (PREVIEW) ===================== -->
-    <section id="research" class="section research-section">
+    <!-- ===================== 5. RESEARCH & POLICY CONTRIBUTIONS ===================== -->
+    <section id="research-policy" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Academic Work</span>
-                <h2 class="section-title">Academic Research</h2>
-            </div>
-            <p class="section-preview-intro">Major research initiatives spanning econometric modelling, institutional economics, and applied policy analysis.</p>
-            <div class="research-grid">
-                {% for item in collections.research | reverse %}
-                <div class="research-card reveal">
-                    <div class="research-badge">{{ item.data.badge }}</div>
-                    <h3>{{ item.data.title }}</h3>
-                    <p class="research-institution">{{ item.data.institution }}</p>
-                    <div class="research-details">
-                        <h4>Methodology / Focus areas:</h4>
-                        <ul>{% for pt in item.data.items %}{% if loop.index <= 3 %}<li>{{ pt.text }}</li>{% endif %}{% endfor %}</ul>
+            <!-- Featured Policy Highlight preview -->
+            <div style="margin-bottom:2.5rem;">
+                <a class="fpc-preview" href="/policy-contributions/">
+                    <div class="fpc-preview-body">
+                        <span class="fpc-preview-tag">Featured Policy Contribution</span>
+                        <h2 class="fpc-preview-title">Digital Identity Harmonisation in Nigeria</h2>
+                        <p class="fpc-preview-text">Research, public commentary and peer-reviewed publication examining Nigeria's digital identity infrastructure and the harmonisation of national identification systems around the NIN.</p>
+                        <span class="fpc-preview-cta">Read More <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                     </div>
-                </div>
-                {% endfor %}
-            </div>
-            <a href="/academic-research/" class="btn btn-primary view-more-btn">View Academic Research →</a>
-        </div>
-    </section>
-
-    <!-- ===================== AWARDS & HONOURS (PREVIEW) ===================== -->
-    <section id="awards" class="section awards-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Recognition</span>
-                <h2 class="section-title">Awards &amp; Honours</h2>
-            </div>
-            <p class="section-preview-intro">Recognition for contributions to data analysis, research, and public-sector service.</p>
-            <div class="awards-grid">
-                {% for award in collections.awards | reverse %}
-                <div class="award-card reveal">
-                    {% if award.data.image %}
-                    <div class="award-image-container">
-                        <img src="{{ award.data.image }}" alt="{{ award.data.title }}" class="award-image" loading="lazy">
+                    <div class="fpc-preview-aside" aria-hidden="true">
+                        <span class="fpc-preview-pill">Peer-reviewed article · IJDES 2026</span>
+                        <span class="fpc-preview-pill">National &amp; international media</span>
+                        <span class="fpc-preview-pill">Policy relevance · NIMC Act 2026</span>
                     </div>
-                    {% endif %}
-                    <div class="award-content">
-                        {% if award.data.badge %}<span class="award-badge">{{ award.data.badge }}</span>{% endif %}
-                        <h3>{{ award.data.title }}</h3>
-                        <p class="award-issuer">{{ award.data.issuer }}</p>
-                        <div class="award-date"><span>📅 {{ award.data.date_issued }}</span></div>
+                </a>
+            </div>
+
+            <div class="section-pair">
+                <div id="policy" class="section-pair-col">
+                    <div class="section-header section-header-left">
+                        <span class="section-tag">Regulatory Evidence</span>
+                        <h2 class="section-title">Policy Submissions</h2>
                     </div>
-                </div>
-                {% endfor %}
-            </div>
-            <a href="/awards/" class="btn btn-primary view-more-btn">View All Awards →</a>
-        </div>
-    </section>
-
-    <!-- ===================== CORE EXPERTISE ===================== -->
-    <section id="skills" class="section skills-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Technical Expertise</span>
-                <h2 class="section-title">Core Expertise</h2>
-            </div>
-            <p class="section-preview-intro">A cross-disciplinary toolkit spanning economic analysis, econometrics, analytics engineering and regulatory compliance.</p>
-            <div class="expertise-card reveal">
-                <div class="expertise-tags">
-                    <span class="expertise-tag">Data Analysis</span>
-                    <span class="expertise-tag">Statistical Methodology</span>
-                    <span class="expertise-tag">Performance Analytics</span>
-                    <span class="expertise-tag">Econometrics</span>
-                    <span class="expertise-tag">Python</span>
-                    <span class="expertise-tag">R</span>
-                    <span class="expertise-tag">SQL</span>
-                    <span class="expertise-tag">Streamlit</span>
-                    <span class="expertise-tag">Power BI</span>
-                    <span class="expertise-tag">Tableau</span>
-                    <span class="expertise-tag">KPI &amp; Decision Support</span>
-                    <span class="expertise-tag">Data Quality Assurance</span>
-                    <span class="expertise-tag">Digital Product Development</span>
-                    <span class="expertise-tag">Policy &amp; Research Methods</span>
-                </div>
-            </div>
-            <a href="/expertise/" class="btn btn-primary view-more-btn">View Expertise →</a>
-        </div>
-    </section>
-
-    <!-- ===================== PUBLICATIONS (PREVIEW) ===================== -->
-    <section id="publications" class="section publications-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Thought Leadership</span>
-                <h2 class="section-title">Latest Publications</h2>
-            </div>
-            <p class="section-preview-intro">Peer-reviewed journal articles across development economics, tax policy, and institutional analysis.</p>
-            <div class="publications-grid">
-                {% for article in collections.journal_articles | reverse %}
-                {% if loop.index <= 3 %}
-                <div class="publication-card journal-card reveal">
-                    <div class="pub-icon">📄</div>
-                    <h3>{{ article.data.title }}</h3>
-                    <p class="pub-meta">{{ article.data.journal }}{% if article.data.year %} ({{ article.data.year }}){% endif %}</p>
-                    {% if article.data.doi %}<p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
-                    <p class="pub-summary">{{ article.templateContent | excerpt(2) }}</p>
-                    <div class="pub-full-details collapsed">{{ article.templateContent | safe }}</div>
-                    <button class="read-more-btn" aria-expanded="false">Read more ▾</button>
-                    <a href="{{ article.data.url or article.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Journal Article →</a>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-            <a href="/publications/" class="btn btn-primary view-more-btn">View All Publications →</a>
-        </div>
-    </section>
-
-    <!-- ===================== BOOKS (PREVIEW) ===================== -->
-    <section id="books" class="section publications-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Thought Leadership</span>
-                <h2 class="section-title">Books &amp; Handbooks</h2>
-            </div>
-            <p class="section-preview-intro">Independently published books and handbooks distilling applied economics and data analysis for practitioners.</p>
-            <div class="publications-grid">
-                {% for book in collections.books | reverse %}
-                {% if loop.index <= 3 %}
-                <div class="publication-card book-card flip-card reveal">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="{{ book.data.image }}" alt="{{ book.data.title }} Cover" class="book-cover-img" loading="lazy"/>
-                            <div class="flip-hint">Hover to read more</div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>{{ book.data.title }}</h3>
-                            <p class="pub-meta">Independently published ({{ book.data.year }})</p>
-                            <div class="pub-description">{{ book.templateContent | safe }}</div>
-                            <a href="{{ book.data.link }}" target="_blank" rel="noopener" class="pub-link">View on Amazon →</a>
-                        </div>
-                    </div>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-            <a href="/books/" class="btn btn-primary view-more-btn">View All Books →</a>
-        </div>
-    </section>
-
-    <!-- ============ PUBLIC ENGAGEMENT + POLICY CONTRIBUTIONS (paired) ============ -->
-    <section class="section section-pair-wrap">
-        <div class="container section-pair">
-            <div id="public-engagement" class="section-pair-col">
-                <div class="section-header section-header-left">
-                    <span class="section-tag">Thought Leadership</span>
-                    <h2 class="section-title">Public Engagement</h2>
-                </div>
-                <p class="section-preview-intro section-preview-intro-left">Translating economic evidence into public policy debate across major Nigerian media outlets.</p>
-                <div class="publications-grid">
-                    <div class="publication-card media-card reveal">
-                        <div class="pub-icon">📰</div>
-                        <div class="media-list">
-                            {% for item in collections.media | reverse %}
-                            {% if loop.index <= 3 %}
-                            <div class="media-item">
-                                <h3>{{ item.data.title }}</h3>
-                                <p class="media-description">{{ item.data.description }} <span class="media-date">({{ item.data.date_issued }})</span></p>
-                            </div>
+                    <p class="section-preview-intro section-preview-intro-left">Independent consultation responses across UK data governance, tax administration, and digital regulation.</p>
+                    <div class="policy-grid">
+                        {% for item in collections.policy_contributions %}
+                        {% if loop.index <= 3 %}
+                        <div class="policy-card reveal">
+                            <span class="policy-area">{{ item.data.area }}</span>
+                            <h3>{{ item.data.title }}</h3>
+                            <p class="policy-desc">{{ item.data.description }}</p>
+                            {% if item.data.pdf %}
+                            <a href="{{ item.data.pdf }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm policy-btn">{{ item.data.pdf_label or "Read Submission" }}</a>
                             {% endif %}
-                            {% endfor %}
                         </div>
-                    </div>
-                </div>
-                <a href="/public-engagement/" class="btn btn-primary view-more-btn">View All Media →</a>
-            </div>
-            <div id="policy" class="section-pair-col">
-                <div class="section-header section-header-left">
-                    <span class="section-tag">Policy Engagement</span>
-                    <h2 class="section-title">Policy Contributions</h2>
-                </div>
-                <p class="section-preview-intro section-preview-intro-left">Independent consultation responses across UK tax administration, data governance and public-sector digital reform.</p>
-                <div class="policy-grid">
-                    {% for item in collections.policy_contributions %}
-                    {% if loop.index <= 3 %}
-                    <div class="policy-card reveal">
-                        <span class="policy-area">{{ item.data.area }}</span>
-                        <h3>{{ item.data.title }}</h3>
-                        <p class="policy-desc">{{ item.data.description }}</p>
-                        {% if item.data.pdf %}
-                        <a href="{{ item.data.pdf }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm policy-btn">{{ item.data.pdf_label or "Read Submission" }}</a>
                         {% endif %}
+                        {% endfor %}
                     </div>
-                    {% endif %}
-                    {% endfor %}
+                    <a href="/policy-contributions/" class="btn btn-primary view-more-btn">View All Policy Work →</a>
                 </div>
-                <a href="/policy-contributions/" class="btn btn-primary view-more-btn">View All Policy Work →</a>
+                <div id="publications" class="section-pair-col">
+                    <div class="section-header section-header-left">
+                        <span class="section-tag">Academic Research</span>
+                        <h2 class="section-title">Selected Publications</h2>
+                    </div>
+                    <p class="section-preview-intro section-preview-intro-left">Peer-reviewed journal articles across development economics, econometric modelling, and institutional analysis.</p>
+                    <div class="publications-grid">
+                        {% for article in collections.journal_articles | reverse %}
+                        {% if loop.index <= 2 %}
+                        <div class="publication-card journal-card reveal" style="margin-bottom:1rem;">
+                            <div class="pub-icon">📄</div>
+                            <h3>{{ article.data.title }}</h3>
+                            <p class="pub-meta">{{ article.data.journal }}{% if article.data.year %} ({{ article.data.year }}){% endif %}</p>
+                            {% if article.data.doi %}<p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
+                            <p class="pub-summary">{{ article.templateContent | excerpt(2) }}</p>
+                            <a href="{{ article.data.url or article.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Journal Article →</a>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    <a href="/publications/" class="btn btn-primary view-more-btn">View All Publications →</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ RESEARCH IMPACT + EDUCATION (paired) ============ -->
-    <section class="section section-pair-wrap">
+    <!-- ===================== 6. EDUCATION & RELEVANT CERTIFICATIONS ===================== -->
+    <section id="education-certifications" class="section" style="background:var(--bg-white);">
         <div class="container section-pair">
-            <div id="impact" class="section-pair-col">
-                <div class="section-header section-header-left">
-                    <span class="section-tag">By the Numbers</span>
-                    <h2 class="section-title">Research Impact</h2>
-                </div>
-                <div class="impact-card reveal">
-                    <div class="impact-stat">
-                        <div class="impact-stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4.5h6a3 3 0 0 1 3 3V20a2.5 2.5 0 0 0-2.5-2.5H2zM22 4.5h-6a3 3 0 0 0-3 3V20a2.5 2.5 0 0 1 2.5-2.5H22z"/></svg></div>
-                        <span class="impact-stat-number">9+</span>
-                        <span class="impact-stat-label">Journal Publications</span>
-                    </div>
-                    <div class="impact-stat">
-                        <div class="impact-stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11v2a2 2 0 0 0 2 2h1l4 4v-6M10 9h8a3 3 0 0 0 0-6h-8z"/><path d="M3 11h4V9H5a2 2 0 0 0-2 2z"/></svg></div>
-                        <span class="impact-stat-number">6+</span>
-                        <span class="impact-stat-label">National Media Features</span>
-                    </div>
-                    <div class="impact-stat">
-                        <div class="impact-stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 7l-3 6a3.2 3.2 0 0 0 6 0zM19 7l-3 6a3.2 3.2 0 0 0 6 0zM5 7h14M3 21h18"/></svg></div>
-                        <span class="impact-stat-number">5+</span>
-                        <span class="impact-stat-label">Policy Submissions</span>
-                    </div>
-                    <div class="impact-stat">
-                        <div class="impact-stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M11 20V4M18 20v-7"/><path d="M3 20h18"/></svg></div>
-                        <span class="impact-stat-label impact-stat-label-solo">Policy Influence &amp; Engagement</span>
-                    </div>
-                </div>
-                <a href="/impact/" class="btn btn-primary view-more-btn">View Impact →</a>
-            </div>
             <div id="education" class="section-pair-col">
                 <div class="section-header section-header-left">
                     <span class="section-tag">Academic Background</span>
@@ -438,17 +355,56 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data Analyst, Researc
                 </div>
                 <a href="/education/" class="btn btn-primary view-more-btn">View Education →</a>
             </div>
+            <div id="certifications" class="section-pair-col">
+                <div class="section-header section-header-left">
+                    <span class="section-tag">Professional Learning</span>
+                    <h2 class="section-title">Relevant Certifications</h2>
+                </div>
+                <div class="edu-grid">
+                    <div class="edu-card reveal">
+                        <h3>General Data Protection Regulation (GDPR)</h3>
+                        <p class="edu-institution">Alison</p>
+                        <p class="edu-date">Completed May 2026 · Cert: 8ba07ce37e</p>
+                    </div>
+                    <div class="edu-card reveal">
+                        <h3>Preparing Data for Analysis with Microsoft Excel</h3>
+                        <p class="edu-institution">Microsoft / Coursera</p>
+                        <p class="edu-date">Completed June 2024</p>
+                    </div>
+                    <div class="edu-card reveal">
+                        <h3>Claude Code in Action</h3>
+                        <p class="edu-institution">Anthropic / Skilljar</p>
+                        <p class="edu-date">Completed June 2026 · Cert: wuavhft2fsae</p>
+                    </div>
+                </div>
+                <a href="/certifications/" class="btn btn-primary view-more-btn">View All Certifications →</a>
+            </div>
         </div>
     </section>
 
-    <!-- ===================== CONTACT (PREVIEW) ===================== -->
+    <!-- ===================== 7. CONTACT & CAREER OPPORTUNITIES ===================== -->
     <section id="contact" class="section contact-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Let's Connect</span>
-                <h2 class="section-title">Get in Touch</h2>
+                <h2 class="section-title">Contact &amp; Career Opportunities</h2>
             </div>
-            <p class="section-preview-intro">Open to hybrid, full-time, or part-time roles and travel as required — ready to bring data-driven economic insights to your organisation.</p>
-            <a href="/contact/" class="btn btn-primary view-more-btn">Contact Me →</a>
+            <p class="section-preview-intro">Open to hybrid, full-time, or part-time roles and travel as required — ready to bring analytical rigour and data-driven insights to your organisation.</p>
+            <div class="availability-card reveal" style="max-width:680px; margin:0 auto 2rem;">
+                <div class="availability-badge">
+                    <span class="badge-dot pulse"></span>
+                    Open to Opportunities
+                </div>
+                <h3>Let's Discuss How I Can Add Value</h3>
+                <p>Whether you require statistical modeling, business intelligence dashboards, research analysis or applied digital tool development, feel free to get in touch.</p>
+                <div class="contact-actions" style="margin-top:1.5rem;">
+                    <a href="mailto:dju78@omoyelejd.co.uk" class="btn btn-primary">Send Email</a>
+                    <a href="/Daramola_Joseph_Omoyele_CV.pdf" download class="btn btn-outline-light">Download CV</a>
+                    <a href="https://www.linkedin.com/in/joseph-omoyele-bbb006244/" target="_blank" rel="noopener" class="btn btn-outline-light">LinkedIn</a>
+                </div>
+            </div>
+            <div style="text-align:center;">
+                <a href="/contact/" class="btn btn-primary view-more-btn">All Contact Details &amp; Links →</a>
+            </div>
         </div>
     </section>

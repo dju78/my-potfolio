@@ -2,10 +2,11 @@
 title: "CarePhrase Communication Academy"
 client: "Digital Learning / Health & Social Care Training"
 badge: "Live EdTech Platform"
-order: 9
+order: 10
 categories:
   - "health-care"
-  - "digital-learning"
+  - "websites-platforms"
+  - "business-applications"
 description: "A structured workplace training platform that strengthens how care professionals communicate, conduct handovers, escalate clinical risks, maintain safeguarding awareness, and master care English."
 link: "https://comms.carephrase.com"
 highlights:

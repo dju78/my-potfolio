@@ -1,11 +1,12 @@
 ---
 title: "GarageProof UK"
 client: "Automotive Workflow / Digital Audit Trail / Customer Approval"
-badge: "Digital Product"
-status: "Workflow Solution"
-order: 7
+badge: "In Development"
+status: "Workflow Solution (In Development)"
+order: 8
 categories:
   - "automotive"
+  - "business-applications"
 description: "A digital workflow management solution built around garage repair processes, providing digital audit trails, instant customer approval links, and transparent estimate-to-invoice tracking."
 link: "#"
 highlights:

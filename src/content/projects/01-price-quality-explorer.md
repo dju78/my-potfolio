@@ -2,9 +2,10 @@
 title: "Price Quality Explorer"
 client: "Statistical Methodology / Price Analysis / Data Quality"
 badge: "Live Analytical App"
-order: 1
+order: 2
 categories:
   - "data-analytics"
+  - "economic-research"
 description: "An interactive Python and Streamlit analytical application demonstrating a structured, reproducible approach to price-data quality assessment and elementary price-index construction."
 link: "https://pricequality.streamlit.app/"
 highlights:

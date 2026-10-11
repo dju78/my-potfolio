@@ -2,9 +2,10 @@
 title: "Kogi Quest"
 client: "Community Development & Civic Engagement"
 badge: "Live Platform"
-order: 14
+order: 15
 categories:
   - "community"
+  - "websites-platforms"
 description: "A community-centred digital engagement platform designed to promote regional civic participation, showcase grassroots development projects, and highlight cultural landmarks."
 link: "https://dju78.github.io/kogiqest/"
 highlights:

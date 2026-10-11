@@ -2,9 +2,10 @@
 title: "UKCalc — UK Calculator Platform"
 client: "Financial Technology / UK Calculators / Decision Tools"
 badge: "Live Platform"
-order: 4
+order: 5
 categories:
   - "fintech"
+  - "business-applications"
 description: "A UK-focused calculator platform providing practical, accurate tools for everyday financial and economic decisions, translating complex statutory rules into accessible digital interfaces."
 link: "https://ukcalc.jomovate.com/"
 highlights:

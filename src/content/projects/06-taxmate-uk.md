@@ -2,9 +2,10 @@
 title: "TaxMate UK"
 client: "FinTech / Sole-Trader Bookkeeping / UK Tax Organisation"
 badge: "Live Product"
-order: 6
+order: 7
 categories:
   - "fintech"
+  - "business-applications"
 description: "A tailored financial management and bookkeeping application built for UK sole traders and freelancers, simplifying income/expense tracking, tax reservations, and HMRC deadlines."
 link: "https://taxmate.omoyelejd.co.uk/"
 highlights:
