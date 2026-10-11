@@ -13,7 +13,7 @@ highlights:
   - text: "Aggregates multi-source tax data into interactive evaluative dashboards"
   - text: "Automated compliance metrics and anomaly tracking for stakeholder review"
   - text: "Streamlined audit-ready reporting workflows ensuring regulatory transparency"
-  - text: "Combines fiscal domain expertise with interactive analytics visualization"
+  - text: "Combines fiscal domain expertise with interactive analytics visualisation"
 tech:
   - tag: "Tax Analytics"
   - tag: "Compliance Assurance"

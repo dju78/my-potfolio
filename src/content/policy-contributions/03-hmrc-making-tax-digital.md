@@ -1,5 +1,5 @@
 ---
-title: "HMRC – Making Tax Digital for Income Tax"
+title: "HMRC: Making Tax Digital for Income Tax"
 area: "Tax Administration"
 date: 2026-03-01
 pdf: "/papers/hmrc-making-tax-digital-submission.pdf"

@@ -1,5 +1,5 @@
 ---
-title: "UKCalc — UK Calculator Platform"
+title: "UKCalc: UK Calculator Platform"
 client: "Financial Technology / UK Calculators / Decision Tools"
 badge: "Live Platform"
 order: 5

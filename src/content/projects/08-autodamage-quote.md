@@ -7,7 +7,7 @@ order: 9
 categories:
   - "automotive"
   - "business-applications"
-description: "A specialized automotive damage assessment and quotation engine engineered to streamline repair estimates, cost modeling, structured reporting, and parts breakdown."
+description: "A specialised automotive damage assessment and quotation engine engineered to streamline repair estimates, cost modelling, structured reporting, and parts breakdown."
 link: "#"
 highlights:
   - text: "Vehicle damage assessment and algorithmic repair quotation calculation engine"

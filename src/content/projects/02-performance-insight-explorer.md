@@ -5,7 +5,7 @@ badge: "Live Analytical App"
 order: 3
 categories:
   - "data-analytics"
-description: "An interactive analytical application transforming operational and organizational data into executive KPIs, trend analyses, comparative benchmarks, and evidence to guide strategic decisions."
+description: "An interactive analytical application transforming operational and organisational data into executive KPIs, trend analyses, comparative benchmarks, and evidence to guide strategic decisions."
 link: "https://performance-insight-explorer.streamlit.app/performance_overview"
 highlights:
   - text: "KPI monitoring, operational trend analysis and comparative performance reporting"

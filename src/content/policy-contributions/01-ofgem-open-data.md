@@ -1,5 +1,5 @@
 ---
-title: "Ofgem – Securing Open Data in Energy"
+title: "Ofgem: Securing Open Data in Energy"
 area: "Energy Data Regulation"
 date: 2026-01-01
 pdf: "/papers/ofgem-securing-open-data-consultation-response.pdf"

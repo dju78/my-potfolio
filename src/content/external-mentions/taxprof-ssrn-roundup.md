@@ -1,5 +1,5 @@
 ---
-title: "TaxProf Blog – Weekly SSRN Tax Roundup"
+title: "TaxProf Blog: Weekly SSRN Tax Roundup"
 source: "TaxProf Blog"
 mention_type: "External Mention / SSRN Roundup"
 date_display: "April 24, 2026"
