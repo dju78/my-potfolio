@@ -114,25 +114,62 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===========================
-// Reveal on Scroll
+// Homepage Chart, Reveal & Counter Animations
 // ===========================
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            revealObserver.unobserve(entry.target);
-        }
+(function(){
+  var root = document.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var trend = document.getElementById('trend');
+  if (trend && trend.getTotalLength) {
+    trend.style.setProperty('--len', Math.ceil(trend.getTotalLength()));
+  }
+
+  if (reduce || !('IntersectionObserver' in window)) return;
+  root.classList.add('motion');
+
+  // Section reveal: only items still below the fold start hidden, so the first view is always complete.
+  var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  var vh = window.innerHeight;
+  items.forEach(function(el){
+    if (el.getBoundingClientRect().top > vh) el.classList.add('pending');
+  });
+  var cards = document.querySelectorAll('.card.reveal');
+  Array.prototype.forEach.call(cards, function(c, i){
+    c.style.transitionDelay = (i * 100) + 'ms';
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){
+        e.target.classList.remove('pending');
+        e.target.classList.add('active');
+        io.unobserve(e.target);
+      }
     });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.15 });
+  items.forEach(function(el){
+    if (el.classList.contains('pending')) io.observe(el);
+    else el.classList.add('active');
+  });
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-// Safety net: if the observer never fires for some elements (e.g. automated
-// capture tools that resize the viewport without simulating real scrolling),
-// force everything visible after a short delay rather than leaving it stuck.
-setTimeout(() => {
-    document.querySelectorAll('.reveal:not(.active)').forEach(el => el.classList.add('active'));
-}, 1200);
+  // Count up once when the number scrolls into view.
+  var counters = document.querySelectorAll('.count');
+  var co = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      co.unobserve(e.target);
+      var el = e.target, to = +el.getAttribute('data-to'), start = null, dur = 1200;
+      function step(t){
+        if (start === null) start = t;
+        var p = Math.min((t - start) / dur, 1);
+        el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(step);
+      }
+      el.textContent = '0';
+      requestAnimationFrame(step);
+    });
+  }, { threshold: 0.6 });
+  Array.prototype.forEach.call(counters, function(c){ co.observe(c); });
+})();
 
 // ===========================
 // Counter Animation
