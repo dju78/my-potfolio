@@ -1,232 +1,158 @@
 ---
 layout: base.njk
-pageTitle: "Daramola Joseph Omoyele | Data & Research Analyst | Economic Analysis & Business Intelligence"
-pageDescription: "Portfolio of Daramola Joseph Omoyele, Data and Research Analyst in economic analysis, business intelligence, and applied digital tools."
+pageTitle: "Joseph Omoyele, Research and Data Analyst"
+pageDescription: "I turn complex data into clear evidence for better decisions, combining economic research, statistical analysis and performance reporting."
 ---
-    <!-- ===================== HERO ===================== -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-inner">
-                <!-- Left: Text content (60%) -->
-                <div class="hero-left">
-                    <h1 class="hero-headline">Joseph Omoyele</h1>
-                    <p class="hero-role">Data and Research Analyst</p>
-                    <p class="hero-description">
-                        Fifteen years of financial and data analysis in public sector and education settings. I build analytical tools and write evidence for tax, regulatory and economic policy, including consultation responses to HMRC, Ofgem and the ICO.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="/Daramola_Joseph_Omoyele_CV.pdf" download class="btn btn-hero-primary">
-                            Download CV
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </a>
-                        <a href="#contact" class="btn btn-hero-outline">
-                            Contact
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13 20 6.01V6H4zm0 12h16V8.99l-8 6.5-8-6.5V18z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </a>
-                    </div>
-                    <div class="hero-credentials">
-                        MSc Economics with Data Analytics (Merit), University of Essex · Consultation responses to HMRC, Ofgem and the ICO · Author of three practitioner books on tax compliance
-                    </div>
-                </div>
 
-                <!-- Right: Photo (40%) -->
-                <div class="hero-right">
-                    <div class="hero-photo-wrapper">
-                        <img src="/images/profile-photo.jpg"
-                             alt="Joseph Omoyele"
-                             class="hero-photo"
-                             loading="eager">
-                    </div>
-                </div>
+<section id="top" class="ref-hero">
+    <div class="ref-container ref-hero-container">
+        <div class="ref-hero-left">
+            <p class="ref-hero-kicker">Colchester, United Kingdom</p>
+            <h1 class="ref-hero-title">Joseph Omoyele</h1>
+            <p class="ref-hero-subtitle">Research and Data Analyst</p>
+            <p class="ref-hero-text">I turn complex data into clear evidence for better decisions, combining economic research, statistical analysis and performance reporting. I check how reliable the data is, choose the right method, and explain the result so people can act on it.</p>
+            <div class="ref-tools" aria-label="Tools">
+                <span class="ref-tool-tag">R</span>
+                <span class="ref-tool-tag">Python</span>
+                <span class="ref-tool-tag">SQL</span>
+                <span class="ref-tool-tag">Power BI</span>
+                <span class="ref-tool-tag">Tableau</span>
+                <span class="ref-tool-tag">Excel</span>
+                <span class="ref-tool-tag">Econometrics</span>
             </div>
+            <div class="ref-hero-cta">
+                <a href="/Daramola_Joseph_Omoyele_CV.pdf" download class="ref-btn-primary">Download CV</a>
+                <a href="#work" class="ref-btn-outline">See my work</a>
+            </div>
+            <p class="ref-hero-availability">Open to Data Analyst, Research Analyst and Business Intelligence Analyst roles in the UK.</p>
         </div>
-    </section>
-
-    <!-- ===================== 2. SELECTED DATA, RESEARCH & BI PROJECTS ===================== -->
-    <section id="projects" class="section projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Selected Data, Research &amp; Business Intelligence Projects</h2>
-            </div>
-            <p class="section-preview-intro">Interactive analytical platforms, econometric models, statistical methodologies and operational intelligence systems.</p>
-            <div class="project-grid">
-                {% for project in collections.projects | sort(false, false, 'data.order') %}
-                {% if project.data.title == "Performance Insight Explorer" or project.data.title == "Price Quality Explorer" or project.data.title == "UK AI Economic Measurement Lab" %}
-                <div class="project-card reveal" data-category="{% if project.data.categories %}{{ project.data.categories | join(' ') }}{% else %}{{ project.data.badge | lower | replace(' ', '-') }}{% endif %}">
-                    <div class="project-card-top">
-                        <div class="project-card-meta">
-                            <span class="project-badge">{{ project.data.badge }}</span>
-                            {% if project.data.status %}<span class="project-status-badge">{{ project.data.status }}</span>{% endif %}
-                            <span class="project-client-tag">{{ project.data.client }}</span>
-                        </div>
-                        <h3 class="project-title">{{ project.data.title }}</h3>
-                        <p class="project-desc">{{ project.data.description }}</p>
-                    </div>
-                    {% if project.data.image %}
-                    <div class="project-card-image" style="padding:0 1.25rem 0.5rem 1.25rem;">
-                        <img src="{{ project.data.image }}" alt="{{ project.data.title }} screenshot" style="width:100%; height:auto; border-radius:6px; border:1px solid var(--border-color); display:block;" loading="lazy">
-                    </div>
-                    {% endif %}
-                    <div class="project-card-mid">
-                        <ul class="project-highlights">
-                            {% for highlight in project.data.highlights %}
-                            {% if loop.index <= 2 %}
-                            <li class="highlight-item"><span>{{ highlight.text }}</span></li>
-                            {% endif %}
-                            {% endfor %}
-                        </ul>
-                        {% if project.data.tech or project.data.tags %}
-                        <div class="tech-tags">
-                            {% for tag in (project.data.tech or project.data.tags) %}
-                            {% if loop.index <= 4 %}
-                            <span class="tech-tag">{{ tag.tag }}</span>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="project-card-foot">
-                        {% if project.data.status and "Restricted Access" in project.data.status %}
-                        <span class="btn btn-disabled btn-sm">Preview available on request</span>
-                        {% elseif project.data.link and project.data.link != '#' %}
-                        <a href="{{ project.data.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                            View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </a>
-                        {% else %}
-                        <span class="btn btn-disabled btn-sm">{% if project.data.status %}{{ project.data.status }}{% else %}In Development{% endif %}</span>
-                        {% endif %}
-                    </div>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-            <div style="text-align:center; margin-top:2rem;">
-                <a href="/projects/" class="btn btn-primary view-more-btn">View All Projects &amp; Products →</a>
-            </div>
+        <div class="ref-hero-right">
+            <img src="/images/profile-photo.jpg" alt="Joseph Omoyele" class="ref-hero-photo" loading="eager">
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===================== 3. PROFESSIONAL EXPERIENCE ===================== -->
-    <section id="experience" class="section experience-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Experience</h2>
-            </div>
-            <p class="section-preview-intro">Experience spanning economic research, financial analysis, institutional data governance, and analytical software development.</p>
-            <div class="exp-preview-grid">
-                <div class="exp-preview-card reveal">
-                    <div class="exp-preview-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
-                    </div>
-                    <h3>Founder &amp; Product Business Analyst</h3>
-                    <p class="exp-preview-company">Jomovate Digital Labs</p>
-                    <p class="exp-preview-date">July 2024 to Present</p>
-                    <p class="role-focus">Built and launched analytical web tools including Performance Insight Explorer and the UK AI Economic Measurement Lab.</p>
-                </div>
-                <div class="exp-preview-card reveal">
-                    <div class="exp-preview-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
-                    </div>
-                    <h3>Data Analytics | Financial Analyst &amp; Business Intelligence</h3>
-                    <p class="exp-preview-company">Univelcity Computing</p>
-                    <p class="exp-preview-date">July 2023 to Present</p>
-                    <p class="role-focus">Data analysis, statistical modelling in R and Python, business intelligence dashboards in Power BI and Shiny, and analytical quality assurance.</p>
-                </div>
-                <div class="exp-preview-card reveal">
-                    <div class="exp-preview-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
-                    </div>
-                    <h3>Financial Analyst</h3>
-                    <p class="exp-preview-company">Nigerian Postal Service</p>
-                    <p class="exp-preview-date">January 2014 to September 2022</p>
-                    <p class="role-focus">Financial data evaluation, operational budgeting, revenue/cost variance reporting, and operational efficiency analysis.</p>
-                </div>
-                <div class="exp-preview-card reveal">
-                    <div class="exp-preview-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
-                    </div>
-                    <h3>Data Analyst/Admin</h3>
-                    <p class="exp-preview-company">City College of Education</p>
-                    <p class="exp-preview-date">January 2008 to December 2013</p>
-                    <p class="role-focus">Institutional record keeping, student and administrative data verification, academic reporting, and attendance analysis.</p>
-                </div>
-            </div>
-            <a href="/experience/" class="btn btn-primary view-more-btn">View Full Experience →</a>
+<section class="ref-highlights" aria-label="Highlights">
+    <div class="ref-container ref-highlights-container">
+        <div class="ref-highlight-item">
+            <p class="ref-highlight-stat">MSc, Merit</p>
+            <p class="ref-highlight-desc">Economics with Data Analytics, University of Essex</p>
         </div>
-    </section>
-
-    <!-- ===================== 4. RESEARCH & POLICY CONTRIBUTIONS ===================== -->
-    <section id="research-policy" class="section">
-        <div class="container">
-
-            <div class="section-pair">
-                <div id="policy" class="section-pair-col">
-                    <div class="section-header section-header-left">
-                        <h2 class="section-title">Policy Submissions</h2>
-                    </div>
-                    <p class="section-preview-intro section-preview-intro-left">Independent consultation responses across UK data governance, tax administration, and digital regulation.</p>
-                    <div class="policy-grid">
-                        {% for item in collections.policy_contributions %}
-                        {% if loop.index <= 3 %}
-                        <div class="policy-card reveal">
-                            <span class="policy-area">{{ item.data.area }}</span>
-                            <h3>{{ item.data.title }}</h3>
-                            <p class="policy-desc">{{ item.data.description }}</p>
-                            {% if item.data.pdf %}
-                            <a href="{{ item.data.pdf }}" target="_blank" rel="noopener" class="btn btn-soft btn-sm policy-btn">{{ item.data.pdf_label or "Read Submission" }}</a>
-                            {% endif %}
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-                    <a href="/policy-contributions/" class="btn btn-primary view-more-btn">View All Policy Work →</a>
-                </div>
-                <div id="publications" class="section-pair-col">
-                    <div class="section-header section-header-left">
-                        <h2 class="section-title">Selected Publications</h2>
-                    </div>
-                    <p class="section-preview-intro section-preview-intro-left">Peer-reviewed journal articles across development economics, econometric modelling, and institutional analysis.</p>
-                    <div class="publications-grid">
-                        {% for article in collections.journal_articles | reverse %}
-                        {% if loop.index <= 2 %}
-                        <div class="publication-card journal-card reveal" style="margin-bottom:1rem;">
-                            <h3>{{ article.data.title }}</h3>
-                            <p class="pub-meta">{{ article.data.journal }}{% if article.data.year %} ({{ article.data.year }}){% endif %}</p>
-                            {% if article.data.doi %}<p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
-                            <p class="pub-summary">{{ article.templateContent | excerpt(2) }}</p>
-                            <a href="{{ article.data.url or article.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Journal Article →</a>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-                    <a href="/publications/" class="btn btn-primary view-more-btn">View All Publications →</a>
-                </div>
-            </div>
+        <div class="ref-highlight-item">
+            <p class="ref-highlight-stat">About 30%</p>
+            <p class="ref-highlight-desc">less reconciliation and reporting time after automating workflows in R, Python and SQL</p>
         </div>
-    </section>
-
-    <!-- ===================== 5. CONTACT & CAREER OPPORTUNITIES ===================== -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contact &amp; Career Opportunities</h2>
-            </div>
-            <p class="section-preview-intro">I'm looking for Data Analyst, Research Analyst and Economist roles in the UK. The quickest way to reach me is by email.</p>
-            <div class="availability-card reveal" style="max-width:680px; margin:0 auto 2rem;">
-                <div class="availability-badge">
-                    <span class="badge-dot pulse"></span>
-                    Open to Opportunities
-                </div>
-                <h3>Let's Discuss How I Can Add Value</h3>
-                <p>Whether you require statistical modelling, business intelligence dashboards, research analysis or applied digital tool development, feel free to get in touch.</p>
-                <div class="contact-actions" style="margin-top:1.5rem;">
-                    <a href="mailto:info@jomovate.com" class="btn btn-primary">Send Email</a>
-                    <a href="/Daramola_Joseph_Omoyele_CV.pdf" download class="btn btn-outline-light">Download CV</a>
-                    <a href="https://www.linkedin.com/in/joseph-omoyele-bbb006244/" target="_blank" rel="noopener" class="btn btn-outline-light">LinkedIn</a>
-                </div>
-            </div>
-            <div style="text-align:center;">
-                <a href="/contact/" class="btn btn-primary view-more-btn">All Contact Details &amp; Links →</a>
-            </div>
+        <div class="ref-highlight-item">
+            <p class="ref-highlight-stat">HMRC, Ofgem, ICO</p>
+            <p class="ref-highlight-desc">independent consultation responses on tax, energy data and automated decisions</p>
         </div>
-    </section>
+        <div class="ref-highlight-item">
+            <p class="ref-highlight-stat">Published author</p>
+            <p class="ref-highlight-desc">peer reviewed research and practitioner books on UK and Nigerian tax compliance</p>
+        </div>
+    </div>
+</section>
+
+<section id="work" class="ref-work">
+    <div class="ref-container ref-work-container">
+        <div class="ref-work-header">
+            <div class="ref-work-title-group">
+                <h2 class="ref-section-title">Selected work</h2>
+                <p class="ref-section-subtitle">Analytical tools I designed and built, each live and open to try.</p>
+            </div>
+            <a href="/projects/" class="ref-link-bold">All projects</a>
+        </div>
+        <div class="ref-work-grid">
+            <article class="ref-project-card">
+                <div class="ref-card-img-wrap">
+                    <img src="/images/screenshot_performance_insight.png" alt="Performance Insight Explorer dashboard screenshot" class="ref-card-img" loading="lazy">
+                </div>
+                <div class="ref-card-body">
+                    <p class="ref-card-category">Performance analytics</p>
+                    <h3 class="ref-card-title">Performance Insight Explorer</h3>
+                    <p class="ref-card-desc">Upload operational data and get KPI tracking, trend analysis and benchmark comparisons for management reporting.</p>
+                    <p class="ref-card-tech">Python · Streamlit</p>
+                    <a href="https://performance-insight.jomovate.com" target="_blank" rel="noopener noreferrer" class="ref-card-link">Open live demo</a>
+                </div>
+            </article>
+
+            <article class="ref-project-card">
+                <div class="ref-card-img-wrap">
+                    <img src="/images/screenshot_ai_measurement.png" alt="UK AI Economic Measurement Lab screenshot" class="ref-card-img" loading="lazy">
+                </div>
+                <div class="ref-card-body">
+                    <p class="ref-card-category">Economic research</p>
+                    <h3 class="ref-card-title">UK AI Economic Measurement Lab</h3>
+                    <p class="ref-card-desc">Estimates the footprint of AI activity in the UK economy using Supply and Use Table analysis across 23 product categories.</p>
+                    <p class="ref-card-tech">National accounts · Scenario modelling</p>
+                    <a href="https://ai-measurement.jomovate.com" target="_blank" rel="noopener noreferrer" class="ref-card-link">Open live demo</a>
+                </div>
+            </article>
+
+            <article class="ref-project-card">
+                <div class="ref-card-img-wrap">
+                    <img src="/images/screenshot_price_quality.png" alt="Price Quality Explorer screenshot" class="ref-card-img" loading="lazy">
+                </div>
+                <div class="ref-card-body">
+                    <p class="ref-card-category">Statistical methodology</p>
+                    <h3 class="ref-card-title">Price Quality Explorer</h3>
+                    <p class="ref-card-desc">Checks price data for anomalies and scale errors, keeps an audit trail, and builds elementary price indices reproducibly.</p>
+                    <p class="ref-card-tech">Python · Price indices · Data quality</p>
+                    <a href="https://price-quality.jomovate.com" target="_blank" rel="noopener noreferrer" class="ref-card-link">Open live demo</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="ref-experience">
+    <div class="ref-container ref-exp-container">
+        <div class="ref-exp-col-left">
+            <h2 class="ref-section-title">How I work</h2>
+            <p class="ref-exp-intro">Every piece of analysis starts with three questions.</p>
+            <ol class="ref-exp-list">
+                <li>What does the organisation actually need to know?</li>
+                <li>How reliable is the data behind it?</li>
+                <li>Which method gives a useful answer, and what are its limits?</li>
+            </ol>
+        </div>
+        <div class="ref-exp-col-right">
+            <h2 class="ref-section-title ref-exp-heading-right">Experience</h2>
+            <div class="ref-timeline-item">
+                <div class="ref-timeline-text">
+                    <h3 class="ref-timeline-role">Data and Financial Analyst, Univelcity Computing</h3>
+                    <p class="ref-timeline-desc">Lead statistical analysis in R and build Power BI, Tableau and Shiny dashboards for programme and client reporting.</p>
+                </div>
+                <p class="ref-timeline-date">2023 to present</p>
+            </div>
+            <div class="ref-timeline-item">
+                <div class="ref-timeline-text">
+                    <h3 class="ref-timeline-role">Founder and Product Business Analyst, Jomovate Digital Labs</h3>
+                    <p class="ref-timeline-desc">Built and launched analytical web tools, including Performance Insight Explorer and the UK AI Economic Measurement Lab.</p>
+                </div>
+                <p class="ref-timeline-date">2024 to present</p>
+            </div>
+            <div class="ref-timeline-item ref-timeline-item-last">
+                <div class="ref-timeline-text">
+                    <h3 class="ref-timeline-role">Financial Analyst, Nigerian Postal Service</h3>
+                    <p class="ref-timeline-desc">Built SQL and Power BI reporting for senior government stakeholders and automated financial reporting.</p>
+                </div>
+                <p class="ref-timeline-date">2014 to 2022</p>
+            </div>
+            <a href="/experience/" class="ref-link-bold ref-exp-all-link">Full experience and CV</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="ref-contact">
+    <div class="ref-container ref-contact-container">
+        <div class="ref-contact-left">
+            <h2 class="ref-contact-title">Hiring a research or data analyst?</h2>
+            <p class="ref-contact-subtitle">I'm available for UK roles and happy to talk through any of the work above.</p>
+        </div>
+        <div class="ref-contact-right">
+            <a href="mailto:info@jomovate.com" class="ref-btn-white">info@jomovate.com</a>
+            <a href="https://www.linkedin.com/in/joseph-omoyele-bbb006244/" target="_blank" rel="noopener noreferrer" class="ref-btn-outline-white">LinkedIn</a>
+        </div>
+    </div>
+</section>
