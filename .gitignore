@@ -4,3 +4,5 @@ _site/
 lighthouse-report*
 public/cv_page_*.png
 public/screenshot_*.png
+desktop_*.png
+mobile_*.png
