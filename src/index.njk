@@ -41,7 +41,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data and Research Analys
                     </h1>
                     <p class="hero-tagline">Data &amp; Research Analyst | Economic Analysis &amp; Business Intelligence</p>
                     <p class="hero-description">
-                        I turn complex data into clear insights and practical tools that support better decisions. Fifteen years of financial and data analysis in public sector and education settings, now applied to UK tax, regulation and economic policy.
+                        I turn complex data into clear insights and practical tools that support better decisions. My work combines data analysis, economic research and business intelligence with practical application development.
                     </p>
                     <div class="hero-cta">
                         <a href="#projects" class="btn btn-hero-primary">
@@ -108,7 +108,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data and Research Analys
             <p class="section-preview-intro">Interactive analytical platforms, econometric models, statistical methodologies and operational intelligence systems.</p>
             <div class="project-grid">
                 {% for project in collections.projects | sort(false, false, 'data.order') %}
-                {% if project.data.title == "Performance Insight Explorer" or project.data.title == "Care Quality Intelligence (CQI)" or project.data.title == "UK AI Economic Measurement Lab" %}
+                {% if project.data.title == "Performance Insight Explorer" or project.data.title == "Price Quality Explorer" or project.data.title == "UK AI Economic Measurement Lab" %}
                 <div class="project-card reveal" data-category="{% if project.data.categories %}{{ project.data.categories | join(' ') }}{% else %}{{ project.data.badge | lower | replace(' ', '-') }}{% endif %}">
                     <div class="project-card-top">
                         <div class="project-card-meta">
@@ -169,7 +169,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele, Data and Research Analys
             <div class="section-header">
                 <h2 class="section-title">Professional Experience</h2>
             </div>
-            <p class="section-preview-intro">Fifteen years of financial and data analysis in public sector and education settings, now applied to UK tax, regulation and economic policy.</p>
+            <p class="section-preview-intro">Experience spanning economic research, financial analysis, institutional data governance, and analytical software development.</p>
             <div class="exp-preview-grid">
                 <div class="exp-preview-card reveal">
                     <div class="exp-preview-icon">
