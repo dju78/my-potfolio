@@ -2,9 +2,10 @@
 title: "CarePhrase"
 client: "Health & Social Care / Communication / Documentation Quality"
 badge: "Live Product"
-order: 5
+order: 6
 categories:
   - "health-care"
+  - "websites-platforms"
 description: "A digital solution built to address frontline challenges in healthcare documentation, helping care workers improve how they observe, record, escalate, and communicate vital care information."
 link: "https://carephrase.com"
 highlights:

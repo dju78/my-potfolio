@@ -2,7 +2,7 @@
 title: "Care Quality Intelligence (CQI)"
 client: "Health & Social Care Analytics / Quality Intelligence / Regulatory Evidence"
 badge: "Live Dashboard"
-order: 3
+order: 4
 categories:
   - "data-analytics"
   - "health-care"

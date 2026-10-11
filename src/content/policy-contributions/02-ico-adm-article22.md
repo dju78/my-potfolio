@@ -1,5 +1,5 @@
 ---
-title: "ICO – Automated Decision-Making and Profiling Guidance under UK GDPR Article 22"
+title: "ICO: Automated Decision-Making and Profiling Guidance under UK GDPR Article 22"
 area: "Data Protection & AI Governance"
 date: 2026-02-01
 pdf: "/papers/ico-adm-article22-consultation-response.pdf"

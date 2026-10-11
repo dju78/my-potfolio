@@ -1,5 +1,5 @@
 ---
-title: "HMRC – Residency Tax Orientation Statement Proposal"
+title: "HMRC: Residency Tax Orientation Statement Proposal"
 area: "Tax Policy & Public Administration"
 date: 2026-04-01
 pdf: "/papers/hmrc-rtos-early-compliance-note.pdf"

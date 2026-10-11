@@ -191,13 +191,36 @@ filterBtns.forEach(btn => {
 // ===========================
 document.querySelectorAll('.read-more-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-        const desc = btn.previousElementSibling;
-        if (!desc) return;
-        const isCollapsed = desc.classList.contains('collapsed');
-        desc.classList.toggle('collapsed', !isCollapsed);
-        desc.classList.toggle('expanded', isCollapsed);
+        const fullDetails = btn.previousElementSibling;
+        if (!fullDetails) return;
+        const summary = fullDetails.previousElementSibling;
+        const isCollapsed = fullDetails.classList.contains('collapsed');
+        fullDetails.classList.toggle('collapsed', !isCollapsed);
+        fullDetails.classList.toggle('expanded', isCollapsed);
+        if (summary && summary.classList.contains('pub-summary')) {
+            summary.style.display = isCollapsed ? 'none' : '';
+        }
         btn.textContent = isCollapsed ? 'Read less ▴' : 'Read more ▾';
         btn.setAttribute('aria-expanded', isCollapsed ? 'true' : 'false');
+    });
+});
+
+// ===========================
+// Accessible Book Card Flip
+// ===========================
+document.querySelectorAll('.book-flip-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.flip-card');
+        if (card) card.classList.add('flipped');
+    });
+});
+
+document.querySelectorAll('.book-flip-back-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.flip-card');
+        if (card) card.classList.remove('flipped');
     });
 });
 
