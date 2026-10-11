@@ -1,7 +1,7 @@
 ---
 title: "Price Quality Explorer"
 client: "Statistical Methodology / Price Analysis / Data Quality"
-badge: "Access on Request"
+badge: "Live Analytical App"
 order: 2
 categories:
   - "data-analytics"
