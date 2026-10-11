@@ -39,12 +39,29 @@ breadcrumbLabel: "Projects"
                     <h3 class="project-title">{{ project.data.title }}</h3>
                     <p class="project-desc">{{ project.data.description }}</p>
                 </div>
+                {% if project.data.image %}
+                <div class="project-card-image" style="padding:0 1.25rem 0.75rem 1.25rem;">
+                    <img src="{{ project.data.image }}" alt="{{ project.data.title }} screenshot" style="width:100%; height:auto; border-radius:6px; border:1px solid var(--border-color); display:block;" loading="lazy">
+                </div>
+                {% endif %}
                 <div class="project-card-mid">
                     <div class="project-highlights">
                         {% for highlight in project.data.highlights %}
                         <div class="highlight-item"><span class="highlight-dot">▸</span><span>{{ highlight.text }}</span></div>
                         {% endfor %}
                     </div>
+                    {% if project.data.case_study %}
+                    <details class="project-case-study" style="margin:0.75rem 0; font-size:0.875rem; border:1px solid #e2e8f0; border-radius:6px; background:#f8fafc; padding:0.5rem 0.75rem;">
+                        <summary style="cursor:pointer; font-weight:600; color:var(--navy); outline:none;">Analytical Case Study &amp; Methodology</summary>
+                        <div style="margin-top:0.6rem; display:flex; flex-direction:column; gap:0.45rem; line-height:1.45; color:var(--text-color);">
+                            <p><strong>Problem / Context:</strong> {{ project.data.case_study.problem }}</p>
+                            <p><strong>My Contribution:</strong> {{ project.data.case_study.contribution }}</p>
+                            <p><strong>Methods &amp; Tools:</strong> {{ project.data.case_study.methods }}</p>
+                            <p><strong>Functionality:</strong> {{ project.data.case_study.functionality }}</p>
+                            <p><strong>Limitations &amp; Guardrails:</strong> {{ project.data.case_study.limitations }}</p>
+                        </div>
+                    </details>
+                    {% endif %}
                     {% if project.data.tech or project.data.tags %}
                     <div class="tech-tags">
                         {% for tag in (project.data.tech or project.data.tags) %}<span class="tech-tag">{{ tag.tag }}</span>{% endfor %}
@@ -52,7 +69,9 @@ breadcrumbLabel: "Projects"
                     {% endif %}
                 </div>
                 <div class="project-card-foot">
-                    {% if project.data.link and project.data.link != '#' %}
+                    {% if project.data.status and "Restricted Access" in project.data.status %}
+                    <span class="btn btn-disabled btn-sm">Preview available on request</span>
+                    {% elif project.data.link and project.data.link != '#' %}
                     <a href="{{ project.data.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                         View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>

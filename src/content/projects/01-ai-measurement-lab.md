@@ -22,4 +22,11 @@ tech:
   - tag: "Streamlit"
   - tag: "SNA 2008 / ESA 2010"
   - tag: "Statistical Methodology"
+image: "/images/screenshot_ai_measurement.png"
+case_study:
+  problem: "Traditional National Accounts frameworks and standard industrial classifications (SIC/CPA) do not isolate AI as an independent product group, complicating transparent measurement of AI production, intermediate consumption, capital formation, and trade across the UK economy."
+  contribution: "Designed and engineered an independent statistical research prototype and interactive lab exploring supply-use disaggregation, activity classification, and asset boundary decisions."
+  methods: "Supply & Use Table (SUT) matrix analysis across 23 AI-relevant CPA categories; sensitivity scenario modeling for disaggregation parameters; rule-based and ML classifier identifying AI-related economic activities aligned with SNA 2008 / ESA 2010 principles."
+  functionality: "Features an interactive SUT balance explorer, asset capitalization decision tree, parameter sensitivity simulator, and enterprise activity classification sandbox."
+  limitations: "Research prototype utilizing published aggregate Blue Book benchmarks; broad product totals serve as candidate denominators rather than official estimates of AI output; requires explicit scenario assumptions."
 ---
