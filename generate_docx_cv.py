@@ -233,7 +233,7 @@ r_e1_t.bold = True
 r_e1_t.font.name = "Calibri"
 r_e1_t.font.size = Pt(9.5)
 r_e1_t.font.color.rgb = COLOR_NAVY
-r_e1_i = p_edu1.add_run("  |  University of Essex  |  Awarded November 2023")
+r_e1_i = p_edu1.add_run("  |  University of Essex  |  2023")
 r_e1_i.font.name = "Calibri"
 r_e1_i.font.size = Pt(9.5)
 

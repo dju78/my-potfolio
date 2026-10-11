@@ -286,7 +286,7 @@ def build_pdf():
     story.append(Paragraph("EDUCATION", styles['CVHeading']))
     edu_row1 = [
         Paragraph("<b>MSc Economics with Data Analytics (Merit)</b> — University of Essex", styles['CVRoleTitle']),
-        Paragraph("Awarded Nov 2023", styles['CVRoleDate'])
+        Paragraph("2023", styles['CVRoleDate'])
     ]
     t_e1 = Table([edu_row1], colWidths=[5.5 * inch, 2.0 * inch])
     t_e1.setStyle(TableStyle([
