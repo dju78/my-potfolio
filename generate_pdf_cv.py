@@ -242,13 +242,13 @@ def build_pdf():
     )
 
     make_exp_entry(
-        title="Data Analyst",
-        company="Univelcity Computing (UK / Remote)",
+        title="Data Analytics | Financial Analyst &amp; Business Intelligence",
+        company="Univelcity Computing",
         date_str="July 2023 – Present",
-        focus="Data analysis, economic modelling, financial analysis, business intelligence, dashboards, and compliance assurance.",
+        focus="Delivering financial, operational, survey, and research data analysis, predictive modelling, and interactive dashboards.",
         bullets=[
-            "Deliver financial, operational, survey, and research data analysis for donor-funded development programmes and business research.",
-            "Apply econometric modelling, forecasting, cost-benefit analysis, risk assessments, and scenario analysis across multi-currency environments (GBP, USD, EUR, NGN).",
+            "Deliver financial, operational, survey, and research data analysis for development programmes and business research.",
+            "Apply econometric modelling, forecasting, cost-benefit analysis, risk assessments, and scenario analysis across multi-currency environments.",
             "Design and maintain automated dashboards and decision tools in Power BI, Tableau, Shiny, and Excel, streamlining stakeholder access to timely insights.",
             "Execute data preparation, ETL, and reporting pipelines using R, Python, SQL, and Excel to identify trends, risks, and performance gaps.",
             "Produce clear analytical summaries and policy briefings communicating complex findings to non-technical stakeholders.",
@@ -257,10 +257,10 @@ def build_pdf():
     )
 
     make_exp_entry(
-        title="Data Analyst",
+        title="Financial Analyst",
         company="Nigerian Postal Service",
-        date_str="January 2014 – October 2022",
-        focus="Public sector operational datasets, regional performance benchmarking, forecasting models, and service quality monitoring.",
+        date_str="January 2014 – September 2022",
+        focus="Financial data evaluation, operational budgeting, revenue/cost variance reporting, and operational efficiency analysis.",
         bullets=[
             "Analysed nationwide operational, financial, and socioeconomic datasets to support service delivery planning and management reporting.",
             "Built forecasting models and performance monitoring tools to identify regional efficiency gaps and operational intervention points.",
@@ -271,10 +271,10 @@ def build_pdf():
     )
 
     make_exp_entry(
-        title="Lecturer / Education Data &amp; Academic Administration Support",
+        title="Data Analyst/Admin",
         company="City College of Education",
-        date_str="April 2008 – March 2013",
-        focus="Analysed student attendance, assessment outcomes, and academic progress data for departmental reporting, quality assurance, and curriculum planning.",
+        date_str="January 2008 – December 2013",
+        focus="Institutional record keeping, student and administrative data verification, academic reporting, and attendance analysis.",
         bullets=[
             "Maintained assessment records and student reporting databases, strengthening institutional documentation standards and compliance.",
             "Compiled departmental reports and learning performance data to support evidence-informed learner support and curriculum planning.",

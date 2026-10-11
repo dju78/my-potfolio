@@ -182,13 +182,13 @@ add_experience_item(
 )
 
 add_experience_item(
-    title="Data Analyst",
-    company="Univelcity Computing (UK / Remote)",
+    title="Data Analytics | Financial Analyst & Business Intelligence",
+    company="Univelcity Computing",
     dates="July 2023 – Present",
-    focus="Data analysis, economic modelling, financial analysis, business intelligence, dashboards, and compliance assurance.",
+    focus="Delivering financial, operational, survey, and research data analysis, predictive modelling, and interactive dashboards.",
     bullets=[
-        "Deliver financial, operational, survey, and research data analysis for donor-funded development programmes and business research, informing evidence-based decision-making.",
-        "Apply econometric modelling, forecasting, cost-benefit analysis, risk assessments, and scenario analysis across multi-currency environments (GBP, USD, EUR, NGN).",
+        "Deliver financial, operational, survey, and research data analysis for development programmes and business research, informing evidence-based decision-making.",
+        "Apply econometric modelling, forecasting, cost-benefit analysis, risk assessments, and scenario analysis across multi-currency environments.",
         "Design and maintain automated dashboards and decision tools in Power BI, Tableau, Shiny, and Excel, streamlining stakeholder access to timely insights.",
         "Execute data preparation, ETL, and automated reporting pipelines using R, Python, SQL, and Excel to uncover trends, risks, and performance gaps.",
         "Produce clear analytical summaries and policy briefings communicating complex findings to non-technical stakeholders.",
@@ -197,24 +197,24 @@ add_experience_item(
 )
 
 add_experience_item(
-    title="Data Analyst",
+    title="Financial Analyst",
     company="Nigerian Postal Service",
-    dates="January 2014 – October 2022",
-    focus="Public sector data analysis, operational insight, performance monitoring, forecasting, and regional service improvement.",
+    dates="January 2014 – September 2022",
+    focus="Financial data evaluation, operational budgeting, revenue/cost variance reporting, and operational efficiency analysis.",
     bullets=[
         "Analysed nationwide operational, financial, and socioeconomic datasets to support service delivery planning and management reporting.",
         "Built forecasting models and performance monitoring tools to identify regional efficiency gaps and operational intervention points.",
-        "Designed composite performance indices to benchmark regional office performance and support objective resource allocation decisions.",
+        "Designed composite performance indices to benchmark regional facility performance and support objective resource allocation decisions.",
         "Produced analytical briefings and management summaries translating operational data into actionable service improvement recommendations.",
         "Strengthened survey design, data collection protocols, reporting standards, and data quality assurance across regional facilities."
     ]
 )
 
 add_experience_item(
-    title="Lecturer / Education Data & Academic Administration Support",
+    title="Data Analyst/Admin",
     company="City College of Education",
-    dates="April 2008 – March 2013",
-    focus="Analysed student attendance, assessment outcomes, and academic progress data for departmental reporting, quality assurance, and curriculum planning.",
+    dates="January 2008 – December 2013",
+    focus="Institutional record keeping, student and administrative data verification, academic reporting, and attendance analysis.",
     bullets=[
         "Maintained assessment records and student reporting databases, strengthening institutional documentation standards and compliance.",
         "Compiled departmental reports and learning performance data to support evidence-informed learner support and curriculum planning.",
