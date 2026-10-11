@@ -2,3 +2,5 @@ node_modules/
 _site/
 .DS_Store
 lighthouse-report*
+public/cv_page_*.png
+public/screenshot_*.png
