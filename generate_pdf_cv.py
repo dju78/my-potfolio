@@ -3,7 +3,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.lib import colors
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, ListFlowable, ListItem
+    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, ListFlowable, ListItem, PageBreak
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.pdfgen import canvas
@@ -61,8 +61,8 @@ def build_pdf():
     styles.add(ParagraphStyle(
         'CVName',
         fontName='Helvetica-Bold',
-        fontSize=17,
-        leading=19,
+        fontSize=18,
+        leading=21,
         textColor=c_navy,
         spaceAfter=2
     ))
@@ -70,8 +70,8 @@ def build_pdf():
     styles.add(ParagraphStyle(
         'CVTitle',
         fontName='Helvetica-Bold',
-        fontSize=10.5,
-        leading=13,
+        fontSize=11,
+        leading=14,
         textColor=c_accent,
         spaceAfter=3
     ))
@@ -79,8 +79,8 @@ def build_pdf():
     styles.add(ParagraphStyle(
         'CVContact',
         fontName='Helvetica',
-        fontSize=8,
-        leading=11,
+        fontSize=8.5,
+        leading=11.5,
         textColor=c_muted,
         spaceAfter=4
     ))
@@ -88,8 +88,8 @@ def build_pdf():
     styles.add(ParagraphStyle(
         'CVHeading',
         fontName='Helvetica-Bold',
-        fontSize=10,
-        leading=12,
+        fontSize=11.5,
+        leading=14,
         textColor=c_navy,
         spaceBefore=7,
         spaceAfter=3,
@@ -99,8 +99,8 @@ def build_pdf():
     styles.add(ParagraphStyle(
         'CVBody',
         fontName='Helvetica',
-        fontSize=8.5,
-        leading=11,
+        fontSize=10.5,
+        leading=13.5,
         textColor=c_text,
         spaceAfter=3
     ))
@@ -108,24 +108,24 @@ def build_pdf():
     styles.add(ParagraphStyle(
         'CVRoleTitle',
         fontName='Helvetica-Bold',
-        fontSize=9,
-        leading=11.5,
+        fontSize=11,
+        leading=13.5,
         textColor=c_navy
     ))
 
     styles.add(ParagraphStyle(
         'CVRoleCompany',
         fontName='Helvetica',
-        fontSize=8.5,
-        leading=11,
+        fontSize=10.5,
+        leading=13.5,
         textColor=c_text
     ))
 
     styles.add(ParagraphStyle(
         'CVRoleDate',
         fontName='Helvetica-Bold',
-        fontSize=8.5,
-        leading=11,
+        fontSize=10.5,
+        leading=13.5,
         alignment=2, # Right aligned
         textColor=c_muted
     ))
@@ -133,8 +133,8 @@ def build_pdf():
     styles.add(ParagraphStyle(
         'CVRoleFocus',
         fontName='Helvetica-Oblique',
-        fontSize=8,
-        leading=10.5,
+        fontSize=10,
+        leading=12.5,
         textColor=colors.HexColor("#475569"),
         spaceBefore=1,
         spaceAfter=2,
@@ -144,11 +144,11 @@ def build_pdf():
     styles.add(ParagraphStyle(
         'CVBullet',
         fontName='Helvetica',
-        fontSize=8.2,
-        leading=10.5,
+        fontSize=10.5,
+        leading=13.2,
         textColor=c_text,
         spaceBefore=1,
-        spaceAfter=1
+        spaceAfter=1.5
     ))
 
     story = []
@@ -241,6 +241,8 @@ def build_pdf():
         ]
     )
 
+    story.append(PageBreak())
+
     make_exp_entry(
         title="Data Analytics | Financial Analyst &amp; Business Intelligence",
         company="Univelcity Computing",
@@ -281,6 +283,8 @@ def build_pdf():
             "Liaised with academic faculty and management to enhance reporting quality and student progression tracking."
         ]
     )
+
+    story.append(PageBreak())
 
     # 5. EDUCATION
     story.append(Paragraph("EDUCATION", styles['CVHeading']))

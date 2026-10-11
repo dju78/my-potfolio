@@ -20,11 +20,12 @@ breadcrumbLabel: "Books"
 
         <div class="publications-grid">
             {% for book in collections.books | reverse %}
-            <div class="publication-card book-card flip-card reveal">
+            <div class="publication-card book-card flip-card reveal" tabindex="0" role="region" aria-label="{{ book.data.title }}">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="{{ book.data.image }}" alt="{{ book.data.title }} Cover" class="book-cover-img" loading="lazy"/>
-                        <div class="flip-hint">Hover to read more</div>
+                        <div class="flip-hint">Click or hover to read details</div>
+                        <button class="btn btn-sm btn-soft book-flip-btn" type="button" aria-label="View details for {{ book.data.title }}" style="position:absolute; bottom:1rem; left:50%; transform:translateX(-50%); z-index:2;">View Details</button>
                     </div>
                     <div class="flip-card-back">
                         <h3>{{ book.data.title }}</h3>
@@ -33,7 +34,10 @@ breadcrumbLabel: "Books"
                         {% if book.data.isbn %}<p class="pub-isbn">ISBN: {{ book.data.isbn }}</p>{% endif %}
                         {% if book.data.asin %}<p class="pub-isbn">ASIN: {{ book.data.asin }}</p>{% endif %}
                         <div class="pub-description">{{ book.templateContent | safe }}</div>
-                        <a href="{{ book.data.link }}" target="_blank" rel="noopener" class="pub-link">View on Amazon →</a>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:0.5rem; border-top:1px solid var(--border);">
+                            <a href="{{ book.data.link }}" target="_blank" rel="noopener" class="pub-link" style="border:none; padding:0; margin:0;">View on Amazon →</a>
+                            <button class="book-flip-back-btn" type="button" style="background:none; border:none; color:var(--text-3); font-size:0.8rem; cursor:pointer; font-weight:600;">Close ✕</button>
+                        </div>
                     </div>
                 </div>
             </div>

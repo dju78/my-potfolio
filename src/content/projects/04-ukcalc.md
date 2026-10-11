@@ -6,13 +6,13 @@ order: 5
 categories:
   - "fintech"
   - "business-applications"
-description: "A UK-focused calculator platform providing practical, accurate tools for everyday financial and economic decisions, translating complex statutory rules into accessible digital interfaces."
+description: "A UK-focused calculator platform providing transparent tools for financial and economic decisions, translating UK statutory tax, income, and mortgage calculation rules into accessible digital interfaces."
 link: "https://ukcalc.jomovate.com/"
 highlights:
-  - text: "Accurate UK tax, mortgage, savings, and income calculation logic"
-  - text: "Reusable, modular calculator architecture with responsive user interfaces"
-  - text: "User-focused output breakdowns making complex calculations easily digestible"
-  - text: "Optimised for high performance, accessibility, and search discoverability"
+  - text: "Implements UK income tax, National Insurance, mortgage, and savings calculation models"
+  - text: "Modular calculator architecture with clear parameter inputs and responsive interfaces"
+  - text: "Structured breakdown of statutory deductions and net outcomes for transparent user verification"
+  - text: "Engineered for client-side privacy, performance, and accessible navigation"
 tech:
   - tag: "Financial Analytics"
   - tag: "Calculation Logic"

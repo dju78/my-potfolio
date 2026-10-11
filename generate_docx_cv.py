@@ -19,7 +19,7 @@ COLOR_CHARCOAL = RGBColor(33, 37, 41) # #212529
 COLOR_MUTED = RGBColor(100, 116, 139) # #64748B
 COLOR_LINE = "D1D5DB"
 
-def set_para_font(p, name="Calibri", size_pt=10, bold=False, italic=False, color=COLOR_CHARCOAL, space_after=2, space_before=0, line_spacing=1.1):
+def set_para_font(p, name="Calibri", size_pt=10.5, bold=False, italic=False, color=COLOR_CHARCOAL, space_after=2, space_before=0, line_spacing=1.15):
     p.paragraph_format.space_before = Pt(space_before)
     p.paragraph_format.space_after = Pt(space_after)
     p.paragraph_format.line_spacing = line_spacing
@@ -32,12 +32,12 @@ def set_para_font(p, name="Calibri", size_pt=10, bold=False, italic=False, color
 
 def add_heading_1(text):
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(8)
+    p.paragraph_format.space_before = Pt(9)
     p.paragraph_format.space_after = Pt(3)
     p.paragraph_format.keep_with_next = True
     run = p.add_run(text.upper())
     run.font.name = "Calibri"
-    run.font.size = Pt(11)
+    run.font.size = Pt(12)
     run.bold = True
     run.font.color.rgb = COLOR_NAVY
     
@@ -72,7 +72,7 @@ p_contact.paragraph_format.space_before = Pt(0)
 p_contact.paragraph_format.space_after = Pt(6)
 run_c = p_contact.add_run("Colchester, Essex, UK  |  info@jomovate.com  |  Alternative email: dju78@yahoo.com\nPortfolio: daramolajo.co.uk  |  Business: jomovate.com  |  LinkedIn: linkedin.com/in/joseph-omoyele-bbb006244/  |  GitHub: github.com/dju78  |  ORCID: 0009-0006-0347-0499")
 run_c.font.name = "Calibri"
-run_c.font.size = Pt(8.8)
+run_c.font.size = Pt(9.5)
 run_c.font.color.rgb = COLOR_MUTED
 
 # 2. PROFESSIONAL SUMMARY
@@ -89,7 +89,7 @@ r_sum = p_sum.add_run(
     "and founder of Jomovate Digital Labs."
 )
 r_sum.font.name = "Calibri"
-r_sum.font.size = Pt(9.5)
+r_sum.font.size = Pt(10.5)
 r_sum.font.color.rgb = COLOR_CHARCOAL
 
 # 3. CORE TECHNICAL & ANALYTICAL EXPERTISE
@@ -104,16 +104,16 @@ skills_data = [
 for title, content in skills_data:
     p_sk = doc.add_paragraph()
     p_sk.paragraph_format.space_before = Pt(0)
-    p_sk.paragraph_format.space_after = Pt(2)
-    p_sk.paragraph_format.line_spacing = 1.12
+    p_sk.paragraph_format.space_after = Pt(2.5)
+    p_sk.paragraph_format.line_spacing = 1.15
     r_t = p_sk.add_run(title)
     r_t.bold = True
     r_t.font.name = "Calibri"
-    r_t.font.size = Pt(9.5)
+    r_t.font.size = Pt(10.5)
     r_t.font.color.rgb = COLOR_NAVY
     r_c = p_sk.add_run(content)
     r_c.font.name = "Calibri"
-    r_c.font.size = Pt(9.5)
+    r_c.font.size = Pt(10.5)
     r_c.font.color.rgb = COLOR_CHARCOAL
 
 # 4. PROFESSIONAL EXPERIENCE
@@ -121,25 +121,25 @@ add_heading_1("Professional Experience")
 
 def add_experience_item(title, company, dates, focus, bullets):
     p_hdr = doc.add_paragraph()
-    p_hdr.paragraph_format.space_before = Pt(4)
-    p_hdr.paragraph_format.space_after = Pt(1)
+    p_hdr.paragraph_format.space_before = Pt(5)
+    p_hdr.paragraph_format.space_after = Pt(1.5)
     p_hdr.paragraph_format.keep_with_next = True
     
     r_role = p_hdr.add_run(title)
     r_role.bold = True
     r_role.font.name = "Calibri"
-    r_role.font.size = Pt(10)
+    r_role.font.size = Pt(11)
     r_role.font.color.rgb = COLOR_NAVY
     
     r_sep = p_hdr.add_run("  |  " + company + "  |  ")
     r_sep.font.name = "Calibri"
-    r_sep.font.size = Pt(9.5)
+    r_sep.font.size = Pt(10.5)
     r_sep.font.color.rgb = COLOR_CHARCOAL
     
     r_dt = p_hdr.add_run(dates)
     r_dt.bold = True
     r_dt.font.name = "Calibri"
-    r_dt.font.size = Pt(9.5)
+    r_dt.font.size = Pt(10.5)
     r_dt.font.color.rgb = COLOR_MUTED
     
     if focus:
@@ -150,21 +150,21 @@ def add_experience_item(title, company, dates, focus, bullets):
         r_f1 = p_foc.add_run("Focus: ")
         r_f1.bold = True
         r_f1.font.name = "Calibri"
-        r_f1.font.size = Pt(9)
+        r_f1.font.size = Pt(10)
         r_f1.font.color.rgb = COLOR_NAVY
         r_f2 = p_foc.add_run(focus)
         r_f2.font.name = "Calibri"
-        r_f2.font.size = Pt(9)
+        r_f2.font.size = Pt(10)
         r_f2.font.color.rgb = COLOR_CHARCOAL
     
     for b in bullets:
         p_b = doc.add_paragraph(style='List Bullet')
         p_b.paragraph_format.space_before = Pt(0)
-        p_b.paragraph_format.space_after = Pt(1.5)
-        p_b.paragraph_format.line_spacing = 1.1
+        p_b.paragraph_format.space_after = Pt(2)
+        p_b.paragraph_format.line_spacing = 1.15
         r_b = p_b.add_run(b)
         r_b.font.name = "Calibri"
-        r_b.font.size = Pt(9)
+        r_b.font.size = Pt(10.5)
         r_b.font.color.rgb = COLOR_CHARCOAL
 
 add_experience_item(
@@ -225,37 +225,37 @@ add_experience_item(
 # 5. EDUCATION
 add_heading_1("Education")
 p_edu1 = doc.add_paragraph()
-p_edu1.paragraph_format.space_before = Pt(2)
+p_edu1.paragraph_format.space_before = Pt(3)
 p_edu1.paragraph_format.space_after = Pt(1)
 p_edu1.paragraph_format.keep_with_next = True
 r_e1_t = p_edu1.add_run("MSc Economics with Data Analytics (Merit)")
 r_e1_t.bold = True
 r_e1_t.font.name = "Calibri"
-r_e1_t.font.size = Pt(9.5)
+r_e1_t.font.size = Pt(10.5)
 r_e1_t.font.color.rgb = COLOR_NAVY
 r_e1_i = p_edu1.add_run("  |  University of Essex  |  2023")
 r_e1_i.font.name = "Calibri"
-r_e1_i.font.size = Pt(9.5)
+r_e1_i.font.size = Pt(10.5)
 
 p_dis = doc.add_paragraph()
 p_dis.paragraph_format.space_before = Pt(0)
 p_dis.paragraph_format.space_after = Pt(2)
 r_dis = p_dis.add_run("Dissertation: Econometric analysis of Foreign Direct Investment and Economic Growth in Sub-Saharan Africa (Panel ARDL across 39 countries, 1970–2019, integrating World Bank, IMF, and UNCTAD datasets).")
 r_dis.font.name = "Calibri"
-r_dis.font.size = Pt(9)
+r_dis.font.size = Pt(10)
 r_dis.font.color.rgb = COLOR_CHARCOAL
 
 p_edu2 = doc.add_paragraph()
-p_edu2.paragraph_format.space_before = Pt(1)
+p_edu2.paragraph_format.space_before = Pt(2)
 p_edu2.paragraph_format.space_after = Pt(3)
 r_e2_t = p_edu2.add_run("BSc Economics")
 r_e2_t.bold = True
 r_e2_t.font.name = "Calibri"
-r_e2_t.font.size = Pt(9.5)
+r_e2_t.font.size = Pt(10.5)
 r_e2_t.font.color.rgb = COLOR_NAVY
 r_e2_i = p_edu2.add_run("  |  University of Ilorin  |  2006")
 r_e2_i.font.name = "Calibri"
-r_e2_i.font.size = Pt(9.5)
+r_e2_i.font.size = Pt(10.5)
 
 # 6. SELECTED ANALYTICAL PROJECTS
 add_heading_1("Selected Analytical Projects & Digital Products")
@@ -270,16 +270,16 @@ projects_cv = [
 for p_title, p_desc in projects_cv:
     p_pr = doc.add_paragraph(style='List Bullet')
     p_pr.paragraph_format.space_before = Pt(0)
-    p_pr.paragraph_format.space_after = Pt(1.5)
-    p_pr.paragraph_format.line_spacing = 1.1
+    p_pr.paragraph_format.space_after = Pt(2)
+    p_pr.paragraph_format.line_spacing = 1.15
     r_pt = p_pr.add_run(p_title)
     r_pt.bold = True
     r_pt.font.name = "Calibri"
-    r_pt.font.size = Pt(9)
+    r_pt.font.size = Pt(10.5)
     r_pt.font.color.rgb = COLOR_NAVY
     r_pd = p_pr.add_run(p_desc)
     r_pd.font.name = "Calibri"
-    r_pd.font.size = Pt(9)
+    r_pd.font.size = Pt(10.5)
     r_pd.font.color.rgb = COLOR_CHARCOAL
 
 # 7. PUBLICATIONS & POLICY CONTRIBUTIONS
@@ -295,16 +295,16 @@ pubs_cv = [
 for p_tag, p_detail in pubs_cv:
     p_pb = doc.add_paragraph(style='List Bullet')
     p_pb.paragraph_format.space_before = Pt(0)
-    p_pb.paragraph_format.space_after = Pt(1.5)
-    p_pb.paragraph_format.line_spacing = 1.1
+    p_pb.paragraph_format.space_after = Pt(2)
+    p_pb.paragraph_format.line_spacing = 1.15
     r_tag = p_pb.add_run(p_tag)
     r_tag.bold = True
     r_tag.font.name = "Calibri"
-    r_tag.font.size = Pt(9)
+    r_tag.font.size = Pt(10.5)
     r_tag.font.color.rgb = COLOR_NAVY
     r_det = p_pb.add_run(p_detail)
     r_det.font.name = "Calibri"
-    r_det.font.size = Pt(9)
+    r_det.font.size = Pt(10.5)
     r_det.font.color.rgb = COLOR_CHARCOAL
 
 doc.save("public/Daramola_Joseph_Omoyele_CV.docx")
