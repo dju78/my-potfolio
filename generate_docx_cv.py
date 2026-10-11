@@ -70,9 +70,9 @@ run_sub.font.color.rgb = COLOR_CHARCOAL
 p_contact = doc.add_paragraph()
 p_contact.paragraph_format.space_before = Pt(0)
 p_contact.paragraph_format.space_after = Pt(6)
-run_c = p_contact.add_run("Colchester, Essex, UK  |  dju78@omoyelejd.co.uk  |  Portfolio: daramolajo.co.uk  |  Business: jomovate.com\nLinkedIn: linkedin.com/in/joseph-omoyele-bbb006244/  |  GitHub: github.com/dju78  |  ORCID: 0009-0006-0347-0499")
+run_c = p_contact.add_run("Colchester, Essex, UK  |  info@jomovate.com  |  Alternative email: dju78@yahoo.com\nPortfolio: daramolajo.co.uk  |  Business: jomovate.com  |  LinkedIn: linkedin.com/in/joseph-omoyele-bbb006244/  |  GitHub: github.com/dju78  |  ORCID: 0009-0006-0347-0499")
 run_c.font.name = "Calibri"
-run_c.font.size = Pt(9)
+run_c.font.size = Pt(8.8)
 run_c.font.color.rgb = COLOR_MUTED
 
 # 2. PROFESSIONAL SUMMARY

@@ -32,7 +32,7 @@ class NumberedCanvas(canvas.Canvas):
         self.setFillColor(colors.HexColor("#64748B"))
         page_text = f"Page {self._pageNumber} of {page_count}"
         self.drawRightString(8.5 * inch - 0.5 * inch, 0.35 * inch, page_text)
-        self.drawString(0.5 * inch, 0.35 * inch, "Daramola Joseph Omoyele  —  Data & Research Analyst  —  dju78@omoyelejd.co.uk")
+        self.drawString(0.5 * inch, 0.35 * inch, "Daramola Joseph Omoyele  —  Data & Research Analyst  —  info@jomovate.com")
         self.setStrokeColor(colors.HexColor("#E2E8F0"))
         self.setLineWidth(0.5)
         self.line(0.5 * inch, 0.48 * inch, 8.5 * inch - 0.5 * inch, 0.48 * inch)
@@ -157,8 +157,8 @@ def build_pdf():
     story.append(Paragraph("DARAMOLA JOSEPH OMOYELE", styles['CVName']))
     story.append(Paragraph("Data &amp; Research Analyst | Economic Analysis &amp; Business Intelligence", styles['CVTitle']))
     contact_text = (
-        "Colchester, Essex, UK  |  dju78@omoyelejd.co.uk  |  "
-        "Portfolio: daramolajo.co.uk  |  Business: jomovate.com<br/>"
+        "Colchester, Essex, UK  |  info@jomovate.com  |  Alternative email: dju78@yahoo.com<br/>"
+        "Portfolio: daramolajo.co.uk  |  Business: jomovate.com  |  "
         "LinkedIn: linkedin.com/in/joseph-omoyele-bbb006244/  |  "
         "GitHub: github.com/dju78  |  ORCID: 0009-0006-0347-0499"
     )
