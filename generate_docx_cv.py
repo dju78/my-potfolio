@@ -6,34 +6,23 @@ from docx.oxml.ns import nsdecls, qn
 
 doc = docx.Document()
 
-# Page Margins (0.6 in / 43.2 pt for clean ATS & page fit)
+# Page Margins (compact for clean 2-page fit)
 for section in doc.sections:
-    section.top_margin = Inches(0.55)
-    section.bottom_margin = Inches(0.55)
-    section.left_margin = Inches(0.65)
-    section.right_margin = Inches(0.65)
+    section.top_margin = Inches(0.45)
+    section.bottom_margin = Inches(0.45)
+    section.left_margin = Inches(0.55)
+    section.right_margin = Inches(0.55)
 
 # Styling palette
 COLOR_NAVY = RGBColor(8, 37, 84)      # #082554
-COLOR_CHARCOAL = RGBColor(33, 37, 41) # #212529
+COLOR_CHARCOAL = RGBColor(30, 41, 59) # #1E293B
 COLOR_MUTED = RGBColor(100, 116, 139) # #64748B
-COLOR_LINE = "D1D5DB"
-
-def set_para_font(p, name="Calibri", size_pt=10.5, bold=False, italic=False, color=COLOR_CHARCOAL, space_after=2, space_before=0, line_spacing=1.15):
-    p.paragraph_format.space_before = Pt(space_before)
-    p.paragraph_format.space_after = Pt(space_after)
-    p.paragraph_format.line_spacing = line_spacing
-    for run in p.runs:
-        run.font.name = name
-        run.font.size = Pt(size_pt)
-        run.bold = bold
-        run.italic = italic
-        run.font.color.rgb = color
+COLOR_LINE = "CBD5E1"
 
 def add_heading_1(text):
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(9)
-    p.paragraph_format.space_after = Pt(3)
+    p.paragraph_format.space_before = Pt(6)
+    p.paragraph_format.space_after = Pt(2)
     p.paragraph_format.keep_with_next = True
     run = p.add_run(text.upper())
     run.font.name = "Calibri"
@@ -43,7 +32,7 @@ def add_heading_1(text):
     
     # Add bottom border to heading
     pPr = p._p.get_or_add_pPr()
-    pBdr = parse_xml(f'<w:pBdr {nsdecls("w")}><w:bottom w:val="single" w:sz="8" w:space="2" w:color="{COLOR_LINE}"/></w:pBdr>')
+    pBdr = parse_xml(f'<w:pBdr {nsdecls("w")}><w:bottom w:val="single" w:sz="6" w:space="2" w:color="{COLOR_LINE}"/></w:pBdr>')
     pPr.append(pBdr)
     return p
 
@@ -54,32 +43,32 @@ p_name.paragraph_format.space_before = Pt(0)
 p_name.paragraph_format.space_after = Pt(1)
 run_name = p_name.add_run("DARAMOLA JOSEPH OMOYELE")
 run_name.font.name = "Calibri"
-run_name.font.size = Pt(18)
+run_name.font.size = Pt(17)
 run_name.bold = True
 run_name.font.color.rgb = COLOR_NAVY
 
 p_sub = doc.add_paragraph()
 p_sub.paragraph_format.space_before = Pt(0)
-p_sub.paragraph_format.space_after = Pt(3)
+p_sub.paragraph_format.space_after = Pt(2)
 run_sub = p_sub.add_run("Data & Research Analyst | Economic Analysis & Business Intelligence")
 run_sub.font.name = "Calibri"
-run_sub.font.size = Pt(11.5)
+run_sub.font.size = Pt(11)
 run_sub.bold = True
-run_sub.font.color.rgb = COLOR_CHARCOAL
+run_sub.font.color.rgb = RGBColor(22, 134, 76)
 
 p_contact = doc.add_paragraph()
 p_contact.paragraph_format.space_before = Pt(0)
-p_contact.paragraph_format.space_after = Pt(6)
-run_c = p_contact.add_run("Colchester, Essex, UK  |  info@jomovate.com  |  Alternative email: dju78@yahoo.com\nPortfolio: daramolajo.co.uk  |  Business: jomovate.com  |  LinkedIn: linkedin.com/in/joseph-omoyele-bbb006244/  |  GitHub: github.com/dju78  |  ORCID: 0009-0006-0347-0499")
+p_contact.paragraph_format.space_after = Pt(4)
+run_c = p_contact.add_run("Colchester, Essex, UK  |  info@jomovate.com  |  Portfolio: daramolajo.co.uk  |  Business: jomovate.com\nLinkedIn: linkedin.com/in/joseph-omoyele-bbb006244/  |  GitHub: github.com/dju78  |  ORCID: 0009-0006-0347-0499")
 run_c.font.name = "Calibri"
-run_c.font.size = Pt(9.5)
+run_c.font.size = Pt(9)
 run_c.font.color.rgb = COLOR_MUTED
 
 # 2. PROFESSIONAL SUMMARY
 add_heading_1("Professional Summary")
 p_sum = doc.add_paragraph()
 p_sum.paragraph_format.space_before = Pt(1)
-p_sum.paragraph_format.space_after = Pt(5)
+p_sum.paragraph_format.space_after = Pt(3)
 p_sum.paragraph_format.line_spacing = 1.15
 r_sum = p_sum.add_run(
     "Data and Research Analyst with extensive experience turning complex data into clear insights and practical decision-support tools. "
@@ -104,7 +93,7 @@ skills_data = [
 for title, content in skills_data:
     p_sk = doc.add_paragraph()
     p_sk.paragraph_format.space_before = Pt(0)
-    p_sk.paragraph_format.space_after = Pt(2.5)
+    p_sk.paragraph_format.space_after = Pt(1.5)
     p_sk.paragraph_format.line_spacing = 1.15
     r_t = p_sk.add_run(title)
     r_t.bold = True
@@ -121,14 +110,14 @@ add_heading_1("Professional Experience")
 
 def add_experience_item(title, company, dates, focus, bullets):
     p_hdr = doc.add_paragraph()
-    p_hdr.paragraph_format.space_before = Pt(5)
-    p_hdr.paragraph_format.space_after = Pt(1.5)
+    p_hdr.paragraph_format.space_before = Pt(4)
+    p_hdr.paragraph_format.space_after = Pt(1)
     p_hdr.paragraph_format.keep_with_next = True
     
     r_role = p_hdr.add_run(title)
     r_role.bold = True
     r_role.font.name = "Calibri"
-    r_role.font.size = Pt(11)
+    r_role.font.size = Pt(10.5)
     r_role.font.color.rgb = COLOR_NAVY
     
     r_sep = p_hdr.add_run("  |  " + company + "  |  ")
@@ -139,13 +128,13 @@ def add_experience_item(title, company, dates, focus, bullets):
     r_dt = p_hdr.add_run(dates)
     r_dt.bold = True
     r_dt.font.name = "Calibri"
-    r_dt.font.size = Pt(10.5)
+    r_dt.font.size = Pt(10)
     r_dt.font.color.rgb = COLOR_MUTED
     
     if focus:
         p_foc = doc.add_paragraph()
         p_foc.paragraph_format.space_before = Pt(0)
-        p_foc.paragraph_format.space_after = Pt(2)
+        p_foc.paragraph_format.space_after = Pt(1.5)
         p_foc.paragraph_format.keep_with_next = True
         r_f1 = p_foc.add_run("Focus: ")
         r_f1.bold = True
@@ -160,7 +149,7 @@ def add_experience_item(title, company, dates, focus, bullets):
     for b in bullets:
         p_b = doc.add_paragraph(style='List Bullet')
         p_b.paragraph_format.space_before = Pt(0)
-        p_b.paragraph_format.space_after = Pt(2)
+        p_b.paragraph_format.space_after = Pt(1.5)
         p_b.paragraph_format.line_spacing = 1.15
         r_b = p_b.add_run(b)
         r_b.font.name = "Calibri"
@@ -170,7 +159,7 @@ def add_experience_item(title, company, dates, focus, bullets):
 add_experience_item(
     title="Founder & Product Business Analyst",
     company="Jomovate Digital Labs (jomovate.com)",
-    dates="July 2024 – Present",
+    dates="July 2024 to Present",
     focus="Founded venture to build data-driven solutions, conduct applied economic research, and engineer decision-support web applications and analytical dashboards.",
     bullets=[
         "Gather and document user and business requirements, translating operational and analytical questions into digital products and decision tools.",
@@ -184,22 +173,24 @@ add_experience_item(
 add_experience_item(
     title="Data Analytics | Financial Analyst & Business Intelligence",
     company="Univelcity Computing",
-    dates="July 2023 – Present",
+    dates="July 2023 to Present",
     focus="Delivering financial, operational, survey, and research data analysis, predictive modelling, and interactive dashboards.",
     bullets=[
         "Deliver financial, operational, survey, and research data analysis for development programmes and business research, informing evidence-based decision-making.",
         "Apply econometric modelling, forecasting, cost-benefit analysis, risk assessments, and scenario analysis across multi-currency environments.",
         "Design and maintain automated dashboards and decision tools in Power BI, Tableau, Shiny, and Excel, streamlining stakeholder access to timely insights.",
         "Execute data preparation, ETL, and automated reporting pipelines using R, Python, SQL, and Excel to uncover trends, risks, and performance gaps.",
-        "Produce clear analytical summaries and policy briefings communicating complex findings to non-technical stakeholders.",
-        "Strengthen data quality, governance, and GDPR-aligned handling across projects; mentor junior analysts and provide analytical quality assurance."
+        "Produce clear analytical summaries and policy briefings communicating complex findings to non-technical stakeholders, strengthening GDPR-aligned handling."
     ]
 )
+
+# Page Break after first two roles
+doc.add_page_break()
 
 add_experience_item(
     title="Financial Analyst",
     company="Nigerian Postal Service",
-    dates="January 2014 – September 2022",
+    dates="January 2014 to September 2022",
     focus="Financial data evaluation, operational budgeting, revenue/cost variance reporting, and operational efficiency analysis.",
     bullets=[
         "Analysed nationwide operational, financial, and socioeconomic datasets to support service delivery planning and management reporting.",
@@ -213,7 +204,7 @@ add_experience_item(
 add_experience_item(
     title="Data Analyst/Admin",
     company="City College of Education",
-    dates="January 2008 – December 2013",
+    dates="January 2008 to December 2013",
     focus="Institutional record keeping, student and administrative data verification, academic reporting, and attendance analysis.",
     bullets=[
         "Maintained assessment records and student reporting databases, strengthening institutional documentation standards and compliance.",
@@ -225,7 +216,7 @@ add_experience_item(
 # 5. EDUCATION
 add_heading_1("Education")
 p_edu1 = doc.add_paragraph()
-p_edu1.paragraph_format.space_before = Pt(3)
+p_edu1.paragraph_format.space_before = Pt(2)
 p_edu1.paragraph_format.space_after = Pt(1)
 p_edu1.paragraph_format.keep_with_next = True
 r_e1_t = p_edu1.add_run("MSc Economics with Data Analytics (Merit)")
@@ -246,8 +237,8 @@ r_dis.font.size = Pt(10)
 r_dis.font.color.rgb = COLOR_CHARCOAL
 
 p_edu2 = doc.add_paragraph()
-p_edu2.paragraph_format.space_before = Pt(2)
-p_edu2.paragraph_format.space_after = Pt(3)
+p_edu2.paragraph_format.space_before = Pt(1.5)
+p_edu2.paragraph_format.space_after = Pt(2)
 r_e2_t = p_edu2.add_run("BSc Economics")
 r_e2_t.bold = True
 r_e2_t.font.name = "Calibri"
@@ -270,7 +261,7 @@ projects_cv = [
 for p_title, p_desc in projects_cv:
     p_pr = doc.add_paragraph(style='List Bullet')
     p_pr.paragraph_format.space_before = Pt(0)
-    p_pr.paragraph_format.space_after = Pt(2)
+    p_pr.paragraph_format.space_after = Pt(1.5)
     p_pr.paragraph_format.line_spacing = 1.15
     r_pt = p_pr.add_run(p_title)
     r_pt.bold = True
@@ -295,7 +286,7 @@ pubs_cv = [
 for p_tag, p_detail in pubs_cv:
     p_pb = doc.add_paragraph(style='List Bullet')
     p_pb.paragraph_format.space_before = Pt(0)
-    p_pb.paragraph_format.space_after = Pt(2)
+    p_pb.paragraph_format.space_after = Pt(1.5)
     p_pb.paragraph_format.line_spacing = 1.15
     r_tag = p_pb.add_run(p_tag)
     r_tag.bold = True

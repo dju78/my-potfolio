@@ -7,6 +7,7 @@ categories:
   - "data-analytics"
   - "economic-research"
 description: "An interactive Python and Streamlit analytical application demonstrating a structured, reproducible approach to price-data quality assessment and elementary price-index construction."
+image: "/images/screenshot_price_quality.png"
 link: "https://pricequality.streamlit.app/"
 highlights:
   - text: "Automated data-quality checks, anomaly detection & scale-error identification"

@@ -49,13 +49,12 @@
     <!-- ===================== NAVBAR ===================== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="/" class="nav-brand">
-                <img src="/djo-portfolio-logo.png" alt="DJO professional portfolio logo" title="Daramola Joseph Omoyele Logo" class="nav-logo-img">
+            <a href="/" class="nav-brand" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none;">
+                <img src="/djo-portfolio-logo.png" alt="DJO professional portfolio logo" title="Joseph Omoyele" class="nav-logo-img">
+                <span class="nav-brand-text" style="font-weight:700; font-size:1.1rem; color:var(--text); letter-spacing:-0.01em;">Joseph Omoyele</span>
             </a>
             <ul class="nav-menu" id="navMenu">
-                {% set h = "" if page.url == "/" else "/" %}
-                <li><a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
-                <li><a href="/projects/" class="nav-link{% if page.url == '/projects/' %} active{% endif %}">Projects</a></li>
+                <li><a href="/projects/" class="nav-link{% if page.url == '/projects/' %} active{% endif %}">Work</a></li>
                 <li class="nav-item-dropdown">
                     <button class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-dropdown="research">Research</button>
                     <ul class="nav-dropdown" id="research-menu" aria-label="Research submenu">
@@ -66,23 +65,23 @@
                     </ul>
                 </li>
                 <li class="nav-item-dropdown">
-                    <button class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-dropdown="policy">Policy & Impact</button>
-                    <ul class="nav-dropdown" id="policy-menu" aria-label="Policy & Impact submenu">
+                    <button class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-dropdown="policy">Policy</button>
+                    <ul class="nav-dropdown" id="policy-menu" aria-label="Policy submenu">
                         <li><a href="/policy-contributions/" class="nav-dropdown-link{% if page.url == '/policy-contributions/' %} active{% endif %}">Policy Work</a></li>
                         <li><a href="/impact/" class="nav-dropdown-link{% if page.url == '/impact/' %} active{% endif %}">Impact</a></li>
                     </ul>
                 </li>
                 <li class="nav-item-dropdown">
-                    <button class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-dropdown="expertise">Expertise</button>
-                    <ul class="nav-dropdown" id="expertise-menu" aria-label="Expertise submenu">
-                        <li><a href="/expertise/" class="nav-dropdown-link{% if page.url == '/expertise/' %} active{% endif %}">Expertise</a></li>
+                    <button class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-dropdown="about">About</button>
+                    <ul class="nav-dropdown" id="about-menu" aria-label="About submenu">
                         <li><a href="/experience/" class="nav-dropdown-link{% if page.url == '/experience/' %} active{% endif %}">Experience</a></li>
-                        <li><a href="/cv/" class="nav-dropdown-link{% if page.url == '/cv/' %} active{% endif %}">CV</a></li>
+                        <li><a href="/expertise/" class="nav-dropdown-link{% if page.url == '/expertise/' %} active{% endif %}">Expertise</a></li>
                         <li><a href="/education/" class="nav-dropdown-link{% if page.url == '/education/' %} active{% endif %}">Education</a></li>
                         <li><a href="/certifications/" class="nav-dropdown-link{% if page.url == '/certifications/' %} active{% endif %}">Certifications</a></li>
                         <li><a href="/awards/" class="nav-dropdown-link{% if page.url == '/awards/' %} active{% endif %}">Awards</a></li>
                     </ul>
                 </li>
+                <li><a href="/cv/" class="nav-link{% if page.url == '/cv/' %} active{% endif %}">CV</a></li>
                 <li><a href="/contact/" class="nav-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a></li>
             </ul>
             <div class="nav-right">
@@ -102,30 +101,18 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="/djo-portfolio-logo.png" alt="DJO professional portfolio logo" title="Daramola Joseph Omoyele Logo" height="48" loading="lazy">
+                        <img src="/djo-portfolio-logo.png" alt="DJO professional portfolio logo" title="Joseph Omoyele Logo" height="48" loading="lazy">
                         <div>
                             <div class="footer-brand-tagline">Data-driven tools for smarter decisions</div>
                         </div>
                     </div>
                 </div>
                 <div class="footer-links">
-                    <a href="/">Home</a>
-                    <a href="/projects/">Projects</a>
-                    <span class="footer-section-label">Research</span>
-                    <a href="/academic-research/">Academic Research</a>
-                    <a href="/publications/">Publications</a>
-                    <a href="/books/">Books</a>
-                    <a href="/public-engagement/">Media</a>
-                    <span class="footer-section-label">Policy & Impact</span>
-                    <a href="/policy-contributions/">Policy Work</a>
-                    <a href="/impact/">Impact</a>
-                    <span class="footer-section-label">Expertise</span>
-                    <a href="/expertise/">Expertise</a>
-                    <a href="/experience/">Experience</a>
+                    <a href="/projects/">Work</a>
+                    <a href="/academic-research/">Research</a>
+                    <a href="/policy-contributions/">Policy</a>
+                    <a href="/experience/">About</a>
                     <a href="/cv/">CV</a>
-                    <a href="/education/">Education</a>
-                    <a href="/certifications/">Certifications</a>
-                    <a href="/awards/">Awards</a>
                     <a href="/contact/">Contact</a>
                 </div>
                 <div class="footer-social">
@@ -144,7 +131,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="footer-year">2026</span> Daramola Joseph Omoyele · Founder, <a href="https://jomovate.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">Jomovate Digital Labs</a>. All rights reserved.</p>
+                <p>&copy; <span id="footer-year">2026</span> Joseph Omoyele. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 pageTitle: "Daramola Joseph Omoyele | Data & Research Analyst | Economic Analysis & Business Intelligence"
-pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analyst. Turning complex data into clear insights and practical tools that support better decisions across statistical analysis, economic research, business intelligence and digital product development."
+pageDescription: "Portfolio of Daramola Joseph Omoyele, Data and Research Analyst in economic analysis, business intelligence, and applied digital tools."
 ---
     <!-- ===================== HERO ===================== -->
     <section id="home" class="hero">
@@ -103,13 +103,12 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
     <section id="projects" class="section projects-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Analytical Solutions</span>
                 <h2 class="section-title">Selected Data, Research &amp; Business Intelligence Projects</h2>
             </div>
             <p class="section-preview-intro">Interactive analytical platforms, econometric models, statistical methodologies and operational intelligence systems.</p>
             <div class="project-grid">
                 {% for project in collections.projects | sort(false, false, 'data.order') %}
-                {% if project.data.order <= 4 %}
+                {% if project.data.title == "Performance Insight Explorer" or project.data.title == "Price Quality Explorer" or project.data.title == "UK AI Economic Measurement Lab" %}
                 <div class="project-card reveal" data-category="{% if project.data.categories %}{{ project.data.categories | join(' ') }}{% else %}{{ project.data.badge | lower | replace(' ', '-') }}{% endif %}">
                     <div class="project-card-top">
                         <div class="project-card-meta">
@@ -126,13 +125,13 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
                     </div>
                     {% endif %}
                     <div class="project-card-mid">
-                        <div class="project-highlights">
+                        <ul class="project-highlights">
                             {% for highlight in project.data.highlights %}
                             {% if loop.index <= 2 %}
-                            <div class="highlight-item"><span class="highlight-dot">▸</span><span>{{ highlight.text }}</span></div>
+                            <li class="highlight-item"><span>{{ highlight.text }}</span></li>
                             {% endif %}
                             {% endfor %}
-                        </div>
+                        </ul>
                         {% if project.data.tech or project.data.tags %}
                         <div class="tech-tags">
                             {% for tag in (project.data.tech or project.data.tags) %}
@@ -158,75 +157,16 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
                 {% endif %}
                 {% endfor %}
             </div>
-            <a href="/projects/" class="btn btn-primary view-more-btn">View All Projects &amp; Products →</a>
-        </div>
-    </section>
-
-    <!-- ===================== 3. WIDER APPLICATIONS & WEBSITE PORTFOLIO ===================== -->
-    <section id="applications" class="section applications-section" style="background:var(--bg-white);">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Digital Products</span>
-                <h2 class="section-title">Wider Applications &amp; Digital Solutions</h2>
-            </div>
-            <p class="section-preview-intro">Practical web-based calculation engines, workflow automation tools, health communication platforms, and community technology.</p>
-            <div class="project-grid">
-                {% for project in collections.projects | sort(false, false, 'data.order') %}
-                {% if project.data.order >= 5 and project.data.order <= 8 %}
-                <div class="project-card reveal" data-category="{% if project.data.categories %}{{ project.data.categories | join(' ') }}{% else %}{{ project.data.badge | lower | replace(' ', '-') }}{% endif %}">
-                    <div class="project-card-top">
-                        <div class="project-card-meta">
-                            <span class="project-badge">{{ project.data.badge }}</span>
-                            {% if project.data.status %}<span class="project-status-badge">{{ project.data.status }}</span>{% endif %}
-                            <span class="project-client-tag">{{ project.data.client }}</span>
-                        </div>
-                        <h3 class="project-title">{{ project.data.title }}</h3>
-                        <p class="project-desc">{{ project.data.description }}</p>
-                    </div>
-                    <div class="project-card-mid">
-                        <div class="project-highlights">
-                            {% for highlight in project.data.highlights %}
-                            {% if loop.index <= 2 %}
-                            <div class="highlight-item"><span class="highlight-dot">▸</span><span>{{ highlight.text }}</span></div>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                        {% if project.data.tech or project.data.tags %}
-                        <div class="tech-tags">
-                            {% for tag in (project.data.tech or project.data.tags) %}
-                            {% if loop.index <= 4 %}
-                            <span class="tech-tag">{{ tag.tag }}</span>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="project-card-foot">
-                        {% if project.data.status and "Restricted Access" in project.data.status %}
-                        <span class="btn btn-disabled btn-sm">Preview available on request</span>
-                        {% elif project.data.link and project.data.link != '#' %}
-                        <a href="{{ project.data.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                            View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </a>
-                        {% else %}
-                        <span class="btn btn-disabled btn-sm">{% if project.data.status %}{{ project.data.status }}{% else %}In Development{% endif %}</span>
-                        {% endif %}
-                    </div>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-            <div style="text-align:center; margin-top:1.75rem;">
-                <a href="/projects/" class="btn btn-outline view-more-btn">Explore Full Product Catalogue →</a>
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="/projects/" class="btn btn-primary view-more-btn">View All Projects &amp; Products →</a>
             </div>
         </div>
     </section>
 
-    <!-- ===================== 4. PROFESSIONAL EXPERIENCE ===================== -->
+    <!-- ===================== 3. PROFESSIONAL EXPERIENCE ===================== -->
     <section id="experience" class="section experience-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Career Journey</span>
                 <h2 class="section-title">Professional Experience</h2>
             </div>
             <p class="section-preview-intro">15+ years combining data analysis, economic research, business intelligence, public sector analytics, and digital product development.</p>
@@ -237,7 +177,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
                     </div>
                     <h3>Founder &amp; Product Business Analyst</h3>
                     <p class="exp-preview-company">Jomovate Digital Labs</p>
-                    <p class="exp-preview-date">July 2024 – Present</p>
+                    <p class="exp-preview-date">July 2024 to Present</p>
                     <p class="role-focus">Founded Jomovate Digital Labs to develop data-driven solutions, conduct applied research, and build practical analytical applications and dashboards.</p>
                 </div>
                 <div class="exp-preview-card reveal">
@@ -246,7 +186,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
                     </div>
                     <h3>Data Analytics | Financial Analyst &amp; Business Intelligence</h3>
                     <p class="exp-preview-company">Univelcity Computing</p>
-                    <p class="exp-preview-date">July 2023 – Present</p>
+                    <p class="exp-preview-date">July 2023 to Present</p>
                     <p class="role-focus">Data analysis, statistical modelling in R and Python, business intelligence dashboards in Power BI and Shiny, and analytical quality assurance.</p>
                 </div>
                 <div class="exp-preview-card reveal">
@@ -255,7 +195,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
                     </div>
                     <h3>Financial Analyst</h3>
                     <p class="exp-preview-company">Nigerian Postal Service</p>
-                    <p class="exp-preview-date">January 2014 – September 2022</p>
+                    <p class="exp-preview-date">January 2014 to September 2022</p>
                     <p class="role-focus">Financial data evaluation, operational budgeting, revenue/cost variance reporting, and operational efficiency analysis.</p>
                 </div>
                 <div class="exp-preview-card reveal">
@@ -264,7 +204,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
                     </div>
                     <h3>Data Analyst/Admin</h3>
                     <p class="exp-preview-company">City College of Education</p>
-                    <p class="exp-preview-date">January 2008 – December 2013</p>
+                    <p class="exp-preview-date">January 2008 to December 2013</p>
                     <p class="role-focus">Institutional record keeping, student and administrative data verification, academic reporting, and attendance analysis.</p>
                 </div>
             </div>
@@ -272,7 +212,7 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
         </div>
     </section>
 
-    <!-- ===================== 5. RESEARCH & POLICY CONTRIBUTIONS ===================== -->
+    <!-- ===================== 4. RESEARCH & POLICY CONTRIBUTIONS ===================== -->
     <section id="research-policy" class="section">
         <div class="container">
             <!-- Featured Policy Highlight preview -->
@@ -295,7 +235,6 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
             <div class="section-pair">
                 <div id="policy" class="section-pair-col">
                     <div class="section-header section-header-left">
-                        <span class="section-tag">Regulatory Evidence</span>
                         <h2 class="section-title">Policy Submissions</h2>
                     </div>
                     <p class="section-preview-intro section-preview-intro-left">Independent consultation responses across UK data governance, tax administration, and digital regulation.</p>
@@ -317,7 +256,6 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
                 </div>
                 <div id="publications" class="section-pair-col">
                     <div class="section-header section-header-left">
-                        <span class="section-tag">Academic Research</span>
                         <h2 class="section-title">Selected Publications</h2>
                     </div>
                     <p class="section-preview-intro section-preview-intro-left">Peer-reviewed journal articles across development economics, econometric modelling, and institutional analysis.</p>
@@ -325,7 +263,6 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
                         {% for article in collections.journal_articles | reverse %}
                         {% if loop.index <= 2 %}
                         <div class="publication-card journal-card reveal" style="margin-bottom:1rem;">
-                            <div class="pub-icon">📄</div>
                             <h3>{{ article.data.title }}</h3>
                             <p class="pub-meta">{{ article.data.journal }}{% if article.data.year %} ({{ article.data.year }}){% endif %}</p>
                             {% if article.data.doi %}<p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
@@ -341,12 +278,11 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
         </div>
     </section>
 
-    <!-- ===================== 6. EDUCATION & RELEVANT CERTIFICATIONS ===================== -->
+    <!-- ===================== 5. EDUCATION & RELEVANT CERTIFICATIONS ===================== -->
     <section id="education-certifications" class="section" style="background:var(--bg-white);">
         <div class="container section-pair">
             <div id="education" class="section-pair-col">
                 <div class="section-header section-header-left">
-                    <span class="section-tag">Academic Background</span>
                     <h2 class="section-title">Education</h2>
                 </div>
                 <div class="edu-grid">
@@ -366,7 +302,6 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
             </div>
             <div id="certifications" class="section-pair-col">
                 <div class="section-header section-header-left">
-                    <span class="section-tag">Professional Learning</span>
                     <h2 class="section-title">Relevant Certifications</h2>
                 </div>
                 <div class="edu-grid">
@@ -391,14 +326,13 @@ pageDescription: "Portfolio of Daramola Joseph Omoyele — Data & Research Analy
         </div>
     </section>
 
-    <!-- ===================== 7. CONTACT & CAREER OPPORTUNITIES ===================== -->
+    <!-- ===================== 6. CONTACT & CAREER OPPORTUNITIES ===================== -->
     <section id="contact" class="section contact-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Let's Connect</span>
                 <h2 class="section-title">Contact &amp; Career Opportunities</h2>
             </div>
-            <p class="section-preview-intro">Open to hybrid, full-time, or part-time roles and travel as required — ready to bring analytical rigour and data-driven insights to your organisation.</p>
+            <p class="section-preview-intro">Open to hybrid, full-time, or part-time roles and travel as required, ready to bring analytical rigour and data-driven insights to your organisation.</p>
             <div class="availability-card reveal" style="max-width:680px; margin:0 auto 2rem;">
                 <div class="availability-badge">
                     <span class="badge-dot pulse"></span>

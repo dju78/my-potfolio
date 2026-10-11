@@ -2,7 +2,7 @@
 layout: base.njk
 permalink: /projects/index.html
 pageTitle: "Projects & Analytical Products | Daramola Joseph Omoyele"
-pageDescription: "Interactive analytical applications, statistical methodologies, FinTech calculators, healthcare quality dashboards, and digital platforms built by Daramola Joseph Omoyele."
+pageDescription: "Explore analytical applications, statistical methodologies, FinTech calculators, and digital platforms built by Daramola Joseph Omoyele."
 breadcrumbLabel: "Projects"
 ---
 <main class="pc-page">
@@ -45,11 +45,11 @@ breadcrumbLabel: "Projects"
                 </div>
                 {% endif %}
                 <div class="project-card-mid">
-                    <div class="project-highlights">
+                    <ul class="project-highlights">
                         {% for highlight in project.data.highlights %}
-                        <div class="highlight-item"><span class="highlight-dot">▸</span><span>{{ highlight.text }}</span></div>
+                        <li class="highlight-item"><span>{{ highlight.text }}</span></li>
                         {% endfor %}
-                    </div>
+                    </ul>
                     {% if project.data.case_study %}
                     <details class="project-case-study" style="margin:0.75rem 0; font-size:0.875rem; border:1px solid #e2e8f0; border-radius:6px; background:#f8fafc; padding:0.5rem 0.75rem;">
                         <summary style="cursor:pointer; font-weight:600; color:var(--navy); outline:none;">Analytical Case Study &amp; Methodology</summary>

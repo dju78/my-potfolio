@@ -3,7 +3,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.lib import colors
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, ListFlowable, ListItem, PageBreak
+    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, PageBreak
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.pdfgen import canvas
@@ -31,11 +31,11 @@ class NumberedCanvas(canvas.Canvas):
         self.setFont("Helvetica", 8)
         self.setFillColor(colors.HexColor("#64748B"))
         page_text = f"Page {self._pageNumber} of {page_count}"
-        self.drawRightString(8.5 * inch - 0.5 * inch, 0.35 * inch, page_text)
-        self.drawString(0.5 * inch, 0.35 * inch, "Daramola Joseph Omoyele  —  Data & Research Analyst  —  info@jomovate.com")
-        self.setStrokeColor(colors.HexColor("#E2E8F0"))
+        self.drawRightString(8.5 * inch - 0.45 * inch, 0.25 * inch, page_text)
+        self.drawString(0.45 * inch, 0.25 * inch, "Daramola Joseph Omoyele  |  Data & Research Analyst  |  info@jomovate.com")
+        self.setStrokeColor(colors.HexColor("#CBD5E1"))
         self.setLineWidth(0.5)
-        self.line(0.5 * inch, 0.48 * inch, 8.5 * inch - 0.5 * inch, 0.48 * inch)
+        self.line(0.45 * inch, 0.35 * inch, 8.5 * inch - 0.45 * inch, 0.35 * inch)
         self.restoreState()
 
 def build_pdf():
@@ -43,10 +43,10 @@ def build_pdf():
     doc = SimpleDocTemplate(
         pdf_filename,
         pagesize=letter,
-        leftMargin=0.5 * inch,
-        rightMargin=0.5 * inch,
-        topMargin=0.45 * inch,
-        bottomMargin=0.55 * inch
+        leftMargin=0.45 * inch,
+        rightMargin=0.45 * inch,
+        topMargin=0.38 * inch,
+        bottomMargin=0.42 * inch
     )
 
     styles = getSampleStyleSheet()
@@ -61,38 +61,38 @@ def build_pdf():
     styles.add(ParagraphStyle(
         'CVName',
         fontName='Helvetica-Bold',
-        fontSize=18,
-        leading=21,
+        fontSize=16.5,
+        leading=18.5,
         textColor=c_navy,
-        spaceAfter=2
+        spaceAfter=1
     ))
 
     styles.add(ParagraphStyle(
         'CVTitle',
         fontName='Helvetica-Bold',
         fontSize=11,
-        leading=14,
+        leading=13,
         textColor=c_accent,
-        spaceAfter=3
+        spaceAfter=2
     ))
 
     styles.add(ParagraphStyle(
         'CVContact',
         fontName='Helvetica',
         fontSize=8.5,
-        leading=11.5,
+        leading=11,
         textColor=c_muted,
-        spaceAfter=4
+        spaceAfter=2
     ))
 
     styles.add(ParagraphStyle(
         'CVHeading',
         fontName='Helvetica-Bold',
-        fontSize=11.5,
+        fontSize=12,
         leading=14,
         textColor=c_navy,
-        spaceBefore=7,
-        spaceAfter=3,
+        spaceBefore=4,
+        spaceAfter=1.5,
         keepWithNext=True
     ))
 
@@ -100,33 +100,25 @@ def build_pdf():
         'CVBody',
         fontName='Helvetica',
         fontSize=10.5,
-        leading=13.5,
+        leading=12.8,
         textColor=c_text,
-        spaceAfter=3
+        spaceAfter=1
     ))
 
     styles.add(ParagraphStyle(
         'CVRoleTitle',
         fontName='Helvetica-Bold',
-        fontSize=11,
-        leading=13.5,
-        textColor=c_navy
-    ))
-
-    styles.add(ParagraphStyle(
-        'CVRoleCompany',
-        fontName='Helvetica',
         fontSize=10.5,
-        leading=13.5,
-        textColor=c_text
+        leading=12.5,
+        textColor=c_navy
     ))
 
     styles.add(ParagraphStyle(
         'CVRoleDate',
         fontName='Helvetica-Bold',
-        fontSize=10.5,
-        leading=13.5,
-        alignment=2, # Right aligned
+        fontSize=10,
+        leading=12.5,
+        alignment=2,
         textColor=c_muted
     ))
 
@@ -134,10 +126,10 @@ def build_pdf():
         'CVRoleFocus',
         fontName='Helvetica-Oblique',
         fontSize=10,
-        leading=12.5,
+        leading=12,
         textColor=colors.HexColor("#475569"),
-        spaceBefore=1,
-        spaceAfter=2,
+        spaceBefore=0.5,
+        spaceAfter=1,
         keepWithNext=True
     ))
 
@@ -145,10 +137,10 @@ def build_pdf():
         'CVBullet',
         fontName='Helvetica',
         fontSize=10.5,
-        leading=13.2,
+        leading=12.4,
         textColor=c_text,
-        spaceBefore=1,
-        spaceAfter=1.5
+        spaceBefore=0,
+        spaceAfter=0.8
     ))
 
     story = []
@@ -157,13 +149,13 @@ def build_pdf():
     story.append(Paragraph("DARAMOLA JOSEPH OMOYELE", styles['CVName']))
     story.append(Paragraph("Data &amp; Research Analyst | Economic Analysis &amp; Business Intelligence", styles['CVTitle']))
     contact_text = (
-        "Colchester, Essex, UK  |  info@jomovate.com  |  Alternative email: dju78@yahoo.com<br/>"
+        "Colchester, Essex, UK  |  info@jomovate.com  |  "
         "Portfolio: daramolajo.co.uk  |  Business: jomovate.com  |  "
         "LinkedIn: linkedin.com/in/joseph-omoyele-bbb006244/  |  "
         "GitHub: github.com/dju78  |  ORCID: 0009-0006-0347-0499"
     )
     story.append(Paragraph(contact_text, styles['CVContact']))
-    story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor("#CBD5E1"), spaceBefore=1, spaceAfter=4))
+    story.append(HRFlowable(width="100%", thickness=0.75, color=colors.HexColor("#CBD5E1"), spaceBefore=1, spaceAfter=2.5))
 
     # 2. PROFESSIONAL SUMMARY
     story.append(Paragraph("PROFESSIONAL SUMMARY", styles['CVHeading']))
@@ -171,7 +163,7 @@ def build_pdf():
         "Data and Research Analyst with extensive experience turning complex data into clear insights and practical decision-support tools. "
         "Combines statistical analysis, economic research, business intelligence, and digital product development to solve operational and "
         "policy challenges. Holds an MSc in Economics with Data Analytics (Merit) from the University of Essex. Published researcher with peer-reviewed "
-        "articles in development economics and institutional analysis, an active contributor to UK regulatory consultations, and founder of Jomovate Digital Labs."
+        "articles in development economics and institutional analysis, active contributor to UK regulatory consultations, and founder of Jomovate Digital Labs."
     )
     story.append(Paragraph(summary_text, styles['CVBody']))
 
@@ -195,13 +187,13 @@ def build_pdf():
             Paragraph("GDPR-aligned data handling, reproducible data pipelines, regulatory evidence documentation, tax compliance analytics", styles['CVBody'])
         ]
     ]
-    t_skills = Table(skills_table_data, colWidths=[1.5 * inch, 6.0 * inch])
+    t_skills = Table(skills_table_data, colWidths=[1.55 * inch, 6.05 * inch])
     t_skills.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'TOP'),
         ('LEFTPADDING', (0,0), (-1,-1), 0),
         ('RIGHTPADDING', (0,0), (-1,-1), 0),
-        ('TOPPADDING', (0,0), (-1,-1), 1),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 1),
+        ('TOPPADDING', (0,0), (-1,-1), 0.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 0.5),
     ]))
     story.append(t_skills)
 
@@ -213,55 +205,54 @@ def build_pdf():
             Paragraph(f"<b>{title}</b> — {company}", styles['CVRoleTitle']),
             Paragraph(date_str, styles['CVRoleDate'])
         ]
-        t = Table([row], colWidths=[5.5 * inch, 2.0 * inch])
+        t = Table([row], colWidths=[5.65 * inch, 1.95 * inch])
         t.setStyle(TableStyle([
             ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
             ('LEFTPADDING', (0,0), (-1,-1), 0),
             ('RIGHTPADDING', (0,0), (-1,-1), 0),
-            ('TOPPADDING', (0,0), (-1,-1), 2),
-            ('BOTTOMPADDING', (0,0), (-1,-1), 1),
+            ('TOPPADDING', (0,0), (-1,-1), 0.5),
+            ('BOTTOMPADDING', (0,0), (-1,-1), 0.5),
         ]))
         story.append(t)
         if focus:
             story.append(Paragraph(f"<b>Focus:</b> {focus}", styles['CVRoleFocus']))
         for b in bullets:
             story.append(Paragraph(f"• {b}", styles['CVBullet']))
-        story.append(Spacer(1, 3))
+        story.append(Spacer(1, 1.5))
 
     make_exp_entry(
         title="Founder &amp; Product Business Analyst",
         company="Jomovate Digital Labs (jomovate.com)",
-        date_str="July 2024 – Present",
+        date_str="July 2024 to Present",
         focus="Founded venture to develop data-driven solutions, conduct applied research, and engineer decision-support tools and analytical dashboards.",
         bullets=[
             "Gather and document user and business requirements, translating operational and analytical questions into digital products and decision tools.",
             "Engineered specialized analytical platforms including the UK AI Economic Measurement Lab, Price Quality Explorer, and UKCalc financial platform.",
             "Perform rigorous testing, data validation, calculation verification, and quality assurance across data pipelines and interactive web dashboards.",
-            "Develop product documentation, methodology guides, and user-centred workflows; explore practical AI integrations for reporting.",
+            "Develop product documentation, methodology guides, and user-centred workflows; explore practical AI integrations for reporting."
+        ]
+    )
+
+    make_exp_entry(
+        title="Data Analytics | Financial Analyst &amp; Business Intelligence",
+        company="Univelcity Computing",
+        date_str="July 2023 to Present",
+        focus="Delivering financial, operational, survey, and research data analysis, predictive modelling, and interactive dashboards.",
+        bullets=[
+            "Deliver financial, operational, survey, and research data analysis for development programmes and business research.",
+            "Apply econometric modelling, forecasting, cost-benefit analysis, risk assessments, and scenario analysis across multi-currency environments.",
+            "Design and maintain automated dashboards and decision tools in Power BI, Tableau, Shiny, and Excel, streamlining stakeholder access to timely insights.",
+            "Execute data preparation, ETL, and reporting pipelines using R, Python, SQL, and Excel to uncover trends, risks, and performance gaps.",
+            "Produce clear analytical summaries and policy briefings communicating complex findings to non-technical stakeholders, strengthening GDPR-aligned handling."
         ]
     )
 
     story.append(PageBreak())
 
     make_exp_entry(
-        title="Data Analytics | Financial Analyst &amp; Business Intelligence",
-        company="Univelcity Computing",
-        date_str="July 2023 – Present",
-        focus="Delivering financial, operational, survey, and research data analysis, predictive modelling, and interactive dashboards.",
-        bullets=[
-            "Deliver financial, operational, survey, and research data analysis for development programmes and business research.",
-            "Apply econometric modelling, forecasting, cost-benefit analysis, risk assessments, and scenario analysis across multi-currency environments.",
-            "Design and maintain automated dashboards and decision tools in Power BI, Tableau, Shiny, and Excel, streamlining stakeholder access to timely insights.",
-            "Execute data preparation, ETL, and reporting pipelines using R, Python, SQL, and Excel to identify trends, risks, and performance gaps.",
-            "Produce clear analytical summaries and policy briefings communicating complex findings to non-technical stakeholders.",
-            "Strengthen data quality, governance, and GDPR-aligned handling across projects; mentor junior analysts and provide analytical quality assurance."
-        ]
-    )
-
-    make_exp_entry(
         title="Financial Analyst",
         company="Nigerian Postal Service",
-        date_str="January 2014 – September 2022",
+        date_str="January 2014 to September 2022",
         focus="Financial data evaluation, operational budgeting, revenue/cost variance reporting, and operational efficiency analysis.",
         bullets=[
             "Analysed nationwide operational, financial, and socioeconomic datasets to support service delivery planning and management reporting.",
@@ -275,7 +266,7 @@ def build_pdf():
     make_exp_entry(
         title="Data Analyst/Admin",
         company="City College of Education",
-        date_str="January 2008 – December 2013",
+        date_str="January 2008 to December 2013",
         focus="Institutional record keeping, student and administrative data verification, academic reporting, and attendance analysis.",
         bullets=[
             "Maintained assessment records and student reporting databases, strengthening institutional documentation standards and compliance.",
@@ -284,21 +275,19 @@ def build_pdf():
         ]
     )
 
-    story.append(PageBreak())
-
     # 5. EDUCATION
     story.append(Paragraph("EDUCATION", styles['CVHeading']))
     edu_row1 = [
         Paragraph("<b>MSc Economics with Data Analytics (Merit)</b> — University of Essex", styles['CVRoleTitle']),
         Paragraph("2023", styles['CVRoleDate'])
     ]
-    t_e1 = Table([edu_row1], colWidths=[5.5 * inch, 2.0 * inch])
+    t_e1 = Table([edu_row1], colWidths=[5.65 * inch, 1.95 * inch])
     t_e1.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
         ('LEFTPADDING', (0,0), (-1,-1), 0),
         ('RIGHTPADDING', (0,0), (-1,-1), 0),
-        ('TOPPADDING', (0,0), (-1,-1), 1),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 1),
+        ('TOPPADDING', (0,0), (-1,-1), 0.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 0.5),
     ]))
     story.append(t_e1)
     story.append(Paragraph("<i>Dissertation:</i> Impact of Foreign Direct Investment on Economic Growth in Sub-Saharan Africa (Panel ARDL across 39 countries, 1970–2019, integrating World Bank, IMF, UNCTAD datasets).", styles['CVRoleFocus']))
@@ -307,13 +296,13 @@ def build_pdf():
         Paragraph("<b>BSc Economics</b> — University of Ilorin", styles['CVRoleTitle']),
         Paragraph("2006", styles['CVRoleDate'])
     ]
-    t_e2 = Table([edu_row2], colWidths=[5.5 * inch, 2.0 * inch])
+    t_e2 = Table([edu_row2], colWidths=[5.65 * inch, 1.95 * inch])
     t_e2.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
         ('LEFTPADDING', (0,0), (-1,-1), 0),
         ('RIGHTPADDING', (0,0), (-1,-1), 0),
-        ('TOPPADDING', (0,0), (-1,-1), 1),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 1),
+        ('TOPPADDING', (0,0), (-1,-1), 0.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 0.5),
     ]))
     story.append(t_e2)
 

@@ -18,17 +18,16 @@ breadcrumbLabel: "Publications"
             <p class="pc-hero-sub">Peer-reviewed journal articles across development economics, tax policy, and institutional analysis.</p>
         </header>
 
-        <p class="fpc-xlink fpc-xlink-center"><a href="/policy-contributions/">Featured: Digital Identity Harmonisation in Nigeria — research, media &amp; policy relevance →</a></p>
+        <p class="fpc-xlink fpc-xlink-center"><a href="/policy-contributions/">Featured: Digital Identity Harmonisation in Nigeria, research, media &amp; policy relevance →</a></p>
         <div class="publications-grid">
             {% for article in collections.journal_articles | reverse %}
             <div class="publication-card journal-card reveal">
-                <div class="pub-icon">📄</div>
                 <h3>{{ article.data.title }}</h3>
                 <p class="pub-meta">{{ article.data.journal }}{% if article.data.volume %}, {{ article.data.volume }}{% endif %}{% if article.data.pages %}, pp. {{ article.data.pages }}{% endif %}{% if article.data.year %} ({{ article.data.year }}){% endif %}</p>
                 {% if article.data.published %}<p class="pub-meta pub-published">Published {{ article.data.published }}</p>{% endif %}
                 {% if article.data.doi %}<p class="pub-doi"><a href="{{ article.data.doi }}" target="_blank" rel="noopener">DOI Link</a></p>{% endif %}
-                <p class="pub-summary">{{ article.templateContent | excerpt(2) }}</p>
-                <div class="pub-full-details collapsed">{{ article.templateContent | safe }}</div>
+                <div class="pub-summary">{{ article.templateContent | excerpt(2) }}</div>
+                <div class="pub-full-details collapsed" style="display:none;">{{ article.templateContent | safe }}</div>
                 <button class="read-more-btn" aria-expanded="false">Read more ▾</button>
                 {% if article.data.contributors %}<div class="pub-contributors"><strong>Contributors:</strong> {{ article.data.contributors }}</div>{% endif %}
                 <a href="{{ article.data.url or article.data.doi }}" target="_blank" rel="noopener" class="pub-link">View Journal Article →</a>
