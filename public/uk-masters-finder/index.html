@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Find indicative UK MBA and business analytics master's programmes for Nigerian applicants using alternatives to IELTS.">
+<title>UK Masters Finder | Nigerian Applicants</title>
+<style>
+:root{--navy:#102747;--teal:#067f78;--bg:#f4f7fb;--muted:#526176;--line:#dce5ec;--white:#fff;--gold:#b7791f;--red:#a04332}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:#152b43;line-height:1.5}header{background:linear-gradient(125deg,#0d2443,#17636d);color:white;padding:44px 20px 65px}header .wrap{max-width:1060px;margin:auto}header h1{font-size:clamp(27px,5vw,42px);letter-spacing:-.8px;line-height:1.17;max-width:770px;margin:10px 0}header p{max-width:750px;color:#d8ecf0;margin:0}.eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#9ee9dc}.shell{max-width:1060px;margin:-32px auto 50px;padding:0 18px}.panel{background:white;border:1px solid #dfe8ef;border-radius:20px;padding:clamp(18px,3vw,30px);box-shadow:0 8px 22px rgba(12,34,58,.05)}h2{margin:0 0 6px;font-size:23px}p.hint{color:var(--muted);margin:0 0 22px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.field{min-width:0}label{display:block;font-weight:700;font-size:14px;margin-bottom:7px}select,input{display:block;width:100%;min-height:49px;background:white;border:1.5px solid #bacbd7;border-radius:11px;font-size:15px;padding:10px 12px;color:#15314e}select:focus,input:focus,button:focus-visible{outline:3px solid #88d5cb;outline-offset:1px}.help{font-size:12px;color:var(--muted);margin:5px 0 0}.buttons{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}.btn{border:0;border-radius:12px;padding:14px 20px;font-size:15px;cursor:pointer;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:7px}.primary{background:var(--teal);color:white;flex:2;min-width:200px}.secondary{background:#e8f4f2;color:#075b59}.muted{background:#edf1f6;color:#1b3654}.notice{border-left:4px solid #62a8ad;background:#eef9f8;padding:13px 16px;border-radius:8px;font-size:14px;color:#22495b;margin-top:18px}.results{margin-top:23px}.resulthead{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:14px}.count{font-size:14px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{padding:20px;background:white;border:1px solid var(--line);border-radius:15px;display:flex;flex-direction:column;gap:9px}.card h3{font-size:18px;margin:0;line-height:1.3}.course{color:#184865;font-weight:600;min-height:45px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{background:#eef3f9;border-radius:99px;padding:4px 9px;color:#43566b;font-size:11px;font-weight:700}.tag.teal{background:#e4f5f0;color:#046957}.money{font-size:22px;font-weight:850;color:#132e4a}.small{font-size:12px;color:var(--muted);margin-top:-8px}.card p{font-size:13px;margin:0;color:var(--muted)}a{color:#075e72}.visit{margin-top:auto;font-weight:800;text-decoration:none;padding-top:9px}.foot{padding:26px 0;color:#5f6c7a;font-size:12px}.empty{background:white;border:1px solid var(--line);padding:24px;border-radius:14px}.hidden{display:none!important}.countbadge{display:inline-block;border-radius:10px;padding:6px 10px;background:#e3f7f2;color:#065d54;font-size:13px;font-weight:800}@media(max-width:720px){.grid,.cards{grid-template-columns:1fr}.shell{padding:0 12px}.btn{width:100%}.buttons{flex-direction:column}header{padding:33px 18px 58px}.course{min-height:auto}}@media print{header{padding:15px;color:black;background:white}.panel{box-shadow:none}.buttons,.visit{display:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">UK study planning tool</div><h1>Find your UK master's programme — without automatically needing IELTS</h1><p>Select your Nigerian qualifications, English-language evidence, preferred intake and budget. See an indicative shortlist of MBA, business analytics and related courses.</p></div></header>
+<main class="shell">
+<section class="panel">
+<h2>Your study preferences</h2><p class="hint">Choose your answers below, then press <strong>Find matches</strong>. No account or personal details required.</p>
+<form id="finder">
+<div class="grid">
+<div class="field"><label for="degree">1. Bachelor's degree classification</label><select id="degree" name="degree"><option value="first">First Class</option><option value="upper">Second Class Upper (2:1)</option><option value="lower" selected>Second Class Lower (2:2)</option><option value="third">Third Class</option><option value="hnd">HND</option><option value="other">Other / Not sure</option></select><p class="help">Academic entry requirements differ between universities.</p></div>
+<div class="field"><label for="english">2. English proficiency evidence</label><select id="english" name="english"><option value="waec">WAEC / NECO English at C6 or better</option><option value="moi">Bachelor's degree taught in English (MOI)</option><option value="both">Both WAEC/NECO and MOI</option><option value="unknown">Neither / Not sure</option></select><p class="help">A waiver is not guaranteed; admissions must verify your evidence.</p></div>
+<div class="field"><label for="course">3. Preferred course</label><select id="course" name="course"><option value="all">Any related business master's programme</option><option value="mba">MBA / Business Administration</option><option value="analytics">MSc Business Analytics / Business Analyst</option><option value="bi">Business Intelligence / Data Analytics</option><option value="management">MSc Management / International Business</option></select></div>
+<div class="field"><label for="intake">4. Preferred start date</label><select id="intake" name="intake"><option value="early" selected>January – April 2027</option><option value="sept">September 2027</option><option value="any">Either / Flexible</option></select></div>
+<div class="field"><label for="budget">5. Maximum tuition budget</label><select id="budget" name="budget"><option value="15000">Up to £15,000</option><option value="18000">Up to £18,000</option><option value="20000" selected>Up to £20,000</option><option value="25000">Up to £25,000</option><option value="35000">Up to £35,000</option><option value="0">Flexible / No maximum</option></select><p class="help">Tuition only, not living costs, visa or health surcharge.</p></div>
+<div class="field"><label for="city">6. Preferred UK area (optional)</label><select id="city" name="city"><option value="any" selected>Anywhere in the UK</option><option value="london">London</option><option value="colchester">Colchester / Essex</option><option value="birmingham">Birmingham</option><option value="manchester">Manchester</option><option value="bristol">Bristol</option><option value="leeds">Leeds</option><option value="liverpool">Liverpool</option><option value="edinburgh">Edinburgh</option><option value="cardiff">Cardiff</option></select></div>
+<div class="field"><label for="distance">7. Maximum distance from preferred area</label><select id="distance" name="distance"><option value="0" selected>No distance limit</option><option value="50">Within 50 miles</option><option value="100">Within 100 miles</option><option value="200">Within 200 miles</option><option value="300">Within 300 miles</option></select><p class="help">Approximate straight-line distance, not driving distance. Only applies if you choose an area.</p></div>
+</div>
+<div class="buttons"><button class="btn primary" type="submit">Find university matches →</button><button class="btn muted" type="button" id="reset">Reset selections</button></div>
+</form>
+<div class="notice"><strong>Important:</strong> “Without IELTS” means a university may accept WAEC/NECO or an approved English-medium degree instead. This is a research shortlist — not confirmation of admission, a visa or an English waiver. Nigerian recruitment restrictions and places can change.</div>
+</section>
+<section id="results" class="results hidden" aria-live="polite">
+<div class="resulthead"><div><h2>Your indicative university matches</h2><div class="count" id="summary"></div></div><span class="countbadge" id="number"></span></div>
+<div id="cards" class="cards"></div>
+<div class="buttons"><button class="btn secondary" type="button" id="copy">Copy results to send</button><button class="btn muted" type="button" id="share">Share my selections</button></div>
+<p class="help" style="margin-top:14px">Rankings are based on available course, fee, intake, location and English evidence information. Check official pages for application deadlines, fees and current restrictions. A university's decision is final.</p>
+</section>
+<footer class="foot">Independent, free planning aid. Sources: official university course and Nigeria admissions pages linked with each result. Indicative fees and intakes from 2026/27–2027/28, checked for initial compilation in November 2026. No form responses are saved or transmitted by this site.</footer>
+</main>
+<script>
+(function(){
+'use strict';
+const schools=[
+{name:'University of the West of England (UWE Bristol)',course:'MSc International Business Management',type:'management',city:'Bristol',lat:51.46,lon:-2.59,fee:17000,year:'2026/27',intakes:['early'],english:['waec','both'],url:'https://courses.uwe.ac.uk/N14J12/2026/',note:'January 2027 option. WAEC/NECO C6 route; verify your exact certificate and deadline.'},
+{name:'University of South Wales',course:'MBA Business Administration',type:'mba',city:'Pontypridd',lat:51.60,lon:-3.34,fee:17900,year:'2026/27',intakes:['early'],english:['waec','both'],url:'https://www.southwales.ac.uk/courses/mba-master-of-business-administration/',note:'February 2027 option; WAEC/NECO C6 generally accepted, subject to verification.'},
+{name:'University of South Wales',course:'MSc Management',type:'management',city:'Pontypridd',lat:51.60,lon:-3.34,fee:17900,year:'2026/27',intakes:['early'],english:['waec','both'],url:'https://www.southwales.ac.uk/courses/msc-management/',note:'February 2027 option; confirm any course-specific conditions.'},
+{name:'University of Westminster',course:'MSc FinTech with Business Analytics',type:'analytics',city:'London',lat:51.51,lon:-0.14,fee:18000,year:'2026/27',intakes:['early'],english:['waec','moi','both'],url:'https://www.westminster.ac.uk/accounting-and-finance-data-science-and-informatics-courses/2026-27/january/full-time/fintech-with-business-analytics-msc',note:'January 2027 route; check WAEC certificate recency and qualifying-degree rules.'},
+{name:'University of Portsmouth',course:'MSc International Business and Management',type:'management',city:'Portsmouth',lat:50.80,lon:-1.09,fee:18600,year:'2026/27',intakes:['early'],english:['waec','moi','both'],url:'https://www.port.ac.uk/study/courses/postgraduate-taught/msc-international-business-and-management',note:'January 2027 option; MOI route and course-specific requirements assessed individually.'},
+{name:'University of Leicester',course:'MSc Business Analytics',type:'analytics',city:'Leicester',lat:52.63,lon:-1.13,fee:24250,year:'2026/27–2027',intakes:['early'],english:['waec','moi','both'],url:'https://le.ac.uk/courses/business-analytics-msc/2027',note:'January/April 2027 routes; January international deadline previously published as 20 November 2026. Verify current status.'},
+{name:'Liverpool John Moores University',course:'MSc Business Analytics and AI',type:'analytics',city:'Liverpool',lat:53.41,lon:-2.98,fee:17250,year:'2027/28',intakes:['sept'],english:['waec','both'],url:'https://www.ljmu.ac.uk/study/courses/postgraduates/2027/37139-business-analytics-and-ai-msc',note:'September 2027 planning option; confirm Nigeria-specific intake and requirements.'},
+{name:'University of Hertfordshire',course:'MSc Business Analytics and Consultancy',type:'analytics',city:'Hatfield',lat:51.76,lon:-0.23,fee:19025,year:'2027/28',intakes:['sept'],english:['waec','both'],url:'https://www.herts.ac.uk/courses/postgraduate-masters/msc-business-analytics-and-consultancy',note:'WAEC/NECO English C6 route in Nigerian guidance; confirm offer and intake.'},
+{name:'University of Greenwich',course:'MSc Business Analytics',type:'analytics',city:'London',lat:51.48,lon:0.00,fee:19450,year:'2026/27 reference',intakes:['sept'],english:['waec','both'],url:'https://www.gre.ac.uk/postgraduate-courses/bus/business-analytics-msc',note:'Indicative 2026/27 fee. January 2027 Nigeria applications previously closed; September 2027 must be checked.'},
+{name:'Edinburgh Napier University',course:'MSc Business Analytics',type:'analytics',city:'Edinburgh',lat:55.94,lon:-3.21,fee:20540,year:'2026/27 reference',intakes:['sept'],english:['moi','both'],url:'https://www.napier.ac.uk/courses/msc-business-analytics-postgraduate-full-time',note:'MOI waiver can be considered; confirm acceptance and 2027 fees.'},
+{name:'Manchester Metropolitan University',course:'MSc Business Analytics',type:'analytics',city:'Manchester',lat:53.47,lon:-2.24,fee:21000,year:'published indicative',intakes:['sept'],english:['waec','both'],url:'https://www.mmu.ac.uk/study/postgraduate/course/msc-business-analytics',note:'WAEC/NECO C6 alternative; confirm current fee and intake.'},
+{name:'Leeds Beckett University',course:'Graduate Master of Business Administration (MBA)',type:'mba',city:'Leeds',lat:53.80,lon:-1.55,fee:19060,year:'2026/27 per-year reference',intakes:['sept'],english:['waec','both'],url:'https://www.leedsbeckett.ac.uk/courses/graduate-master-business-administration-mba',note:'Fee shown as annual reference, not verified full-course total; check programme length and full cost.'},
+{name:'University of Leeds',course:'MSc Business Analytics and Decision Sciences',type:'analytics',city:'Leeds',lat:53.81,lon:-1.55,fee:34400,year:'2027/28',intakes:['sept'],english:['waec','moi','both'],url:'https://courses.leeds.ac.uk/g503/business-analytics-and-decision-sciences-msc',note:'Higher-cost analytics option; confirm accepted qualification and English-waiver conditions.'}
+];
+const cities={london:[51.51,-0.13],colchester:[51.89,0.90],birmingham:[52.49,-1.89],manchester:[53.48,-2.24],bristol:[51.46,-2.59],leeds:[53.80,-1.55],liverpool:[53.41,-2.98],edinburgh:[55.95,-3.18],cardiff:[51.48,-3.18]};
+const $=id=>document.getElementById(id);
+const form=$('finder');
+const money=n=>'£'+n.toLocaleString('en-GB');
+function dist(lat1,lon1,lat2,lon2){const r=Math.PI/180,a=Math.sin((lat2-lat1)*r/2)**2+Math.cos(lat1*r)*Math.cos(lat2*r)*Math.sin((lon2-lon1)*r/2)**2;return Math.round(3958.76*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a)));}
+function labelFor(id){const el=$(id);return el.options[el.selectedIndex].text;}
+let selected=[];
+function match(e){
+if(e)e.preventDefault();
+const target=$('course').value,english=$('english').value,intake=$('intake').value,budget=Number($('budget').value),loc=$('city').value,max=Number($('distance').value),point=cities[loc]||null;
+selected=schools.filter(s=>{
+if(target==='mba'&&s.type!=='mba')return false;
+if(target==='management'&&s.type!=='management'&&s.type!=='mba')return false;
+if((target==='analytics'||target==='bi')&&s.type!=='analytics')return false;
+if(intake!=='any'&&!s.intakes.includes(intake))return false;
+if(budget>0&&s.fee>budget)return false;
+if(point&&max>0&&dist(point[0],point[1],s.lat,s.lon)>max)return false;
+return true;
+}).sort((a,b)=>{
+const ea=a.english.includes(english)?1:0,eb=b.english.includes(english)?1:0;
+if(ea!==eb)return eb-ea;
+return a.fee-b.fee;
+});
+const cards=$('cards');cards.textContent='';
+const flagAcademic=['third','hnd','other'].includes($('degree').value);
+if(!selected.length){const box=document.createElement('div');box.className='empty';box.innerHTML='<strong>No courses meet every selected filter.</strong><p>Try a higher tuition ceiling, a different intake, or no distance limit. This does not mean you are ineligible for postgraduate study.</p>';cards.appendChild(box);}
+selected.forEach(s=>{
+const c=document.createElement('article');c.className='card';
+const waiver=s.english.includes(english)&&english!=='unknown'?'Potential English alternative':'English assessment needed';
+const mile=point?dist(point[0],point[1],s.lat,s.lon):null;
+const tags=['<span class="tag">'+s.city+'</span>','<span class="tag">'+(s.intakes.includes('early')?'Early 2027':'September 2027 planning')+'</span>'];
+if(mile!==null)tags.push('<span class="tag">~'+mile+' miles</span>');
+tags.push('<span class="tag '+(waiver==='Potential English alternative'?'teal':'')+'">'+waiver+'</span>');
+c.innerHTML='<h3>'+s.name+'</h3><div class="course">'+s.course+'</div><div class="tags">'+tags.join('')+'</div><div class="money">'+money(s.fee)+'</div><div class="small">International tuition ('+s.year+')</div><p>'+s.note+'</p>'+(flagAcademic?'<p><strong>Academic qualification:</strong> Third Class, HND and other backgrounds require individual entry assessment.</p>':'<p><strong>Academic qualification:</strong> Verify the course\'s degree classification requirement before applying.</p>')+'<a class="visit" href="'+s.url+'" target="_blank" rel="noopener noreferrer">Official course page ↗</a>';
+cards.appendChild(c);
+});
+$('results').classList.remove('hidden');
+$('number').textContent=selected.length+' result'+(selected.length===1?'':'s');
+$('summary').textContent='Filters applied. These results are indicative, not admission offers.';
+$('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+form.addEventListener('submit',match);
+$('reset').addEventListener('click',()=>{form.reset();$('results').classList.add('hidden');window.history.replaceState({},'',window.location.pathname);window.scrollTo({top:0,behavior:'smooth'});});
+function profile(){return 'UK masters finder selections:\n• Degree: '+labelFor('degree')+'\n• English: '+labelFor('english')+'\n• Course: '+labelFor('course')+'\n• Intake: '+labelFor('intake')+'\n• Tuition limit: '+labelFor('budget')+'\n• UK area: '+labelFor('city')+'\n• Distance: '+labelFor('distance');}
+$('copy').addEventListener('click',async()=>{const msg=profile()+'\n\nIndicative matches:\n'+selected.map(s=>s.name+' — '+s.course+' — '+money(s.fee)+'\n'+s.url).join('\n\n');try{await navigator.clipboard.writeText(msg);$('copy').textContent='Copied ✓';setTimeout(()=>$('copy').textContent='Copy results to send',2200)}catch(e){window.prompt('Copy these results:',msg)}});
+$('share').addEventListener('click',async()=>{const p=new URLSearchParams(new FormData(form)).toString(),url=window.location.origin+window.location.pathname+'?'+p;try{if(navigator.share){await navigator.share({title:'My UK masters preferences',text:profile(),url});return}await navigator.clipboard.writeText(url);$('share').textContent='Link copied ✓';setTimeout(()=>$('share').textContent='Share my selections',2200)}catch(e){}});
+const q=new URLSearchParams(window.location.search);let any=false;['degree','english','course','intake','budget','city','distance'].forEach(id=>{const val=q.get(id),el=$(id);if(val&&[...el.options].some(o=>o.value===val)){el.value=val;any=true}});if(any){match();}
+})();
+</script>
+</body>
+</html>
