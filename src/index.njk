@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 pageTitle: "Daramola Joseph Omoyele, Research and Data Analyst"
-pageDescription: "I turn complex data into clear evidence for better decisions, combining economic research, statistical analysis and performance reporting."
+pageDescription: "I turn complex data into clear evidence for better decisions, combining economic research, statistical analysis and business intelligence."
 ---
 
 <section class="hero" id="top">
@@ -10,7 +10,7 @@ pageDescription: "I turn complex data into clear evidence for better decisions, 
       <p class="loc">Colchester, United Kingdom</p>
       <h1>Daramola Joseph Omoyele</h1>
       <p class="role">Research and Data Analyst</p>
-      <p class="lead">I turn complex data into clear evidence for better decisions, combining economic research, statistical analysis and performance reporting. I check how reliable the data is, choose the right method, and explain the result so people can act on it.</p>
+      <p class="lead">I turn complex data into clear evidence for better decisions, combining economic research, statistical analysis and business intelligence. I build dashboards, design reproducible analyses and explain the findings so teams can act on them.</p>
       <div class="tags" aria-label="Tools">
         <span class="tag">R</span>
         <span class="tag">Python</span>
@@ -77,8 +77,14 @@ pageDescription: "I turn complex data into clear evidence for better decisions, 
     </div>
     <div class="stat reveal">
       <p class="stat-n">Published author</p>
-      <p class="stat-d">peer reviewed research and practitioner books on UK and Nigerian tax compliance</p>
+      <p class="stat-d">practical guides on Power BI and tax compliance, alongside peer-reviewed research</p>
     </div>
+  </div>
+</section>
+
+<section class="section" aria-label="Featured publication">
+  <div class="wrap">
+    {% include "featured-book.njk" %}
   </div>
 </section>
 
@@ -87,9 +93,29 @@ pageDescription: "I turn complex data into clear evidence for better decisions, 
     <div class="section-head reveal">
       <div>
         <h2>Selected work</h2>
-        <p>Analytical tools I designed and built, each live and open to try.</p>
+        <p>Recent dashboards and analytical tools I designed and built.</p>
       </div>
       <a class="more" href="/projects/">All projects</a>
+    </div>
+    <div class="cards recent-projects">
+      <article class="card reveal">
+        <div class="card-body">
+          <p class="kicker">Excel case study</p>
+          <h3>Brightway Home Sales Dashboard</h3>
+          <p>I cleaned and combined six monthly retail sales files, then built a dashboard to compare net revenue, orders and units sold.</p>
+          <p class="stack">Excel · Power Query · PivotTables</p>
+          <a class="more" href="/projects/#brightway-sales-dashboard">Read the Brightway case study</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-body">
+          <p class="kicker">Interactive dashboard</p>
+          <h3>Sportswear Sales Lab</h3>
+          <p>Explore synthetic sportswear sales, or upload a file and compare trends using documented calculations.</p>
+          <p class="stack">Sales reporting · Data validation</p>
+          <a class="more" href="https://omoyele-sportswear-sales-lab.dju78.chatgpt.site">Open Sportswear Sales Lab</a>
+        </div>
+      </article>
     </div>
     <div class="cards">
       <article class="card reveal">
@@ -112,14 +138,16 @@ pageDescription: "I turn complex data into clear evidence for better decisions, 
         <div class="card-body">
           <p class="kicker">Economic research</p>
           <h3>UK AI Economic Measurement Lab</h3>
-          <p>Estimates the footprint of AI activity in the UK economy using Supply and Use Table analysis across 23 product categories.</p>
+          <p>Explores how AI-related activity could be measured using UK Supply and Use Tables across 23 product categories.</p>
           <p class="stack">National accounts · Scenario modelling</p>
           <a class="more" href="https://ai-measurement.jomovate.com" target="_blank" rel="noopener noreferrer">Open live demo</a>
         </div>
       </article>
 
       <article class="card reveal">
-        <div class="shot">Price Quality Explorer</div>
+        <div class="shot">
+          <img src="/images/screenshot_price_quality.png" alt="Price Quality Explorer screenshot" class="shot-img" loading="lazy">
+        </div>
         <div class="card-body">
           <p class="kicker">Statistical methodology</p>
           <h3>Price Quality Explorer</h3>

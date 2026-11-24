@@ -1,0 +1,19 @@
+{% for book in collections.books %}
+{% if book.data.featured %}
+<article class="featured-book" id="power-bi-book" aria-labelledby="power-bi-book-title">
+    <img src="{{ book.data.image }}" alt="Cover of {{ book.data.title }}" width="280" height="400" loading="lazy">
+    <div class="featured-book-copy">
+        <p class="kicker">Featured book</p>
+        <h2 id="power-bi-book-title">{{ book.data.title }}</h2>
+        <p><strong>{{ book.data.subtitle }}</strong></p>
+        <p class="featured-book-meta">By {{ book.data.author }} · {{ book.data.year }} · ISBN {{ book.data.isbn }}</p>
+        {{ book.templateContent | safe }}
+        <div class="featured-book-links">
+            <a class="btn btn-primary" href="{{ book.data.resources }}">Datasets and exercises</a>
+            <a class="more" href="{{ book.data.link }}">Paperback on Amazon UK</a>
+            <a class="more" href="{{ book.data.kindle }}">Kindle on Amazon UK</a>
+        </div>
+    </div>
+</article>
+{% endif %}
+{% endfor %}
