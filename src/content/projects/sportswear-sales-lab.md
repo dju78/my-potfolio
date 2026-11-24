@@ -6,6 +6,7 @@ order: 0.5
 categories:
   - "data-analytics"
 description: "An interactive sales dashboard that uses synthetic sportswear data to explore revenue and units sold over time and across product categories."
+image: "/images/projects/sportswear-sales-lab.jpg"
 link: "https://omoyele-sportswear-sales-lab.dju78.chatgpt.site"
 link_label: "Open Sportswear Sales Lab"
 highlights:

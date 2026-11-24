@@ -7,6 +7,7 @@ categories:
   - "fintech"
   - "business-applications"
 description: "A tailored financial management and bookkeeping application built for UK sole traders and freelancers, simplifying income/expense tracking, tax reservations, and HMRC deadlines."
+image: "/images/projects/taxmate-uk.jpg"
 link: "https://taxmate.omoyelejd.co.uk/"
 highlights:
   - text: "Intuitive income and expense management with structured CRUD workflows"

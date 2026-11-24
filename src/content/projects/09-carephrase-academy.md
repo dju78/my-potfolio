@@ -8,6 +8,7 @@ categories:
   - "websites-platforms"
   - "business-applications"
 description: "A structured workplace training platform that strengthens how care professionals communicate, conduct handovers, escalate clinical risks, maintain safeguarding awareness, and master care English."
+image: "/images/projects/carephrase-academy.jpg"
 link: "https://comms.carephrase.com"
 highlights:
   - text: "Structured workplace communication and clinical handover training modules"
