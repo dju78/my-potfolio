@@ -5,7 +5,7 @@ badge: "Power BI Report"
 order: 0.2
 categories:
   - "data-analytics"
-description: "A three-page Power BI report that tracks on-time mail delivery, late items and unit cost across six zones from 2016 to 2018, then ranks zones and states to recommend where delivery support should go first in January 2019."
+description: "A three-page Power BI report that tracks on-time mail delivery, late items and unit cost across six zones from 2016 to 2018, then ranks zones and states to recommend where delivery support should go first in January 2019. Built on synthetic data."
 image: "/images/projects/mail-delivery-overview.jpg"
 gallery:
   - src: "/images/projects/mail-delivery-decision.jpg"
@@ -28,5 +28,5 @@ case_study:
   contribution: "Designed and built all three report pages, from the executive overview to the scored recommendation and the methodology notes."
   methods: "Summed totals for rates; each metric scaled against the highest value among the units scored; weighted priority index with sensitivity tests at 50/30/20, equal and 40/40/20; forecast method selected by backtest error."
   functionality: "Slicers filter the overview by year, quarter, zone and state. The decision page ranks six zones, then drills into the states of the shortlisted zone, and states a recommended first action with the checks to make before deploying staff."
-  limitations: "Workload and cost are treated as signals to investigate, not proof of need. Delivery FTE is a staffing proxy, and a high cost per item is checked against how operating cost is allocated before it is read as inefficiency."
+  limitations: "The dataset is synthetic and does not describe a real postal operator. Workload and cost are treated as signals to investigate, not proof of need. Delivery FTE is a staffing proxy, and a high cost per item is checked against how operating cost is allocated before it is read as inefficiency."
 ---
