@@ -6,6 +6,7 @@ order: 0
 categories:
   - "data-analytics"
 description: "An Excel dashboard built from six months of fictional retail transactions, from April to September 2025. It lets readers compare sales performance across stores, channels and product categories."
+image: "/images/projects/brightway-sales-dashboard.jpg"
 link: "https://learn.jomovate.com/power-bi-book/#brightway-heading"
 link_label: "Explore Brightway practice files"
 highlights:
