@@ -42,6 +42,16 @@ breadcrumbLabel: "Projects"
                 {% if project.data.image %}
                 <div class="project-card-image" style="padding:0 1.25rem 0.75rem 1.25rem;">
                     <img src="{{ project.data.image }}" alt="{{ project.data.title }} screenshot" style="width:100%; height:auto; border-radius:6px; border:1px solid var(--border-color); display:block;" loading="lazy">
+                    {% if project.data.gallery %}
+                    <div class="project-gallery" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(120px, 1fr)); gap:0.5rem; margin-top:0.5rem;">
+                        {% for shot in project.data.gallery %}
+                        <a href="{{ shot.src }}" target="_blank" rel="noopener" title="{{ shot.caption }}" style="display:block; text-decoration:none;">
+                            <img src="{{ shot.src }}" alt="{{ project.data.title }}: {{ shot.caption }}" style="width:100%; height:auto; border-radius:4px; border:1px solid var(--border-color); display:block;" loading="lazy">
+                            <span style="display:block; font-size:0.75rem; color:var(--text-light, #64748b); margin-top:0.2rem;">{{ shot.caption }}</span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </div>
                 {% endif %}
                 <div class="project-card-mid">
@@ -76,7 +86,7 @@ breadcrumbLabel: "Projects"
                         {{ project.data.link_label or "View Live Demo" }}
                     </a>
                     {% else %}
-                    <span class="btn btn-disabled btn-sm">{% if project.data.status %}{{ project.data.status }}{% else %}In Development{% endif %}</span>
+                    <span class="btn btn-disabled btn-sm">{% if project.data.foot_label %}{{ project.data.foot_label }}{% elif project.data.status %}{{ project.data.status }}{% else %}In Development{% endif %}</span>
                     {% endif %}
                 </div>
             </div>

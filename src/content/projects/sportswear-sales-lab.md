@@ -7,6 +7,9 @@ categories:
   - "data-analytics"
 description: "An interactive sales dashboard that uses synthetic sportswear data to explore revenue and units sold over time and across product categories."
 image: "/images/projects/sportswear-sales-lab.jpg"
+gallery:
+  - src: "/images/projects/sportswear-power-bi.jpg"
+    caption: "Original Power BI report"
 link: "https://omoyele-sportswear-sales-lab.dju78.chatgpt.site"
 link_label: "Open Sportswear Sales Lab"
 highlights:
@@ -14,6 +17,8 @@ highlights:
   - text: "Load CSV or Excel data and map columns to the dashboard fields."
   - text: "Review metric definitions, baseline checks and assumptions before interpreting results."
 tech:
+  - tag: "Power BI"
+  - tag: "Python"
   - tag: "Dashboard Design"
   - tag: "Sales Analytics"
   - tag: "Reproducibility"
