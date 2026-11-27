@@ -171,7 +171,7 @@ add_experience_item(
 )
 
 add_experience_item(
-    title="Data Analytics | Financial Analyst & Business Intelligence",
+    title="Data and Finance Analyst",
     company="Univelcity Computing",
     dates="July 2023 to Present",
     focus="Delivering financial, operational, survey, and research data analysis, predictive modelling, and interactive dashboards.",
@@ -188,7 +188,7 @@ add_experience_item(
 doc.add_page_break()
 
 add_experience_item(
-    title="Financial Analyst",
+    title="Data Analyst",
     company="Nigerian Postal Service",
     dates="January 2014 to September 2022",
     focus="Financial data evaluation, operational budgeting, revenue/cost variance reporting, and operational efficiency analysis.",
@@ -202,10 +202,10 @@ add_experience_item(
 )
 
 add_experience_item(
-    title="Data Analyst/Admin",
+    title="Lecturer & Secretary to the School of Business Studies",
     company="City College of Education",
-    dates="January 2008 to December 2013",
-    focus="Institutional record keeping, student and administrative data verification, academic reporting, and attendance analysis.",
+    dates="April 2008 to December 2013",
+    focus="Teaching, academic administration, institutional reporting and coordination for the School of Business Studies.",
     bullets=[
         "Maintained assessment records and student reporting databases, strengthening institutional documentation standards and compliance.",
         "Compiled departmental reports and learning performance data to support evidence-informed learner support and curriculum planning.",
