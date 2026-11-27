@@ -8,6 +8,7 @@ categories:
   - "fintech"
   - "business-applications"
 description: "A proof-of-concept AI-assisted banknote verification prototype providing simulated currency feature scanning, security education, confidence scoring, and anti-counterfeit guidance."
+image: "/images/projects/nairaguard.jpg"
 link: "https://daramol.netlify.app/"
 highlights:
   - text: "Demonstrates an AI-assisted workflow for counterfeit banknote risk assessment"

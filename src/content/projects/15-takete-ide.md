@@ -8,6 +8,7 @@ categories:
   - "websites-platforms"
   - "business-applications"
 description: "A comprehensive community platform and centenary Celebration Studio built for Takete-Ide, featuring cultural heritage archives, development project tracking, and private browser-based poster creation."
+image: "/images/projects/takete-ide.jpg"
 link: "https://takete-ide.org/"
 highlights:
   - text: "Interactive Centenary Celebration Studio with in-browser private photo compositing and poster generation"

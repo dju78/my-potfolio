@@ -8,6 +8,7 @@ categories:
   - "data-analytics"
   - "business-applications"
 description: "An executive business intelligence dashboard prototype engineered to track core performance indicators, user activity, operational trends, and decision-support signals."
+image: "/images/projects/uba-pulse.jpg"
 link: "https://ubapulse.netlify.app/"
 highlights:
   - text: "Executive dashboard interface delivering clean visualisation of key operational KPIs"

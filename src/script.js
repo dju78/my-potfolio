@@ -4,7 +4,7 @@
 const navbar    = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
 const navMenu   = document.getElementById('navMenu');
-const navLinks  = document.querySelectorAll('.nav-link');
+const navLinks  = navMenu.querySelectorAll('a');
 
 window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
@@ -15,7 +15,20 @@ navToggle.addEventListener('click', () => {
     navToggle.setAttribute('aria-expanded', open);
 });
 
-navLinks.forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+navLinks.forEach(link => link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    closeAllDropdowns();
+}));
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !event.defaultPrevented && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        closeAllDropdowns();
+        navToggle.focus();
+    }
+});
 
 // ===========================
 // Dropdown Navigation
@@ -50,7 +63,8 @@ dropdownToggles.forEach(toggle => {
                 dropdown.classList.add('active');
             }
             if (links.length > 0) links[0].focus();
-        } else if (e.key === 'Escape') {
+        } else if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+            e.preventDefault();
             closeAllDropdowns();
             toggle.focus();
         }
@@ -60,16 +74,13 @@ dropdownToggles.forEach(toggle => {
 document.querySelectorAll('.nav-dropdown-link').forEach(link => {
     link.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
+            e.preventDefault();
             closeAllDropdowns();
             const toggle = link.closest('.nav-item-dropdown').querySelector('.nav-dropdown-toggle');
             toggle.focus();
         }
     });
 
-    link.addEventListener('click', () => {
-        closeAllDropdowns();
-        navMenu.classList.remove('active');
-    });
 });
 
 function closeAllDropdowns() {

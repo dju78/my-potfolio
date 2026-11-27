@@ -234,7 +234,7 @@ def build_pdf():
     )
 
     make_exp_entry(
-        title="Data Analytics | Financial Analyst &amp; Business Intelligence",
+        title="Data and Finance Analyst",
         company="Univelcity Computing",
         date_str="July 2023 to Present",
         focus="Delivering financial, operational, survey, and research data analysis, predictive modelling, and interactive dashboards.",
@@ -250,7 +250,7 @@ def build_pdf():
     story.append(PageBreak())
 
     make_exp_entry(
-        title="Financial Analyst",
+        title="Data Analyst",
         company="Nigerian Postal Service",
         date_str="January 2014 to September 2022",
         focus="Financial data evaluation, operational budgeting, revenue/cost variance reporting, and operational efficiency analysis.",
@@ -264,10 +264,10 @@ def build_pdf():
     )
 
     make_exp_entry(
-        title="Data Analyst/Admin",
+        title="Lecturer &amp; Secretary to the School of Business Studies",
         company="City College of Education",
-        date_str="January 2008 to December 2013",
-        focus="Institutional record keeping, student and administrative data verification, academic reporting, and attendance analysis.",
+        date_str="April 2008 to December 2013",
+        focus="Teaching, academic administration, institutional reporting and coordination for the School of Business Studies.",
         bullets=[
             "Maintained assessment records and student reporting databases, strengthening institutional documentation standards and compliance.",
             "Compiled departmental reports and learning performance data to support evidence-informed learner support and curriculum planning.",

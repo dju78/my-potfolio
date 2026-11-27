@@ -1,8 +1,8 @@
 ---
 title: "GarageProof UK"
 client: "Automotive Workflow / Digital Audit Trail / Customer Approval"
-badge: "In Development"
-status: "Workflow Solution (In Development)"
+badge: "Pilot Stage"
+status: "Workflow Solution (Pilot Stage)"
 order: 8
 categories:
   - "automotive"

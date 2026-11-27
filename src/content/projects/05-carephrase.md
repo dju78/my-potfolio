@@ -7,6 +7,7 @@ categories:
   - "health-care"
   - "websites-platforms"
 description: "A digital solution built to address frontline challenges in healthcare documentation, helping care workers improve how they observe, record, escalate, and communicate vital care information."
+image: "/images/projects/carephrase.jpg"
 link: "https://carephrase.com"
 highlights:
   - text: "Structured care-note observation, recording, and escalation protocols"

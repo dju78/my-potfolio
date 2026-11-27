@@ -1,8 +1,8 @@
 ---
 title: "AutoDamage Quote"
 client: "Automotive Technology / Damage Assessment / Quotation Workflow"
-badge: "In Development"
-status: "Quotation Engine (In Development)"
+badge: "Pilot Stage"
+status: "Quotation Engine (Pilot Stage)"
 order: 9
 categories:
   - "automotive"

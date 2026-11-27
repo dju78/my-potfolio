@@ -6,6 +6,7 @@ order: 11
 categories:
   - "business-applications"
 description: "An interactive coaching application designed to help professionals practice and elevate speaking clarity, structured articulation, and presentation confidence through real-time feedback."
+image: "/images/projects/speaking-trainer.jpg"
 link: "https://speech.omoyelejd.co.uk"
 highlights:
   - text: "Interactive speaking drills and professional scenario-based simulations"

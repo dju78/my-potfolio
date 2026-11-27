@@ -1,4 +1,4 @@
-﻿---
+---
 layout: base.njk
 permalink: /books/index.html
 pageTitle: "Books & Handbooks | Daramola Joseph Omoyele"
@@ -18,8 +18,11 @@ breadcrumbLabel: "Books"
             <p class="pc-hero-sub">Independently published books and handbooks distilling applied economics, tax compliance, and data analysis for practitioners.</p>
         </header>
 
+        {% include "featured-book.njk" %}
+
         <div class="publications-grid">
             {% for book in collections.books | reverse %}
+            {% if not book.data.featured %}
             <div class="publication-card book-card flip-card reveal" tabindex="0" role="region" aria-label="{{ book.data.title }}">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
@@ -36,11 +39,12 @@ breadcrumbLabel: "Books"
                         <div class="pub-description">{{ book.templateContent | safe }}</div>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:0.5rem; border-top:1px solid var(--border);">
                             <a href="{{ book.data.link }}" target="_blank" rel="noopener" class="pub-link" style="border:none; padding:0; margin:0;">View on Amazon →</a>
-                            <button class="book-flip-back-btn" type="button" style="background:none; border:none; color:var(--text-3); font-size:0.8rem; cursor:pointer; font-weight:600;">Close âœ•</button>
+                            <button class="book-flip-back-btn" type="button" style="background:none; border:none; color:var(--text-3); font-size:0.8rem; cursor:pointer; font-weight:600;">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
 

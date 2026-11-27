@@ -3,7 +3,7 @@ layout: base.njk
 pageTitle: "Daramola Joseph Omoyele | Data Intelligence, Economics & Digital Innovation"
 pageDescription: "Explore the analytical work, economic research and digital products of Daramola Joseph Omoyele: UK-based data and business intelligence analyst, economist and founder of Jomovate Digital Labs."
 ---
-<main class="premium-home" id="main-content">
+<main class="premium-home" id="main-content" tabindex="-1">
   <section class="p-hero" id="top" aria-labelledby="p-hero-title">
     <div class="p-wrap p-hero-inner">
       <div class="p-hero-copy">
@@ -13,7 +13,7 @@ pageDescription: "Explore the analytical work, economic research and digital pro
         <p class="p-hero-desc">I transform complex data into decision-ready intelligence. From statistical modelling and business intelligence to digital products, I build rigorous solutions that make the next decision clearer.</p>
         <div class="p-hero-actions">
           <a class="p-button p-button-gold" href="#featured">Explore selected work <span aria-hidden="true">↗</span></a>
-          <a class="p-inline-link" href="/cv/">Explore my CV <span aria-hidden="true">↗</span></a>
+          <a class="p-inline-link" href="/Daramola_Joseph_Omoyele_CV.pdf" download>Download CV (PDF) <span aria-hidden="true">↗</span></a>
         </div>
         <p class="p-availability"><span class="p-availability-marker"></span> Based in Colchester, Essex · Open to UK analytics and BI opportunities</p>
       </div>
@@ -47,17 +47,24 @@ pageDescription: "Explore the analytical work, economic research and digital pro
     </div>
   </section>
 
+  <section class="p-section p-featured-book-section" aria-label="Featured publication">
+    <div class="p-wrap">
+      {% include "featured-book.njk" %}
+    </div>
+  </section>
+
+  <div id="work"></div>
   <section class="p-section p-work" id="featured" aria-labelledby="p-work-title">
     <div class="p-wrap">
       <div class="p-section-top"><p class="p-overline">01 / SELECTED WORK</p><a class="p-text-link" href="/projects/">View full project archive <span aria-hidden="true">↗</span></a></div>
       <div class="p-section-heading"><h2 id="p-work-title">Built for questions<br><em>that matter.</em></h2><p>Interactive tools and rigorous research, developed with a focus on clarity, reproducibility and real decisions.</p></div>
       <div class="p-project-grid">
         <article class="p-project p-featured-project">
-          <a class="p-project-image p-image-performance" href="https://performance-insight.jomovate.com" target="_blank" rel="noopener noreferrer" aria-label="Open Performance Insight Explorer">
+          <a class="p-project-image p-image-performance" href="/projects/#02-performance-insight-explorer" aria-label="View the Performance Insight Explorer project">
             <img src="/images/screenshot_performance_insight.png" alt="Screenshot of Performance Insight Explorer analytical dashboard" loading="lazy">
             <span class="p-image-index">01 / FEATURED PROJECT</span>
           </a>
-          <div class="p-project-info"><div class="p-project-meta"><span>PERFORMANCE INTELLIGENCE</span><span>PYTHON / STREAMLIT</span></div><h3>Performance Insight Explorer</h3><p>KPI monitoring, trend diagnostics and benchmarking that help management teams turn operational data into usable intelligence.</p><a class="p-project-action" href="https://performance-insight.jomovate.com" target="_blank" rel="noopener noreferrer">Explore live application <span aria-hidden="true">↗</span></a></div>
+          <div class="p-project-info"><div class="p-project-meta"><span>PERFORMANCE INTELLIGENCE</span><span>PYTHON / STREAMLIT</span></div><h3>Performance Insight Explorer</h3><p>KPI monitoring, trend diagnostics and benchmarking that help management teams turn operational data into usable intelligence.</p><a class="p-project-action" href="/projects/#02-performance-insight-explorer">View project details <span aria-hidden="true">↗</span></a></div>
         </article>
         <article class="p-project">
           <a class="p-project-image p-image-ai" href="https://ai-measurement.jomovate.com" target="_blank" rel="noopener noreferrer" aria-label="Open UK AI Economic Measurement Lab">
@@ -67,7 +74,25 @@ pageDescription: "Explore the analytical work, economic research and digital pro
         </article>
         <article class="p-project">
           <div class="p-project-image p-method-art" aria-label="Custom visualisation of a price index methodology comparison"><span class="p-image-index">03 / STATISTICAL METHODS</span><div class="p-method-heading">PRICE / QUALITY<br><span>EXPLORER</span></div><svg viewBox="0 0 440 170" aria-hidden="true"><g stroke="#345063" stroke-width="1"><path d="M0 28H440M0 74H440M0 120H440"/></g><path d="M0 140 L80 114 L160 122 L240 61 L320 80 L440 31" stroke="#E4BD77" stroke-width="3" fill="none"/><path d="M0 145 L80 130 L160 102 L240 105 L320 59 L440 46" stroke="#79C6B4" stroke-width="3" fill="none"/></svg><div class="p-method-legend"><span>JEVONS</span><span>CARLI</span><span>DUTOT</span></div></div>
-          <div class="p-project-info"><div class="p-project-meta"><span>PRICE STATISTICS</span><span>DATA QUALITY</span></div><h3>Price Quality Explorer</h3><p>Reproducible anomaly checks, transparent audit trails and elementary price-index methods for more reliable analytical outputs.</p><a class="p-project-action" href="https://price-quality.jomovate.com" target="_blank" rel="noopener noreferrer">Explore live application <span aria-hidden="true">↗</span></a></div>
+          <div class="p-project-info"><div class="p-project-meta"><span>PRICE STATISTICS</span><span>DATA QUALITY</span></div><h3>Price Quality Explorer</h3><p>Reproducible anomaly checks, transparent audit trails and elementary price-index methods for more reliable analytical outputs.</p><a class="p-project-action" href="/projects/#01-price-quality-explorer">View project details <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+      <div class="p-project-grid p-recent-projects">
+        <article class="p-project">
+          <div class="p-project-info">
+            <div class="p-project-meta"><span>EXCEL CASE STUDY</span><span>POWER QUERY</span></div>
+            <h3>Brightway Home Sales Dashboard</h3>
+            <p>I combined six monthly retail sales files and built a dashboard to compare net revenue, orders and units sold.</p>
+            <a class="p-project-action" href="/projects/#brightway-sales-dashboard">Read the Brightway case study <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="p-project">
+          <div class="p-project-info">
+            <div class="p-project-meta"><span>INTERACTIVE DASHBOARD</span><span>SALES REPORTING</span></div>
+            <h3>Sportswear Sales Lab</h3>
+            <p>Explore synthetic sportswear sales or upload a file to compare trends using documented calculations.</p>
+            <a class="p-project-action" href="/projects/#sportswear-sales-lab">View the Sportswear Sales Lab <span aria-hidden="true">↗</span></a>
+          </div>
         </article>
       </div>
       <div class="p-bottom-link"><span>More products in healthcare intelligence, financial tools and digital automation</span><a href="/projects/">Browse all projects <span aria-hidden="true">↗</span></a></div>

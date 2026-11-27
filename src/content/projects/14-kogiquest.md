@@ -7,6 +7,7 @@ categories:
   - "community"
   - "websites-platforms"
 description: "A community-centred digital engagement platform designed to promote regional civic participation, showcase grassroots development projects, and highlight cultural landmarks."
+image: "/images/projects/kogiquest.jpg"
 link: "https://dju78.github.io/kogiqest/"
 highlights:
   - text: "Regional community engagement hub showcasing local development initiatives"

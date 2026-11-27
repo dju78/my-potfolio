@@ -15,7 +15,7 @@ breadcrumbLabel: "Projects"
         <header class="pc-hero">
             <span class="section-tag">Portfolio</span>
             <h1>Projects &amp; Analytical Products</h1>
-            <p class="pc-hero-sub">A comprehensive portfolio of interactive analytical applications, statistical methodologies, FinTech calculators, healthcare quality intelligence, and digital products built to solve real organisational challenges.</p>
+            <p class="pc-hero-sub">Explore dashboards, analytical case studies and digital products across business intelligence, economic research, care and finance.</p>
         </header>
 
         <div class="project-filters" role="tablist" aria-label="Filter projects by category">
@@ -29,7 +29,7 @@ breadcrumbLabel: "Projects"
         </div>
         <div class="project-grid">
             {% for project in collections.projects | sort(false, false, 'data.order') %}
-            <div class="project-card reveal" data-category="{% if project.data.categories %}{{ project.data.categories | join(' ') }}{% else %}{{ project.data.badge | lower | replace(' ', '-') }}{% endif %}">
+            <div class="project-card reveal" id="{{ project.fileSlug }}" data-category="{% if project.data.categories %}{{ project.data.categories | join(' ') }}{% else %}{{ project.data.badge | lower | replace(' ', '-') }}{% endif %}">
                 <div class="project-card-top">
                     <div class="project-card-meta">
                         <span class="project-badge">{{ project.data.badge }}</span>
@@ -42,6 +42,16 @@ breadcrumbLabel: "Projects"
                 {% if project.data.image %}
                 <div class="project-card-image" style="padding:0 1.25rem 0.75rem 1.25rem;">
                     <img src="{{ project.data.image }}" alt="{{ project.data.title }} screenshot" style="width:100%; height:auto; border-radius:6px; border:1px solid var(--border-color); display:block;" loading="lazy">
+                    {% if project.data.gallery %}
+                    <div class="project-gallery" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(120px, 1fr)); gap:0.5rem; margin-top:0.5rem;">
+                        {% for shot in project.data.gallery %}
+                        <a href="{{ shot.src }}" target="_blank" rel="noopener" title="{{ shot.caption }}" style="display:block; text-decoration:none;">
+                            <img src="{{ shot.src }}" alt="{{ project.data.title }}: {{ shot.caption }}" style="width:100%; height:auto; border-radius:4px; border:1px solid var(--border-color); display:block;" loading="lazy">
+                            <span style="display:block; font-size:0.75rem; color:var(--text-light, #64748b); margin-top:0.2rem;">{{ shot.caption }}</span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </div>
                 {% endif %}
                 <div class="project-card-mid">
@@ -73,10 +83,10 @@ breadcrumbLabel: "Projects"
                     <span class="btn btn-disabled btn-sm">Preview available on request</span>
                     {% elseif project.data.link and project.data.link != '#' %}
                     <a href="{{ project.data.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                        View Live Demo <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        {{ project.data.link_label or "View Live Demo" }}
                     </a>
                     {% else %}
-                    <span class="btn btn-disabled btn-sm">{% if project.data.status %}{{ project.data.status }}{% else %}In Development{% endif %}</span>
+                    <span class="btn btn-disabled btn-sm">{% if project.data.foot_label %}{{ project.data.foot_label }}{% elif project.data.status %}{{ project.data.status }}{% else %}In Development{% endif %}</span>
                     {% endif %}
                 </div>
             </div>

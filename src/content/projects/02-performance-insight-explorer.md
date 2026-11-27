@@ -1,12 +1,13 @@
 ---
 title: "Performance Insight Explorer"
 client: "Performance Analytics / KPI Intelligence / Decision Support"
-badge: "Live Analytical App"
+badge: "Analytical App"
 order: 3
 categories:
   - "data-analytics"
 description: "An interactive analytical application transforming operational and organisational data into executive KPIs, trend analyses, comparative benchmarks, and evidence to guide strategic decisions."
-link: "https://performance-insight-explorer.streamlit.app/performance_overview"
+link: "https://performance-insight-explorer.streamlit.app/"
+link_label: "Try the demo (Streamlit)"
 highlights:
   - text: "KPI monitoring, operational trend analysis and comparative performance reporting"
   - text: "Upload-driven analysis and automated analytical workflows for fast insight generation"
